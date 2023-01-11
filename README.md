@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+Kako bismo setapovali react aplikaciju, potrebno je da uradimo par stvari:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1 . kloniramo github repozitorijum na Desktop-u(desni klik mišem, pa git bash here):
 
-## Available Scripts
+git clone https://github.com/IlijaTrifke/fon_hakaton23.git
 
-In the project directory, you can run:
+2 . ulazimo u direktorjium fon_hakaton23-a:
 
-### `npm start`
+cd fon_hakaton23
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3 . instaliramo potrebne dependency-je za react:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+npm install
 
-### `npm test`
+Rad na sajtu:
+Bilo bi dobro da svako od nas napravi granu na kojoj ce raditi (grana se pravi komandom git checkout -b "naziv grane"). Nazivi grana mogu biti: "landing", "o hakatonu", "partneri"... Kada napravimo granu, ubuduće iskljucivo pravite izmene na toj vasoj grani
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Kada kloniramo i setapujemo projekat, svako od nas bi trebalo da napravi folder u src\components kao naziv stranice na kojoj radi. npr: Aleksa radi na stranici "o-hakatonu", Aleksa ce napraviti folder o-hakatonu i u njega ce ubacivati sve komponente(npr.jsx i css) vezane za njegov deo posla.
 
-### `npm run build`
+naziv_grane = naziv sekcije za koju cete pisati kod!
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+//KAKO KREIRAMO GRANE
+git checkout -b "naziv grane"
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+//KAKO DODAJEMO PROMENE NA GITHUB GRANI
+git add .
+git commit -m ‘poruka’
+git push origin naziv_grane
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+//KAKO PULL-UJEMO PROMENE SA MASTER GRANE
+git pull origin master
 
-### `npm run eject`
+//KAKO LISTAMO SVE GRANE
+git branch
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+//KAKO MENJAMO GRANU
+git checkout naziv_grane
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+(U slucaju git checkout-a, desava se da nece nekad da radei iz razloga sto ste prethodno napravili izmene u kodu i vscode nece znati sta da radi sa tim izmenama,
+pa je resenje ili da ih unstage-ujete(izbrisete) izmene, ili da ih pushujete na trenutnu granu)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+//KAKO BRISEMO GRANE 
+git branch --delete naziv_grane(nece vam biti potrebno)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+//POVRATKOM NA MASTER GRANU DOBIJAMO KOD KOJI SE NALAZI NA MASTER GRANI
+git checkout master
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Bitna stavka!!!-Prilikom imenovanja jsx i css fajlova unutar vasih foldera, imunujte ih sa prvim pocetnim slovom(npr. SlikeTima.jsx, Ohakatonu.jsx...),
+iz razloga sto je to react konvencija da komponente(jsx ili css) aplikacije budu prepoznate kao komponente, a ne kao html-tagove:
+<Ohakatonu /> --> prepoznaje kao komponentu
+<ohakatonu /> --> prepoznaje kao html-tag
