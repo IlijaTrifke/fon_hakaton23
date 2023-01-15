@@ -20,7 +20,7 @@ Kada kloniramo i setapujemo projekat, svako od nas bi trebalo da napravi folder 
 naziv_grane = naziv sekcije za koju cete pisati kod!
 
 //KAKO KREIRAMO GRANE
-git checkout -b "naziv grane"
+git checkout -b naziv grane
 
 //KAKO DODAJEMO PROMENE NA GITHUB GRANI
 git add .
