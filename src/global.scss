@@ -1,1 +1,23 @@
-// ovde cu uskoro da vam ubacim sve
+$ljubicasta: #7b2787; //Za detalje - na giveaway objavi je glow plav i  ljubicast
+$tamnoPlava: #002440; //Za pozadinu i detalje na svetloj
+$bela: #e8eff5; //Za pozadinu i detalje na tamnoj
+$svetloPlava: #24bdde; //Za detalje
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-center-gap {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  align-items: center;
+}
