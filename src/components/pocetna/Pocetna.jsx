@@ -1,4 +1,5 @@
 import React from "react";
+import "./pocetna.scss";
 
 export default function Pocetna() {
   return (
