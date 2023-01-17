@@ -49,3 +49,5 @@ Bitna stavka!!!-Prilikom imenovanja jsx i css fajlova unutar vasih foldera, imun
 iz razloga sto je to react konvencija da komponente(jsx ili css) aplikacije budu prepoznate kao komponente, a ne kao html-tagove:
 <Ohakatonu /> --> prepoznaje kao komponentu
 <ohakatonu /> --> prepoznaje kao html-tag
+
+Kada zelite da proverite vas kod koji ste kucali do sada za odredjenu sekciju, pre pokretanja aplikacije(npm start), ubacite komponentu u Home.js(primer je Pocetna.jsx, mozete je izbrisati), ne u App.js, i potrebno je da bude importovana(automatski importuje kad kucate <Pocetna/>). U App.js se nalaze dve rute, jedna za home(Home.js) stranicu a druga ruta je za prijavnu stranicu
