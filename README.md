@@ -53,3 +53,5 @@ iz razloga sto je to react konvencija da komponente(jsx ili css) aplikacije budu
 U js(jsxu) prilikom kucanja html-a, return deo moze da vrati samo jedan div ili fragment, sto znaci da treba da napravite jedan taj div koji predstavlja wrapper(kao body u htmlu) i dajte mu klasu npr. slike-tima-wrapper, footer-wrapper, u zavisnoti koju sekciju radite
 
 Kada zelite da proverite vas kod koji ste kucali do sada za odredjenu sekciju, pre pokretanja aplikacije(npm start), ubacite komponentu u Home.js(primer je Pocetna.jsx, mozete je izbrisati), ne u App.js, i potrebno je da bude importovana(automatski importuje kad kucate <Pocetna/>). U App.js se nalaze dve rute, jedna za home(Home.js) stranicu a druga ruta je za prijavnu stranicu
+
+Samo imenovanje klasa nek vazi za sve moguce elemente kako ne bi doslo do preklapanja
