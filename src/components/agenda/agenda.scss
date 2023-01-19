@@ -1,0 +1,154 @@
+@import "../../global.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.agn-section {
+  background-color: $tamnoPlava;
+  padding-bottom: 20rem;
+}
+
+.agn-timeline {
+  position: relative;
+  min-height: 150px;
+}
+
+.agn-line {
+  position: absolute;
+  z-index: 2;
+  left: calc(50% - 1px);
+  width: 2px;
+  top: -50px;
+  bottom: -50px;
+  background-image: linear-gradient(45deg, $svetloPlava, $ljubicasta);
+}
+
+.agn-line::before,
+.agn-line::after {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-color: black;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.agn-header {
+  font-family: "Orbitron", sans-serif;
+  color: $bela;
+  text-shadow: 0 0 7px $bela;
+  text-shadow: 0 0 10px $bela;
+}
+
+.agn-card {
+  font-family: "Raleway", sans-serif;
+  color: $bela;
+  margin-top: 100px;
+  margin-left: 100px;
+  width: 24rem;
+  //   height: 13rem;
+  position: relative;
+  filter: drop-shadow(0 0 10px #011b30);
+}
+
+.agn-bead {
+  content: "";
+  position: absolute;
+  inset: 0;
+  top: 50%;
+  left: -5rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100px;
+  background-color: $tamnoPlava;
+}
+
+.agn-bead::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  padding: 2.1px;
+  background: linear-gradient(45deg, $svetloPlava, $ljubicasta);
+  -webkit-mask: linear-gradient(rgb(255, 255, 255) 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.agn-head {
+  background-color: $tamnoPlava;
+  width: 60%;
+  height: 18%;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 12px 12px 0 0;
+  padding: 0.5rem 1rem 0rem 1rem;
+  text-align: center;
+}
+.agn-pseudo {
+  background-color: transparent;
+  width: 10%;
+  height: calc(18% - (2rem) * 0.18);
+  border-radius: 12px;
+  position: absolute;
+  top: 0;
+  left: 60%;
+  box-shadow: -8px 6px 0 -3px $tamnoPlava;
+}
+
+.agn-text {
+  background-color: $tamnoPlava;
+  width: 100%;
+  height: 82%;
+  padding-top: 1rem;
+  padding-bottom: 0.2rem;
+  border-radius: 0 12px 12px 12px;
+}
+
+.agn-date {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: left;
+  padding: 0.3rem 0rem 0.3rem 1rem;
+  margin: 0rem 1rem 1rem 1rem;
+  position: relative;
+}
+
+.agn-date::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 1.5px;
+  background: linear-gradient(45deg, $svetloPlava, $ljubicasta);
+  -webkit-mask: linear-gradient(rgb(255, 255, 255) 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.agn-descr {
+  position: relative;
+  margin: 1rem 1rem 1rem 1rem;
+  padding: 0.5rem;
+  text-align: left;
+}
+.agn-descr::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 1.5px;
+  background: linear-gradient(45deg, $svetloPlava, $ljubicasta);
+  -webkit-mask: linear-gradient(rgb(255, 255, 255) 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
