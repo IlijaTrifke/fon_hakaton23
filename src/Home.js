@@ -1,8 +1,10 @@
 import React from "react";
-import Pocetna from "./components/pocetna/Pocetna";
+// import Iskustva from "./components/iskustva/Iskustva";
+import Partneri from "./components/partneri/Partneri";
 
 const Home = () => {
-  return <Pocetna />;
+  // return <Iskustva />;
+  return <Partneri />;
 };
 
 export default Home;
