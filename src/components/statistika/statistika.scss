@@ -1,0 +1,44 @@
+@import "../../global.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  border-radius: 20px;
+  background: linear-gradient(to right, #003560, $tamnoPlava);
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem;
+}
+
+.stk-numbers {
+  font-size: 1.5rem;
+  padding: 1.5rem;
+  color: white;
+}
+
+.stk-text {
+  display: flexbox;
+  align-self: center;
+  flex-wrap: wrap;
+  color: white;
+  padding: 1.5rem;
+}
+
+.stk-vertical-line {
+  display: inline-block;
+  border-left: 0.8px solid $svetloPlava;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
