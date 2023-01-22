@@ -9,15 +9,17 @@ const Faq = () => {
       <div className="faq-box">
         <div className="faq-horizontal">
           <p>Ko se može prijaviti</p>
-          <div className="faq-plus">+</div>
+          <h1 className="faq-plus">+</h1>
         </div>
 
-        <p>
+        <p className="faq-longtext">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed enim,
           nihil aut tenetur ipsam, commodi aliquam suscipit corporis, quibusdam
           labore expedita quis. Eius, libero tempore delectus laboriosam
           consequuntur exercitationem veniam.
         </p>
+
+        <span class="faq-horizontal-line"></span>
       </div>
     </div>
   );
