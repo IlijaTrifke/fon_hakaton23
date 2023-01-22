@@ -8,7 +8,7 @@ const Agenda = () => {
 
   const seeRef = () => {
     console.log(timlineRef.current); // <h1 ></h1>
-    if (timlineRef.current != undefined) {
+    if (timlineRef.current !== undefined) {
       var sections = timlineRef.current.querySelectorAll(".agn-card");
       var timeline = timlineRef.current.querySelector(".agn-timeline");
       var line = timlineRef.current.querySelector(".agn-line");
@@ -19,15 +19,15 @@ const Agenda = () => {
       let prevScrollY = window.scrollY;
       let up, down;
       let full = false;
-      let set = 0;
-      const targetY = window.innerHeight * 0.8;
+      let set = 50;
+      const targetY = window.innerHeight * 0.9;
 
       function scrollHandler(e) {
         const { scrollY } = window;
         up = scrollY < prevScrollY;
         down = !up;
         const timelineRect = timeline.getBoundingClientRect();
-        const lineRect = line.getBoundingClientRect(); // const lineHeight = lineRect.bottom - lineRect.top;
+        //const lineRect = line.getBoundingClientRect(); // const lineHeight = lineRect.bottom - lineRect.top;
 
         const dist = targetY - timelineRect.top;
         console.log(dist);
@@ -39,7 +39,7 @@ const Agenda = () => {
 
         if (dist > timeline.offsetHeight + 50 && !full) {
           full = true;
-          line.style.bottom = `-50px`;
+          line.style.bottom = `-60px`;
         }
 
         sections.forEach((item) => {
