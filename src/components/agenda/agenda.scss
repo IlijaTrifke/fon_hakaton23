@@ -13,6 +13,8 @@
   flex-direction: column;
   justify-items: center;
   align-items: center;
+  overflow: hidden;
+  scroll-behavior: smooth;
 }
 
 .agn-timeline {
@@ -68,6 +70,7 @@
   position: relative;
   z-index: 1;
   filter: drop-shadow(0 0 10px #011b30);
+  visibility: hidden;
 }
 .agn-bead {
   display: block;
@@ -188,6 +191,7 @@
 .show-me:nth-child(n) {
   transform: none;
   opacity: 1;
+  visibility: visible;
 }
 
 .agn-content {

@@ -35,7 +35,7 @@ const Agenda = () => {
         const timelineRect = timeline.getBoundingClientRect();
         //const lineRect = line.getBoundingClientRect(); // const lineHeight = lineRect.bottom - lineRect.top;
 
-        const dist = targetY - timelineRect.top;
+        const dist = targetY - timelineRect.top + 50;
         console.log(dist);
 
         if (down && !full) {
