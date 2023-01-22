@@ -1,8 +1,14 @@
 import React from "react";
 import "./agenda.scss";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 const Agenda = () => {
+  const scrollRef = useRef();
+  const isInView = useInView(scrollRef);
+  useEffect(() => {
+    if (isInView) seeRef();
+  }, [isInView]);
   var timlineRef = useRef();
   console.log(timlineRef.current);
 
@@ -20,7 +26,7 @@ const Agenda = () => {
       let up, down;
       let full = false;
       let set = 50;
-      const targetY = window.innerHeight * 0.9;
+      const targetY = window.innerHeight * 0.8;
 
       function scrollHandler(e) {
         const { scrollY } = window;
@@ -37,9 +43,9 @@ const Agenda = () => {
           line.style.bottom = `calc(100% - ${set}px)`;
         }
 
-        if (dist > timeline.offsetHeight + 50 && !full) {
+        if (dist > timeline.offsetHeight - 70 && !full) {
           full = true;
-          line.style.bottom = `-60px`;
+          line.style.bottom = `70px`;
         }
 
         sections.forEach((item) => {
@@ -62,8 +68,9 @@ const Agenda = () => {
 
   return (
     <div className="agn-section" ref={timlineRef}>
-      <button onClick={() => seeRef()}>Click</button>
-      <h1 className="agn-header">Agenda</h1>
+      <h1 className="agn-header" ref={scrollRef}>
+        Agenda
+      </h1>
       <div className="agn-timeline">
         <div className="agn-line"></div>
 
