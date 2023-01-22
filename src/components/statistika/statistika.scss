@@ -6,26 +6,34 @@
   padding: 0;
 }
 
-li {
-  border-radius: 20px;
-  background: linear-gradient(to right, #003560, $tamnoPlava);
+.stk-section {
+  background-color: $tamnoPlava;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  padding: 5rem;
 }
 
-ul {
+.stk-section ul {
   display: flex;
   justify-content: center;
 }
 
-li {
+.stk-section li {
   display: flex;
   justify-content: center;
   margin: 0.5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 20px;
+  background: linear-gradient(to right, #003560, $tamnoPlava);
 }
 
 .stk-numbers {
   font-size: 1.5rem;
   padding: 1.5rem;
   color: white;
+  width: 6rem;
 }
 
 .stk-text {
@@ -41,4 +49,27 @@ li {
   border-left: 0.8px solid $svetloPlava;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 900px) {
+  .stk-section ul {
+    flex-direction: column;
+  }
+
+  .stk-section {
+    background-color: $tamnoPlava;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .stk-text {
+    display: flex;
+    align-self: center;
+    flex-wrap: wrap;
+    color: white;
+    padding: 0.5rem;
+  }
 }

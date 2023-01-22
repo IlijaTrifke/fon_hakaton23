@@ -4,25 +4,46 @@ import "./statistika.scss";
 
 const Statistika = () => {
   return (
-    <div className="stk-center">
+    <div className="stk-section">
       <ul>
         <li>
           <p className="stk-numbers">
-            <CountUp start={0} end={100} duration={2} delay={0} /> +
+            <CountUp
+              start={0}
+              end={100}
+              duration={2}
+              delay={0}
+              suffix="+"
+              useEasing="yes"
+            />
           </p>
           <span class="stk-vertical-line"></span>
           <p className="stk-text">Lorem ipsum dolor</p>
         </li>
         <li>
           <p className="stk-numbers">
-            <CountUp start={0} end={100} duration={2} delay={0} /> +
+            <CountUp
+              start={0}
+              end={100}
+              duration={2}
+              delay={0}
+              suffix="+"
+              useEasing="yes"
+            />
           </p>
           <span class="stk-vertical-line"></span>
           <p className="stk-text">Lorem ipsum dolor</p>
         </li>
         <li>
           <p className="stk-numbers">
-            <CountUp start={0} end={100} duration={2} delay={0} /> +
+            <CountUp
+              start={0}
+              end={100}
+              duration={2}
+              delay={0}
+              suffix="+"
+              useEasing="yes"
+            />
           </p>
           <span class="stk-vertical-line"></span>
           <p className="stk-text">Lorem ipsum dolor</p>
