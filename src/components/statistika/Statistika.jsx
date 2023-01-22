@@ -4,7 +4,7 @@ import "./statistika.scss";
 
 const Statistika = () => {
   return (
-    <div className="stk-center">
+    <div className="stk-section">
       <ul>
         <li>
           <p className="stk-numbers">
