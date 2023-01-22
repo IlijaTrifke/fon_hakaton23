@@ -1,0 +1,65 @@
+@import "../../global.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.faq-naslov {
+  color: white;
+  font-family: "Orbitron", sans-serif;
+}
+
+.faq-section {
+  background-color: $tamnoPlava;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  padding: 2rem;
+  align-items: center;
+}
+
+.faq-box {
+  border-radius: 15px;
+  background-color: $tamnoPlava;
+  width: 40%;
+  align-self: center;
+  margin: 2rem;
+  padding: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.faq-horizontal p {
+  color: white;
+  font-family: "Raleway", sans-serif;
+}
+
+.faq-horizontal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-plus {
+  color: white;
+  font-size: 2rem;
+  align-items: center;
+}
+
+.faq-section p {
+  text-align: left;
+}
+
+.faq-longtext {
+  color: white;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.8rem;
+}
+
+.faq-horizontal-line {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  border-bottom: 1px solid $ljubicasta;
+}
