@@ -1,0 +1,193 @@
+@import "../../global.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.ng-nagrade {
+  background-color: $tamnoPlava;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 0;
+}
+
+.ng-text h1 {
+  font-size: 3rem;
+  font-weight: lighter;
+  text-transform: uppercase;
+  color: $bela;
+}
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+}
+
+.ng-rectangle2 {
+  height: 8rem;
+  width: 15rem;
+  display: flex;
+  align-items: center;
+  background-color: #555;
+}
+.ng-rectangle1 {
+  height: 10rem;
+  width: 15rem;
+  display: flex;
+  background-color: #555;
+}
+
+.ng-rectangle1 .ng-rectangletext {
+  padding-top: 10%;
+}
+.ng-rectangle3 {
+  height: 6rem;
+  width: 15rem;
+  display: flex;
+  align-items: center;
+  background-color: #555;
+}
+
+.ng-rectangletext {
+  display: flex;
+  padding-left: 35%;
+  font-size: 4rem;
+  color: $bela;
+}
+
+.ng-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 50%;
+}
+
+.ng-stands {
+  padding-top: 5rem;
+  padding-left: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  max-width: 50%;
+  overflow: hidden;
+}
+
+.ng-circle {
+  display: flex;
+  align-items: center;
+  background: black;
+  border-radius: 100%;
+  height: 12rem;
+  width: 12rem;
+  margin: 0;
+  background: radial-gradient(circle at 4rem 4rem, #5cabff, #000);
+  animation: float 6s ease-in-out infinite;
+}
+
+.ng-circletext {
+  display: flex;
+  text-align: center;
+  padding: 1rem;
+  font-size: 3rem;
+  color: $bela;
+}
+
+.ng-pole {
+  max-width: 33%;
+}
+@media (max-width: 1100px) {
+  .ng-text h1 {
+    font-size: 2rem;
+  }
+
+  .ng-circle {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  .ng-circletext {
+    font-size: 2rem;
+  }
+
+  .ng-rectangle1 {
+    width: 7.5rem;
+    height: 5rem;
+  }
+  .ng-rectangle2 {
+    width: 7.5rem;
+    height: 4rem;
+  }
+  .ng-rectangle3 {
+    width: 7.5rem;
+    height: 3rem;
+  }
+
+  .ng-rectangle1 .ng-rectangletext {
+    padding-top: 0;
+  }
+}
+@media (max-width: 680px) {
+  .ng-nagrade {
+    flex-direction: column;
+
+    .ng-text h1 {
+      font-size: 1.5rem;
+    }
+  }
+  .ng-stands {
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .ng-rectangle1 {
+    width: 6rem;
+    height: 5rem;
+  }
+  .ng-rectangle2 {
+    width: 6rem;
+    height: 4rem;
+  }
+  .ng-rectangle3 {
+    width: 6rem;
+    height: 3rem;
+  }
+  .ng-rectangle1 .ng-rectangletext {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .ng-nagrade {
+    flex-direction: column;
+  }
+  .ng-stands {
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .ng-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .ng-circle {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+
+  .ng-circletext {
+    font-size: 1.5rem;
+  }
+}
