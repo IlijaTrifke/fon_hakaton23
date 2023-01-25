@@ -14,6 +14,14 @@ const Faq = () => {
     }
   };
 
+  const toggleAnimLongext = () => {
+    if (plus === true) {
+      return "faq-longtext1 faq-text-movingTopToBottom";
+    } else {
+      return "faq-longtext2 faq-text-movingBottomToTop";
+    }
+  };
+
   const toggleState = () => {
     if (plus === false) {
       setPlus(true);
@@ -39,7 +47,7 @@ const Faq = () => {
           </p>
         </div>
 
-        <p className="faq-longtext">
+        <p className={toggleAnimLongext()}>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed enim,
           nihil aut tenetur ipsam, commodi aliquam suscipit corporis, quibusdam
           labore expedita quis. Eius, libero tempore delectus laboriosam
@@ -60,7 +68,7 @@ const Faq = () => {
           </p>
         </div>
 
-        <p className="faq-longtext">
+        <p className={toggleAnimLongext()}>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed enim,
           nihil aut tenetur ipsam, commodi aliquam suscipit corporis, quibusdam
           labore expedita quis. Eius, libero tempore delectus laboriosam

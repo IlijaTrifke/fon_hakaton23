@@ -16,7 +16,7 @@
   display: flex;
   flex-direction: column;
   justify-items: center;
-  padding: 2rem;
+  padding-top: 2rem;
   align-items: center;
 }
 
@@ -46,10 +46,17 @@
   text-align: left;
 }
 
-.faq-longtext {
+.faq-longtext1 {
   color: white;
   font-family: "Raleway", sans-serif;
   font-size: 0.8rem;
+}
+
+.faq-longtext2 {
+  color: white;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.8rem;
+  display: none;
 }
 
 .faq-horizontal-line {
@@ -71,11 +78,13 @@
 .faq-plus-animation1 {
   animation-name: animplus1;
   animation-duration: 0.3s;
+  animation-fill-mode: forwards;
 }
 
 .faq-plus-animation2 {
   animation-name: animplus2;
   animation-duration: 0.3s;
+  animation-fill-mode: forwards;
 }
 
 @keyframes animplus1 {
@@ -95,5 +104,32 @@
 
   100% {
     transform: rotate(0deg);
+  }
+}
+
+.faq-text-movingTopToBottom {
+  animation-name: movingTopToBottom;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.faq-text-movingBottomToTop {
+  animation-name: movingBottomToTop;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes movingTopToBottom {
+  0% {
+    transform: translateY(-2rem);
+  }
+}
+
+@keyframes movingBottomToTop {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-2rem);
   }
 }
