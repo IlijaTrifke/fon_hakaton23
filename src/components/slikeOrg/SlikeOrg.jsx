@@ -2,7 +2,7 @@ import React from "react";
 import "./slikeOrg.scss";
 import slika from "./god.png";
 
-export const SlikeOrg = () => {
+const SlikeOrg = () => {
   return (
     <div className="org-section">
       <h2 className="org-header">Organizacioni tim</h2>
@@ -23,3 +23,5 @@ export const SlikeOrg = () => {
     </div>
   );
 };
+
+export default SlikeOrg;
