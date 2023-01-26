@@ -30,20 +30,15 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.faq-horizontal p {
+.faq-text {
   color: white;
   font-family: "Raleway", sans-serif;
+  font-size: 1rem;
 }
 
 .faq-horizontal {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-}
-
-.faq-plus {
-  color: white;
-  font-size: 2rem;
   align-items: center;
 }
 
@@ -62,4 +57,43 @@
   display: inline-block;
   width: 100%;
   border-bottom: 1px solid $ljubicasta;
+}
+
+.faq-plus {
+  color: white;
+  font-size: 2rem;
+  align-items: center;
+  padding-bottom: 0.5rem;
+  color: $ljubicasta;
+  cursor: default;
+}
+
+.faq-plus-animation1 {
+  animation-name: animplus1;
+  animation-duration: 0.3s;
+}
+
+.faq-plus-animation2 {
+  animation-name: animplus2;
+  animation-duration: 0.3s;
+}
+
+@keyframes animplus1 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes animplus2 {
+  0% {
+    transform: rotate(45deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
 }
