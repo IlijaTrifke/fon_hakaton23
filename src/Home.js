@@ -11,8 +11,6 @@ import SlikeOrg from "./components/slikeOrg/SlikeOrg";
 const Home = () => {
   return (
     <>
-      <SlikeOrg />
-      <Agenda />
       <Faq />
     </>
   );

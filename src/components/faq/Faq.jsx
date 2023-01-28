@@ -45,7 +45,7 @@ const Faq = () => {
 
       <div className="faq-box">
         {dataFaq.map((item, i) => (
-          <div key={i}>
+          <div className="faq-content" key={i}>
             <div className="faq-horizontal">
               <p className="faq-text">{item.question}</p>
               <p
@@ -65,15 +65,12 @@ const Faq = () => {
 
             <p
               className={
-                selected === i
-                  ? "faq-longtext1 faq-text-movingTopToBottom"
-                  : "faq-longtext2 faq-text-movingBottomToTop"
+                selected === i ? "faq-text-moving show" : "faq-text-moving"
               }
             >
               {item.answer}
             </p>
-
-            <span class="faq-horizontal-line"></span>
+            {/* <span class="faq-horizontal-line" /> */}
           </div>
         ))}
       </div>

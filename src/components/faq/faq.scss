@@ -7,7 +7,7 @@
 }
 
 .faq-naslov {
-  color: white;
+  color: $bela;
   font-family: "Orbitron", sans-serif;
 }
 
@@ -31,7 +31,7 @@
 }
 
 .faq-text {
-  color: white;
+  color: $bela;
   font-family: "Raleway", sans-serif;
   font-size: 1rem;
 }
@@ -42,9 +42,9 @@
   align-items: center;
 }
 
-.faq-section p {
-  text-align: left;
-}
+// .faq-section p {
+//   text-align: left;
+// }
 
 .faq-longtext1 {
   color: white;
@@ -60,19 +60,24 @@
 }
 
 .faq-horizontal-line {
-  position: relative;
   display: inline-block;
   width: 100%;
-  border-bottom: 1px solid $ljubicasta;
+  height: 0.1rem;
+  background-image: linear-gradient(
+    to right,
+    $svetloPlava,
+    $ljubicasta,
+    $svetloPlava,
+    #24bcde50
+  );
 }
 
 .faq-plus {
-  color: white;
   font-size: 2rem;
   align-items: center;
   padding-bottom: 0.5rem;
   color: $ljubicasta;
-  cursor: grab;
+  cursor: pointer;
 }
 
 .faq-plus-animation1 {
@@ -111,32 +116,62 @@
   display: none;
 }
 
-.faq-text-movingTopToBottom {
-  animation-name: movingTopToBottom;
-  animation-duration: 0.3s;
-  animation-fill-mode: forwards;
+.faq-text-moving {
+  overflow: hidden;
+  max-height: 0;
+  transition: all 0.3s cubic-bezier(0, 1, 0, 1);
+  border-bottom: 2px solid;
+  border-image: linear-gradient(
+    to right,
+    $svetloPlava,
+    $ljubicasta,
+    $svetloPlava,
+    #24bcde50
+  );
+  border-image-slice: 1;
+  width: 100%;
 }
 
-.faq-text-movingBottomToTop {
-  animation-name: movingBottomToTop;
-  animation-duration: 0.3s;
-  animation-fill-mode: forwards;
+.show {
+  height: auto;
+  max-height: 9999px;
+  transition: all 0.3s cubic-bezier(1, 0, 1, 0);
 }
 
-@keyframes movingTopToBottom {
-  0% {
-    transform: translateY(-2rem);
-  }
+// @keyframes movingTopToBottom {
+//   0% {
+//     transform: translateY(-2rem);
+//     opacity: 0;
+//   }
+//   100% {
+//     transform: translateY(0);
+//     opacity: 1;
+//   }
+// }
+
+// @keyframes movingBottomToTop {
+//   0% {
+//     opacity: 1;
+//     transform: translateY(0);
+//   }
+
+//   100% {
+//     opacity: 0;
+//     transform: scale(-2rem);
+//   }
+// }
+
+.faq-plus,
+.faq-text,
+.faq-text-moving,
+.faq-horizontal-line,
+.faq-naslov {
+  user-select: none;
 }
 
-@keyframes movingBottomToTop {
-  0% {
-    opacity: 0;
-    transform: scale(0.001);
-  }
-
-  100% {
-    opacity: 0;
-    transform: scale(0.001);
-  }
+.faq-plus-animation2::selection {
+  color: none;
+  background: none;
 }
+
+//da se ne bi pojavljivao plavi selekt i blicanje cursora
