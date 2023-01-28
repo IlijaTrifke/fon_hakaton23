@@ -9,12 +9,7 @@ import Nagrade from "./components/nagrade/Nagrade";
 const Home = () => {
   return (
     <>
-      <Pocetna />;
-      <Nagrade />;
-      <Agenda />;
-      <Statistika />;
       <FAQ />;
-      <Partneri />;
     </>
   );
 };
