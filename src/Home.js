@@ -11,7 +11,7 @@ import SlikeOrg from "./components/slikeOrg/SlikeOrg";
 const Home = () => {
   return (
     <>
-      <Faq />
+      <Nagrade />
     </>
   );
 };
