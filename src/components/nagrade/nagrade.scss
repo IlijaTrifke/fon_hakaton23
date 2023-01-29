@@ -15,6 +15,7 @@
 }
 
 .ng-text h1 {
+  font-family: Raleway;
   font-size: 3rem;
   font-weight: lighter;
   text-transform: uppercase;
@@ -72,6 +73,7 @@
   justify-content: center;
   align-items: center;
   max-width: 50%;
+  padding-left: 1rem;
 }
 
 .ng-stands {
@@ -106,7 +108,14 @@
 
 .ng-pole {
   max-width: 33%;
+  max-height: 500px;
 }
+
+.ng-stand {
+  width: 15rem;
+  height: 15rem;
+}
+
 @media (max-width: 1100px) {
   .ng-text h1 {
     font-size: 2rem;
@@ -178,6 +187,12 @@
     padding-left: 1rem;
     padding-right: 1rem;
   }
+
+  .ng-text {
+    max-width: 75%;
+    padding-top: 1rem;
+  }
+
   .ng-text h1 {
     font-size: 1.5rem;
   }
@@ -190,4 +205,25 @@
   .ng-circletext {
     font-size: 1.5rem;
   }
+}
+
+.face {
+  position: relative;
+  transform-origin: 0 0;
+  height: 16em;
+  width: 16em;
+}
+.left {
+  background-color: black;
+  transform: rotate(90deg) skewX(180deg) scaleY(0.864);
+}
+.right {
+  background-color: black;
+  transform: rotate(-30deg) skewX(-30deg) scaleX(0.4) scaleY(0.864);
+  bottom: 16em;
+}
+.top {
+  background-color: black;
+  transform: rotate(180deg) skew(-60deg) scaleY(0.2) scaleX(0.85);
+  bottom: 32em;
 }

@@ -13,8 +13,11 @@ const Nagrade = () => {
           <div class="ng-circle">
             <p class="ng-circletext">40.000</p>
           </div>
-          <div class="ng-rectangle2">
-            <p class="ng-rectangletext">2</p>
+
+          <div class="ng-stand">
+            <div class="face left"></div>
+            <div class="face right"></div>
+            <div class="face top"></div>
           </div>
         </div>
 
