@@ -7,25 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import IskustvoSlider from "./IskustvaSlider.js";
 
-// import Slika from "./assets/slika.png";
-
-// import Linija from "./assets/linija.png";
 import photo from "./assets/photo.jpg";
-// import iskustvaFoto1 from "./assets/iskustvaFoto/1.png";
-// import medijski2 from "./assets/medijski/2.png";
-// import medijski3 from "./assets/medijski/3.png";
-// import medijski4 from "./assets/medijski/4.png";
-// import medijski5 from "./assets/medijski/5.png";
-// import medijski6 from "./assets/medijski/6.png";
-// import medijski7 from "./assets/medijski/7.png";
-// import medijski8 from "./assets/medijski/8.png";
-// import medijski9 from "./assets/medijski/9.png";
-// import medijski10 from "./assets/medijski/10.png";
-// import medijski11 from "./assets/medijski/11.png";
-// import medijski12 from "./assets/medijski/12.png";
-// import medijski13 from "./assets/medijski/13.png";
-// import medijski14 from "./assets/medijski/14.png";
-// import medijski15 from "./assets/medijski/15.jpeg";
 import iskustvaFoto from "./assets/fonis.jpg";
 
 const Iskustva = (props) => {
