@@ -2,15 +2,15 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  background-color: $tamnoPlava;
+  box-sizing: border-box; //prebacio back color u hakaton section
 }
 
 .hakaton-section {
-  /* background-color: #002440; */
-  padding-bottom: 0rem;
+  background-color: $tamnoPlava;
   justify-items: center;
   align-items: center;
+  height: 40rem; //mora da se roditelj precizira kad su deca position:abolute, jer onda deca ne zauzimaju na taj nacin nikakav prostor ako su absolute
+  position: relative; //ovo da se namesti da se deca u odnosu na njega pomeraju
 }
 
 .hakaton-title {
@@ -34,7 +34,7 @@
 }
 
 .card1 {
-  margin-left: 15rem;
+  margin-left: 15rem; //probaj redom da podesavas prozore, jedan po jedan, i umesto margina idi ono top i left
   margin-top: 2.9rem;
   width: 40%;
 }
@@ -77,11 +77,11 @@
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: 10%;
+  border-radius: 1rem; //za border radius koristi px ili rem, % ne radi lepo
   padding: 2.1px;
   background: linear-gradient(3deg, $ljubicasta, $svetloPlava);
   -webkit-mask: linear-gradient(rgb(255, 255, 255) 0 0) content-box,
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
-  mask-composite: exclude;
+  // mask-composite: exclude; mislim da ovo ne treba
 }
