@@ -1,0 +1,335 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.slike-tima-wrapper {
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+}
+
+.navbar-st {
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+  padding: 2% 0;
+}
+
+.navbar-st .box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7vw;
+  height: 4vw;
+  font-weight: 300;
+  font-family: "Manrope";
+  font-size: 1.5vw;
+  cursor: pointer;
+  border-radius: 1.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.inactiveS {
+  color: #00ffa3;
+}
+.inactiveS:hover {
+  background-color: #00ffa3;
+  color: #000000;
+  opacity: 0.3;
+}
+
+.activeS {
+  background-color: #00ffa3;
+  color: #000000 !important;
+}
+
+.slike-tima-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 3%;
+}
+
+.slike-tima-container .slike-tima-levo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 3%;
+  position: relative;
+}
+
+.slika-bordera {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24vw;
+}
+.slider {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 52;
+  margin: 10%;
+}
+
+.image {
+  height: 24vw;
+  width: 17.8vw;
+  object-fit: cover;
+}
+
+.left-arrow {
+  position: absolute;
+  top: 30%;
+  right: 100%;
+  width: 7vw;
+  cursor: pointer;
+  z-index: 10;
+}
+.right-arrow {
+  position: absolute;
+  top: 30%;
+  left: 100%;
+  width: 7vw;
+  cursor: pointer;
+  z-index: 10;
+}
+
+@keyframes animScale {
+  0% {
+    transform: scale(1.5);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+@keyframes animScale1 {
+  0% {
+    transform: scale(1.5);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+.inactiveAR {
+  animation-name: animScale;
+  animation-duration: 0.3s;
+}
+.activeAR {
+  animation-name: animScale1;
+  animation-duration: 0.3s;
+}
+.inactiveARL {
+  animation-name: animScale;
+  animation-duration: 0.3s;
+}
+.activeARL {
+  animation-name: animScale1;
+  animation-duration: 0.3s;
+}
+
+.right-arrow,
+.left-arrow {
+  transition: all 0.2s ease-in-out;
+}
+@media screen and (min-width: 560px) {
+  .right-arrow:hover,
+  .left-arrow:hover {
+    transform: scale(1.5);
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.slide {
+  display: flex;
+  opacity: 0;
+  transition: 1s ease;
+}
+
+.slide-active {
+  display: flex;
+  opacity: 1;
+  transition-duration: 0.5s;
+  transform: scale(1.08);
+}
+
+.slike-tima-levo .opis-slike {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Manrope";
+  color: #ffffff;
+  padding-top: 5%;
+  height: 7.5vw;
+  width: 20vw;
+  white-space: nowrap;
+}
+
+.opis-slike .ime-koordinatora {
+  font-weight: 400;
+  font-size: 2.5vw;
+}
+.opis-slike .funkcija-koordinatora {
+  font-weight: 200;
+  font-size: 1.3vw;
+}
+
+.slike-tima-container .slike-tima-desno {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slike-tima-desno .slika-roditelj {
+  position: relative;
+}
+
+.slika-grupna {
+  object-fit: cover;
+  width: 43.8vw;
+  height: 24.6vw;
+}
+
+.slika-bordera1 {
+  width: 52vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.slike-tima-desno .opis-tima {
+  font-weight: 200;
+  font-family: "Manrope";
+  padding-top: 5%;
+  padding-left: 10%;
+  color: #ffffff;
+  font-size: 1.3vw;
+  height: 10vw;
+  width: 55vw;
+  text-align: start;
+}
+@media screen and (min-width: 1920px) {
+}
+@media screen and (min-width: 1200px) {
+}
+@media screen and (min-width: 960px) {
+}
+@media screen and (min-width: 620px) {
+}
+@media screen and (max-width: 560px) {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+  .slike-tima-container {
+    flex-direction: column;
+  }
+  .slike-tima-levo .opis-slike {
+    height: 12vw;
+    padding: 0;
+  }
+  .slike-tima-container .slike-tima-levo {
+    padding-bottom: 0%;
+  }
+
+  .slike-tima-container .slike-tima-desno {
+    padding: 7% 0;
+  }
+
+  .navbar-st {
+    padding: 1% 0;
+    margin-bottom: 5%;
+  }
+  .navbar-st .box {
+    width: 13vw;
+    height: 9vw;
+    font-size: 3vw;
+    border-radius: 1rem;
+  }
+
+  .slika-bordera {
+    width: 50vw;
+  }
+
+  .image {
+    height: 50vw;
+    width: 37vw;
+  }
+
+  .left-arrow {
+    width: 15vw;
+  }
+  .right-arrow {
+    width: 15vw;
+  }
+
+  @keyframes animScale {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes animScale1 {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .opis-slike .ime-koordinatora {
+    font-size: 6vw;
+  }
+  .opis-slike .funkcija-koordinatora {
+    font-size: 3vw;
+  }
+
+  .slika-roditelj .slika-grupna {
+    width: 75vw;
+    height: 42vw;
+  }
+
+  .slika-roditelj .slika-bordera1 {
+    width: 90vw;
+  }
+
+  .slike-tima-desno .opis-tima {
+    font-weight: 200;
+    font-family: "Manrope";
+    padding-left: 0%;
+    color: #ffffff;
+    font-size: 3vw;
+    width: 90vw;
+    text-align: center;
+    height: 20vw;
+  }
+
+  .inactiveS:hover {
+    background-color: transparent;
+    color: #ffffff;
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 340px) {
+}
