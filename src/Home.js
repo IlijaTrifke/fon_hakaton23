@@ -13,7 +13,6 @@ function Home() {
   return (
     <>
       <Ohakatonu />
-      <Nagrade />
     </>
   );
 }
