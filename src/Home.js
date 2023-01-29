@@ -7,13 +7,14 @@ import Partneri from "./components/partneri/Partneri";
 import Nagrade from "./components/nagrade/Nagrade";
 import Navbar from "./components/navbar/Navbar";
 import SlikeOrg from "./components/slikeOrg/SlikeOrg";
+import Ohakatonu from "./components/o-hakatonu/Ohakatonu";
 
-const Home = () => {
+function Home() {
   return (
     <>
-      <Faq />
+      <Ohakatonu />
     </>
   );
-};
+}
 
 export default Home;
