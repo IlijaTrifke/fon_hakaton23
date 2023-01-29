@@ -1,0 +1,87 @@
+@import "../../global.scss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: $tamnoPlava;
+}
+
+.hakaton-section {
+  /* background-color: #002440; */
+  padding-bottom: 0rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.hakaton-title {
+  font-family: "Orbitron", sans-serif;
+  color: $bela;
+  text-shadow: 0 0 7px $bela;
+  text-shadow: 0 0 10px $bela;
+  text-align: center;
+}
+
+.hakaton-card {
+  font-family: "Raleway", sans-serif;
+  color: $bela;
+  border-radius: 10px 10px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  height: 13rem;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.card1 {
+  margin-left: 15rem;
+  margin-top: 2.9rem;
+  width: 40%;
+}
+
+.card2 {
+  margin-left: 52rem;
+  margin-top: 2.9rem;
+  width: 19%;
+}
+
+.card3 {
+  margin-left: 35rem;
+  margin-top: 15rem;
+  width: 30%;
+  opacity: 0.3;
+}
+
+.hakaton-header {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  margin-right: 1rem;
+}
+
+.icons {
+  width: 3rem;
+}
+
+.hakaton-descr {
+  width: 100%;
+  height: 82%;
+  border-radius: 0 0 10px 10px;
+  position: absolute;
+  padding: 0.5rem;
+  text-align: left;
+  opacity: 1;
+}
+
+.hakaton-bead1::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 10%;
+  padding: 2.1px;
+  background: linear-gradient(3deg, $ljubicasta, $svetloPlava);
+  -webkit-mask: linear-gradient(rgb(255, 255, 255) 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
