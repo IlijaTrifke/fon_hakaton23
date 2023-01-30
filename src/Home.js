@@ -7,11 +7,12 @@ import Partneri from "./components/partneri/Partneri";
 import Nagrade from "./components/nagrade/Nagrade";
 import Navbar from "./components/navbar/Navbar";
 import SlikeOrg from "./components/slikeOrg/SlikeOrg";
+import Prijava from "./components/prijava/Prijava";
 
 const Home = () => {
   return (
     <>
-      <Nagrade />
+      <Prijava />
     </>
   );
 };
