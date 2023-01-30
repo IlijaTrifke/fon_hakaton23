@@ -1,8 +1,8 @@
 import React from "react";
-import Pocetna from "./components/pocetna/Pocetna";
+import Iskustva from "./components/iskustva/Iskustva";
 
 const Home = () => {
-  return <Pocetna />;
+  return <Iskustva />;
 };
 
 export default Home;

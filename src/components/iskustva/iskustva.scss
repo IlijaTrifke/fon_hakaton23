@@ -1,0 +1,88 @@
+@import "../../global.scss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  background-color: #0d2447;
+}
+.title {
+  text-align: center;
+}
+.top {
+  margin-top: 1%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.top-left-box {
+  width: 12rem;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  border-style: solid;
+}
+.top-left-box-name {
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+.top-left-box-hr {
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+.top-right-box {
+  width: 12rem;
+  height: 15rem;
+  text-align: center;
+  border-style: solid;
+}
+.top-photo1 {
+  width: 7rem;
+  height: 8rem;
+  margin: auto;
+  justify-content: center;
+}
+.down {
+  margin-top: 7%;
+  height: 100%;
+  background-color: #181919;
+  position: relative;
+  z-index: 1;
+}
+.down h1 {
+  margin-top: 1.2%;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 3vw;
+  color: #ffffff;
+  text-align: center;
+}
+.iskustvo img {
+  z-index: -100;
+}
+
+.iskustvo {
+  z-index: -10;
+
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+
+  background: #c3b0ff;
+  box-shadow: 25px 50px 70px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+
+  /* transform: scale(1.1); */
+  margin: 0 auto;
+}
+
+.iskustvo img {
+  margin-top: 0px;
+  width: 16em;
+  height: 9em;
+  border-radius: 30px;
+}
+.iskustva {
+  margin-top: 5%;
+}
