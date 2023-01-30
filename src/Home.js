@@ -13,6 +13,7 @@ function Home() {
   return (
     <>
       <Ohakatonu />
+      <Partneri />;
     </>
   );
 }
