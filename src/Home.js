@@ -8,12 +8,14 @@ import Nagrade from "./components/nagrade/Nagrade";
 import Navbar from "./components/navbar/Navbar";
 import SlikeOrg from "./components/slikeOrg/SlikeOrg";
 import Ohakatonu from "./components/o-hakatonu/Ohakatonu";
+import Iskustva from "./components/iskustva/Iskustva";
 
 function Home() {
   return (
     <>
       <Ohakatonu />
       <Partneri />;
+      <Iskustva />;
     </>
   );
 }
