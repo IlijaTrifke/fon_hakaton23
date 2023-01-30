@@ -4,7 +4,7 @@ import "./iskustva.scss";
 const Iskustvo = (props) => {
   return (
     <div
-      className="iskustvo"
+      className="ax-iskustvo"
       style={{
         width: props.width,
         height: props.height,
