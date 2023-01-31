@@ -13,9 +13,7 @@ import Iskustva from "./components/iskustva/Iskustva";
 function Home() {
   return (
     <>
-      <Ohakatonu />
-      <Partneri />;
-      <Iskustva />;
+      <Pocetna />
     </>
   );
 }
