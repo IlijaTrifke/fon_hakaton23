@@ -1,2 +1,116 @@
 @import "../../global.scss";
 
+.pocetna-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 0;
+  background-color: $tamnoPlava;
+  color: $bela;
+}
+
+.pocetna-logo {
+  width: 19rem;
+}
+
+.pocetna-motto {
+  font-family: Orbitron;
+  word-spacing: 2vw;
+  text-align: center;
+  text-shadow: 0 0 10px $bela;
+  margin: 2% 0;
+}
+
+.pocetna-text-box {
+  font-family: Orbitron;
+  @include flex-center();
+  width: 15rem;
+  height: 4rem;
+  background-image: linear-gradient(to right, $svetloPlava, $ljubicasta);
+  border-radius: 5rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin: 2% 0;
+  position: relative;
+}
+
+.pocetna-text-box::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: "";
+  opacity: 0;
+  background-color: $svetloPlava;
+  transition: all 0.3s ease;
+  border-radius: 5rem;
+}
+.pocetna-text-box:hover::after {
+  opacity: 1;
+}
+.pocetna-text-box span {
+  position: relative;
+  z-index: 199;
+}
+
+.pocetna-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+}
+.pocetna-arrows {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.pocetna-arrow {
+  border: solid $svetloPlava;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 10px;
+  transform: rotate(45deg) scale(1.5);
+  -webkit-transform: rotate(45deg) scale(1.8);
+  position: relative;
+  animation: arrow-load 1s infinite ease-out;
+}
+
+@keyframes arrow-load {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg);
+  }
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg);
+  }
+}
+
+.pocetna-arrow:nth-child(1) {
+  position: relative;
+  animation-delay: -0.4s;
+}
+.pocetna-arrow:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.pocetna-bottom-middle h1 {
+  font-family: Raleway;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.pocetna-arrows h1 {
+  position: absolute;
+  bottom: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.8rem;
+  text-align: center;
+  color: $svetloPlava;
+  font-family: Orbitron;
+}
