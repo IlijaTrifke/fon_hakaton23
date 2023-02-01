@@ -231,4 +231,10 @@
   .pocetna-arrows {
     cursor: none;
   }
+  .blue-ball-blur {
+    filter: blur(8rem) drop-shadow(0 0 10px $svetloPlava);
+  }
+  .purple-rectangle-blur {
+    filter: blur(5rem) drop-shadow(0 0 10px $ljubicasta);
+  }
 }
