@@ -5,50 +5,58 @@
   box-sizing: border-box;
 }
 
-.title {
+// .title {
+// * {
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+//   color: white;
+//   background-color: #0d2447;
+// }
+.ax-title {
   text-align: center;
 }
-.top {
+.ax-top {
   margin-top: 1%;
   display: flex;
   justify-content: center;
   gap: 2rem;
 }
-.top-left-box {
+.ax-top-left-box {
   width: 12rem;
   height: 15rem;
   display: flex;
   flex-direction: column;
   border-style: solid;
 }
-.top-left-box-name {
+.ax-top-left-box-name {
   text-align: center;
   padding-bottom: 0.5rem;
 }
-.top-left-box-hr {
+.ax-top-left-box-hr {
   text-align: center;
   padding-bottom: 0.5rem;
 }
-.top-right-box {
+.ax-top-right-box {
   width: 12rem;
   height: 15rem;
   text-align: center;
   border-style: solid;
 }
-.top-photo1 {
+.ax-top-photo1 {
   width: 7rem;
   height: 8rem;
   margin: auto;
   justify-content: center;
 }
-.down {
+.ax-down {
   margin-top: 7%;
   height: 100%;
   background-color: #181919;
   position: relative;
   z-index: 1;
 }
-.down h1 {
+.ax-down h1 {
   margin-top: 1.2%;
   font-family: "Manrope";
   font-style: normal;
@@ -57,11 +65,11 @@
   color: #ffffff;
   text-align: center;
 }
-.iskustvo img {
+.ax-iskustvo img {
   z-index: -100;
 }
 
-.iskustvo {
+.ax-iskustvo {
   z-index: -10;
 
   display: flex;
@@ -76,13 +84,13 @@
   margin: 0 auto;
 }
 
-.iskustvo img {
+.ax-iskustvo img {
   margin-top: 0px;
   width: 16em;
   height: 9em;
   border-radius: 30px;
 }
-.iskustva {
+.ax-iskustva {
   margin-top: 5%;
   color: white;
   background-color: #0d2447;

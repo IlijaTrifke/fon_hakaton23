@@ -116,33 +116,33 @@ const Iskustva = (props) => {
     },
   ];
   return (
-    <div className="iskustva">
-      <div className="title">
+    <div className="ax-iskustva">
+      <div className="ax-title">
         <h1>Iskustva</h1>
       </div>
-      <div className="top">
-        <div className="top-left-button">
+      <div className="ax-top">
+        <div className="ax-top-left-button">
           <button>lijevo</button>
         </div>
-        <div className="top-left-box">
-          <img src={photo} alt="photo" className="top-photo1" />
-          <div className="top-left-box-name">Nemanja Petronijevic</div>
-          <hr className="top-left-box-hr" />
+        <div className="ax-top-left-box">
+          <img src={photo} alt="photo" className="ax-top-photo1" />
+          <div className="ax-top-left-box-name">Nemanja Petronijevic</div>
+          <hr className="ax-top-left-box-hr" />
         </div>
-        <div className="top-right-box">
+        <div className="ax-top-right-box">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
             ratione unde laborum voluptas, nobis quod ducimus quae itaque ab
             earum saepe doloremque aliquid atque dolore.
           </p>
         </div>
-        <div className="top-right-button">
+        <div className="ax-top-right-button">
           <button>desno</button>
         </div>
       </div>
 
-      <div className="down">
-        <div className="iskustva-box">
+      <div className="ax-down">
+        <div className="ax-iskustva-box">
           <IskustvoSlider
             iskustva={downSlike}
             settings={iskustvaSettings}
