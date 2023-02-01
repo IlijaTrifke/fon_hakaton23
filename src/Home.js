@@ -15,6 +15,8 @@ function Home() {
   return (
     <>
       <Pocetna />
+      <Agenda />
+      <SlikeOrg />
     </>
   );
 }
