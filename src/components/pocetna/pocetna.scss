@@ -7,6 +7,9 @@
   padding: 3rem 0;
   background-color: $tamnoPlava;
   color: $bela;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
 }
 
 .pocetna-logo {
@@ -19,6 +22,8 @@
   text-align: center;
   text-shadow: 0 0 10px $bela;
   margin: 2% 0;
+  position: relative;
+  z-index: 100;
 }
 
 .pocetna-text-box {
@@ -32,6 +37,7 @@
   font-weight: 400;
   margin: 2% 0;
   position: relative;
+  cursor: pointer;
 }
 
 .pocetna-text-box::after {
@@ -64,6 +70,8 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  cursor: pointer;
+  z-index: 100;
 }
 .pocetna-arrow {
   border: solid $svetloPlava;
@@ -73,10 +81,10 @@
   transform: rotate(45deg) scale(1.5);
   -webkit-transform: rotate(45deg) scale(1.8);
   position: relative;
-  animation: arrow-load 1s infinite ease-out;
+  animation: arrowLoad 1s infinite ease-out;
 }
 
-@keyframes arrow-load {
+@keyframes arrowLoad {
   0% {
     opacity: 0;
     transform: rotate(45deg);
@@ -90,18 +98,12 @@
   }
 }
 
-.pocetna-arrow:nth-child(1) {
+.pocetna-arrow:nth-child(2) {
   position: relative;
   animation-delay: -0.4s;
 }
-.pocetna-arrow:nth-child(2) {
+.pocetna-arrow:nth-child(3) {
   animation-delay: -0.2s;
-}
-
-.pocetna-bottom-middle h1 {
-  font-family: Raleway;
-  font-size: 1.2rem;
-  font-weight: 400;
 }
 
 .pocetna-arrows h1 {
@@ -113,4 +115,56 @@
   text-align: center;
   color: $svetloPlava;
   font-family: Orbitron;
+}
+
+.pocetna-bottom-middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pocetna-middle-text {
+  font-family: Raleway;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.pocetna-timer {
+  @include flex-center();
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  border-radius: 1.5rem;
+  box-shadow: 0px 7px 20px 0px rgb(0 0 0);
+  // filter: blur(20px);
+  width: 20rem;
+  height: 5rem;
+  font-size: 2.4rem;
+  font-family: Orbitron;
+  color: $svetloPlava;
+  font-weight: 500;
+}
+
+.blue-ball-blur {
+  position: absolute;
+  top: 30%;
+  left: -20%;
+  width: 40%;
+  height: 60%;
+  background-color: $svetloPlava;
+  filter: blur(14rem);
+  border-radius: 50%;
+}
+.purple-rectangle-blur {
+  position: absolute;
+  top: 0;
+  left: 80%;
+  width: 40%;
+  height: 50%;
+  background-color: $ljubicasta;
+  filter: blur(9rem);
+  border-radius: 50%;
 }
