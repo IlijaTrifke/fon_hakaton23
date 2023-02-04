@@ -29,7 +29,7 @@ export const DataSlider = [
   {
     id: 3,
     image: require("../../images/ana.JPG"),
-    name: "Ana Vićovac",
+    name: "Lorem Ipsum",
     // title: "Koordinatorka tima za odnose sa javnošću",
     // imageGroup: require("../../images/pr.JPG"),
     description:

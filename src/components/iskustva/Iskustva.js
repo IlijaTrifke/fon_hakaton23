@@ -13,10 +13,10 @@ import iskustvaFoto from "./assets/fonis.jpg";
 // slike tima dolje
 import React, { useState, useEffect } from "react";
 // import "./slike_tima.css";
-import SLikaBordera1 from "../../images/Slike tima - okvir za sliku tima.png";
+// import SLikaBordera1 from "../../images/Slike tima - okvir za sliku tima.png";
 import StrelaLevo from "../../images/LeftArrow.png";
 import StrelaDesno from "../../images/RightArrow.png";
-import SlikaBordera from "../../images/Slike tima - okvir za koordinatora.png";
+// import SlikaBordera from "../../images/Slike tima - okvir za koordinatora.png";
 import { DataSlider } from "./DataSlider";
 // slike tima gore
 
@@ -282,9 +282,9 @@ const Iskustva = (props) => {
           ))}
         </div> */}
 
-      <div className="slike-tima-container">
-        <div className="slike-tima-levo">
-          <div className="slider">
+      <div className="ax-top-container">
+        <div className="ax-top-left">
+          <div className="ax-top-slider">
             <img
               className={toggleActiveStylesLeftArrow()}
               src={StrelaLevo}
@@ -331,7 +331,7 @@ const Iskustva = (props) => {
               >
                 {index === current && (
                   // <div className="opis-slike">
-                  <h1 className="ime-koordinatora">{data.name}</h1>
+                  <h1 className="ax-top-name">{data.name}</h1>
                   // <h3 className="funkcija-koordinatora">{data.title}</h3>
                   // </div>
                 )}
@@ -339,7 +339,7 @@ const Iskustva = (props) => {
             );
           })}
         </div>
-        <div className="slike-tima-desno">
+        <div className="ax-top-right">
           {/* <div className="slika-roditelj">
             <img
               className="slika-bordera1"
@@ -370,7 +370,7 @@ const Iskustva = (props) => {
                 key={index}
               >
                 {index === current && (
-                  <p className="opis-tima">{data.description}</p>
+                  <p className="ax-top-description">{data.description}</p>
                 )}
               </div>
             );

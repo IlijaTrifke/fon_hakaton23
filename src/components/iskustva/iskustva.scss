@@ -235,7 +235,7 @@
   color: #000000 !important;
 }
 
-.slike-tima-container {
+.ax-top-container {
   // display: flex;
   // align-items: center;
   //  justify-content: space-around;
@@ -247,7 +247,7 @@
   // background-color: seagreen;
 }
 
-.slike-tima-container .slike-tima-levo {
+.ax-top-container .ax-top-left {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -270,7 +270,7 @@
 //   width: 24vw;
 //   background-color: #00ffa3;
 // }
-.slider {
+.ax-top-slider {
   position: relative;
   display: flex;
   justify-content: center;
@@ -376,7 +376,7 @@
   transform: scale(1.08);
 }
 
-// .slike-tima-levo .opis-slike {
+// .slike-tima-levo .ax-top-description {
 //   display: flex;
 //   flex-direction: column;
 //   align-items: center;
@@ -390,7 +390,7 @@
 // }
 
 // .opis-slike
-.ime-koordinatora {
+.ax-top-name {
   font-weight: 400;
   font-size: 1rem;
   margin-top: 5rem;
@@ -404,7 +404,7 @@
   font-size: 1.3vw;
 } */
 
-.slike-tima-container .slike-tima-desno {
+.ax-top-container .ax-top-right {
   // display: flex;
   // flex-direction: column;
   // align-items: center;
@@ -438,7 +438,7 @@
 //   background-color: #ffffff;
 // }
 
-.slike-tima-desno .opis-tima {
+.ax-top-right .ax-top-description {
   font-weight: 200;
   font-family: "Manrope";
   padding-top: 5%;
@@ -452,7 +452,7 @@
   text-align: center;
   // background-color: purple;
 }
-.slike-tima-desno .slide-active {
+.ax-top-right .slide-active {
   background-color: #00ffa3;
   height: 10rem;
   width: 0rem;
@@ -471,18 +471,18 @@
   * {
     -webkit-tap-highlight-color: transparent;
   }
-  .slike-tima-container {
+  .ax-top-container {
     flex-direction: column;
   }
-  .slike-tima-levo .opis-slike {
+  .ax-top-left .ax-top-description {
     height: 12vw;
     padding: 0;
   }
-  .slike-tima-container .slike-tima-levo {
+  .ax-top-container .ax-top-left {
     padding-bottom: 0%;
   }
 
-  .slike-tima-container .slike-tima-desno {
+  .ax-top-container .ax-top-right {
     padding: 7% 0;
   }
 
@@ -536,21 +536,21 @@
     }
   }
 
-  .opis-slike .ime-koordinatora {
+  .ax-top-description .ax-top-name {
     font-size: 6vw;
   }
-  .opis-slike .funkcija-koordinatora {
-    font-size: 3vw;
-  }
+  // .ax-top-description .funkcija-koordinatora {
+  //   font-size: 3vw;
+  // }
 
-  .slika-roditelj .slika-grupna {
-    width: 75vw;
-    height: 42vw;
-  }
+  // .slika-roditelj .slika-grupna {
+  //   width: 75vw;
+  //   height: 42vw;
+  // }
 
-  .slika-roditelj .slika-bordera1 {
-    width: 90vw;
-  }
+  // .slika-roditelj .slika-bordera1 {
+  //   width: 90vw;
+  // }
 
   // .slike-tima-desno .opis-tima {
   //   font-weight: 200;
