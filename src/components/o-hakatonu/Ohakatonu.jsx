@@ -1,15 +1,24 @@
 import "./ohakatonu.scss";
 import React from "react";
-import icons from "./icons.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMinimize } from "@fortawesome/free-solid-svg-icons";
+import { faMaximize } from "@fortawesome/free-solid-svg-icons";
+import { faClose } from "@fortawesome/free-solid-svg-icons";
+import { faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
 
 function Ohakatonu() {
   return (
     <div className="hakaton-section">
+      <div id="stars"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>
       <h1 className="hakaton-title">O Hakatonu</h1>
       <div className="hakaton-card card1">
         <div className="hakaton-header">
           <div className="hakaton-bead1"></div>
-          <img src={icons} className="icons" alt="icons" />
+          <FontAwesomeIcon icon={faMinimize} />
+          <FontAwesomeIcon icon={faMaximize} />
+          <FontAwesomeIcon icon={faClose} />
         </div>
         <div className="hakaton-content">
           <p className="hakaton-descr">
@@ -27,24 +36,36 @@ function Ohakatonu() {
       </div>
 
       <div className="hakaton-card card2">
-        <div className="agn-bead"></div>
         <div className="hakaton-header">
           <div className="hakaton-bead1"></div>
-          <img src={icons} className="icons" alt="icons" />
+          <FontAwesomeIcon icon={faMinimize} />
+          <FontAwesomeIcon icon={faMaximize} />
+          <FontAwesomeIcon icon={faClose} />
         </div>
         <div className="hakaton-content">
-          <p className="hakaton-descr">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus,
-            reprehenderit?
-          </p>
+          <div className="hakaton-loc-time">
+            <FontAwesomeIcon icon={faArrowAltCircleRight} />
+            <h1 className="hakaton-lt"> lokacija:</h1>
+          </div>
+          <div>
+            <p className="hakaton-descr">Fakultet organizacionih nauka</p>
+          </div>
+          <div className="hakaton-loc-time">
+            <FontAwesomeIcon icon={faArrowAltCircleRight} />
+            <h1 className="hakaton-lt"> vreme:</h1>
+          </div>
+          <div>
+            <p className="hakaton-descr">12. i 13. mart</p>
+          </div>
         </div>
       </div>
 
       <div className="hakaton-card card3">
-        <div className="agn-bead"></div>
         <div className="hakaton-header">
           <div className="hakaton-bead1"></div>
-          <img src={icons} className="icons" alt="icons" />
+          <FontAwesomeIcon icon={faMinimize} />
+          <FontAwesomeIcon icon={faMaximize} />
+          <FontAwesomeIcon icon={faClose} />
         </div>
         <div className="hakaton-content">
           <p className="hakaton-descr">
