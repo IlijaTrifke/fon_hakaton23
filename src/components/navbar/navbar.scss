@@ -1,3 +1,5 @@
+@import "../../global.scss";
+
 * {
   padding: 0;
   margin: 0;
@@ -6,60 +8,54 @@
 
 .ceo-nav {
   position: relative;
-  z-index: 10;
-}
-
-body {
-  --main-color: #181919;
-  background-color: var(--main-color);
+  z-index: 600;
 }
 
 .navbar {
-  background-color: #181919;
-  padding: 0rem 3vw;
+  padding: 0 3vw;
+  margin: 2vh 3vw;
   position: fixed;
-  width: 100%;
+  width: 95%;
   height: 5rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  gap: 6%;
   align-items: center;
   font-size: 1.2rem;
-  /* scroll-behavior: smooth; */
   background-color: transparent;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(15px);
+  font-family: Orbitron;
   -webkit-backdrop-filter: blur(15px);
+  border-radius: 10rem;
+  border: 2px solid $ljubicasta;
 }
 
 .navbar-logo {
-  width: 15%;
+  width: 5rem;
   display: flex;
   justify-content: center;
-  margin-left: -8vw;
-  margin-top: 10px;
 }
 
 .nav-menu {
   display: flex;
   list-style: none;
   text-align: center;
-
-  width: 77%;
+  align-items: center;
+  width: 70%;
   justify-content: space-between;
 }
 
-.nav-links {
-  color: #ffffff;
+.nav-links,
+.prijavi-se {
+  color: $bela;
   text-decoration: none;
+  transition: all 0.2s ease-in-out;
 }
 
-.nav-links:hover {
-  color: #00ffa3;
-  transition: all 0.5s ease-out;
-}
-
-.link-do-prijave:hover {
-  color: #00ffa3;
+.nav-links:hover,
+.prijavi-se:hover {
+  color: $ljubicasta;
 }
 
 .menu-icon {
@@ -67,26 +63,38 @@ body {
 }
 
 .link-do-prijave {
-  color: white;
-  padding: 0.5rem 1rem;
-
-  position: relative;
-  cursor: pointer;
+  display: none;
 }
 
-@media (max-width: 750px) {
+.link-do-prijave,
+.prijavi-se {
+  color: white;
+  padding: 0.5rem 1rem;
+  position: relative;
+  white-space: nowrap;
+  border: 2px solid $ljubicasta;
+  border-radius: 12rem;
+}
+
+.desktop {
+  display: block;
+}
+
+@media (max-width: 1200px) {
+  .desktop {
+    display: none;
+  }
+
   .navbar {
     z-index: 500;
     width: 100%;
-    background-color: #181919;
+    margin: 0;
+    border: 0;
     opacity: 1;
-
     position: fixed;
     top: 0;
-
-    height: 60px;
-
-    outline: 1.5px solid rgba(255, 255, 255, 0.093);
+    height: 4rem;
+    // outline: 1.5px solid rgba(255, 255, 255, 0.093);
   }
 
   .hamburger-react {
@@ -95,13 +103,7 @@ body {
 
   a.nav-links.link-do-prijave {
     width: 70%;
-    padding: 5px;
-    margin-left: 15vw;
-    margin-bottom: 20%;
-
-    color: white;
     padding: 0.5rem 1rem;
-
     position: relative;
     cursor: pointer;
   }
@@ -122,13 +124,9 @@ body {
   }
 
   .nav-menu.active {
-    // background-image: url("./nav-tel.png");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-
-    opacity: 1;
+    background-color: $tamnoPlava;
     transition: all 0.5s ease;
-    z-index: 1;
+    border-radius: 0;
     position: fixed;
     left: 0;
   }
@@ -141,11 +139,7 @@ body {
     font-size: 8.5vw;
     width: 100vw;
     display: table;
-
-    font-family: "Manrope";
-    font-style: normal;
     font-weight: 200;
-
     color: #ffffff;
   }
 

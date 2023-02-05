@@ -4,6 +4,7 @@ import "./navbar.scss";
 import menuItems from "./MenuItems";
 import { HashLink } from "react-router-hash-link";
 import { Twirl as Hamburger } from "hamburger-react";
+import logo from "../../images/FH_Logo.png";
 
 const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -40,9 +41,10 @@ const Navbar = () => {
   return (
     <div
       className="ceo-nav"
-      style={{ ...navbarStyles, top: visible ? "0" : "-6rem" }}
+      style={{ ...navbarStyles, top: visible ? "0" : "-7rem" }}
     >
       <nav className="navbar">
+        <img className="navbar-logo" src={logo} alt="Fon hakaton logo" />
         <div className="menu-icon" onClick={handleClick}>
           <Hamburger
             className="hamburger"
@@ -65,6 +67,13 @@ const Navbar = () => {
             );
           })}
         </ul>
+        <HashLink
+          to="/prijava"
+          className="prijavi-se desktop"
+          onClick={handleClick}
+        >
+          PRIJAVI SE
+        </HashLink>
       </nav>
     </div>
   );
