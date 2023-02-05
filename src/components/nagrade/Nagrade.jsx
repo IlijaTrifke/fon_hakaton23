@@ -1,6 +1,7 @@
 import React from "react";
 import CountUp from "react-countup";
 import "./nagrade.scss";
+import Postolje from "./img/ng-Postolje.png";
 
 const Nagrade = () => {
   return (
@@ -14,19 +15,21 @@ const Nagrade = () => {
             <p class="ng-circletext">40.000</p>
           </div>
 
-          <div class="ng-stand">
-            <div class="face left"></div>
-            <div class="face right"></div>
-            <div class="face top"></div>
+          <div class="ng-stand-3">
+            <img src={Postolje} class="ng-postolje-img"></img>
+            <div class="ng-postolje-text">3</div>
           </div>
         </div>
 
         <div class="ng-pole">
-          <div class="ng-circle">
-            <p class="ng-circletext">70.000</p>
+          <div class="ng-test">
+            <div class="ng-circle">
+              <p class="ng-circletext">70.000</p>
+            </div>
           </div>
-          <div class="ng-rectangle1">
-            <p class="ng-rectangletext">1</p>
+          <div class="ng-stand-1">
+            <img src={Postolje} class="ng-postolje-img"></img>
+            <div class="ng-postolje-text">1</div>
           </div>
         </div>
 
@@ -34,8 +37,9 @@ const Nagrade = () => {
           <div class="ng-circle">
             <p class="ng-circletext">20.000</p>
           </div>
-          <div class="ng-rectangle3">
-            <p class="ng-rectangletext">3</p>
+          <div class="ng-stand-2">
+            <img src={Postolje} class="ng-postolje-img"></img>
+            <div class="ng-postolje-text">2</div>
           </div>
         </div>
       </div>

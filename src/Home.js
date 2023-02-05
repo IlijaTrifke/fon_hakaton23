@@ -15,9 +15,9 @@ function Home() {
   return (
     <>
       <Pocetna />
+      <Nagrade />
       <Agenda />
       <SlikeOrg />
-      <Iskustva />;
     </>
   );
 }
