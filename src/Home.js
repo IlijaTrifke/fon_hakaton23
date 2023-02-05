@@ -17,6 +17,7 @@ function Home() {
       <Pocetna />
       <Agenda />
       <SlikeOrg />
+      <Iskustva />;
     </>
   );
 }
