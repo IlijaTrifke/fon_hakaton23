@@ -15,7 +15,7 @@
 }
 
 .ng-text h1 {
-  font-family: Noto Sans;
+  font-family: "Noto sans", light;
   font-size: 3rem;
   font-weight: lighter;
   text-transform: uppercase;
@@ -36,38 +36,15 @@
   }
 }
 
-.ng-rectangle2 {
-  height: 8rem;
-  width: 15rem;
-  display: flex;
-  align-items: center;
-  background-color: #555;
+@keyframes fadeInTop {
+  0% {
+    //opacity: 0;
+    margin-bottom: -80vh;
+  }
+  100% {
+    //opacity: 1;
+  }
 }
-.ng-rectangle1 {
-  height: 10rem;
-  width: 15rem;
-  display: flex;
-  background-color: #555;
-}
-
-.ng-rectangle1 .ng-rectangletext {
-  padding-top: 10%;
-}
-.ng-rectangle3 {
-  height: 6rem;
-  width: 15rem;
-  display: flex;
-  align-items: center;
-  background-color: #555;
-}
-
-.ng-rectangletext {
-  display: flex;
-  padding-left: 35%;
-  font-size: 4rem;
-  color: $bela;
-}
-
 .ng-text {
   display: flex;
   justify-content: center;
@@ -91,14 +68,24 @@
   align-items: center;
   background: black;
   border-radius: 100%;
-  height: 12rem;
-  width: 12rem;
+  height: 11rem;
+  width: 11rem;
   margin: 0;
   background: radial-gradient(circle at 4rem 4rem, #5cabff, #000);
-  animation: float 6s ease-in-out infinite;
+  animation: float 6s ease-in-out infinite, fadeIn 4s ease-in-out 1;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .ng-circletext {
+  font-family: "Noto sans", light;
   display: flex;
   text-align: center;
   padding: 1rem;
@@ -106,17 +93,59 @@
   color: $bela;
 }
 
-.ng-pole {
-  max-width: 33%;
-  max-height: 500px;
+.ng-postolje-img {
+  height: 40vh;
+  width: 15rem;
+  animation: fadeInTop 4s ease-in-out 1;
 }
 
-.ng-stand {
-  width: 15rem;
+.ng-pole {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 35%;
+}
+
+.ng-stand-3 {
+  position: relative;
+  width: 14rem;
   height: 15rem;
 }
 
-@media (max-width: 1100px) {
+.ng-stand-1 {
+  position: relative;
+  width: 14rem;
+  height: 20rem;
+}
+.ng-stand-2 {
+  position: relative;
+  width: 14rem;
+  height: 17rem;
+}
+
+.ng-postolje-text {
+  font-family: "Noto Sans", sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 8rem;
+  color: $bela;
+  animation: fadeInNumbers 5s ease-in-out 1;
+}
+
+@keyframes fadeInNumbers {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media (max-width: 1200px) {
   .ng-text h1 {
     font-size: 2rem;
   }
@@ -129,24 +158,53 @@
   .ng-circletext {
     font-size: 2rem;
   }
-
-  .ng-rectangle1 {
-    width: 7.5rem;
-    height: 5rem;
-  }
-  .ng-rectangle2 {
-    width: 7.5rem;
-    height: 4rem;
-  }
-  .ng-rectangle3 {
-    width: 7.5rem;
-    height: 3rem;
+  .ng-postolje-img {
+    height: 20rem;
+    width: 10rem;
   }
 
-  .ng-rectangle1 .ng-rectangletext {
-    padding-top: 0;
+  .ng-stand-3 {
+    width: 10rem;
+    height: 15rem;
+  }
+
+  .ng-stand-1 {
+    width: 10rem;
+    height: 20rem;
+  }
+  .ng-stand-2 {
+    width: 10rem;
+    height: 15rem;
   }
 }
+
+@media (max-width: 960px) {
+  .ng-stands {
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .ng-postolje-img {
+    height: 20rem;
+    width: 8.5rem;
+  }
+
+  .ng-stand-3 {
+    width: 8.5rem;
+    height: 15rem;
+  }
+
+  .ng-stand-1 {
+    width: 8.5rem;
+    height: 20rem;
+  }
+  .ng-stand-2 {
+    width: 8.5rem;
+    height: 15rem;
+  }
+}
+
 @media (max-width: 680px) {
   .ng-nagrade {
     flex-direction: column;
@@ -161,20 +219,23 @@
     padding-right: 1rem;
   }
 
-  .ng-rectangle1 {
-    width: 6rem;
-    height: 5rem;
+  .ng-postolje-img {
+    height: 20rem;
+    width: 8rem;
   }
-  .ng-rectangle2 {
-    width: 6rem;
-    height: 4rem;
+
+  .ng-stand-3 {
+    width: 8rem;
+    height: 15rem;
   }
-  .ng-rectangle3 {
-    width: 6rem;
-    height: 3rem;
+
+  .ng-stand-1 {
+    width: 8rem;
+    height: 20rem;
   }
-  .ng-rectangle1 .ng-rectangletext {
-    padding-top: 0;
+  .ng-stand-2 {
+    width: 8rem;
+    height: 15rem;
   }
 }
 
@@ -205,25 +266,28 @@
   .ng-circletext {
     font-size: 1.5rem;
   }
-}
 
-.face {
-  position: relative;
-  transform-origin: 0 0;
-  height: 16em;
-  width: 16em;
-}
-.left {
-  background-color: black;
-  transform: rotate(90deg) skewX(180deg) scaleY(0.864);
-}
-.right {
-  background-color: black;
-  transform: rotate(-30deg) skewX(-30deg) scaleX(0.4) scaleY(0.864);
-  bottom: 16em;
-}
-.top {
-  background-color: black;
-  transform: rotate(180deg) skew(-60deg) scaleY(0.2) scaleX(0.85);
-  bottom: 32em;
+  .ng-postolje-img {
+    height: 10rem;
+    width: 6rem;
+  }
+
+  .ng-stand-3 {
+    width: 6rem;
+    height: 5rem;
+  }
+
+  .ng-stand-1 {
+    width: 6rem;
+    height: 10rem;
+  }
+  .ng-stand-2 {
+    width: 6rem;
+    height: 7.5rem;
+  }
+
+  .ng-postolje-text {
+    padding-top: 1rem;
+    font-size: 3rem;
+  }
 }

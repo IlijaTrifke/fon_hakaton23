@@ -16,6 +16,7 @@ function Home() {
     <>
       <Navbar />
       <Pocetna />
+      <Nagrade />
       <Agenda />
       <SlikeOrg />
       {/* <Iskustva />; */}
