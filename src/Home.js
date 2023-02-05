@@ -17,8 +17,8 @@ function Home() {
       <Navbar />
       <Pocetna />
       <Agenda />
-      {/* <SlikeOrg />
-      <Iskustva />; */}
+      <SlikeOrg />
+      {/* <Iskustva />; */}
     </>
   );
 }
