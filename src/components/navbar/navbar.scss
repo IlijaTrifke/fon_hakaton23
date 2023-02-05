@@ -1,0 +1,170 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.ceo-nav {
+  position: relative;
+  z-index: 10;
+}
+
+body {
+  --main-color: #181919;
+  background-color: var(--main-color);
+}
+
+.navbar {
+  background-color: #181919;
+  padding: 0rem 3vw;
+  position: fixed;
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.2rem;
+  /* scroll-behavior: smooth; */
+  background-color: transparent;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}
+
+.navbar-logo {
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  margin-left: -8vw;
+  margin-top: 10px;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  text-align: center;
+
+  width: 77%;
+  justify-content: space-between;
+}
+
+.nav-links {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-links:hover {
+  color: #00ffa3;
+  transition: all 0.5s ease-out;
+}
+
+.link-do-prijave:hover {
+  color: #00ffa3;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.link-do-prijave {
+  color: white;
+  padding: 0.5rem 1rem;
+
+  position: relative;
+  cursor: pointer;
+}
+
+@media (max-width: 750px) {
+  .navbar {
+    z-index: 500;
+    width: 100%;
+    background-color: #181919;
+    opacity: 1;
+
+    position: fixed;
+    top: 0;
+
+    height: 60px;
+
+    outline: 1.5px solid rgba(255, 255, 255, 0.093);
+  }
+
+  .hamburger-react {
+    margin-top: -10px;
+  }
+
+  a.nav-links.link-do-prijave {
+    width: 70%;
+    padding: 5px;
+    margin-left: 15vw;
+    margin-bottom: 20%;
+
+    color: white;
+    padding: 0.5rem 1rem;
+
+    position: relative;
+    cursor: pointer;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 10%;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 3rem;
+    left: -100%;
+    opacity: 1;
+    /* transition: all 0.5s ease; */
+    overflow: hidden;
+  }
+
+  .nav-menu.active {
+    // background-image: url("./nav-tel.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+    position: fixed;
+    left: 0;
+  }
+
+  .nav-links {
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 20%;
+    margin-bottom: 6vw;
+    font-size: 8.5vw;
+    width: 100vw;
+    display: table;
+
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 200;
+
+    color: #ffffff;
+  }
+
+  .nav-links:hover {
+    border-radius: 0;
+  }
+
+  .navbar-logo {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+
+    top: 1.5rem;
+    right: 2rem;
+    transform: translate(-10%, -7%);
+    color: #00ffa3;
+    cursor: pointer;
+  }
+}

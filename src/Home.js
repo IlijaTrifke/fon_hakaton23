@@ -14,9 +14,11 @@ import Prijava from "./components/prijava/Prijava";
 function Home() {
   return (
     <>
+      <Navbar />
       <Pocetna />
       <Agenda />
-      <SlikeOrg />
+      {/* <SlikeOrg />
+      <Iskustva />; */}
     </>
   );
 }
