@@ -1,5 +1,5 @@
 import React from "react";
-import "./partneri.css";
+import "./partneri.scss";
 import Slider from "react-slick";
 import Partner from "./Partner";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import "./partneri.css";
+import "./partneri.scss";
 import Partner from "./Partner.js";
 
 import "slick-carousel/slick/slick.css";
@@ -93,91 +93,103 @@ const Partneri = (props) => {
 
   const medijskiPartneri = [
     {
-      partnerSlika: medijski1,
+      partnerSlika: Slika,
       partnerIme: "connecting",
       pozadina: "#C3B0FF",
       link: "https://www.instagram.com/connecting.org.rs/",
     },
     {
-      partnerSlika: medijski2,
+      partnerSlika: Slika,
       partnerIme: "case study club",
       pozadina: "#C3B0FF",
       link: "https://casestudyclub.org/en/",
     },
     {
-      partnerSlika: medijski3,
+      partnerSlika: Slika,
       partnerIme: "ehls",
       pozadina: "#C3B0FF",
       link: "https://ehls.rs/",
     },
     {
-      partnerSlika: medijski4,
+      // partnerSlika: medijski4,
+      partnerSlika: Slika,
       partnerIme: "ja alumni serbia",
       pozadina: "#000000",
       link: "https://www.ja-serbia.org/alumni-klub/",
     },
     {
-      partnerSlika: medijski5,
+      // partnerSlika: medijski5,
+      partnerSlika: Slika,
       partnerIme: "it network",
       pozadina: "#C3B0FF",
       link: "https://www.itnetwork.rs/",
     },
     {
-      partnerSlika: medijski6,
+      // partnerSlika: medijski6,
+      partnerSlika: Slika,
       partnerIme: "nova s",
       pozadina: "#C3B0FF",
       link: "https://nova.rs/",
     },
     {
-      partnerSlika: medijski7,
+      // partnerSlika: medijski7,
+      partnerSlika: Slika,
       partnerIme: "Slika",
       pozadina: "#C3B0FF",
       link: "https://www.instagram.com/codewithmary/?igshid=YmMyMTA2M2Y%3D",
     },
     {
-      partnerSlika: medijski8,
+      // partnerSlika: medijski8,
+      partnerSlika: Slika,
       partnerIme: "n1",
       pozadina: "#C3B0FF",
       link: "https://rs.n1info.com/",
     },
     {
-      partnerSlika: medijski9,
+      // partnerSlika: medijski9,
+      partnerSlika: Slika,
       partnerIme: "pr objave",
       pozadina: "#C3B0FF",
       link: "https://www.probjave.com/",
     },
     {
-      partnerSlika: medijski10,
+      // partnerSlika: medijski10,
+      partnerSlika: Slika,
       partnerIme: "softuni",
       pozadina: "#C3B0FF",
       link: "https://www.softuni.rs/",
     },
     {
-      partnerSlika: medijski11,
+      // partnerSlika: medijski11,
+      partnerSlika: Slika,
       partnerIme: "youth.rs",
       pozadina: "#C3B0FF",
       link: "https://youth.rs/",
     },
     {
-      partnerSlika: medijski12,
+      // partnerSlika: medijski12,
+      partnerSlika: Slika,
       partnerIme: "znanje.rs",
       pozadina: "#C3B0FF",
       link: "http://www.znanje.rs/",
     },
     {
-      partnerSlika: medijski13,
+      // partnerSlika: medijski13,
+      partnerSlika: Slika,
       partnerIme: "kzm bajina basta",
       pozadina: "#C3B0FF",
       link: "https://www.instagram.com/kzm_bb/",
     },
     {
-      partnerSlika: medijski14,
+      // partnerSlika: medijski14,
+      partnerSlika: Slika,
       partnerIme: "startuj infostud",
       pozadina: "#C3B0FF",
       link: "https://startuj.com/",
     },
     {
-      partnerSlika: medijski15,
+      // partnerSlika: medijski15,
+      partnerSlika: Slika,
       partnerIme: "tv brainz",
       pozadina: "#C3B0FF",
       link: "https://brainz.center/",
@@ -186,25 +198,25 @@ const Partneri = (props) => {
 
   const robniPartneri = [
     {
-      partnerSlika: robni1,
+      partnerSlika: Slika,
       partnerIme: "upisi fon",
       pozadina: "#C3B0FF",
       link: "https://upisifon.rs/",
     },
     {
-      partnerSlika: robni2,
+      partnerSlika: Slika,
       partnerIme: "devhub",
       pozadina: "#000000",
       link: "https://www.instagram.com/dev_hub_/",
     },
     {
-      partnerSlika: robni3,
+      partnerSlika: Slika,
       partnerIme: "campster",
       pozadina: "#000000",
       link: "https://www.thecampster.com/rs/",
     },
     {
-      partnerSlika: robni4,
+      partnerSlika: Slika,
       partnerIme: "njamb",
       pozadina: "#C3B0FF",
       link: "https://www.jaffa.rs/en/njamb/",
@@ -231,61 +243,61 @@ const Partneri = (props) => {
 
   const godisnjiPartneri = [
     {
-      partnerSlika: godisnji1,
+      partnerSlika: Slika,
       partnerIme: "upisi fon",
       pozadina: "#C3B0FF",
       link: "https://upisifon.rs/",
     },
     {
-      partnerSlika: godisnji2,
+      partnerSlika: Slika,
       partnerIme: "devhub",
       pozadina: "#000000",
       link: "https://www.instagram.com/dev_hub_/",
     },
     {
-      partnerSlika: godisnji3,
+      partnerSlika: Slika,
       partnerIme: "guarana",
       pozadina: "#C3B0FF",
       link: "https://guarana.rs/",
     },
     {
-      partnerSlika: godisnji4,
+      partnerSlika: Slika,
       partnerIme: "hedwell",
       pozadina: "#C3B0FF",
       link: "https://hedwell.com/",
     },
     {
-      partnerSlika: godisnji5,
+      partnerSlika: Slika,
       partnerIme: "mainstream",
       pozadina: "#C3B0FF",
       link: "https://www.mainstream.rs/en/",
     },
     {
-      partnerSlika: godisnji6,
+      partnerSlika: Slika,
       partnerIme: "mintpromoprint",
       pozadina: "#C3B0FF",
       link: "https://www.mintpromoprint.rs/",
     },
     {
-      partnerSlika: godisnji7,
+      partnerSlika: Slika,
       partnerIme: "primeholding",
       pozadina: "#C3B0FF",
       link: "https://primeholding.com/",
     },
     {
-      partnerSlika: godisnji8,
+      partnerSlika: Slika,
       partnerIme: "devit",
       pozadina: "#C3B0FF",
       link: "https://www.devit.rs/",
     },
     {
-      partnerSlika: godisnji9,
+      partnerSlika: Slika,
       partnerIme: "fon",
       pozadina: "#C3B0FF",
       link: "http://www.fon.bg.ac.rs/",
     },
     {
-      partnerSlika: godisnji10,
+      tpartnerSlika: Slika,
       partnerIme: "sbgakademija",
       pozadina: "#C3B0FF",
       link: "https://sbgakademija.rs/",
@@ -354,7 +366,7 @@ const Partneri = (props) => {
           <h1 className="pokrovitelj-naslov">POKROVITELJ TAKMIČENJA</h1>
 
           <Partner
-            partnerSlika={Pokrovitelj}
+            partnerSlika={Slika}
             partnerIme="Partner"
             width="16em"
             height="9em"

@@ -16,10 +16,14 @@ function Home() {
     <>
       <Navbar />
       <Pocetna />
+      <Ohakatonu />
       <Nagrade />
       <Agenda />
+      <Iskustva />;
+      <Statistika />
+      <Faq />
+      <Partneri />
       <SlikeOrg />
-      {/* <Iskustva />; */}
     </>
   );
 }
