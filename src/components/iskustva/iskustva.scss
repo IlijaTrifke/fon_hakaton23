@@ -1,12 +1,4 @@
 @import "../../global.scss";
-// * {
-//   margin: 0;
-//   padding: 0;
-//   box-sizing: border-box;
-//   color: white;
-//   background-color: #0d2447;
-// }
-
 .ax-iskustva {
   display: flex;
   flex-direction: column;
@@ -19,208 +11,6 @@
   text-align: center;
   color: #ffffff;
 }
-// .ax-top {
-//   // margin-top: 1%;
-//   display: flex;
-//   justify-content: center;
-//   gap: 2rem;
-// }
-// .ax-top-left-box {
-//   width: 12rem;
-//   height: 15rem;
-//   display: flex;
-//   flex-direction: column;
-//   border-style: solid;
-// }
-// .ax-top-left-box-name {
-//   text-align: center;
-//   padding-bottom: 0.5rem;
-// }
-// .ax-top-left-box-hr {
-//   text-align: center;
-//   padding-bottom: 0.5rem;
-// }
-// .ax-top-right-box {
-//   width: 12rem;
-//   height: 15rem;
-//   text-align: center;
-//   border-style: solid;
-// }
-// .ax-top-photo1 {
-//   width: 7rem;
-//   height: 8rem;
-//   margin: auto;
-//   justify-content: center;
-// }
-.ax-down {
-  margin-bottom: 3.5%;
-  margin-top: 5%;
-  height: 100%;
-  width: 100%;
-  // background-color: #181919;
-  position: relative;
-  z-index: 1;
-}
-// .ax-down h1 {
-//   margin-top: 1.2%;
-//   font-family: "Manrope";
-//   font-style: normal;
-//   font-weight: 200;
-//   font-size: 3vw;
-//   color: #ffffff;
-//   text-align: center;
-// }
-.ax-iskustvo img {
-  z-index: -100;
-}
-
-.ax-iskustvo {
-  z-index: -10;
-
-  display: flex;
-  /* align-items: center; */
-  justify-content: center;
-
-  background: #c3b0ff;
-  box-shadow: 25px 50px 70px rgba(0, 0, 0, 0.25);
-  border-radius: 30px;
-
-  /* transform: scale(1.1); */
-  margin: 0 auto;
-}
-
-.ax-iskustvo img {
-  margin-top: 0px;
-  width: 16em;
-  height: 9em;
-  border-radius: 30px;
-}
-
-// .arr {
-//   position: relative;
-//   height: 100px;
-//   width: 100px;
-//   border-radius: 50%;
-//   margin: 15px;
-//   transition: 0.4s ease;
-//   background-color: #15e0e0;
-// }
-// .arr div {
-//   position: absolute;
-//   height: 25px;
-//   width: 25px;
-//   border-top: 8px solid black;
-//   border-left: 8px solid black;
-//   transform: rotate(45deg);
-//   left: -20px;
-//   top: 100px;
-// }
-// .right {
-//   transform: rotate(90deg);
-// }
-// .icon-arrow {
-//   // width: 100px;
-//   // height: 4px;
-//   // background-color: #181919;
-//   // position: relative;
-//   // top: 50px;
-// }
-// .arrow {
-//   border: solid black;
-//   border-width: 0 3px 3px 0;
-//   display: inline-block;
-//   padding: 3px;
-// }
-
-// .right {
-//   transform: rotate(-45deg);
-//   -webkit-transform: rotate(-45deg);
-// }
-@media screen and (max-width: 1920px) {
-  .ax-down h1 {
-    margin-top: 1.2%;
-    font-family: "Manrope";
-    font-style: normal;
-    font-weight: 200;
-    font-size: 3vw;
-    color: #ffffff;
-  }
-}
-@media screen and (max-width: 1200px) {
-  .ax-down h1 {
-    margin-top: 1.2%;
-    font-family: "Manrope";
-    font-style: normal;
-    font-weight: 200;
-    font-size: 3vw;
-    color: #ffffff;
-  }
-}
-@media screen and (max-width: 960px) {
-  .ax-down h1 {
-    margin-top: 1.2%;
-    font-family: "Manrope";
-    font-style: normal;
-    font-weight: 200;
-    font-size: 3vw;
-    color: #ffffff;
-  }
-}
-@media screen and (max-width: 620px) {
-  .ax-down h1 {
-    margin-top: 1.2%;
-    font-family: "Manrope";
-    font-style: normal;
-    font-weight: 200;
-    font-size: 7vw;
-    color: #ffffff;
-  }
-}
-@media screen and (max-width: 480px) {
-  .ax-down h1 {
-    margin-top: 1.2%;
-    font-family: "Manrope";
-    font-style: normal;
-    font-weight: 200;
-    font-size: 7vw;
-    color: #ffffff;
-  }
-}
-// slike tima dolje
-// * {
-//   margin: 0;
-//   padding: 0;
-//   box-sizing: border-box;
-//   background-color: #000000;
-// }
-
-// .slike-tima-wrapper {
-//   display: flex;
-//   flex-direction: row;
-//   user-select: none;
-// }
-
-// .navbar-st {
-//   display: flex;
-//   justify-content: center;
-//   gap: 2%;
-//   padding: 2% 0;
-// }
-
-// .navbar-st .box {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   width: 7vw;
-//   height: 4vw;
-//   font-weight: 300;
-//   font-family: "Manrope";
-//   font-size: 1.5vw;
-//   cursor: pointer;
-//   border-radius: 1.5rem;
-//   transition: all 0.3s ease-in-out;
-// }
-
 .inactiveS {
   color: #00ffa3;
 }
@@ -261,15 +51,6 @@
   border-color: white;
   border-radius: 15px;
 }
-
-// .slika-bordera {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   width: 24vw;
-//   background-color: #00ffa3;
-// }
 .ax-top-slider {
   position: relative;
   display: flex;
@@ -284,7 +65,7 @@
 .image {
   //  height: 24vw;
   // width: 17.8vw;
-  // object-fit: cover;
+  object-fit: cover;
 
   width: 9rem;
   height: 10rem;
@@ -376,20 +157,6 @@
   transform: scale(1.08);
 }
 
-// .slike-tima-levo .ax-top-description {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   font-family: "Manrope";
-//   color: #ffffff;
-//   padding-top: 5%;
-//   height: 7.5vw;
-//   width: 20vw;
-//   white-space: nowrap;
-//   // background-color: #00ffa3;
-// }
-
-// .opis-slike
 .ax-top-name {
   font-weight: 400;
   font-size: 1rem;
@@ -399,10 +166,6 @@
   justify-content: center;
   color: #ffffff;
 }
-/* .opis-slike .funkcija-koordinatora {
-  font-weight: 200;
-  font-size: 1.3vw;
-} */
 
 .ax-top-container .ax-top-right {
   // display: flex;
@@ -416,27 +179,6 @@
   border-color: #ffffff;
   border-radius: 15px;
 }
-
-// .slike-tima-desno .slika-roditelj {
-//   position: relative;
-//   background-color: #ffffff;
-// }
-
-// .slika-grupna {
-//   object-fit: cover;
-//   width: 43.8vw;
-//   height: 24.6vw;
-//   background-color: #ffffff;
-// }
-
-// .slika-bordera1 {
-//   width: 52vw;
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   background-color: #ffffff;
-// }
 
 .ax-top-right .ax-top-description {
   font-weight: 200;
@@ -486,26 +228,6 @@
     padding: 7% 0;
   }
 
-  // .navbar-st {
-  //   padding: 1% 0;
-  //   margin-bottom: 5%;
-  // }
-  // .navbar-st .box {
-  //   width: 13vw;
-  //   height: 9vw;
-  //   font-size: 3vw;
-  //   border-radius: 1rem;
-  // }
-
-  // .slika-bordera {
-  //   width: 50vw;
-  // }
-
-  // .image {
-  //   height: 50vw;
-  //   width: 37vw;
-  // }
-
   .left-arrow {
     width: 15vw;
   }
@@ -539,30 +261,6 @@
   .ax-top-description .ax-top-name {
     font-size: 6vw;
   }
-  // .ax-top-description .funkcija-koordinatora {
-  //   font-size: 3vw;
-  // }
-
-  // .slika-roditelj .slika-grupna {
-  //   width: 75vw;
-  //   height: 42vw;
-  // }
-
-  // .slika-roditelj .slika-bordera1 {
-  //   width: 90vw;
-  // }
-
-  // .slike-tima-desno .opis-tima {
-  //   font-weight: 200;
-  //   font-family: "Manrope";
-  //   padding-left: 0%;
-  //   color: #ffffff;
-  //   font-size: 3vw;
-  //   width: 90vw;
-  //   text-align: center;
-  //   height: 20vw;
-  //   background-color: #00ffa3;
-  // }
 
   .inactiveS:hover {
     background-color: transparent;
@@ -572,5 +270,89 @@
 }
 @media screen and (min-width: 340px) {
 }
+.ax-down {
+  margin-bottom: 3.5%;
+  margin-top: 5%;
+  height: 100%;
+  width: 100%;
+  // background-color: #181919;
+  position: relative;
+  z-index: 1;
+}
+.ax-iskustvo img {
+  z-index: -100;
+}
 
-// slike tima gore
+.ax-iskustvo {
+  z-index: -10;
+
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+
+  background: #c3b0ff;
+  box-shadow: 25px 50px 70px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+
+  /* transform: scale(1.1); */
+  margin: 0 auto;
+}
+
+.ax-iskustvo img {
+  margin-top: 0px;
+  width: 16em;
+  height: 9em;
+  border-radius: 30px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1920px) {
+  .ax-down h1 {
+    margin-top: 1.2%;
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 200;
+    font-size: 3vw;
+    color: #ffffff;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .ax-down h1 {
+    margin-top: 1.2%;
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 200;
+    font-size: 3vw;
+    color: #ffffff;
+  }
+}
+@media screen and (max-width: 960px) {
+  .ax-down h1 {
+    margin-top: 1.2%;
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 200;
+    font-size: 3vw;
+    color: #ffffff;
+  }
+}
+@media screen and (max-width: 620px) {
+  .ax-down h1 {
+    margin-top: 1.2%;
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 200;
+    font-size: 7vw;
+    color: #ffffff;
+  }
+}
+@media screen and (max-width: 480px) {
+  .ax-down h1 {
+    margin-top: 1.2%;
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 200;
+    font-size: 7vw;
+    color: #ffffff;
+  }
+}

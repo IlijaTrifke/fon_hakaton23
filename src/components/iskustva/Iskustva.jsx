@@ -242,45 +242,6 @@ const Iskustva = (props) => {
       <div className="ax-title">
         <h1>Iskustva</h1>
       </div>
-      {/* <div className="ax-top">
-        <div className="ax-top-left-button">
-          <button>lijevo</button>
-        </div>
-        <div className="ax-top-left-box">
-          <img src={photo} alt="photo" className="ax-top-photo1" />
-          <div className="ax-top-left-box-name">Nemanja Petronijevic</div>
-          <hr className="ax-top-left-box-hr" />
-        </div>
-        <div className="ax-top-right-box">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-            ratione unde laborum voluptas, nobis quod ducimus quae itaque ab
-            earum saepe doloremque aliquid atque dolore.
-          </p>
-        </div>
-
-         { <p>Right arrow: <i class="arrow right"></i></p> } //ovdje bilo zakomentarisano kad ostalo nije!!! }
-        <div className="ax-top-right-button">
-          <button>desno</button>
-        </div>
-      </div> */}
-      {/* slike tima dolje*/}
-      {/* <div className="slike-tima-wrapper" id="tim"> */}
-      {/* <div className="navbar-st">
-          {appState.objects.map((elements, index) => (
-            <h1
-              key={index}
-              className={toggleActiveStyles(index)}
-              onClick={() => {
-                toggleActive(index);
-                setCurrent(index);
-                setState(true);
-              }}
-            >
-              {elements.title}
-            </h1>
-          ))}
-        </div> */}
 
       <div className="ax-top-container">
         <div className="ax-top-left">
@@ -305,11 +266,7 @@ const Iskustva = (props) => {
                 setState(true);
               }}
             />
-            {/* <img
-              className="slika-bordera"
-              src={SlikaBordera}
-              alt="Okvir za sliku koordinatora"
-            /> */}
+
             {DataSlider.map((data, index) => {
               return (
                 <div
@@ -340,29 +297,6 @@ const Iskustva = (props) => {
           })}
         </div>
         <div className="ax-top-right">
-          {/* <div className="slika-roditelj">
-            <img
-              className="slika-bordera1"
-              src={SLikaBordera1}
-              alt="Okvir za sliku tima"
-            />
-            {DataSlider.map((data, index) => {
-              return (
-                <div
-                  className={index === current ? "slide-active" : "slide"}
-                  key={index}
-                >
-                  {index === current && (
-                    <img
-                      className="slika-grupna"
-                      src={data.imageGroup}
-                      alt="Grupna slika tima"
-                    />
-                  )}
-                </div>
-              );
-            })}
-          </div> */}
           {DataSlider.map((data, index) => {
             return (
               <div
@@ -377,8 +311,6 @@ const Iskustva = (props) => {
           })}
         </div>
       </div>
-      {/* </div> */}
-      {/* slike tima gore */}
 
       <div className="ax-down">
         <div className="ax-iskustva-box">
