@@ -24,6 +24,7 @@ function Home() {
       <Faq />
       <Partneri />
       <SlikeOrg />
+      <Prijava />
     </>
   );
 }
