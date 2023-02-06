@@ -14,16 +14,16 @@ import Prijava from "./components/prijava/Prijava";
 function Home() {
   return (
     <>
-      <Navbar />
-      <Pocetna />
       <Ohakatonu />
+      {/* <Navbar />
+      <Pocetna />
       <Nagrade />
       <Agenda />
       <Iskustva />;
       <Statistika />
       <Faq />
       <Partneri />
-      <SlikeOrg />
+      <SlikeOrg /> */}
     </>
   );
 }
