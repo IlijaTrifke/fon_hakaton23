@@ -1,5 +1,5 @@
 import React from "react";
-import "./partneri.css";
+import "./partneri.scss";
 
 const Partner = (props) => {
   return (
