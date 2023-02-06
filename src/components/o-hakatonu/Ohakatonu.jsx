@@ -47,16 +47,12 @@ function Ohakatonu() {
             <FontAwesomeIcon icon={faArrowAltCircleRight} />
             <h1 className="hakaton-lt"> lokacija:</h1>
           </div>
-          <div>
-            <p className="hakaton-descr">Fakultet organizacionih nauka</p>
-          </div>
+          <p className="hakaton-descr">Fakultet organizacionih nauka</p>
           <div className="hakaton-loc-time">
             <FontAwesomeIcon icon={faArrowAltCircleRight} />
             <h1 className="hakaton-lt"> vreme:</h1>
           </div>
-          <div>
-            <p className="hakaton-descr">12. i 13. mart</p>
-          </div>
+          <p className="hakaton-descr">12. i 13. mart</p>
         </div>
       </div>
 
