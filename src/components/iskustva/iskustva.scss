@@ -46,10 +46,14 @@
   position: relative;
   // background-color: black;
   width: 20%;
-  height: 20%;
+  height: 21.7rem;
   border-style: solid;
   border-color: white;
   border-radius: 15px;
+}
+.hr {
+  margin-top: -0.5rem;
+  width: 13rem;
 }
 .ax-top-slider {
   position: relative;
@@ -66,10 +70,11 @@
   //  height: 24vw;
   // width: 17.8vw;
   object-fit: cover;
-
-  width: 9rem;
-  height: 10rem;
+  margin-top: 3rem;
+  width: 11rem;
   // margin: auto;
+  height: 12rem;
+
   justify-content: center;
   border-style: solid;
   border-color: aqua;

@@ -10,15 +10,12 @@ import IskustvoSlider from "./IskustvaSlider.js";
 import photo from "./assets/photo.jpg";
 import iskustvaFoto from "./assets/fonis.jpg";
 
-// slike tima dolje
 import React, { useState, useEffect } from "react";
-// import "./slike_tima.css";
-// import SLikaBordera1 from "../../images/Slike tima - okvir za sliku tima.png";
+
 import StrelaLevo from "../../images/LeftArrow.png";
 import StrelaDesno from "../../images/RightArrow.png";
-// import SlikaBordera from "../../images/Slike tima - okvir za koordinatora.png";
+
 import { DataSlider } from "./DataSlider";
-// slike tima gore
 
 const Iskustva = (props) => {
   const iskustvaSettings = {
@@ -125,7 +122,7 @@ const Iskustva = (props) => {
       iskustvoIme: "iskustvo15",
     },
   ];
-  // slike tima dolje
+
   const [people] = useState(DataSlider);
   const [current, setCurrent] = useState(0);
   const [stateR, setStateR] = useState(false);
@@ -155,30 +152,30 @@ const Iskustva = (props) => {
     }
   }, [current, people]);
 
-  useEffect(() => {
-    let slider = setInterval(
-      () => {
-        setState(false);
-        if (current == 6) {
-          toggleActiveStyles(0);
-          toggleActive(0);
-          setCurrent(0);
-        } else {
-          toggleActiveStyles(current + 1);
-          toggleActive(current + 1);
-          setCurrent(current + 1);
-        }
+  // useEffect(() => {
+  //   let slider = setInterval(
+  //     () => {
+  //       setState(false);
+  //       if (current == 6) {
+  //         toggleActiveStyles(0);
+  //         toggleActive(0);
+  //         setCurrent(0);
+  //       } else {
+  //         toggleActiveStyles(current + 1);
+  //         toggleActive(current + 1);
+  //         setCurrent(current + 1);
+  //       }
 
-        console.log(current);
-        setCurrent(current + 1);
-      },
-      state === true ? 10000 : 3000
-    );
+  //       console.log(current);
+  //       setCurrent(current + 1);
+  //     },
+  //     state === true ? 10000 : 3000
+  //   );
 
-    return () => {
-      clearInterval(slider);
-    };
-  }, [current]);
+  //   return () => {
+  //     clearInterval(slider);
+  //   };
+  // }, [current]);
 
   const nextSlide = () => {
     const index = current === length - 1 ? 0 : current + 1;
@@ -236,7 +233,7 @@ const Iskustva = (props) => {
       return "left-arrow activeAR";
     }
   };
-  // slike tima gore
+
   return (
     <div className="ax-iskustva">
       <div className="ax-title">
@@ -287,10 +284,10 @@ const Iskustva = (props) => {
                 key={index}
               >
                 {index === current && (
-                  // <div className="opis-slike">
-                  <h1 className="ax-top-name">{data.name}</h1>
-                  // <h3 className="funkcija-koordinatora">{data.title}</h3>
-                  // </div>
+                  <div className="opis-slike">
+                    <h1 className="ax-top-name">{data.name}</h1>
+                    <hr className="hr" />
+                  </div>
                 )}
               </div>
             );
