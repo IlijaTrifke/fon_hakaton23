@@ -9,23 +9,9 @@ import Navbar from "./components/navbar/Navbar";
 import SlikeOrg from "./components/slikeOrg/SlikeOrg";
 import Ohakatonu from "./components/o-hakatonu/Ohakatonu";
 import Iskustva from "./components/iskustva/Iskustva";
-import Prijava from "./components/prijava/Prijava";
 
-function Home() {
-  return (
-    <>
-      <Navbar />
-      <Pocetna />
-      <Ohakatonu />
-      <Nagrade />
-      <Agenda />
-      <Iskustva />;
-      <Statistika />
-      <Faq />
-      <Partneri />
-      <SlikeOrg />
-    </>
-  );
-}
+const Home = () => {
+  return <Iskustva />;
+};
 
 export default Home;

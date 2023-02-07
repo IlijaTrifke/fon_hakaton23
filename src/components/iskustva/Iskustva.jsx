@@ -10,15 +10,12 @@ import IskustvoSlider from "./IskustvaSlider.js";
 import photo from "./assets/photo.jpg";
 import iskustvaFoto from "./assets/fonis.jpg";
 
-// slike tima dolje
 import React, { useState, useEffect } from "react";
-// import "./slike_tima.css";
-// import SLikaBordera1 from "../../images/Slike tima - okvir za sliku tima.png";
+
 import StrelaLevo from "../../images/LeftArrow.png";
 import StrelaDesno from "../../images/RightArrow.png";
-// import SlikaBordera from "../../images/Slike tima - okvir za koordinatora.png";
+
 import { DataSlider } from "./DataSlider";
-// slike tima gore
 
 const Iskustva = (props) => {
   const iskustvaSettings = {
@@ -125,7 +122,7 @@ const Iskustva = (props) => {
       iskustvoIme: "iskustvo15",
     },
   ];
-  // slike tima dolje
+
   const [people] = useState(DataSlider);
   const [current, setCurrent] = useState(0);
   const [stateR, setStateR] = useState(false);
@@ -155,30 +152,30 @@ const Iskustva = (props) => {
     }
   }, [current, people]);
 
-  useEffect(() => {
-    let slider = setInterval(
-      () => {
-        setState(false);
-        if (current == 6) {
-          toggleActiveStyles(0);
-          toggleActive(0);
-          setCurrent(0);
-        } else {
-          toggleActiveStyles(current + 1);
-          toggleActive(current + 1);
-          setCurrent(current + 1);
-        }
+  // useEffect(() => {
+  //   let slider = setInterval(
+  //     () => {
+  //       setState(false);
+  //       if (current == 6) {
+  //         toggleActiveStyles(0);
+  //         toggleActive(0);
+  //         setCurrent(0);
+  //       } else {
+  //         toggleActiveStyles(current + 1);
+  //         toggleActive(current + 1);
+  //         setCurrent(current + 1);
+  //       }
 
-        console.log(current);
-        setCurrent(current + 1);
-      },
-      state === true ? 10000 : 3000
-    );
+  //       console.log(current);
+  //       setCurrent(current + 1);
+  //     },
+  //     state === true ? 10000 : 3000
+  //   );
 
-    return () => {
-      clearInterval(slider);
-    };
-  }, [current]);
+  //   return () => {
+  //     clearInterval(slider);
+  //   };
+  // }, [current]);
 
   const nextSlide = () => {
     const index = current === length - 1 ? 0 : current + 1;
@@ -236,51 +233,12 @@ const Iskustva = (props) => {
       return "left-arrow activeAR";
     }
   };
-  // slike tima gore
+
   return (
     <div className="ax-iskustva">
       <div className="ax-title">
         <h1>Iskustva</h1>
       </div>
-      {/* <div className="ax-top">
-        <div className="ax-top-left-button">
-          <button>lijevo</button>
-        </div>
-        <div className="ax-top-left-box">
-          <img src={photo} alt="photo" className="ax-top-photo1" />
-          <div className="ax-top-left-box-name">Nemanja Petronijevic</div>
-          <hr className="ax-top-left-box-hr" />
-        </div>
-        <div className="ax-top-right-box">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-            ratione unde laborum voluptas, nobis quod ducimus quae itaque ab
-            earum saepe doloremque aliquid atque dolore.
-          </p>
-        </div>
-
-         { <p>Right arrow: <i class="arrow right"></i></p> } //ovdje bilo zakomentarisano kad ostalo nije!!! }
-        <div className="ax-top-right-button">
-          <button>desno</button>
-        </div>
-      </div> */}
-      {/* slike tima dolje*/}
-      {/* <div className="slike-tima-wrapper" id="tim"> */}
-      {/* <div className="navbar-st">
-          {appState.objects.map((elements, index) => (
-            <h1
-              key={index}
-              className={toggleActiveStyles(index)}
-              onClick={() => {
-                toggleActive(index);
-                setCurrent(index);
-                setState(true);
-              }}
-            >
-              {elements.title}
-            </h1>
-          ))}
-        </div> */}
 
       <div className="ax-top-container">
         <div className="ax-top-left">
@@ -305,11 +263,7 @@ const Iskustva = (props) => {
                 setState(true);
               }}
             />
-            {/* <img
-              className="slika-bordera"
-              src={SlikaBordera}
-              alt="Okvir za sliku koordinatora"
-            /> */}
+
             {DataSlider.map((data, index) => {
               return (
                 <div
@@ -330,39 +284,16 @@ const Iskustva = (props) => {
                 key={index}
               >
                 {index === current && (
-                  // <div className="opis-slike">
-                  <h1 className="ax-top-name">{data.name}</h1>
-                  // <h3 className="funkcija-koordinatora">{data.title}</h3>
-                  // </div>
+                  <div className="opis-slike">
+                    <h1 className="ax-top-name">{data.name}</h1>
+                    <hr className="hr" />
+                  </div>
                 )}
               </div>
             );
           })}
         </div>
         <div className="ax-top-right">
-          {/* <div className="slika-roditelj">
-            <img
-              className="slika-bordera1"
-              src={SLikaBordera1}
-              alt="Okvir za sliku tima"
-            />
-            {DataSlider.map((data, index) => {
-              return (
-                <div
-                  className={index === current ? "slide-active" : "slide"}
-                  key={index}
-                >
-                  {index === current && (
-                    <img
-                      className="slika-grupna"
-                      src={data.imageGroup}
-                      alt="Grupna slika tima"
-                    />
-                  )}
-                </div>
-              );
-            })}
-          </div> */}
           {DataSlider.map((data, index) => {
             return (
               <div
@@ -377,8 +308,6 @@ const Iskustva = (props) => {
           })}
         </div>
       </div>
-      {/* </div> */}
-      {/* slike tima gore */}
 
       <div className="ax-down">
         <div className="ax-iskustva-box">
