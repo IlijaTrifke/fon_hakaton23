@@ -10,8 +10,22 @@ import SlikeOrg from "./components/slikeOrg/SlikeOrg";
 import Ohakatonu from "./components/o-hakatonu/Ohakatonu";
 import Iskustva from "./components/iskustva/Iskustva";
 
-const Home = () => {
-  return <Iskustva />;
-};
+function Home() {
+  return (
+    <>
+      <Navbar />
+      <Pocetna />
+      <Ohakatonu />
+      <Nagrade />
+      <Agenda />
+      <Iskustva />;
+      <Statistika />
+      <Faq />
+      <Partneri />
+      <SlikeOrg />
+      <Prijava />
+    </>
+  );
+}
 
 export default Home;
