@@ -1,5 +1,252 @@
 @import "../../global.scss";
 
-p {
-  color: $tamnoPlava;
+.pocetna-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+  background-color: $tamnoPlava;
+  color: $bela;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  background-image: url(../../images/Constellation.png);
+  background-size: 100 100;
+  background-repeat: no-repeat;
+}
+
+.pocetna-logo {
+  width: 19rem;
+  position: relative;
+  z-index: 100;
+}
+
+.pocetna-motto {
+  font-family: Orbitron;
+  word-spacing: 1vw;
+  text-align: center;
+  text-shadow: 0 0 10px $bela;
+  margin: 2% 0;
+  position: relative;
+  z-index: 100;
+  font-size: 2rem;
+  max-width: 80%;
+}
+
+.pocetna-text-box {
+  font-family: Orbitron;
+  @include flex-center();
+  width: 15rem;
+  height: 4rem;
+  background-image: linear-gradient(to right, $svetloPlava, $ljubicasta);
+  border-radius: 5rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin: 2% 0;
+  position: relative;
+  cursor: pointer;
+  z-index: 100;
+  transition: all 0.3s ease-in-out;
+}
+
+.pocetna-text-box::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: "";
+  opacity: 0;
+  background-color: $svetloPlava;
+  transition: all 0.3s ease;
+  border-radius: 5rem;
+  z-index: 100;
+}
+.pocetna-text-box:hover::after {
+  opacity: 1;
+}
+
+.pocetna-text-box:hover > span {
+  color: $ljubicasta;
+  transition: all 0.3s ease-in-out;
+}
+
+.pocetna-text-box span {
+  position: relative;
+  z-index: 199;
+}
+
+.pocetna-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  width: 70%;
+}
+.pocetna-arrows {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+  z-index: 100;
+  filter: brightness(1.75);
+}
+.pocetna-arrow {
+  border: solid $svetloPlava;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 10px;
+  transform: rotate(45deg) scale(1.5);
+  -webkit-transform: rotate(45deg) scale(1.8);
+  position: relative;
+  animation: arrowLoad 1s infinite ease-out;
+}
+
+@keyframes arrowLoad {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg);
+  }
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg);
+  }
+}
+
+.pocetna-arrow:nth-child(2) {
+  position: relative;
+  animation-delay: -0.4s;
+}
+.pocetna-arrow:nth-child(3) {
+  animation-delay: -0.2s;
+}
+
+.pocetna-arrows h1 {
+  position: absolute;
+  bottom: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.8rem;
+  text-align: center;
+  color: $svetloPlava;
+  font-family: Orbitron;
+}
+
+.pocetna-bottom-middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pocetna-middle-text {
+  font-family: Noto Sans;
+  font-size: 1.5rem;
+  font-weight: 400;
+  z-index: 100;
+}
+
+.pocetna-timer {
+  @include flex-center();
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  border-radius: 1.5rem;
+  box-shadow: 0px 7px 20px 0px rgb(0 0 0);
+  // filter: blur(20px);
+  width: 20rem;
+  height: 5rem;
+  font-size: 2.4rem;
+  font-family: Orbitron;
+  color: $svetloPlava;
+  font-weight: 500;
+  z-index: 100;
+}
+
+.blue-ball-blur {
+  position: absolute;
+  top: 30%;
+  left: -20%;
+  width: 40%;
+  height: 60%;
+  background-color: $svetloPlava;
+  filter: blur(14rem) drop-shadow(0 0 14px $svetloPlava);
+  border-radius: 50%;
+  animation: blurMoving 10s linear infinite;
+}
+.purple-rectangle-blur {
+  position: absolute;
+  top: 0;
+  left: 80%;
+  width: 40%;
+  height: 50%;
+  background-color: $ljubicasta;
+  filter: blur(9rem) drop-shadow(0 0 14px $ljubicasta);
+  border-radius: 50%;
+  animation: blurMoving 10s linear infinite;
+}
+
+@keyframes blurMoving {
+  0% {
+    transform: rotate(0deg) translate(-100px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(-100px) rotate(-360deg);
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .pocetna-bottom {
+    gap: 5rem;
+  }
+}
+@media screen and (max-width: 620px) {
+  .pocetna-bottom {
+    gap: 2rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .pocetna-logo {
+    width: 15rem;
+  }
+  .pocetna-motto {
+    font-size: 1.5rem;
+    margin: 10% 0;
+  }
+
+  .pocetna-bottom {
+    flex-wrap: wrap-reverse;
+  }
+
+  .pocetna-bottom-middle {
+    order: 1;
+    gap: 0;
+  }
+  .pocetna-arrows {
+    padding: 0 15%;
+  }
+  .pocetna-timer,
+  .pocetna-text-box {
+    transform: scale(0.8);
+  }
+  .pocetna-bottom h1 {
+    display: none;
+  }
+  .pocetna-text-box,
+  .pocetna-arrows {
+    cursor: none;
+  }
+  .blue-ball-blur {
+    filter: blur(8rem) drop-shadow(0 0 10px $svetloPlava);
+  }
+  .purple-rectangle-blur {
+    filter: blur(5rem) drop-shadow(0 0 10px $ljubicasta);
+  }
 }

@@ -1,0 +1,106 @@
+@import "../../global.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.org-section {
+  background-color: $tamnoPlava;
+}
+.org-content {
+  @include flex-center-gap();
+}
+.org-header {
+  font-family: "Orbitron", sans-serif;
+  color: $bela;
+  text-shadow: 0 0 0.4rem $bela;
+  text-shadow: 0 0 0.8rem $bela;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.org-text {
+  color: $bela;
+  font-family: "Noto Sans", sans-serif;
+  width: 40vw;
+  text-align: center;
+  filter: drop-shadow(0 0 10px #011b30);
+}
+
+.org-h2 {
+  background-color: #002440a9;
+  font-size: 100%;
+  position: relative;
+  padding: 0.8rem;
+  border: 2px;
+  text-align: center;
+  border-radius: 13px;
+}
+.org-h2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 2px;
+  background: linear-gradient(45deg, $svetloPlava, $ljubicasta);
+  -webkit-mask: linear-gradient(rgb(255, 255, 255) 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+.org-p {
+  position: relative;
+  font-size: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  background-color: #002440a9;
+  border-radius: 13px;
+  filter: drop-shadow(0 0 10px #011b30);
+}
+
+.org-p::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 2px;
+  background: linear-gradient(45deg, $svetloPlava, $ljubicasta);
+  -webkit-mask: linear-gradient(rgb(255, 255, 255) 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.org-photo-hold {
+  position: relative;
+  width: 42vw;
+  filter: drop-shadow(0 0 10px #011b30);
+}
+.org-photo-hold::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 2px;
+  background: linear-gradient(45deg, $svetloPlava, $ljubicasta);
+  -webkit-mask: linear-gradient(rgb(255, 255, 255) 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+.org-photo {
+  border-radius: 12px;
+  width: 100%;
+}
+
+@media (max-width: 750px) {
+  .org-content {
+    flex-wrap: wrap-reverse;
+    gap: 2rem;
+  }
+  .org-text,
+  .org-photo-hold {
+    width: 85%;
+  }
+}

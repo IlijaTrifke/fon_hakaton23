@@ -1,4 +1,3 @@
-import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import Home from "./Home";
 
@@ -7,7 +6,7 @@ function App() {
     <div className="App">
       <Routes>
         {/* <Route path="/prijava" exact element={<Prijava />} /> */}
-        <Route path="/" element={<Home />} />
+        <Route path="/" exact element={<Home />} />
       </Routes>
     </div>
   );

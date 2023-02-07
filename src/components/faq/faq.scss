@@ -1,0 +1,183 @@
+@import "../../global.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.faq-naslov {
+  color: $bela;
+  font-family: "Orbitron", sans-serif;
+  text-align: center;
+  font-size: 1.7rem;
+}
+
+.faq-section {
+  background-color: $tamnoPlava;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  padding-top: 2rem;
+  align-items: center;
+}
+
+.faq-box {
+  border-radius: 15px;
+  background-color: $tamnoPlava;
+  //background-color: rgba(0, 36, 64, 0.85); za semi-transparent
+  width: 30rem;
+  max-width: 80%;
+  align-self: center;
+  margin: 2rem;
+  padding: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.faq-text {
+  color: $bela;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1rem;
+}
+
+.faq-horizontal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// .faq-section p {
+//   text-align: left;
+// }
+
+.faq-longtext1 {
+  color: white;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.faq-longtext2 {
+  color: white;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 0.8rem;
+  display: none;
+}
+
+.faq-horizontal-line {
+  display: inline-block;
+  width: 100%;
+  height: 0.1rem;
+  background-image: linear-gradient(
+    to right,
+    $svetloPlava,
+    $ljubicasta,
+    $svetloPlava,
+    #24bcde50
+  );
+}
+
+.faq-plus {
+  font-size: 2.2rem;
+  align-items: center;
+  padding-bottom: 0.5rem;
+  color: #978bcc;
+  cursor: pointer;
+}
+
+.faq-plus-animation1 {
+  animation-name: animplus1;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.faq-plus-animation2 {
+  animation-name: animplus2;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animplus1 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes animplus2 {
+  0% {
+    transform: rotate(45deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.faq-hidden {
+  display: none;
+}
+
+.faq-text-moving {
+  overflow: hidden;
+  max-height: 0;
+  transition: all 0.3s cubic-bezier(0, 1, 0, 1);
+  border-bottom: 2px solid;
+  border-image: linear-gradient(
+    to right,
+    $svetloPlava,
+    $ljubicasta,
+    $svetloPlava,
+    #24bcde50
+  );
+  border-image-slice: 1;
+  width: 100%;
+  color: $bela;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.show {
+  height: 100%;
+  max-height: 9999px;
+  transition: all 0.3s cubic-bezier(1, 0, 1, 0);
+}
+
+// @keyframes movingTopToBottom {
+//   0% {
+//     transform: translateY(-2rem);
+//     opacity: 0;
+//   }
+//   100% {
+//     transform: translateY(0);
+//     opacity: 1;
+//   }
+// }
+
+// @keyframes movingBottomToTop {
+//   0% {
+//     opacity: 1;
+//     transform: translateY(0);
+//   }
+
+//   100% {
+//     opacity: 0;
+//     transform: scale(-2rem);
+//   }
+// }
+
+.faq-plus,
+.faq-text,
+.faq-text-moving,
+.faq-horizontal-line,
+.faq-naslov {
+  user-select: none;
+}
+
+.faq-plus-animation2::selection {
+  color: none;
+  background: none;
+}
+
+//da se ne bi pojavljivao plavi selekt i blicanje cursora

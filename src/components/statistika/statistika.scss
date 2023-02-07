@@ -1,0 +1,76 @@
+@import "../../global.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.stk-section {
+  background-color: $tamnoPlava;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  padding: 5rem;
+  font-family: Noto Sans;
+}
+
+.stk-section ul {
+  display: flex;
+  justify-content: center;
+}
+
+.stk-section li {
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 20px;
+  background: linear-gradient(to right, #003560, $tamnoPlava);
+}
+
+.stk-numbers {
+  font-size: 1.5rem;
+  padding: 1.5rem;
+  color: white;
+  width: 6rem;
+}
+
+.stk-text {
+  display: flexbox;
+  align-self: center;
+  flex-wrap: wrap;
+  color: white;
+  padding: 1.5rem;
+}
+
+.stk-vertical-line {
+  display: inline-block;
+  border-left: 0.8px solid $svetloPlava;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 900px) {
+  .stk-section ul {
+    flex-direction: column;
+  }
+
+  .stk-section {
+    background-color: $tamnoPlava;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .stk-text {
+    display: flex;
+    align-self: center;
+    flex-wrap: wrap;
+    color: white;
+    padding: 0.5rem;
+  }
+}

@@ -1,0 +1,293 @@
+@import "../../global.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.ng-nagrade {
+  background-color: $tamnoPlava;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 0;
+}
+
+.ng-text h1 {
+  font-family: "Noto sans", light;
+  font-size: 3rem;
+  font-weight: lighter;
+  text-transform: uppercase;
+  color: $bela;
+}
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+}
+
+@keyframes fadeInTop {
+  0% {
+    //opacity: 0;
+    margin-bottom: -80vh;
+  }
+  100% {
+    //opacity: 1;
+  }
+}
+.ng-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 50%;
+  padding-left: 1rem;
+}
+
+.ng-stands {
+  padding-top: 5rem;
+  padding-left: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  max-width: 50%;
+  overflow: hidden;
+}
+
+.ng-circle {
+  display: flex;
+  align-items: center;
+  background: black;
+  border-radius: 100%;
+  height: 11rem;
+  width: 11rem;
+  margin: 0;
+  background: radial-gradient(circle at 4rem 4rem, #5cabff, #000);
+  animation: float 6s ease-in-out infinite, fadeIn 4s ease-in-out 1;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.ng-circletext {
+  font-family: "Noto sans", light;
+  display: flex;
+  text-align: center;
+  padding: 1rem;
+  font-size: 3rem;
+  color: $bela;
+}
+
+.ng-postolje-img {
+  height: 40vh;
+  width: 15rem;
+  animation: fadeInTop 4s ease-in-out 1;
+}
+
+.ng-pole {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 35%;
+}
+
+.ng-stand-3 {
+  position: relative;
+  width: 14rem;
+  height: 15rem;
+}
+
+.ng-stand-1 {
+  position: relative;
+  width: 14rem;
+  height: 20rem;
+}
+.ng-stand-2 {
+  position: relative;
+  width: 14rem;
+  height: 17rem;
+}
+
+.ng-postolje-text {
+  font-family: "Noto Sans", sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 8rem;
+  color: $bela;
+  animation: fadeInNumbers 5s ease-in-out 1;
+}
+
+@keyframes fadeInNumbers {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media (max-width: 1200px) {
+  .ng-text h1 {
+    font-size: 2rem;
+  }
+
+  .ng-circle {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  .ng-circletext {
+    font-size: 2rem;
+  }
+  .ng-postolje-img {
+    height: 20rem;
+    width: 10rem;
+  }
+
+  .ng-stand-3 {
+    width: 10rem;
+    height: 15rem;
+  }
+
+  .ng-stand-1 {
+    width: 10rem;
+    height: 20rem;
+  }
+  .ng-stand-2 {
+    width: 10rem;
+    height: 15rem;
+  }
+}
+
+@media (max-width: 960px) {
+  .ng-stands {
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .ng-postolje-img {
+    height: 20rem;
+    width: 8.5rem;
+  }
+
+  .ng-stand-3 {
+    width: 8.5rem;
+    height: 15rem;
+  }
+
+  .ng-stand-1 {
+    width: 8.5rem;
+    height: 20rem;
+  }
+  .ng-stand-2 {
+    width: 8.5rem;
+    height: 15rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .ng-nagrade {
+    flex-direction: column;
+
+    .ng-text h1 {
+      font-size: 1.5rem;
+    }
+  }
+  .ng-stands {
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .ng-postolje-img {
+    height: 20rem;
+    width: 8rem;
+  }
+
+  .ng-stand-3 {
+    width: 8rem;
+    height: 15rem;
+  }
+
+  .ng-stand-1 {
+    width: 8rem;
+    height: 20rem;
+  }
+  .ng-stand-2 {
+    width: 8rem;
+    height: 15rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .ng-nagrade {
+    flex-direction: column;
+  }
+  .ng-stands {
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .ng-text {
+    max-width: 75%;
+    padding-top: 1rem;
+  }
+
+  .ng-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .ng-circle {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+
+  .ng-circletext {
+    font-size: 1.5rem;
+  }
+
+  .ng-postolje-img {
+    height: 10rem;
+    width: 6rem;
+  }
+
+  .ng-stand-3 {
+    width: 6rem;
+    height: 5rem;
+  }
+
+  .ng-stand-1 {
+    width: 6rem;
+    height: 10rem;
+  }
+  .ng-stand-2 {
+    width: 6rem;
+    height: 7.5rem;
+  }
+
+  .ng-postolje-text {
+    padding-top: 1rem;
+    font-size: 3rem;
+  }
+}
