@@ -3,6 +3,7 @@ import CountUp from "react-countup";
 import "./prijava.scss";
 import Kevin from "./img/pr-kocka.png";
 import Iks from "./img/pr-exit.png";
+import Strelica from "./img/pr-strelica-dugme.png";
 
 const Prijava = () => {
   return (
@@ -10,7 +11,7 @@ const Prijava = () => {
       <div class="pr-header">
         <h1 class="pr-h1">Forma za prijavu</h1>
         <div class="pr-exit-text">
-          Izađi
+          <p>Izađi</p>
           <img class="pr-exit" src={Iks}></img>
         </div>
       </div>
@@ -37,7 +38,7 @@ const Prijava = () => {
               <select class="pr-select" id="pr-select_m1">
                 <option value="zaposlen">Zaposlen</option>
                 <option value="student">Student</option>
-                <option value="srednjoskolac">srednjoškolac</option>
+                <option value="srednjoskolac">Srednjoškolac</option>
               </select>
               <lable class="pr-lable" for="pr-year_m1">
                 Godina i naziv fakulteta/ srednje škole
@@ -78,7 +79,7 @@ const Prijava = () => {
               <select class="pr-select" id="pr-select_m1">
                 <option value="zaposlen">Zaposlen</option>
                 <option value="student">Student</option>
-                <option value="srednjoskolac">srednjoškolac</option>
+                <option value="srednjoskolac">Srednjoškolac</option>
               </select>
               <lable class="pr-lable" for="pr-year_m1">
                 Godina i naziv fakulteta/ srednje škole
@@ -119,7 +120,7 @@ const Prijava = () => {
               <select class="pr-select" id="pr-select_m1">
                 <option value="zaposlen">Zaposlen</option>
                 <option value="student">Student</option>
-                <option value="srednjoskolac">srednjoškolac</option>
+                <option value="srednjoskolac">Srednjoškolac</option>
               </select>
               <lable class="pr-lable" for="pr-year_m1">
                 Godina i naziv fakulteta/ srednje škole
@@ -158,9 +159,15 @@ const Prijava = () => {
                 Status: zaposlen, student, srednjoškolac
               </lable>
               <select class="pr-select" id="pr-select_m1">
-                <option value="zaposlen">Zaposlen</option>
-                <option value="student">Student</option>
-                <option value="srednjoskolac">srednjoškolac</option>
+                <option value="zaposlen" class="pr-option">
+                  Zaposlen
+                </option>
+                <option value="student" class="pr-option">
+                  Student
+                </option>
+                <option value="srednjoskolac" class="pr-option">
+                  Srednjoškolac
+                </option>
               </select>
               <lable class="pr-lable" for="pr-year_m1">
                 Godina i naziv fakulteta/ srednje škole
@@ -185,12 +192,18 @@ const Prijava = () => {
             <div class="pr-kevin">
               <img src={Kevin} class="pr-kevin-img" />
             </div>
+
             <div class="pr-team-info">
               <h1 class="pr-h1_m">Tim</h1>
               <lable class="pr-lable" for="pr-teamname">
                 Ime Tima
               </lable>
-              <input type="text" class="pr-text-team" id="pr-teamname"></input>
+              <input
+                type="text"
+                class="pr-text"
+                id="pr-teamname"
+                required
+              ></input>
               <lable class="pr-lable" for="pr-motivation">
                 Navedite i opišite prethodna iskustva u grupnom radu,a ako do
                 sada niste radili zajedno, opišite vaša pojedinačna iskustva.
@@ -198,6 +211,7 @@ const Prijava = () => {
               <textarea
                 class="pr-text-team_textarea"
                 id="pr-motivation"
+                required
               ></textarea>
               <lable class="pr-lable" for="pr-motivation">
                 Šta vas je navelo da se prijavite na hakaton i šta želite da
@@ -206,6 +220,7 @@ const Prijava = () => {
               <textarea
                 class="pr-text-team_textarea"
                 id="pr-motivation"
+                required
               ></textarea>
               <lable class="pr-lable" for="pr-motivation">
                 Šta biste naveli kao svoje vrline i mane koje bi uticale na
@@ -214,17 +229,21 @@ const Prijava = () => {
               <textarea
                 class="pr-text-team_textarea"
                 id="pr-motivation"
+                required
               ></textarea>
             </div>
           </div>
         </div>
         <div class="pr-footer">
-          <input
-            type="submit"
-            id="pr-submit"
-            class="pr-submit"
-            value="Posalji prijavu"
-          ></input>
+          <div class="pr-footer-dugme">
+            <input
+              type="submit"
+              id="pr-submit"
+              class="pr-submit"
+              value="Pošalji prijavu"
+            ></input>
+            <img src={Strelica} class="pr-strelica-img"></img>
+          </div>
         </div>
       </form>
     </div>

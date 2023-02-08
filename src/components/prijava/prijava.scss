@@ -10,16 +10,16 @@
   padding-top: 5vh;
   display: flex;
   width: 100%;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .pr-h1 {
   font-family: "Orbitron";
   color: $bela;
   display: flex;
-  padding-right: 30%;
   font-size: 3rem;
   margin-bottom: 5rem;
+  margin-left: 35%;
   text-shadow: -2px 0 $ljubicasta, 0 2px $ljubicasta, 2px 0 $ljubicasta,
     0 -2px $ljubicasta;
 }
@@ -30,14 +30,14 @@
   color: $bela;
   display: flex;
   align-items: center;
-  gap: 1rem;
+  margin-left: 20vw;
   margin-bottom: 4rem;
 }
 
 .pr-exit {
-  width: 2vw;
-  height: 3vh;
+  max-height: 2rem;
   margin-right: 5rem;
+  margin-left: 1rem;
 }
 
 .pr-team-data {
@@ -53,8 +53,9 @@
 .pr-members {
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 50%;
   border-radius: 30px;
+  margin-left: 10%;
   // overflow: hidden;
 }
 
@@ -78,11 +79,14 @@
   font-size: 1.5rem;
   color: $bela;
   word-wrap: break-word;
+  text-align: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .pr-text {
   height: 2.5rem;
-  width: 75%;
+  width: 80%;
   text-align: center;
   font-size: 1.5rem;
   background-color: $tamnoPlava;
@@ -118,25 +122,29 @@
 }
 
 .pr-kevin {
-  width: 90%;
+  margin-left: 20%;
+  width: 80%;
 }
 
 .pr-kevin-img {
-  width: 90%;
+  max-width: 80%;
+  // width: 80%;
 }
 
 .pr-team-info {
+  margin-left: 20%;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 2rem;
   background-color: rgba(6, 58, 86, 0.6);
   margin-bottom: 10rem;
+  width: 60%;
 }
 
 .pr-text-team {
   height: 2.5rem;
-  width: 75%;
+  width: 90%;
   text-align: center;
   font-size: 1.5rem;
   background-color: $tamnoPlava;
@@ -151,18 +159,19 @@
 }
 
 .pr-text-team_textarea {
-  height: 10rem;
-  width: 75%;
+  height: 25rem;
+  width: 80%;
   font-size: 1.5rem;
   background-color: $tamnoPlava;
   color: $bela;
   border: double 2px transparent;
-  border-radius: 6px;
+  border-radius: 15px;
   background-image: linear-gradient($tamnoPlava, $tamnoPlava),
     linear-gradient(to right, $svetloPlava, $ljubicasta);
   background-origin: border-box;
   background-clip: padding-box, border-box;
   margin-bottom: 3.5rem;
+  resize: none;
 }
 
 .pr-footer {
@@ -170,12 +179,77 @@
   justify-content: center;
 }
 
+.pr-footer-dugme {
+  display: flex;
+}
+
 .pr-submit {
   display: flex;
   font-family: "Noto sans";
   color: $bela;
-  background-color: $ljubicasta;
+  background-image: linear-gradient(to right, $svetloPlava, $ljubicasta);
   font-size: 3rem;
   border-radius: 1.5rem;
   padding: 1rem;
+  position: relative;
+  margin-bottom: 10rem;
+}
+
+.pr-strelica-img {
+  position: absolute;
+  max-width: 20%;
+  transform: translate(-70%, 50%);
+}
+
+@media (max-width: 1200px) {
+  .pr-h1 {
+    margin-left: 20%;
+  }
+  .pr-exit-text {
+    margin-left: 15%;
+  }
+}
+
+@media (max-width: 620px) {
+  .pr-h1 {
+    font-size: 2rem;
+    margin-left: 20%;
+  }
+  .pr-exit-text {
+    margin-left: 10%;
+  }
+
+  .pr-exit-text p {
+    display: none;
+  }
+  .pr-exit {
+    width: 2rem;
+  }
+
+  .pr-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .pr-members {
+    margin-left: 0;
+    width: 85%;
+  }
+  .pr-team-info {
+    justify-content: center;
+    margin-left: 7.5%;
+    width: 85%;
+  }
+  .pr-kevin {
+    display: none;
+  }
+  .pr-submit {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pr-option {
+    font-size: 1rem;
+    max-width: 50%;
+  }
 }
