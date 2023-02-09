@@ -120,8 +120,6 @@
   -webkit-mask-composite: xor;
 }
 
-// @media screen and (max-width: 1920px) {
-// }
 @media screen and (max-width: 1200px) {
   .hakaton-section {
     display: flex;
@@ -162,12 +160,13 @@
     height: 70%;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1450px) {
   .card2 {
     top: 20%;
   }
   .card3 {
     top: 48%;
+    backdrop-filter: none;
   }
 }
 
