@@ -25,27 +25,24 @@ export default function Footer() {
           </h1>
         </div>
       </div>
-      <hr />
+      <hr className="footer-hr" />
       <div className="footer-box">
         <div className="footer-icons">
           <div className="footer-globe">
-            <a href="https://fonis.rs/">
+            <a className="footer-gl" href="https://fonis.rs/">
               <FaGlobe />
               fonis.rs
             </a>
           </div>
           <div className="footer-socials">
-            <a
-              className="footer-ig"
-              href="https://www.instagram.com/fonis_fon/"
-            >
+            <a className="footer-ig" href="https://www.instagram.com/fonis_fon/">
               <FaInstagram />
             </a>
             <a className="footer-fb" href="https://www.facebook.com/fonis.rs">
               <FaFacebookF />
             </a>
             <a
-              className="fotter-in"
+              className="footer-in"
               href="https://www.linkedin.com/company/fonis"
             >
               <FaLinkedinIn />
@@ -57,7 +54,7 @@ export default function Footer() {
         </div>
         <div className="footer-adress">
           <p>Fakultet organizacionih nauka</p>
-          <p>Jove Ilica 154, Beograd</p>
+          <p>Jove Ilića 154, Beograd</p>
         </div>
       </div>
     </div>
