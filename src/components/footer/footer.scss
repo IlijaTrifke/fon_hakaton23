@@ -1,0 +1,196 @@
+@import "../../global.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  background-color: $tamnoPlava;
+  position: fixed;
+  width: 100wh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.footer-text {
+  color: $bela;
+  margin-top: 2rem;
+  text-align: center;
+  width: 40rem;
+  height: 20rem;
+  position: relative;
+  border: 5px;
+  border-radius: 12px;
+}
+
+.footer-h {
+  font-family: Orbitron;
+  font-weight: 200;
+}
+
+.footer-text::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 2px;
+  background: linear-gradient(45deg, $svetloPlava, $ljubicasta);
+  -webkit-mask: linear-gradient(rgb(255, 255, 255) 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.footer-p {
+  margin-top: 2rem;
+  font-family: "Raleway", sans-serif;
+}
+
+.footer-button {
+  font-family: Orbitron;
+  @include flex-center();
+  width: 15rem;
+  height: 4rem;
+  background-image: linear-gradient(to right, $svetloPlava, $ljubicasta);
+  border-radius: 5rem;
+  font-size: 1.4rem;
+  color: $bela;
+  font-weight: 400;
+  margin: 0;
+  position: absolute;
+  top: 56%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 100;
+}
+
+.footer-button::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: "";
+  opacity: 0;
+  background-color: $svetloPlava;
+  transition: all 0.3s ease;
+  border-radius: 5rem;
+  z-index: 100;
+}
+.footer-button:hover::after {
+  opacity: 1;
+}
+
+hr {
+  margin-top: 4rem;
+  height: 2px;
+  width: 80%;
+  align-self: center;
+  margin-bottom: 2rem;
+  background-image: linear-gradient(
+    to left,
+    transparent,
+    $svetloPlava,
+    $ljubicasta,
+    $svetloPlava,
+    transparent
+  );
+  border: none;
+}
+
+.footer-box {
+  margin-left: 3rem;
+  margin-right: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  width: 15rem;
+}
+
+.footer-icons {
+  font-size: 25px;
+}
+
+.footer-adress {
+  color: $bela;
+  font-size: 20px;
+  font-family: "Raleway", sans-serif;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.footer-icons,
+.footer-adress {
+  width: 20%;
+}
+
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  color: $bela;
+}
+.footer-globe {
+  color: $bela;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .footer-box {
+    top: 40%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .footer-text {
+    width: 80%;
+  }
+  .footer-button {
+    top: 55%;
+  }
+  .footer-box {
+    margin-top: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .footer-button {
+    top: 38.5%;
+  }
+  .footer-box {
+    gap: 2rem;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer-box {
+    gap: 2rem;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .footer-button {
+    top: 37.5%;
+  }
+}
