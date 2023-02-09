@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-.hakaton-section {
+.ohakatonu {
   background-color: $tamnoPlava;
   justify-items: center;
   align-items: center;
@@ -44,7 +44,7 @@
 .card2 {
   top: 15%;
   left: 58%;
-  width: 19%;
+  width: 23%;
   padding: 0.7%;
 }
 
@@ -54,16 +54,38 @@
   height: 30rem;
   position: relative;
 }
-.hakaton-loc-time {
+
+.hakaton-card-title {
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1.3rem;
+  position: relative;
+}
+.hakaton-card-title h1 {
+  font-size: 1.3rem;
+  text-align: center;
+  text-decoration: underline;
+  color: white;
+  font-family: Orbitron;
 }
 
-.hakaton-lt {
-  font-family: "Orbitron", sans-serif;
-  color: white;
-  text-decoration: underline;
-  font-size: 1rem;
+.hakaton-arrows {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  z-index: 100;
+  filter: brightness(1.2);
+}
+
+.hakaton-arrow {
+  border: solid $svetloPlava;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 4px;
+  // transform: rotate(45deg) scale(1);
+  -webkit-transform: rotate(-45deg);
+  position: relative;
 }
 
 .card3 {
@@ -90,7 +112,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: 1rem; //za border radius koristi px ili rem, % ne radi lepo
+  border-radius: 1rem;
   padding: 2.1px;
   background: linear-gradient(-30deg, $ljubicasta, transparent, $svetloPlava);
   -webkit-mask: linear-gradient(rgb(255, 255, 255) 0 0) content-box,
@@ -101,27 +123,53 @@
 // @media screen and (max-width: 1920px) {
 // }
 @media screen and (max-width: 1200px) {
-  .hakaton-section {
+  .ohakatonu {
     display: flex;
     flex-direction: column;
+    gap: 2rem;
+    justify-items: center;
+    align-items: center;
   }
+
   .hakaton-card {
+    transform: translateX(100%);
     position: initial;
     width: 90%;
   }
-}
-// @media screen and (max-width: 960px) {
-// }
-// @media screen and (max-width: 620px) {
-// }
-@media screen and (max-width: 480px) {
+
   .hakaton-section {
-    display: flex;
-    flex-direction: column;
+    height: 60%;
+    width: 30%;
+    margin-right: 55%;
+    gap: 4rem;
   }
 }
-// @media screen and (max-width: 340px) {
-// }
+@media screen and (max-width: 960px) {
+  .hakaton-section {
+    height: 40%;
+    width: 50%;
+    margin-right: 85%;
+    gap: 3rem;
+  }
+}
+@media screen and (max-width: 620px) {
+  .hakaton-section {
+    height: 60%;
+    width: 60%;
+    margin-right: 90%;
+    gap: 3rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hakaton-section {
+    height: 70%;
+    width: 75%;
+    margin-right: 90%;
+    gap: 3rem;
+  }
+}
+@media screen and (max-width: 340px) {
+}
 
 #stars {
   width: 1px;
