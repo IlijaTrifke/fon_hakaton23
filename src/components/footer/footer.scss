@@ -82,7 +82,7 @@
   opacity: 1;
 }
 
-hr {
+.footer-hr {
   margin-top: 4rem;
   height: 2px;
   width: 80%;
@@ -132,15 +132,45 @@ hr {
   width: 20%;
 }
 
-a:link {
-  text-decoration: none;
-}
-a:visited {
-  color: $bela;
-}
-.footer-globe {
+.footer-globe{
   color: $bela;
   margin-bottom: 1rem;
+}
+
+.footer-gl{
+    text-decoration: none;
+    color: $bela;
+}
+
+.footer-gl:visited{
+    color: $bela;
+}
+
+.footer-ig{
+    text-decoration: none;
+    color: $bela;
+}
+
+.footer-ig:visited{
+    color: $bela;
+}
+
+.footer-fb{
+    text-decoration: none;
+    color: $bela;
+}
+
+.footer-fb:visited{
+    color: $bela;
+}
+
+.footer-in{
+    text-decoration: none;
+    color: $bela;
+}
+
+.footer-in:visited{
+    color: $bela;
 }
 
 @media screen and (max-width: 1200px) {
