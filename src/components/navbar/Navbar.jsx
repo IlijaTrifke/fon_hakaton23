@@ -68,7 +68,7 @@ const Navbar = () => {
           })}
         </ul>
         <HashLink
-          to="/prijava"
+          to="/Prijava"
           className="prijavi-se desktop"
           onClick={handleClick}
         >
