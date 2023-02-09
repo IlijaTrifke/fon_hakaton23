@@ -10,13 +10,12 @@ import SlikeOrg from "./components/slikeOrg/SlikeOrg";
 import Ohakatonu from "./components/o-hakatonu/Ohakatonu";
 import Iskustva from "./components/iskustva/Iskustva";
 import Prijava from "./components/prijava/Prijava";
+import Footer from "./components/footer/Footer";
 
 function Home() {
   return (
     <>
-      <Pocetna />
-      <Agenda />
-      <SlikeOrg />
+      <Footer />
     </>
   );
 }
