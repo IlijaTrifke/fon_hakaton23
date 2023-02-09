@@ -1,19 +1,9 @@
 @import "../../global.scss";
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
 .footer-section {
   display: flex;
   flex-direction: column;
   background-color: $tamnoPlava;
-  position: fixed;
-  width: 100wh;
-  left: 0;
-  right: 0;
-  bottom: 0;
 }
 
 .footer-content {
@@ -67,9 +57,8 @@
   font-size: 1.4rem;
   color: $bela;
   font-weight: 400;
-  margin: 0;
   position: absolute;
-  top: 56%;
+  top: 100%;
   left: 50%;
   transform: translate(-50%, -50%);
   cursor: pointer;
@@ -164,18 +153,12 @@ a:visited {
   .footer-text {
     width: 80%;
   }
-  .footer-button {
-    top: 55%;
-  }
   .footer-box {
     margin-top: 0.8rem;
   }
 }
 
 @media screen and (max-width: 620px) {
-  .footer-button {
-    top: 38.5%;
-  }
   .footer-box {
     gap: 2rem;
     align-items: center;
@@ -188,9 +171,5 @@ a:visited {
     gap: 2rem;
     align-items: center;
     flex-direction: column;
-  }
-
-  .footer-button {
-    top: 37.5%;
   }
 }
