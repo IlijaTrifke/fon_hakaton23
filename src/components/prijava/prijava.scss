@@ -10,7 +10,9 @@
   padding-top: 5vh;
   display: flex;
   width: 100%;
-  justify-content: flex-start;
+  justify-content: flex-end;
+  margin-bottom: 2rem;
+  //justify-content: center;
 }
 
 .pr-h1 {
@@ -18,8 +20,10 @@
   color: $bela;
   display: flex;
   font-size: 3rem;
-  margin-bottom: 5rem;
-  margin-left: 35%;
+  //   width: 80%;
+  // position: relative;
+  //margin-bottom: 5rem;
+  margin-right: 25%;
   text-shadow: -2px 0 $ljubicasta, 0 2px $ljubicasta, 2px 0 $ljubicasta,
     0 -2px $ljubicasta;
 }
@@ -28,16 +32,19 @@
   font-family: "noto sans";
   font-size: 2rem;
   color: $bela;
+  // position: absolute;
   display: flex;
   align-items: center;
-  margin-left: 20vw;
-  margin-bottom: 4rem;
+  //transform: translate(400%, 20%);
+  // width: 20%;
+  //margin-left: 15vw;
+  //margin-bottom: 4rem;
 }
 
 .pr-exit {
   max-height: 2rem;
-  margin-right: 5rem;
-  margin-left: 1rem;
+  // margin-right: 5rem;
+  //margin-left: 1rem;
 }
 
 .pr-team-data {
@@ -53,7 +60,7 @@
 .pr-members {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 70%;
   border-radius: 30px;
   margin-left: 10%;
   // overflow: hidden;
@@ -72,6 +79,7 @@
   font-family: "Noto sans";
   color: $bela;
   margin-bottom: 2rem;
+  margin-top: 1rem;
 }
 
 .pr-lable {
@@ -82,6 +90,7 @@
   text-align: center;
   margin-left: 2rem;
   margin-right: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 .pr-text {
@@ -97,7 +106,7 @@
     linear-gradient(to right, $svetloPlava, $ljubicasta);
   background-origin: border-box;
   background-clip: padding-box, border-box;
-  margin-bottom: 3.5rem;
+  margin-bottom: 3rem;
 }
 
 .pr-select {
@@ -201,22 +210,31 @@
   transform: translate(-70%, 50%);
 }
 
+@media (max-width: 1920) {
+  .pr-h1 {
+    margin-right: 30%;
+  }
+}
+
 @media (max-width: 1200px) {
   .pr-h1 {
-    margin-left: 20%;
+    margin-right: 20%;
   }
   .pr-exit-text {
-    margin-left: 15%;
+    //margin-left: 15%;
+  }
+  .pr-members {
+    width: 80%;
   }
 }
 
 @media (max-width: 620px) {
   .pr-h1 {
     font-size: 2rem;
-    margin-left: 20%;
+    margin-right: 20%;
   }
   .pr-exit-text {
-    margin-left: 10%;
+    // margin-left: 10%;
   }
 
   .pr-exit-text p {
@@ -248,8 +266,8 @@
 }
 
 @media (max-width: 480px) {
-  .pr-option {
-    font-size: 1rem;
-    max-width: 50%;
+  .pr-h1 {
+    margin-right: 10%;
+    font-size: 1.5rem;
   }
 }
