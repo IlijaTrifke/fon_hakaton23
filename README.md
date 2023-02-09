@@ -26,7 +26,6 @@ git checkout -b naziv grane
 git add .
 git commit -m ‘poruka’
 git push origin naziv_grane
-
 //KAKO PULL-UJEMO PROMENE SA MASTER GRANE
 git pull origin master
 
