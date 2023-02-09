@@ -9,6 +9,8 @@
 .faq-naslov {
   color: $bela;
   font-family: "Orbitron", sans-serif;
+  text-shadow: 0 0 7px $bela;
+  text-shadow: 0 0 10px $bela;
   text-align: center;
   font-size: 1.7rem;
 }
@@ -25,13 +27,13 @@
 .faq-box {
   border-radius: 15px;
   background-color: $tamnoPlava;
-  //background-color: rgba(0, 36, 64, 0.85); za semi-transparent
   width: 30rem;
   max-width: 80%;
   align-self: center;
   margin: 2rem;
   padding: 1rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  backdrop-filter: blur(0.5rem);
 }
 
 .faq-text {
@@ -136,36 +138,15 @@
   width: 100%;
   color: $bela;
   font-family: "Noto Sans", sans-serif;
+  font-size: 0.7rem;
 }
 
 .show {
-  height: 100%;
-  max-height: 9999px;
+  height: 60%;
+  max-height: 100px;
   transition: all 0.3s cubic-bezier(1, 0, 1, 0);
+  padding-bottom: 1rem;
 }
-
-// @keyframes movingTopToBottom {
-//   0% {
-//     transform: translateY(-2rem);
-//     opacity: 0;
-//   }
-//   100% {
-//     transform: translateY(0);
-//     opacity: 1;
-//   }
-// }
-
-// @keyframes movingBottomToTop {
-//   0% {
-//     opacity: 1;
-//     transform: translateY(0);
-//   }
-
-//   100% {
-//     opacity: 0;
-//     transform: scale(-2rem);
-//   }
-// }
 
 .faq-plus,
 .faq-text,
@@ -178,6 +159,16 @@
 .faq-plus-animation2::selection {
   color: none;
   background: none;
+}
+
+@media screen and (max-width: 480px) {
+  .faq-plus {
+    font-size: 2.2rem;
+    align-items: center;
+    padding-bottom: 0.5rem;
+    color: #978bcc;
+    cursor: none;
+  }
 }
 
 //da se ne bi pojavljivao plavi selekt i blicanje cursora

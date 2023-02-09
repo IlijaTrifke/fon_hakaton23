@@ -15,30 +15,6 @@ const Faq = () => {
     setSelected(i);
   };
 
-  // const toggleAnimPlus = () => {
-  //   if (plus === true) {
-  //     return "faq-plus faq-plus-animation1";
-  //   } else {
-  //     return "faq-plus faq-plus-animation2";
-  //   }
-  // };
-
-  // const toggleAnimLongext = (i) => {
-  //   if (plus === true) {
-  //     return "faq-longtext1 faq-text-movingTopToBottom";
-  //   } else {
-  //     return "faq-longtext2 faq-text-movingBottomToTop";
-  //   }
-  // };
-
-  // const toggleState = (argument) => {
-  //   if (plus === false) {
-  //     setPlus(true);
-  //   } else {
-  //     setPlus(false);
-  //   }
-  // };
-
   return (
     <div className="faq-section">
       <h1 className="faq-naslov">Često postavljana pitanja</h1>
