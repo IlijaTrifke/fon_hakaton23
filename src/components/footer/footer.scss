@@ -4,24 +4,25 @@
   display: flex;
   flex-direction: column;
   background-color: $tamnoPlava;
+  padding: 2rem;
 }
 
 .footer-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 }
 
 .footer-text {
   color: $bela;
-  margin-top: 2rem;
   text-align: center;
-  width: 40rem;
-  height: 20rem;
+  width: 35rem;
+  min-height: 15rem;
+  max-width: 95%;
   position: relative;
-  border: 5px;
-  border-radius: 12px;
+  padding: 2rem;
+  backdrop-filter: blur(0.2rem);
 }
 
 .footer-h {
@@ -34,7 +35,7 @@
   position: absolute;
   inset: 0;
   border-radius: 12px;
-  padding: 2px;
+  padding: 0.2rem;
   background: linear-gradient(45deg, $svetloPlava, $ljubicasta);
   -webkit-mask: linear-gradient(rgb(255, 255, 255) 0 0) content-box,
     linear-gradient(#fff 0 0);
@@ -43,8 +44,8 @@
 }
 
 .footer-p {
-  margin-top: 2rem;
-  font-family: "Raleway", sans-serif;
+  margin-top: 1rem;
+  font-family: "Noto Sans", sans-serif;
 }
 
 .footer-button {
@@ -63,6 +64,7 @@
   transform: translate(-50%, -50%);
   cursor: pointer;
   z-index: 100;
+  text-decoration: none;
 }
 
 .footer-button::after {
@@ -82,12 +84,20 @@
   opacity: 1;
 }
 
+.footer-button:hover > span {
+  color: $ljubicasta;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer-button span {
+  position: relative;
+  z-index: 199;
+}
+
 .footer-hr {
-  margin-top: 4rem;
   height: 2px;
   width: 80%;
   align-self: center;
-  margin-bottom: 2rem;
   background-image: linear-gradient(
     to left,
     transparent,
@@ -100,16 +110,14 @@
 }
 
 .footer-box {
-  margin-left: 3rem;
-  margin-right: 3rem;
   margin-top: 2rem;
-  margin-bottom: 2rem;
   display: flex;
   justify-content: space-between;
 }
 
 .footer-logo {
   width: 15rem;
+  display: flex;
 }
 
 .footer-icons {
@@ -119,7 +127,17 @@
 .footer-adress {
   color: $bela;
   font-size: 20px;
-  font-family: "Raleway", sans-serif;
+  font-family: "Noto Sans", sans-serif;
+  text-align: end;
+  font-weight: 300;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-decoration: none;
+}
+
+.footer-adress img {
+  object-fit: contain;
 }
 
 .footer-socials {
@@ -129,62 +147,54 @@
 
 .footer-icons,
 .footer-adress {
-  width: 20%;
+  width: 30%;
 }
 
-.footer-globe{
+.footer-gl {
+  text-decoration: none;
   color: $bela;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   margin-bottom: 1rem;
+  font-family: Noto Sans;
+  font-weight: 300;
 }
 
-.footer-gl{
-    text-decoration: none;
-    color: $bela;
+.footer-gl:visited {
+  color: $bela;
 }
 
-.footer-gl:visited{
-    color: $bela;
+.footer-ig {
+  text-decoration: none;
+  color: $bela;
 }
 
-.footer-ig{
-    text-decoration: none;
-    color: $bela;
+.footer-ig:visited {
+  color: $bela;
 }
 
-.footer-ig:visited{
-    color: $bela;
+.footer-fb {
+  text-decoration: none;
+  color: $bela;
 }
 
-.footer-fb{
-    text-decoration: none;
-    color: $bela;
+.footer-fb:visited {
+  color: $bela;
 }
 
-.footer-fb:visited{
-    color: $bela;
+.footer-in {
+  text-decoration: none;
+  color: $bela;
 }
 
-.footer-in{
-    text-decoration: none;
-    color: $bela;
-}
-
-.footer-in:visited{
-    color: $bela;
-}
-
-@media screen and (max-width: 1200px) {
-  .footer-box {
-    top: 40%;
-  }
+.footer-in:visited {
+  color: $bela;
 }
 
 @media screen and (max-width: 960px) {
-  .footer-text {
-    width: 80%;
-  }
-  .footer-box {
-    margin-top: 0.8rem;
+  .footer-logo {
+    width: 10rem;
   }
 }
 
@@ -193,13 +203,33 @@
     gap: 2rem;
     align-items: center;
     flex-direction: column;
+    width: 100%;
+    margin: auto;
+    margin-top: 2rem;
+    display: flex;
+  }
+  .footer-adress {
+    width: 100%;
+    text-align: center;
+    order: 1;
+    gap: 1rem;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  .footer-icons {
+    width: 80%;
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-logo {
+    order: 3;
+    width: 10rem;
   }
 }
-
-@media screen and (max-width: 480px) {
-  .footer-box {
-    gap: 2rem;
-    align-items: center;
-    flex-direction: column;
+@media screen and (max-width: 340px) {
+  .footer-button {
+    width: 12rem;
   }
 }

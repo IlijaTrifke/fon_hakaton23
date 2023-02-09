@@ -19,7 +19,7 @@ function Home() {
       <Ohakatonu />
       <Nagrade />
       <Agenda />
-      <Iskustva />
+      {/* <Iskustva /> */}
       <Statistika />
       <Faq />
       <Partneri />
