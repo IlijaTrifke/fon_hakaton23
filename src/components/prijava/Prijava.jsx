@@ -159,15 +159,9 @@ const Prijava = () => {
                 Status: zaposlen, student, srednjoškolac
               </lable>
               <select class="pr-select" id="pr-select_m1">
-                <option value="zaposlen" class="pr-option">
-                  Zaposlen
-                </option>
-                <option value="student" class="pr-option">
-                  Student
-                </option>
-                <option value="srednjoskolac" class="pr-option">
-                  Srednjoškolac
-                </option>
+                <option value="zaposlen">Zaposlen</option>
+                <option value="student">Student</option>
+                <option value="srednjoskolac">Srednjoškolac</option>
               </select>
               <lable class="pr-lable" for="pr-year_m1">
                 Godina i naziv fakulteta/ srednje škole
