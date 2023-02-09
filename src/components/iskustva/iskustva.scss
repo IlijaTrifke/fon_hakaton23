@@ -294,7 +294,6 @@
     justify-content: center;
     padding-bottom: 3%;
     width: 30%;
-
     border-style: solid;
     border-color: white;
     border-radius: 15px;
@@ -508,10 +507,6 @@
     }
   }
 
-  // .ax-top-description .ax-top-name {
-  //   font-size: 6vw;
-  // }
-
   .inactiveS:hover {
     background-color: transparent;
     color: #ffffff;
@@ -566,7 +561,6 @@
     justify-content: center;
     padding-bottom: 3%;
     width: 60%;
-
     border-style: solid;
     border-color: white;
     border-radius: 15px;
@@ -602,7 +596,6 @@
 .ax-down {
   height: 100%;
   width: 100%;
-
   position: relative;
   z-index: 1;
 }
@@ -612,15 +605,11 @@
 
 .ax-iskustvo {
   z-index: -10;
-
   display: flex;
-
   justify-content: center;
-
   background: #c3b0ff;
   box-shadow: 25px 50px 70px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
-
   margin: 0 auto;
 }
 
