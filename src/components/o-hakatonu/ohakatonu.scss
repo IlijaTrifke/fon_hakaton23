@@ -59,6 +59,7 @@
   justify-content: flex-start;
   gap: 1.3rem;
   position: relative;
+  align-items: center;
 }
 .hakaton-card-title h1 {
   font-size: 1.3rem;
@@ -80,10 +81,11 @@
   border: solid $svetloPlava;
   border-width: 0 3px 3px 0;
   display: inline-block;
-  padding: 4px;
   // transform: rotate(45deg) scale(1);
   -webkit-transform: rotate(-45deg);
   position: relative;
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 .card3 {
