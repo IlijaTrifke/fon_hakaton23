@@ -23,6 +23,12 @@
   position: relative;
   padding: 2rem;
   backdrop-filter: blur(0.2rem);
+  background: linear-gradient(
+    to right,
+    rgba(36, 188, 222, 0.1),
+    rgba(123, 39, 135, 0.1)
+  );
+  backdrop-filter: blur(0.05rem);
 }
 
 .footer-h {
