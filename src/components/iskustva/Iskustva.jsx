@@ -152,30 +152,30 @@ const Iskustva = (props) => {
     }
   }, [current, people]);
 
-  // useEffect(() => {
-  //   let slider = setInterval(
-  //     () => {
-  //       setState(false);
-  //       if (current == 6) {
-  //         toggleActiveStyles(0);
-  //         toggleActive(0);
-  //         setCurrent(0);
-  //       } else {
-  //         toggleActiveStyles(current + 1);
-  //         toggleActive(current + 1);
-  //         setCurrent(current + 1);
-  //       }
+  useEffect(() => {
+    let slider = setInterval(
+      () => {
+        setState(false);
+        if (current == 6) {
+          toggleActiveStyles(0);
+          toggleActive(0);
+          setCurrent(0);
+        } else {
+          toggleActiveStyles(current + 1);
+          toggleActive(current + 1);
+          setCurrent(current + 1);
+        }
 
-  //       console.log(current);
-  //       setCurrent(current + 1);
-  //     },
-  //     state === true ? 10000 : 3000
-  //   );
+        console.log(current);
+        setCurrent(current + 1);
+      },
+      state === true ? 10000 : 3000
+    );
 
-  //   return () => {
-  //     clearInterval(slider);
-  //   };
-  // }, [current]);
+    return () => {
+      clearInterval(slider);
+    };
+  }, [current]);
 
   const nextSlide = () => {
     const index = current === length - 1 ? 0 : current + 1;
@@ -241,29 +241,28 @@ const Iskustva = (props) => {
       </div>
 
       <div className="ax-top-container">
+        <img
+          className={toggleActiveStylesLeftArrow()}
+          src={StrelaLevo}
+          alt="Slika strele"
+          onClick={() => {
+            prevSlide();
+            toggleStateL();
+            setState(true);
+          }}
+        />
+        <img
+          className={toggleActiveStylesRightArrow()}
+          src={StrelaDesno}
+          alt="Slika strele"
+          onClick={() => {
+            nextSlide();
+            toggleStateR();
+            setState(true);
+          }}
+        />
         <div className="ax-top-left">
           <div className="ax-top-slider">
-            <img
-              className={toggleActiveStylesLeftArrow()}
-              src={StrelaLevo}
-              alt="Slika strele"
-              onClick={() => {
-                prevSlide();
-                toggleStateL();
-                setState(true);
-              }}
-            />
-            <img
-              className={toggleActiveStylesRightArrow()}
-              src={StrelaDesno}
-              alt="Slika strele"
-              onClick={() => {
-                nextSlide();
-                toggleStateR();
-                setState(true);
-              }}
-            />
-
             {DataSlider.map((data, index) => {
               return (
                 <div
@@ -286,7 +285,7 @@ const Iskustva = (props) => {
                 {index === current && (
                   <div className="opis-slike">
                     <h1 className="ax-top-name">{data.name}</h1>
-                    <hr className="hr" />
+                    <hr className="ax-top-hr" />
                   </div>
                 )}
               </div>
