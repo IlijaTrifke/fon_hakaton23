@@ -1,6 +1,11 @@
 // u vas scss importujete na sledeci nacin: @import "../../global.scss";
 // debljina gradijenta bordera-0.2rem
-// backdrop-filter: blur(0.2rem);
+//   background: linear-gradient(
+//   to right,
+//   rgba(36, 188, 222, 0.1),
+//   rgba(123, 39, 135, 0.1)
+// );
+// backdrop-filter: blur(0.05rem);
 
 // Breakpoints:
 // @media screen and (max-width: 1920px) {
