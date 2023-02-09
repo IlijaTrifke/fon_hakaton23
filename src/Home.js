@@ -9,7 +9,6 @@ import Navbar from "./components/navbar/Navbar";
 import SlikeOrg from "./components/slikeOrg/SlikeOrg";
 import Ohakatonu from "./components/o-hakatonu/Ohakatonu";
 import Iskustva from "./components/iskustva/Iskustva";
-import Prijava from "./components/prijava/Prijava";
 
 function Home() {
   return (
@@ -24,7 +23,7 @@ function Home() {
       <Faq />
       <Partneri />
       <SlikeOrg />
-      <Prijava />
+      <footer />
     </>
   );
 }

@@ -39,7 +39,7 @@ const menuItems = [
   },
   {
     title: "PRIJAVI SE",
-    url: "/prijava",
+    url: "/Prijava",
     cName: "nav-links link-do-prijave",
   },
 ];
