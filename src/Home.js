@@ -18,8 +18,6 @@ function Home() {
       <Pocetna />
       <Ohakatonu />
       <Nagrade />
-      <Agenda />
-      <Iskustva />;
       <Statistika />
       <Faq />
       <Partneri />

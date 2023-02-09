@@ -3,12 +3,23 @@ import CountUp from "react-countup";
 import "./nagrade.scss";
 import Postolje from "./img/ng-Postolje.png";
 
+import { useRef, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
 const Nagrade = () => {
+  const scrollRef = useRef();
+  const isInView = useInView(scrollRef);
+  useEffect(() => {
+    if (isInView) seeRef();
+  }, [isInView]);
+  var timlineRef = useRef();
+  const seeRef = () => {
+    console.log("vidljiv");
+  };
+
   return (
     <div class="ng-nagrade">
-      <div class="ng-text">
+      <div class="ng-text" ref={scrollRef}>
         <h1>OSVOJI NAGRADE U VREDNOSTI OD:</h1>
       </div>
       <div class="ng-stands">
