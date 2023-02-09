@@ -14,12 +14,12 @@ import Footer from "./components/footer/Footer";
 function Home() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <Pocetna />
       <Ohakatonu />
       <Nagrade />
       <Agenda />
-      <Iskustva />;
+      <Iskustva />
       <Statistika />
       <Faq />
       <Partneri />
