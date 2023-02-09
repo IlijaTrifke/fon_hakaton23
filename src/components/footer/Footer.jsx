@@ -20,10 +20,10 @@ export default function Footer() {
             provident enim quos labore accusamus debitis modi commodi
             distinctio, corporis repellat voluptas.
           </p>
+          <h1 className="footer-button">
+            <span>PRIJAVI SE!</span>
+          </h1>
         </div>
-        <h1 className="footer-button">
-          <span>PRIJAVI SE!</span>
-        </h1>
       </div>
       <hr />
       <div className="footer-box">
