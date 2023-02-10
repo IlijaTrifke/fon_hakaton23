@@ -61,6 +61,7 @@
   align-items: flex-end;
   max-width: 50%;
   overflow: hidden;
+  height: 35rem;
 }
 
 .ng-circle {
@@ -97,7 +98,7 @@
 .ng-postolje-img {
   height: 100%;
   width: 15rem;
-  animation: fadeInTop 4s ease-in-out 1;
+  animation: fadeInTop 2s ease-in-out 1;
 }
 
 .ng-pole {
@@ -105,6 +106,11 @@
   flex-direction: column;
   align-items: center;
   max-width: 35%;
+  visibility: hidden;
+}
+.show-pole {
+  visibility: visible;
+  animation: fadeInTop 2s ease-in-out 1;
 }
 
 .ng-stand-3 {
@@ -132,7 +138,7 @@
   transform: translate(-50%, -50%);
   font-size: 8rem;
   color: $bela;
-  animation: fadeInNumbers 5s ease-in-out 1;
+  animation: fadeInNumbers 4s ease-in-out 1;
 }
 
 @keyframes fadeInNumbers {

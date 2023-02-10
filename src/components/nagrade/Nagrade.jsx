@@ -3,12 +3,55 @@ import CountUp from "react-countup";
 import "./nagrade.scss";
 import Postolje from "./img/ng-Postolje.png";
 
+import { useRef, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
 const Nagrade = () => {
+  const scrollRef = useRef();
+  const isInView = useInView(scrollRef);
+  useEffect(() => {
+    if (isInView) seeRef();
+  }, [isInView]);
+  var timlineRef = useRef();
+  //console.log(timlineRef.current);
+
+  const seeRef = () => {
+    //console.log(timlineRef.current); // <h1 ></h1>
+    if (timlineRef.current !== undefined) {
+      var sections = timlineRef.current.querySelectorAll(".ng-pole");
+      //var timeline = timlineRef.current.querySelector(".ng-text");
+      //console.log(sections);
+      //console.log(timeline);
+      let prevScrollY = window.scrollY;
+
+      const targetY = window.innerHeight * 0.8;
+
+      function scrollHandler(e) {
+        const { scrollY } = window;
+        //const lineRect = line.getBoundingClientRect(); // const lineHeight = lineRect.bottom - lineRect.top;
+
+        //console.log(dist);
+
+        sections.forEach((item) => {
+          //console.log(item);
+          const rect = item.getBoundingClientRect(); //     //console.log(rect);
+
+          if (rect.top + item.offsetHeight / 5 < targetY) {
+            item.classList.add("show-pole");
+          }
+        }); // //console.log(up, down);
+
+        prevScrollY = window.scrollY;
+      }
+
+      scrollHandler();
+      window.addEventListener("scroll", scrollHandler);
+    }
+  };
+
   return (
-    <div class="ng-nagrade">
-      <div class="ng-text">
+    <div class="ng-nagrade" ref={timlineRef}>
+      <div class="ng-text" ref={scrollRef}>
         <h1>OSVOJI NAGRADE U VREDNOSTI OD:</h1>
       </div>
       <div class="ng-stands">
