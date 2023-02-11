@@ -12,6 +12,8 @@
   text-shadow: 0 0 7px $bela;
   text-align: center;
   margin: 2rem 0;
+  font-weight: 400;
+  font-size: 3rem;
 }
 
 .hakaton-card {
@@ -28,7 +30,7 @@
     rgba(36, 188, 222, 0.1),
     rgba(123, 39, 135, 0.1)
   );
-  backdrop-filter: blur(0.1rem);
+  backdrop-filter: blur(1px);
   box-shadow: 10px 10px 14px 0px #011b30;
 }
 
