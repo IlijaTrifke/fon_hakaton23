@@ -72,7 +72,12 @@ function Ohakatonu() {
             <FontAwesomeIcon icon={faMaximize} />
             <FontAwesomeIcon icon={faClose} />
           </div>
-          <div className="hakaton-content">
+          <div className="hakaton-content crd3">
+            <div className="hakaton-arrows">
+              <div className="hakaton-arrow" />
+              <div className="hakaton-arrow" />
+              <div className="hakaton-arrow" />
+            </div>
             <p className="hakaton-descr">
               Generalni pokrovitelj takmičenja je kompanija Levi9 koja će zadati
               izazovnu temu Hakatona pružajući timovima priliku da pokažu

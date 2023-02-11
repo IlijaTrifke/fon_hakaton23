@@ -15,7 +15,7 @@ import image from "./images/st-faqWeb.png";
 function Home() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <Pocetna />
       <Ohakatonu />
       <Nagrade />

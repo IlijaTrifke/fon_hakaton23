@@ -14,6 +14,11 @@
   margin-bottom: 5rem;
 }
 
+.footer-h {
+  font-family: Orbitron;
+  font-weight: 200;
+}
+
 .footer-text {
   color: $bela;
   text-align: center;
@@ -30,17 +35,12 @@
   backdrop-filter: blur(0.05rem);
 }
 
-.footer-h {
-  font-family: Orbitron;
-  font-weight: 200;
-}
-
 .footer-text::before {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: 12px;
-  padding: 0.2rem;
+  padding: 0.1rem;
   background: linear-gradient(45deg, $svetloPlava, $ljubicasta);
   -webkit-mask: linear-gradient(rgb(255, 255, 255) 0 0) content-box,
     linear-gradient(#fff 0 0);
