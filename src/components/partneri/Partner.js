@@ -11,9 +11,11 @@ const Partner = (props) => {
         backgroundColor: props.pozadina,
       }}
     >
-      <a href={props.link} target="_blank" rel="noreferrer">
-        <img src={props.partnerSlika} alt={props.partnerIme} />
-      </a>
+      <div className="ax-okvir-partneri">
+        <a href={props.link} target="_blank" rel="noreferrer">
+          <img src={props.partnerSlika} alt={props.partnerIme} />
+        </a>
+      </div>
     </div>
   );
 };

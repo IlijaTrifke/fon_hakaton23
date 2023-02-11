@@ -1,15 +1,20 @@
 @import "../../global.scss";
+
 .ax-iskustva {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   width: 100%;
   height: 100%;
-  background-color: #002440;
+  background-color: $tamnoPlava;
 }
 .ax-title {
   text-align: center;
-  color: #ffffff;
+  font-family: "Orbitron", sans-serif;
+  color: $bela;
+  text-shadow: 0 0 7px $bela;
+  text-shadow: 0 0 10px $bela;
+  text-align: center;
 }
 
 .ax-top-container {
@@ -29,13 +34,22 @@
   border-style: solid;
   border-color: white;
   border-radius: 15px;
+  border-width: 1px;
 }
-.ax-top-hr {
+.ax-top-left hr {
   width: 13rem;
+  height: 0.1px;
 }
+
 .ax-top-name {
   text-align: center;
+  font-family: "Noto Sans", sans-serif;
+  color: $bela;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-top: 5rem;
 }
+
 .ax-top-slider {
   position: relative;
   display: flex;
@@ -53,24 +67,26 @@
   border-style: solid;
   border-color: aqua;
   border-radius: 15px;
+  border-width: 1px;
+  position: relative;
 }
 
 .left-arrow {
   position: absolute;
-  height: 30%;
+  height: 15%;
   cursor: pointer;
   z-index: 10;
   justify-content: center;
-  top: 35%;
-  right: 71%;
+  top: 43%;
+  right: 73%;
 }
 .right-arrow {
   position: absolute;
-  height: 30%;
+  height: 15%;
   cursor: pointer;
   z-index: 10;
-  top: 35%;
-  left: 71%;
+  top: 43%;
+  left: 73%;
 }
 
 @keyframes animScale {
@@ -138,14 +154,6 @@
   height: 100%;
 }
 
-.ax-top-name {
-  font-weight: 400;
-  font-size: 1rem;
-  margin-top: 5rem;
-  justify-content: center;
-  color: #ffffff;
-}
-
 .ax-top-container .ax-top-right {
   display: flex;
   justify-content: center;
@@ -153,6 +161,7 @@
   border-style: solid;
   border-color: #ffffff;
   border-radius: 15px;
+  border-width: 1px;
 }
 
 .ax-top-right .ax-top-description {
@@ -160,7 +169,6 @@
   font-family: "Noto Sans", sans-serif;
   color: $bela;
   padding-top: 5%;
-  color: white;
   font-size: 1;
   width: 13rem;
   height: 20rem;
@@ -174,12 +182,12 @@
   align-items: center;
 }
 @media screen and (max-width: 1920px) {
-  .ax-top-hr {
+  .ax-top-left hr {
     width: 10rem;
   }
 }
 @media screen and (max-width: 1200px) {
-  .ax-top-hr {
+  .ax-top-left hr {
     width: 10rem;
   }
   .image {
@@ -192,7 +200,7 @@
     border-color: aqua;
     border-radius: 15px;
   }
-  .ax-top-hr {
+  .ax-top-left hr {
     width: 9rem;
   }
 
@@ -200,13 +208,12 @@
     font-size: 0.65rem;
     font-family: "Noto Sans", sans-serif;
     color: $bela;
-    padding-top: 5%;
     color: white;
     font-size: 1;
     width: 18rem;
     height: 20rem;
     text-align: center;
-    padding-top: 16%;
+    padding-top: 21%;
   }
   .ax-top-right .slide-active {
     height: 55%;
@@ -237,20 +244,20 @@
   }
   .left-arrow {
     position: absolute;
-    height: 30%;
+    height: 15%;
     cursor: pointer;
     z-index: 10;
     justify-content: center;
-    top: 35%;
-    right: 77%;
+    top: 43%;
+    right: 76%;
   }
   .right-arrow {
     position: absolute;
-    height: 30%;
+    height: 15%;
     cursor: pointer;
     z-index: 10;
-    top: 35%;
-    left: 77%;
+    top: 43%;
+    left: 76%;
   }
 }
 @media screen and (max-width: 960px) {
@@ -264,7 +271,7 @@
     border-color: aqua;
     border-radius: 15px;
   }
-  .ax-top-hr {
+  .ax-top-left hr {
     width: 9rem;
   }
 
@@ -272,9 +279,6 @@
     font-size: 0.59rem;
     font-family: "Noto Sans", sans-serif;
     color: $bela;
-
-    color: white;
-    font-size: 1;
     width: 13rem;
     height: 20rem;
     text-align: center;
@@ -309,20 +313,20 @@
   }
   .left-arrow {
     position: absolute;
-    height: 30%;
+    height: 15%;
     cursor: pointer;
     z-index: 10;
     justify-content: center;
-    top: 35%;
-    right: 85%;
+    top: 43%;
+    right: 83%;
   }
   .right-arrow {
     position: absolute;
-    height: 30%;
+    height: 15%;
     cursor: pointer;
     z-index: 10;
-    top: 35%;
-    left: 85%;
+    top: 43%;
+    left: 83%;
   }
 }
 @media screen and (max-width: 620px) {
@@ -336,7 +340,7 @@
     border-color: aqua;
     border-radius: 15px;
   }
-  .ax-top-hr {
+  .ax-top-left hr {
     width: 9rem;
   }
   .ax-top-container {
@@ -349,7 +353,6 @@
     font-size: 0.59rem;
     font-family: "Noto Sans", sans-serif;
     color: $bela;
-
     color: white;
     font-size: 1;
     width: 13rem;
@@ -379,7 +382,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    // height: 20%;
     width: 40%;
     border-style: solid;
     border-color: #ffffff;
@@ -387,20 +389,20 @@
   }
   .left-arrow {
     position: absolute;
-    height: 30%;
+    height: 15%;
     cursor: pointer;
     z-index: 10;
     justify-content: center;
-    top: 35%;
-    right: 87%;
+    top: 43%;
+    right: 93%;
   }
   .right-arrow {
     position: absolute;
-    height: 30%;
+    height: 15%;
     cursor: pointer;
     z-index: 10;
-    top: 35%;
-    left: 87%;
+    top: 43%;
+    left: 93%;
   }
 }
 @media screen and (max-width: 480px) {
@@ -422,7 +424,7 @@
     border-color: aqua;
     border-radius: 15px;
   }
-  .ax-top-hr {
+  .ax-top-left hr {
     width: 9rem;
   }
 
@@ -451,7 +453,6 @@
     justify-content: center;
     padding-bottom: 3%;
     width: 60%;
-
     border-style: solid;
     border-color: white;
     border-radius: 15px;
@@ -468,20 +469,20 @@
   }
   .left-arrow {
     position: absolute;
-    height: 20%;
+    height: 8%;
     cursor: pointer;
     z-index: 10;
     justify-content: center;
-    top: 39%;
-    right: 75%;
+    top: 45%;
+    right: 87%;
   }
   .right-arrow {
     position: absolute;
-    height: 20%;
+    height: 8%;
     cursor: pointer;
     z-index: 10;
-    top: 39%;
-    left: 75%;
+    top: 45%;
+    left: 87%;
   }
 
   @keyframes animScale {
@@ -532,7 +533,7 @@
     border-color: aqua;
     border-radius: 15px;
   }
-  .ax-top-hr {
+  .ax-top-left hr {
     width: 9rem;
   }
 
@@ -577,38 +578,54 @@
   }
   .left-arrow {
     position: absolute;
-    height: 20%;
+    height: 7%;
     cursor: pointer;
     z-index: 10;
     justify-content: center;
-    top: 39%;
-    right: 75%;
+    top: 45%;
+    right: 87%;
   }
   .right-arrow {
     position: absolute;
-    height: 20%;
+    height: 7%;
     cursor: pointer;
     z-index: 10;
-    top: 39%;
-    left: 75%;
+    top: 45%;
+    right: 87%;
   }
+}
+
+.ax-okvir-iskustva {
+  width: 16em;
+  height: 9em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  background-color: $tamnoPlava;
+}
+.ax-okvir-iskustva::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 0.2rem;
+  background: linear-gradient(45deg, $svetloPlava, $ljubicasta);
+  -webkit-mask: linear-gradient(rgb(255, 255, 255) 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
 }
 .ax-down {
   height: 100%;
   width: 100%;
-  // position: relative;
   z-index: 1;
-}
-.ax-iskustvo img {
-  z-index: -100;
 }
 
 .ax-iskustvo {
   z-index: -10;
   display: flex;
   justify-content: center;
-  background: #c3b0ff;
-  box-shadow: 25px 50px 70px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
   margin: 0 auto;
 }
@@ -617,146 +634,27 @@
   margin-top: 0px;
   width: 16em;
   height: 9em;
-  border-radius: 30px;
+  border-radius: 12px;
   object-fit: cover;
+  z-index: -100;
 }
 
-@media screen and (max-width: 1920px) {
-  .ax-down h1 {
-    margin-top: 1.2%;
-    font-family: "Manrope";
-    font-style: normal;
-    font-weight: 200;
-    font-size: 3vw;
-    color: #ffffff;
-  }
-}
-@media screen and (max-width: 1200px) {
-  .ax-down h1 {
-    margin-top: 1.2%;
-    font-family: "Manrope";
-    font-style: normal;
-    font-weight: 200;
-    font-size: 3vw;
-    color: #ffffff;
-  }
-}
-@media screen and (max-width: 960px) {
-  .ax-down h1 {
-    margin-top: 1.2%;
-    font-family: "Manrope";
-    font-style: normal;
-    font-weight: 200;
-    font-size: 3vw;
-    color: #ffffff;
-  }
-}
-@media screen and (max-width: 620px) {
-  .ax-down h1 {
-    margin-top: 1.2%;
-    font-family: "Manrope";
-    font-style: normal;
-    font-weight: 200;
-    font-size: 7vw;
-    color: #ffffff;
-  }
-}
-@media screen and (max-width: 480px) {
-  .ax-down h1 {
-    margin-top: 1.2%;
-    font-family: "Manrope";
-    font-style: normal;
-    font-weight: 200;
-    font-size: 7vw;
-    color: #ffffff;
-  }
-}
 .ax-down {
   height: 100%;
   width: 100%;
-
   position: relative;
   z-index: 1;
 }
 
-.ax-iskustvo img {
-  z-index: -100;
-}
-
-.ax-iskustvo {
-  z-index: -10;
-
-  display: flex;
-
-  justify-content: center;
-
-  background: #c3b0ff;
-  box-shadow: 25px 50px 70px rgba(0, 0, 0, 0.25);
-  border-radius: 30px;
-
-  margin: 0 auto;
-}
-
-.ax-iskustvo img {
-  margin-top: 0px;
-  width: 16em;
-  height: 9em;
-  border-radius: 30px;
-}
-.ax-iskustva {
-  color: white;
-  background-color: #0d2447;
-}
-
 @media screen and (max-width: 1920px) {
-  .ax-down h1 {
-    margin-top: 1.2%;
-    font-family: "Manrope";
-    font-style: normal;
-    font-weight: 200;
-    font-size: 3vw;
-    color: #ffffff;
-  }
 }
 @media screen and (max-width: 1200px) {
-  .ax-down h1 {
-    margin-top: 1.2%;
-    font-family: "Manrope";
-    font-style: normal;
-    font-weight: 200;
-    font-size: 3vw;
-    color: #ffffff;
-  }
 }
 @media screen and (max-width: 960px) {
-  .ax-down h1 {
-    margin-top: 1.2%;
-    font-family: "Manrope";
-    font-style: normal;
-    font-weight: 200;
-    font-size: 3vw;
-    color: #ffffff;
-  }
 }
 @media screen and (max-width: 620px) {
-  .ax-down h1 {
-    margin-top: 1.2%;
-    font-family: "Manrope";
-    font-style: normal;
-    font-weight: 200;
-    font-size: 7vw;
-    color: #ffffff;
-  }
 }
 @media screen and (max-width: 480px) {
-  .ax-down h1 {
-    margin-top: 1.2%;
-    font-family: "Manrope";
-    font-style: normal;
-    font-weight: 200;
-    font-size: 7vw;
-    color: #ffffff;
-  }
 }
 
 .inactiveS {

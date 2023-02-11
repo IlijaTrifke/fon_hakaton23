@@ -10,9 +10,11 @@ const Iskustvo = (props) => {
         height: props.height,
       }}
     >
-      <a href={props.link} target="_blank" rel="noreferrer">
-        <img src={props.downSlika} alt={props.iskustvoIme} />
-      </a>
+      <div className="ax-okvir-iskustva">
+        <a href={props.link} target="_blank" rel="noreferrer">
+          <img src={props.downSlika} alt={props.iskustvoIme} />
+        </a>
+      </div>
     </div>
   );
 };
