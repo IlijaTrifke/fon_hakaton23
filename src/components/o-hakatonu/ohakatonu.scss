@@ -30,7 +30,6 @@
     rgba(36, 188, 222, 0.1),
     rgba(123, 39, 135, 0.1)
   );
-  backdrop-filter: blur(1px);
   box-shadow: 10px 10px 14px 0px #011b30;
 }
 
@@ -77,6 +76,7 @@
   left: 45%;
   width: 25%;
   padding: 0.7%;
+  backdrop-filter: blur(2px);
 }
 
 .hakaton-content {
@@ -173,6 +173,9 @@
     position: initial;
     width: 30rem;
     max-width: 90%;
+  }
+  .card3 {
+    backdrop-filter: none;
   }
 }
 @media screen and (max-width: 620px) {
