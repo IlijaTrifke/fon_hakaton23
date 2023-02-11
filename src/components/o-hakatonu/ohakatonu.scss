@@ -2,7 +2,7 @@
 
 .ohakatonu {
   background-color: $tamnoPlava;
-  min-height: 100vh;
+  min-height: 80vh;
   position: relative;
 }
 
@@ -17,26 +17,63 @@
 .hakaton-card {
   font-family: "Noto Sans", sans-serif;
   color: $bela;
-  border-radius: 10px 10px 10px 10px;
   display: flex;
   flex-direction: column;
+  border-radius: 1rem;
   position: absolute;
   gap: 0.5rem;
   text-align: center;
+  background: linear-gradient(
+    to right,
+    rgba(36, 188, 222, 0.1),
+    rgba(123, 39, 135, 0.1)
+  );
   backdrop-filter: blur(2rem);
+  box-shadow: 10px 10px 14px 0px #011b30;
+}
+
+.hakaton-card:before {
+  content: "";
+  position: absolute;
+  border-radius: 1rem;
+  inset: 0;
+  padding: 0.1rem;
+  background: linear-gradient(
+    130deg,
+    #24bdde,
+    rgba(107, 184, 206, 0.88),
+    rgba(16, 78, 126, 0.5),
+    rgba(71, 51, 153, 0.5),
+    rgba(113, 80, 185, 0.83),
+    #7b2787
+  );
+  -webkit-mask: linear-gradient(rgb(255, 255, 255) 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
 }
 
 .card1 {
-  top: 15%;
-  left: 13%;
-  width: 40%;
+  top: 19%;
+  left: 15%;
+  width: 45rem;
+  max-width: 37%;
+  min-height: 20rem;
   padding: 0.7%;
 }
 
 .card2 {
-  top: 28%;
-  left: 58%;
-  width: 23%;
+  top: 27%;
+  left: 55%;
+  width: 23rem;
+  height: 15rem;
+  padding: 0.7%;
+}
+
+.card3 {
+  top: 57%;
+  left: 45%;
+  width: 25%;
   padding: 0.7%;
 }
 
@@ -44,6 +81,16 @@
   display: flex;
   flex-direction: column;
   position: relative;
+}
+
+.crd3 {
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.crd3 .hakaton-arrows {
+  margin-top: 2%;
+  margin-right: 2%;
 }
 
 .hakaton-card-title {
@@ -55,10 +102,11 @@
   align-items: center;
 }
 .hakaton-card-title h1 {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   text-align: center;
   text-decoration: underline;
-  color: white;
+  font-weight: 500;
+  color: $bela;
   font-family: Orbitron;
 }
 
@@ -78,13 +126,14 @@
   position: relative;
   width: 1.2rem;
   height: 1.2rem;
+  margin-right: -0.5rem;
 }
 
-.card3 {
-  top: 60%;
-  left: 45%;
-  width: 30%;
-  padding: 0.7%;
+.hakaton-arrow:nth-child(1) {
+  opacity: 0.3;
+}
+.hakaton-arrow:nth-child(2) {
+  opacity: 0.6;
 }
 
 .hakaton-header {
@@ -100,20 +149,10 @@
   text-align: left;
 }
 
-.hakaton-card:before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 1rem;
-  padding: 2.1px;
-  background: linear-gradient(-30deg, $ljubicasta, transparent, $svetloPlava);
-  -webkit-mask: linear-gradient(rgb(255, 255, 255) 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-}
-
 @media screen and (max-width: 1200px) {
+  .card3 {
+    left: 50%;
+  }
 }
 
 @media screen and (max-width: 960px) {
@@ -130,7 +169,8 @@
   .hakaton-card {
     transform: translateX(0%);
     position: initial;
-    width: 95%;
+    width: 30rem;
+    max-width: 90%;
   }
 }
 @media screen and (max-width: 620px) {

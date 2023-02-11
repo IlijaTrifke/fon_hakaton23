@@ -43,9 +43,9 @@ const Agenda = () => {
           line.style.bottom = `calc(100% - ${set}px)`;
         }
 
-        if (dist > timeline.offsetHeight - 70 && !full) {
+        if (dist > timeline.offsetHeight - 140 && !full) {
           full = true;
-          line.style.bottom = `70px`;
+          line.style.bottom = `8%`;
         }
 
         sections.forEach((item) => {
