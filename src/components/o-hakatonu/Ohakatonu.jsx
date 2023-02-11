@@ -7,7 +7,7 @@ import { faClose } from "@fortawesome/free-solid-svg-icons";
 
 function Ohakatonu() {
   return (
-    <div className="ohakatonu">
+    <div className="ohakatonu" id="o_hakatonu">
       <div id="stars"></div>
       <div id="stars2"></div>
       <div id="stars3"></div>

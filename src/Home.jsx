@@ -10,6 +10,7 @@ import SlikeOrg from "./components/slikeOrg/SlikeOrg";
 import Ohakatonu from "./components/o-hakatonu/Ohakatonu";
 import Iskustva from "./components/iskustva/Iskustva";
 import Footer from "./components/footer/Footer";
+import image from "./images/st-faqWeb.png";
 
 function Home() {
   return (

@@ -1,14 +1,7 @@
 @import "../../global.scss";
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 .ohakatonu {
   background-color: $tamnoPlava;
-  justify-items: center;
-  align-items: center;
   min-height: 100vh;
   position: relative;
 }
@@ -17,8 +10,8 @@
   font-family: "Orbitron", sans-serif;
   color: $bela;
   text-shadow: 0 0 7px $bela;
-  text-shadow: 0 0 10px $bela;
   text-align: center;
+  margin: 2rem 0;
 }
 
 .hakaton-card {
@@ -30,7 +23,7 @@
   position: absolute;
   gap: 0.5rem;
   text-align: center;
-  height: fit-content;
+  backdrop-filter: blur(2rem);
 }
 
 .card1 {
@@ -81,8 +74,7 @@
   border: solid $svetloPlava;
   border-width: 0 3px 3px 0;
   display: inline-block;
-  // transform: rotate(45deg) scale(1);
-  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
   position: relative;
   width: 1.2rem;
   height: 1.2rem;
@@ -93,8 +85,6 @@
   left: 45%;
   width: 30%;
   padding: 0.7%;
-  backdrop-filter: blur(3px);
-  background: rgba(0, 36, 64, 0.5);
 }
 
 .hakaton-header {
@@ -124,54 +114,38 @@
 }
 
 @media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 960px) {
   .hakaton-section {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
     justify-content: center;
     align-items: center;
+    gap: 2rem;
   }
-
+  .ohakatonu {
+    min-height: 0;
+  }
   .hakaton-card {
     transform: translateX(0%);
     position: initial;
-    width: 60%;
-  }
-
-  .hakaton-section {
-    height: 60%;
-    gap: 2rem;
-    margin-top: 1rem;
-  }
-}
-@media screen and (max-width: 960px) {
-  .hakaton-section {
-    height: 40%;
-  }
-
-  .card3 {
-    backdrop-filter: none;
+    width: 95%;
   }
 }
 @media screen and (max-width: 620px) {
-  .hakaton-section {
-    height: 60%;
-  }
 }
 @media screen and (max-width: 480px) {
-  .hakaton-section {
-    height: 70%;
-  }
 }
-@media screen and (min-width: 1450px) {
-  .card2 {
-    top: 20%;
-  }
-  .card3 {
-    top: 48%;
-    backdrop-filter: none;
-  }
-}
+// @media screen and (min-width: 1450px) {
+//   .card2 {
+//     top: 20%;
+//   }
+//   .card3 {
+//     top: 48%;
+//     backdrop-filter: none;
+//   }
+// }
 
 #stars {
   width: 1px;

@@ -1,16 +1,9 @@
 @import "../../global.scss";
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 .faq-naslov {
   color: $bela;
   font-family: "Orbitron", sans-serif;
   text-shadow: 0 0 7px $bela;
-  text-shadow: 0 0 10px $bela;
   text-align: center;
   font-size: 1.7rem;
 }

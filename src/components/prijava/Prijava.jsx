@@ -1,5 +1,4 @@
 import React from "react";
-import CountUp from "react-countup";
 import "./prijava.scss";
 import Kevin from "./img/pr-kocka.png";
 import Iks from "./img/pr-exit.png";
@@ -18,7 +17,7 @@ const Prijava = () => {
         <h1 class="pr-h1">Forma za prijavu</h1>
         <div class="pr-exit-text">
           <p onClick={goBack}>Izađi</p>
-          <img class="pr-exit" src={Iks} onClick={goBack}></img>
+          <img class="pr-exit" src={Iks} alt="Exit" onClick={goBack}></img>
         </div>
       </div>
       <form class="pr-team-data">
@@ -190,7 +189,7 @@ const Prijava = () => {
           </div>
           <div class="pr-team">
             <div class="pr-kevin">
-              <img src={Kevin} class="pr-kevin-img" />
+              <img src={Kevin} alt="Cube" class="pr-kevin-img" />
             </div>
 
             <div class="pr-team-info">
@@ -242,7 +241,7 @@ const Prijava = () => {
               class="pr-submit"
               value="Pošalji prijavu"
             ></input>
-            <img src={Strelica} class="pr-strelica-img"></img>
+            <img src={Strelica} alt="Arrow" class="pr-strelica-img"></img>
           </div>
         </div>
       </form>

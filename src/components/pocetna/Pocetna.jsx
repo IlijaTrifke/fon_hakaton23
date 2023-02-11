@@ -48,12 +48,12 @@ export default function Pocetna() {
         <span>PRIJAVI SE!</span>
       </HashLink>
       <div className="pocetna-bottom">
-        <div className="pocetna-arrows">
+        <HashLink smooth to="#o_hakatonu" className="pocetna-arrows">
           <h1>Saznaj Više</h1>
           <div className="pocetna-arrow" />
           <div className="pocetna-arrow" />
           <div className="pocetna-arrow" />
-        </div>
+        </HashLink>
         <div className="pocetna-bottom-middle">
           <h1 className="pocetna-middle-text">Ostalo je još:</h1>
           <div className="pocetna-timer">
@@ -64,12 +64,12 @@ export default function Pocetna() {
           </div>
           <div className="pocetna-date-box"></div>
         </div>
-        <div className="pocetna-arrows">
+        <HashLink smooth to="#o_hakatonu" className="pocetna-arrows">
           <h1>Saznaj Više</h1>
           <div className="pocetna-arrow" />
           <div className="pocetna-arrow" />
           <div className="pocetna-arrow" />
-        </div>
+        </HashLink>
       </div>
       <div className="blue-ball-blur" />
       <div className="purple-rectangle-blur" />

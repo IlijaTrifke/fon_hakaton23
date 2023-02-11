@@ -94,6 +94,7 @@
   cursor: pointer;
   z-index: 100;
   filter: brightness(1.75);
+  scroll-behavior: smooth;
 }
 .pocetna-arrow {
   border: solid $svetloPlava;
@@ -162,7 +163,6 @@
   );
   border-radius: 1.5rem;
   box-shadow: 0px 7px 20px 0px rgb(0 0 0);
-  // filter: blur(20px);
   width: 20rem;
   height: 5rem;
   font-size: 2.4rem;
