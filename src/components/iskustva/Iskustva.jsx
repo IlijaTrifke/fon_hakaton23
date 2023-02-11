@@ -285,7 +285,7 @@ const Iskustva = (props) => {
                 {index === current && (
                   <div className="opis-slike">
                     <h1 className="ax-top-name">{data.name}</h1>
-                    <hr className="ax-top-hr" />
+                    <hr />
                   </div>
                 )}
               </div>

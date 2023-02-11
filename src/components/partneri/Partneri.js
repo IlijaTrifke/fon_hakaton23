@@ -11,8 +11,6 @@ import Slika from "./assets/slika.png";
 
 import Linija from "./assets/linija.png";
 
-// import Slike_tima from "../slike_tima/Slike_tima";
-
 import medijski1 from "./assets/medijski/1.png";
 import medijski2 from "./assets/medijski/2.png";
 import medijski3 from "./assets/medijski/3.png";
@@ -111,84 +109,72 @@ const Partneri = (props) => {
       link: "https://ehls.rs/",
     },
     {
-      // partnerSlika: medijski4,
       partnerSlika: Slika,
       partnerIme: "ja alumni serbia",
       pozadina: "#000000",
       link: "https://www.ja-serbia.org/alumni-klub/",
     },
     {
-      // partnerSlika: medijski5,
       partnerSlika: Slika,
       partnerIme: "it network",
       pozadina: "#C3B0FF",
       link: "https://www.itnetwork.rs/",
     },
     {
-      // partnerSlika: medijski6,
       partnerSlika: Slika,
       partnerIme: "nova s",
       pozadina: "#C3B0FF",
       link: "https://nova.rs/",
     },
     {
-      // partnerSlika: medijski7,
       partnerSlika: Slika,
       partnerIme: "Slika",
       pozadina: "#C3B0FF",
       link: "https://www.instagram.com/codewithmary/?igshid=YmMyMTA2M2Y%3D",
     },
     {
-      // partnerSlika: medijski8,
       partnerSlika: Slika,
       partnerIme: "n1",
       pozadina: "#C3B0FF",
       link: "https://rs.n1info.com/",
     },
     {
-      // partnerSlika: medijski9,
       partnerSlika: Slika,
       partnerIme: "pr objave",
       pozadina: "#C3B0FF",
       link: "https://www.probjave.com/",
     },
     {
-      // partnerSlika: medijski10,
       partnerSlika: Slika,
       partnerIme: "softuni",
       pozadina: "#C3B0FF",
       link: "https://www.softuni.rs/",
     },
     {
-      // partnerSlika: medijski11,
       partnerSlika: Slika,
       partnerIme: "youth.rs",
       pozadina: "#C3B0FF",
       link: "https://youth.rs/",
     },
     {
-      // partnerSlika: medijski12,
       partnerSlika: Slika,
       partnerIme: "znanje.rs",
       pozadina: "#C3B0FF",
       link: "http://www.znanje.rs/",
     },
     {
-      // partnerSlika: medijski13,
       partnerSlika: Slika,
       partnerIme: "kzm bajina basta",
       pozadina: "#C3B0FF",
       link: "https://www.instagram.com/kzm_bb/",
     },
     {
-      // partnerSlika: medijski14,
       partnerSlika: Slika,
       partnerIme: "startuj infostud",
       pozadina: "#C3B0FF",
       link: "https://startuj.com/",
     },
     {
-      // partnerSlika: medijski15,
       partnerSlika: Slika,
       partnerIme: "tv brainz",
       pozadina: "#C3B0FF",
@@ -304,96 +290,53 @@ const Partneri = (props) => {
     },
   ];
 
-  // const partneriLista = [
-  //   {
-  //     partnerSlika: Slika,
-  //     partnerIme: "Slika",
-  //     pozadina: "#C3B0FF",
-  //     link: "http://fonis.rs/",
-  //   },
-  //   {
-  //     partnerSlika: Slika,
-  //     partnerIme: "Slika",
-  //     pozadina: "#C3B0FF",
-  //     link: "http://fonis.rs/",
-  //   },
-
-  //   {
-  //     partnerSlika: Slika,
-  //     partnerIme: "Slika",
-  //     pozadina: "#C3B0FF",
-  //     link: "http://fonis.rs/",
-  //   },
-  //   {
-  //     partnerSlika: Slika,
-  //     partnerIme: "Slika",
-  //     pozadina: "#C3B0FF",
-  //     link: "http://fonis.rs/",
-  //   },
-  //   {
-  //     partnerSlika: Slika,
-  //     partnerIme: "Slika",
-  //     pozadina: "#C3B0FF",
-  //     link: "http://fonis.rs/",
-  //   },
-  //   {
-  //     partnerSlika: Slika,
-  //     partnerIme: "Slika",
-  //     pozadina: "#C3B0FF",
-  //     link: "http://fonis.rs/",
-  //   },
-  //   {
-  //     partnerSlika: Slika,
-  //     partnerIme: "Slika",
-  //     pozadina: "#C3B0FF",
-  //     link: "http://fonis.rs/",
-  //   },
-  //   {
-  //     partnerSlika: Slika,
-  //     partnerIme: "Slika",
-  //     pozadina: "#C3B0FF",
-  //     link: "http://fonis.rs/",
-  //   },
-  // ];
-
   return (
     <div className="ceo-partneri">
-      <div className="pokrovitelj">
-        <h1 className="pokrovitelj-naslov">POKROVITELJ TAKMIČENJA</h1>
-        <Partner
-          partnerSlika={Slika}
-          partnerIme="Partner"
-          width="16em"
-          height="9em"
-          pozadina="#C3B0FF"
-          link="https://www.telesign.com/"
-        ></Partner>
+      <div className="dveSekcijeP">
+        <div id="partneri"></div>
+        <div className="pokrovitelj">
+          <h1 className="pokrovitelj-naslov">POKROVITELJ TAKMIČENJA</h1>
+          <Partner
+            partnerSlika={Slika}
+            partnerIme="Partner"
+            width="16em"
+            // height="9em"
+            // pozadina="#C3B0FF"
+            link="https://www.telesign.com/"
+          ></Partner>
+        </div>
       </div>
+
       <h1>GODIŠNJI PARTNERI</h1>
+
       <div className="partneri-box">
         <PartneriSlider
           partneri={godisnjiPartneri}
           settings={partneriSettings}
           width="16em"
-          height="9em"
+          // height="9em"
         />
       </div>
+
       <h1>NATURALNI PARTNERI</h1>
+
       <div className="partneri-box">
         <PartneriSlider
           partneri={robniPartneri}
           settings={partneriSettings}
           width="16em"
-          height="9em"
+          // height="9em"
         />
       </div>
+
       <h1>MEDIJSKI PARTNERI</h1>
+
       <div className="partneri-box">
         <PartneriSlider
           partneri={medijskiPartneri}
           settings={partneriSettings}
           width="16em"
-          height="9em"
+          // height="9em"
         />
       </div>
     </div>
