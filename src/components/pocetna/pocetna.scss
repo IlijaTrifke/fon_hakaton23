@@ -158,8 +158,8 @@
   @include flex-center();
   background-image: linear-gradient(
     to right,
-    rgba(255, 255, 255, 0.2),
-    transparent
+    rgba(232, 239, 245, 0.2),
+    rgba(232, 239, 245, 0.05)
   );
   border-radius: 1.5rem;
   box-shadow: 0px 7px 20px 0px rgb(0 0 0);
@@ -170,7 +170,7 @@
   color: $svetloPlava;
   font-weight: 500;
   z-index: 100;
-  backdrop-filter: blur(0.2rem);
+  backdrop-filter: blur(1px);
 }
 
 .blue-ball-blur {
