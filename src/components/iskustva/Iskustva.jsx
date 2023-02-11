@@ -12,8 +12,8 @@ import iskustvaFoto from "./assets/fonis.jpg";
 
 import React, { useState, useEffect } from "react";
 
-import StrelaLevo from "../../images/LeftArrow.png";
-import StrelaDesno from "../../images/RightArrow.png";
+import StrelaLevo from "../../images/left-arrow.png";
+import StrelaDesno from "../../images/right-arrow.png";
 
 import { DataSlider } from "./DataSlider";
 

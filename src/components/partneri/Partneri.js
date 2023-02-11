@@ -358,31 +358,18 @@ const Partneri = (props) => {
 
   return (
     <div className="ceo-partneri">
-      <div className="dveSekcijeP">
-        {/* <Slike_tima /> */}
-
-        <div id="partneri"></div>
-        <div className="pokrovitelj">
-          <h1 className="pokrovitelj-naslov">POKROVITELJ TAKMIČENJA</h1>
-
-          <Partner
-            partnerSlika={Slika}
-            partnerIme="Partner"
-            width="16em"
-            height="9em"
-            pozadina="#C3B0FF"
-            link="https://www.telesign.com/"
-          ></Partner>
-        </div>
+      <div className="pokrovitelj">
+        <h1 className="pokrovitelj-naslov">POKROVITELJ TAKMIČENJA</h1>
+        <Partner
+          partnerSlika={Slika}
+          partnerIme="Partner"
+          width="16em"
+          height="9em"
+          pozadina="#C3B0FF"
+          link="https://www.telesign.com/"
+        ></Partner>
       </div>
-      {/* <div className="linija">
-        <img src={Linija} alt="linija" />
-      </div> */}
       <h1>GODIŠNJI PARTNERI</h1>
-      {/* <div className="linija">
-        <img src={Linija} alt="linija" />
-      </div> */}
-
       <div className="partneri-box">
         <PartneriSlider
           partneri={godisnjiPartneri}
@@ -391,13 +378,7 @@ const Partneri = (props) => {
           height="9em"
         />
       </div>
-      {/* <div className="linija">
-        <img src={Linija} alt="linija" />
-      </div> */}
       <h1>NATURALNI PARTNERI</h1>
-      {/* <div className="linija">
-        <img src={Linija} alt="linija" />
-      </div> */}
       <div className="partneri-box">
         <PartneriSlider
           partneri={robniPartneri}
@@ -406,13 +387,7 @@ const Partneri = (props) => {
           height="9em"
         />
       </div>
-      {/* <div className="linija">
-        <img src={Linija} alt="linija" />
-      </div> */}
       <h1>MEDIJSKI PARTNERI</h1>
-      {/* <div className="linija">
-        <img src={Linija} alt="linija" />
-      </div> */}
       <div className="partneri-box">
         <PartneriSlider
           partneri={medijskiPartneri}
