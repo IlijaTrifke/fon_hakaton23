@@ -4,6 +4,7 @@
   background-color: $tamnoPlava;
   display: flex;
   flex-direction: column;
+  background-image: url(../../images/Constellation.png);
 }
 
 .pr-header {
@@ -12,39 +13,34 @@
   width: 100%;
   justify-content: flex-end;
   margin-bottom: 2rem;
+  align-items: center;
+  margin-bottom: 5rem;
   //justify-content: center;
 }
 
 .pr-h1 {
-  font-family: "Orbitron";
+  font-family: "Orbitron", sans-serif;
   color: $bela;
   display: flex;
-  font-size: 3rem;
-  //   width: 80%;
-  // position: relative;
-  //margin-bottom: 5rem;
-  margin-right: 25%;
+  margin-right: 18%;
   text-shadow: -2px 0 $ljubicasta, 0 2px $ljubicasta, 2px 0 $ljubicasta,
     0 -2px $ljubicasta;
+  font-size: 3rem;
 }
 
 .pr-exit-text {
-  font-family: "noto sans";
+  font-family: "Noto Sans", sans-serif;
   font-size: 2rem;
+  margin-right: 10%;
   color: $bela;
-  // position: absolute;
   display: flex;
   align-items: center;
-  //transform: translate(400%, 20%);
-  // width: 20%;
-  //margin-left: 15vw;
-  //margin-bottom: 4rem;
+  cursor: pointer;
 }
 
 .pr-exit {
+  margin-left: 0.5rem;
   max-height: 2rem;
-  // margin-right: 5rem;
-  //margin-left: 1rem;
 }
 
 .pr-team-data {
@@ -63,7 +59,6 @@
   width: 70%;
   border-radius: 30px;
   margin-left: 10%;
-  // overflow: hidden;
 }
 
 .pr-member {
@@ -83,7 +78,7 @@
 }
 
 .pr-lable {
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", sans-serif;
   font-size: 1.5rem;
   color: $bela;
   word-wrap: break-word;
@@ -111,7 +106,7 @@
 
 .pr-select {
   height: 2.5rem;
-  width: 75%;
+  width: 80%;
   text-align: center;
   font-size: 1.5rem;
   background-color: $tamnoPlava;
@@ -133,6 +128,7 @@
 .pr-kevin {
   margin-left: 20%;
   width: 80%;
+  margin-bottom: 7rem;
 }
 
 .pr-kevin-img {
@@ -194,7 +190,7 @@
 
 .pr-submit {
   display: flex;
-  font-family: "Noto sans";
+  font-family: "Noto Sans", sans-serif;
   color: $bela;
   background-image: linear-gradient(to right, $svetloPlava, $ljubicasta);
   font-size: 3rem;
@@ -202,6 +198,7 @@
   padding: 1rem;
   position: relative;
   margin-bottom: 10rem;
+  cursor: pointer;
 }
 
 .pr-strelica-img {
@@ -212,13 +209,13 @@
 
 @media (max-width: 1920) {
   .pr-h1 {
-    margin-right: 30%;
+    margin-right: 20%;
   }
 }
 
 @media (max-width: 1200px) {
   .pr-h1 {
-    margin-right: 20%;
+    margin-right: 10%;
   }
   .pr-exit-text {
     //margin-left: 15%;
@@ -228,10 +225,10 @@
   }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 700px) {
   .pr-h1 {
     font-size: 2rem;
-    margin-right: 20%;
+    margin-right: 15%;
   }
   .pr-exit-text {
     // margin-left: 10%;
@@ -268,6 +265,13 @@
 @media (max-width: 480px) {
   .pr-h1 {
     margin-right: 10%;
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 340px) {
+  .pr-h1 {
+    margin-right: 2%;
+    margin-left: 5%;
     font-size: 1.5rem;
   }
 }
