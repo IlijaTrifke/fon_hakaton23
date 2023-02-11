@@ -1,17 +1,10 @@
 @import "../../global.scss";
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 .ng-nagrade {
   background-color: $tamnoPlava;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  gap: 0;
 }
 
 .ng-text h1 {
@@ -54,8 +47,6 @@
 }
 
 .ng-stands {
-  padding-top: 5rem;
-  padding-left: 2rem;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -90,7 +81,6 @@
   font-family: "Noto sans", light;
   display: flex;
   text-align: center;
-  // padding: 1rem;
   font-size: 3rem;
   color: $bela;
 }
@@ -152,7 +142,7 @@
     opacity: 1;
   }
 }
-@media (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
   .ng-text h1 {
     font-size: 2rem;
   }
@@ -254,6 +244,7 @@
     max-width: 100%;
     padding-left: 1rem;
     padding-right: 1rem;
+    height: 20rem;
   }
 
   .ng-text {
