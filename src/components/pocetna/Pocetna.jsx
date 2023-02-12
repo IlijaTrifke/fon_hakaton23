@@ -72,8 +72,6 @@ export default function Pocetna() {
           <div className="pocetna-arrow" />
         </HashLink>
       </div>
-      <div className="blue-ball-blur" />
-      <div className="purple-rectangle-blur" />
     </div>
   );
 }
