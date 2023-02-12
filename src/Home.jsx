@@ -11,13 +11,20 @@ import Ohakatonu from "./components/o-hakatonu/Ohakatonu";
 import Iskustva from "./components/iskustva/Iskustva";
 import Footer from "./components/footer/Footer";
 import image from "./images/st-faqWeb.png";
+import "./home.scss";
 
 function Home() {
   return (
     <>
       {/* <Navbar /> */}
-      <Pocetna />
-      <Ohakatonu />
+      <div className="dveSekcijePO">
+        <Pocetna />
+        <Ohakatonu />
+        <div className="balls-wrapper">
+          <div className="blue-ball-blur" />
+          <div className="purple-rectangle-blur" />
+        </div>
+      </div>
       <Nagrade />
       <Agenda />
       <Iskustva />
