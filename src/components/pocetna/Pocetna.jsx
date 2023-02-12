@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./pocetna.scss";
 import logo from "../../images/FH_Logo.png";
 import { HashLink } from "react-router-hash-link";
+import Ohakatonu from "./../o-hakatonu/Ohakatonu";
 
 export default function Pocetna() {
   const [timer, setTimer] = useState(0);
