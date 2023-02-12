@@ -24,7 +24,7 @@ const Nagrade = () => {
       //console.log(timeline);
       let prevScrollY = window.scrollY;
 
-      const targetY = window.innerHeight * 0.8;
+      const targetY = window.innerHeight * 1.3;
 
       function scrollHandler(e) {
         const { scrollY } = window;
