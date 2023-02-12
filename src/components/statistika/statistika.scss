@@ -13,6 +13,7 @@
 .stk-section ul {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .stk-section li {
@@ -51,6 +52,13 @@
 @media screen and (max-width: 960px) {
   .stk-section ul {
     flex-direction: column;
+    gap: 1rem;
+  }
+
+  .stk-section li {
+    width: 30rem;
+    max-width: 90%;
+    margin: auto;
   }
 
   .stk-section {

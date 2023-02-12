@@ -2,6 +2,11 @@
 
 .org-section {
   background-color: $tamnoPlava;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
 .org-content {
   display: flex;
@@ -11,10 +16,14 @@
 .org-header {
   font-family: "Orbitron", sans-serif;
   color: $bela;
-  text-shadow: 0 0 0.4rem $bela;
-  text-shadow: 0 0 0.8rem $bela;
-  margin-bottom: 3rem;
+  text-shadow: 0 0 7px $bela;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 6rem;
   text-align: center;
+  font-size: 3rem;
+  font-weight: 400;
 }
 .org-text {
   color: $bela;

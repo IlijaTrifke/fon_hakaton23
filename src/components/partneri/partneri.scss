@@ -4,9 +4,14 @@
   height: 9em;
   display: flex;
   flex-direction: column;
+  border-radius: 12px;
   justify-content: center;
   position: relative;
-  background-color: $tamnoPlava;
+  background: linear-gradient(
+    135deg,
+    rgba(36, 189, 222, 0.1),
+    rgba(123, 39, 135, 0.1)
+  );
 }
 .ax-okvir-partneri::before {
   content: "";
@@ -14,7 +19,15 @@
   inset: 0;
   border-radius: 12px;
   padding: 0.2rem;
-  background: linear-gradient(45deg, $svetloPlava, $ljubicasta);
+  background: linear-gradient(
+    135deg,
+    rgba(36, 189, 222, 0.13),
+    rgba(36, 188, 222, 0.6),
+    rgba(0, 36, 64, 0.15),
+    rgba(0, 36, 64, 0.15),
+    rgba(113, 80, 185, 0.25),
+    rgba(123, 39, 135, 0.3)
+  );
   -webkit-mask: linear-gradient(rgb(255, 255, 255) 0 0) content-box,
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
@@ -45,7 +58,6 @@
   font-family: "Orbitron", sans-serif;
   color: $bela;
   text-shadow: 0 0 7px $bela;
-  text-shadow: 0 0 10px $bela;
   font-style: normal;
   text-align: center;
 }
@@ -61,7 +73,6 @@
 .partner img {
   width: 13em;
   height: 7em;
-  border-radius: 30px;
   z-index: -100;
   margin-top: 1%;
   margin-left: 9.5%;
@@ -76,33 +87,17 @@
 
 @media screen and (max-width: 1920px) {
   .ceo-partneri h1 {
-    font-weight: 200;
-    font-size: 3vw;
-  }
-}
-@media screen and (max-width: 1200px) {
-  .ceo-partneri h1 {
-    font-weight: 200;
-    font-size: 3vw;
-  }
-}
-@media screen and (max-width: 960px) {
-  .ceo-partneri h1 {
-    font-weight: 200;
-    font-size: 3vw;
+    font-weight: 400;
+    font-size: 2.5rem;
   }
 }
 @media screen and (max-width: 620px) {
   .ceo-partneri h1 {
-    font-weight: 200;
-    font-size: 7vw;
+    font-size: 2rem;
   }
 }
 @media screen and (max-width: 480px) {
   .ceo-partneri h1 {
-    font-weight: 200;
-    font-size: 7vw;
+    font-size: 2rem;
   }
-}
-@media screen and (max-width: 340px) {
 }

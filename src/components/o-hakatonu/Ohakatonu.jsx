@@ -51,6 +51,11 @@ function Ohakatonu() {
                 <div className="hakaton-arrow" />
               </div>
               <h1> lokacija:</h1>
+              <div className="hakaton-arrows right">
+                <div className="hakaton-arrow" />
+                <div className="hakaton-arrow" />
+                <div className="hakaton-arrow" />
+              </div>
             </div>
             <p className="hakaton-descr">Fakultet organizacionih nauka</p>
             <div className="hakaton-card-title">
@@ -60,6 +65,11 @@ function Ohakatonu() {
                 <div className="hakaton-arrow" />
               </div>
               <h1> vreme:</h1>
+              <div className="hakaton-arrows right">
+                <div className="hakaton-arrow" />
+                <div className="hakaton-arrow" />
+                <div className="hakaton-arrow" />
+              </div>
             </div>
             <p className="hakaton-descr">12. i 13. mart</p>
           </div>

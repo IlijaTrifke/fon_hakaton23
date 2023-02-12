@@ -55,16 +55,16 @@
 }
 
 .card1 {
-  top: 19%;
+  top: 22%;
   left: 15%;
-  width: 45rem;
-  max-width: 37%;
+  width: 48rem;
+  max-width: 33%;
   min-height: 20rem;
   padding: 0.7%;
 }
 
 .card2 {
-  top: 27%;
+  top: 12rem;
   left: 55%;
   width: 23rem;
   height: 15rem;
@@ -72,11 +72,11 @@
 }
 
 .card3 {
-  top: 57%;
-  left: 45%;
-  width: 25%;
+  top: 25rem;
+  left: 47%;
+  width: 25rem;
   padding: 0.7%;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(1px);
 }
 
 .hakaton-content {
@@ -118,6 +118,7 @@
   position: relative;
   z-index: 100;
   filter: brightness(1.2);
+  margin: 0 0.5rem;
 }
 
 .hakaton-arrow {
@@ -126,16 +127,36 @@
   display: inline-block;
   transform: rotate(-45deg);
   position: relative;
-  width: 1.2rem;
-  height: 1.2rem;
-  margin-right: -0.5rem;
+  width: 1rem;
+  height: 1rem;
+  margin-right: -0.4rem;
+  animation: arrowLoad1 1s infinite ease-out;
+}
+
+.right {
+  display: none;
+}
+
+@keyframes arrowLoad1 {
+  0% {
+    opacity: 0;
+    transform: rotate(-45deg);
+  }
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(-45deg);
+  }
 }
 
 .hakaton-arrow:nth-child(1) {
-  opacity: 0.3;
+  position: relative;
+  animation-delay: -0.4s;
 }
 .hakaton-arrow:nth-child(2) {
-  opacity: 0.6;
+  animation-delay: -0.2s;
 }
 
 .hakaton-header {
@@ -149,12 +170,7 @@
 .hakaton-descr {
   padding: 0.5rem;
   text-align: left;
-}
-
-@media screen and (max-width: 1200px) {
-  .card3 {
-    left: 50%;
-  }
+  font-size: 1.2rem;
 }
 
 @media screen and (max-width: 960px) {
@@ -165,6 +181,9 @@
     align-items: center;
     gap: 2rem;
   }
+  .hakaton-title {
+    font-size: 2.5rem;
+  }
   .ohakatonu {
     min-height: 0;
   }
@@ -174,23 +193,29 @@
     width: 30rem;
     max-width: 90%;
   }
+  .hakaton-descr {
+    text-align: center;
+  }
   .card3 {
     backdrop-filter: none;
   }
+  .right {
+    display: block;
+    transform: rotate(-180deg);
+  }
+  .crd3 .hakaton-arrows {
+    display: none;
+  }
+  .hakaton-card-title {
+    justify-content: center;
+  }
+  .card3 {
+    order: 2;
+  }
+  .card2 {
+    order: 3;
+  }
 }
-@media screen and (max-width: 620px) {
-}
-@media screen and (max-width: 480px) {
-}
-// @media screen and (min-width: 1450px) {
-//   .card2 {
-//     top: 20%;
-//   }
-//   .card3 {
-//     top: 48%;
-//     backdrop-filter: none;
-//   }
-// }
 
 #stars {
   width: 1px;
