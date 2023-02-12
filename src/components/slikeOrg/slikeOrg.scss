@@ -110,7 +110,7 @@
   height: 100%;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 620px) {
   .org-content {
     flex-wrap: wrap-reverse;
     gap: 2rem;
@@ -118,5 +118,8 @@
   .org-text,
   .org-photo-hold {
     width: 85%;
+  }
+  .org-header {
+    font-size: 2.5rem;
   }
 }

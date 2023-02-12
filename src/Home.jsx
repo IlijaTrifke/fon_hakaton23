@@ -17,7 +17,6 @@ function Home() {
     <>
       {/* <Navbar /> */}
       <Pocetna />
-      <Ohakatonu />
       <Nagrade />
       <Agenda />
       <Iskustva />
