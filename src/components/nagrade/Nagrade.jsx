@@ -12,7 +12,6 @@ const Nagrade = () => {
     if (isInView) seeRef();
   }, [isInView]);
   var timlineRef = useRef();
-  //console.log(timlineRef.current);
 
   const seeRef = () => {
     if (timlineRef.current !== undefined) {
@@ -36,7 +35,7 @@ const Nagrade = () => {
   return (
     <div class="ng-nagrade" ref={timlineRef}>
       <div class="ng-text" ref={scrollRef}>
-        <h1>OSVOJI NAGRADE U VREDNOSTI OD:</h1>
+        <h1>Osvoji nagrade u vrednosti od:</h1>
       </div>
       <div class="ng-stands">
         <div class="ng-pole">

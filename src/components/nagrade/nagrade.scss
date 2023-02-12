@@ -8,10 +8,9 @@
 }
 
 .ng-text h1 {
-  font-family: "Noto sans", light;
-  font-size: 3rem;
-  font-weight: lighter;
-  text-transform: uppercase;
+  font-family: "Noto sans";
+  font-size: 2.5rem;
+  font-weight: 300;
   color: $bela;
 }
 @keyframes float {
@@ -143,10 +142,6 @@
   }
 }
 @media screen and (max-width: 1200px) {
-  .ng-text h1 {
-    font-size: 2rem;
-  }
-
   .ng-circle {
     width: 7rem;
     height: 7rem;
@@ -176,6 +171,10 @@
 }
 
 @media (max-width: 960px) {
+  .ng-text h1 {
+    width: 16rem;
+  }
+
   .ng-stands {
     max-width: 100%;
     padding-left: 1rem;
@@ -202,18 +201,27 @@
   }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 620px) {
   .ng-nagrade {
     flex-direction: column;
+    min-height: 100vh;
+  }
 
-    .ng-text h1 {
-      font-size: 1.5rem;
-    }
+  .ng-text {
+    padding-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .ng-text h1 {
+    width: 100%;
+    font-size: 2rem;
   }
   .ng-stands {
     max-width: 100%;
     padding-left: 1rem;
     padding-right: 1rem;
+    height: 30rem;
   }
 
   .ng-postolje-img {
@@ -244,11 +252,11 @@
     max-width: 100%;
     padding-left: 1rem;
     padding-right: 1rem;
-    height: 20rem;
+    height: 17rem;
   }
 
   .ng-text {
-    max-width: 75%;
+    width: 75%;
     padding-top: 1rem;
   }
 
