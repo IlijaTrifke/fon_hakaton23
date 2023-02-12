@@ -16,7 +16,12 @@ const Nagrade = () => {
   const seeRef = () => {
     if (timlineRef.current !== undefined) {
       var sections = timlineRef.current.querySelectorAll(".ng-pole");
-      const targetY = window.innerHeight * 0.8;
+      //var timeline = timlineRef.current.querySelector(".ng-text");
+      //console.log(sections);
+      //console.log(timeline);
+      let prevScrollY = window.scrollY;
+
+      const targetY = window.innerHeight * 1.3;
 
       function scrollHandler(e) {
         sections.forEach((item) => {

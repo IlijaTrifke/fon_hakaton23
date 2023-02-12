@@ -64,7 +64,7 @@
   width: 11rem;
   margin: 0;
   background: radial-gradient(circle at 4rem 4rem, #5cabff, #000);
-  animation: float 6s ease-in-out infinite, fadeIn 4s ease-in-out 1;
+  animation: float 6s ease-in-out infinite; //fadeIn 4s ease-in-out 1;
 }
 
 @keyframes fadeIn {
@@ -87,7 +87,7 @@
 .ng-postolje-img {
   height: 100%;
   width: 15rem;
-  animation: fadeInTop 2s ease-in-out 1;
+  //animation: fadeInTop 2s ease-in-out 1;
 }
 
 .ng-pole {
@@ -99,7 +99,7 @@
 }
 .show-pole {
   visibility: visible;
-  animation: fadeInTop 2s ease-in-out 1;
+  animation: fadeInTop 1.5s ease-in-out 1;
 }
 
 .ng-stand-3 {
@@ -127,7 +127,7 @@
   transform: translate(-50%, -50%);
   font-size: 8rem;
   color: $bela;
-  animation: fadeInNumbers 4s ease-in-out 1;
+  //animation: fadeInNumbers 4s ease-in-out 1;
 }
 
 @keyframes fadeInNumbers {
