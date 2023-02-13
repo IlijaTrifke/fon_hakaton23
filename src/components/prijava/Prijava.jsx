@@ -6,7 +6,23 @@ import Strelica from "./img/pr-strelica-dugme.png";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useRef } from "react";
+import { Upload } from "upload-js";
 
+const upload = Upload({ apiKey: "public_FW25b4V4ALwH6oZJdyGdwaxjzmZX" });
+
+const FileUploadButton = (props) => {
+  async function onFileSelected(event) {
+    const [file] = event.target.files;
+    const { fileUrl } = await upload.uploadFile(file, {
+      onBegin: ({ cancel }) => console.log("File upload started!"),
+      onProgress: ({ progress }) =>
+        console.log(`File uploading... ${progress}%`),
+    });
+    console.log(`File uploaded! ${fileUrl}`);
+    props.onChange(fileUrl);
+  }
+  return <input type="file" onChange={(e) => onFileSelected(e)} />;
+};
 const Prijava = () => {
   const navigate = useNavigate();
   const goBack = () => {
@@ -82,7 +98,7 @@ const Prijava = () => {
       );
       const data = await response.json();
       if (data.success) {
-        setIme1("");
+        // setIme1(""); ovde praznimo polja
         openModal("Uspesno poslata prijava");
       } else {
         openModal(data.msg);
@@ -230,7 +246,7 @@ const Prijava = () => {
               <lable class="pr-lable" for="pr-cv_m1">
                 Link ka CV-ju
               </lable>
-              <input
+              {/* <input
                 type="File"
                 class="pr-text"
                 id="pr-cv_m1"
@@ -239,7 +255,12 @@ const Prijava = () => {
                   setCv1(e.target.files[0]);
                 }}
                 required
-              ></input>
+              ></input> */}
+              <FileUploadButton
+                onChange={(fileUrl) => {
+                  setCv1(fileUrl);
+                }}
+              />
               <lable class="pr-lable" for="pr-git_m1">
                 Link ka repozitorijumu na GitHub-u
               </lable>
@@ -320,7 +341,7 @@ const Prijava = () => {
               <lable class="pr-lable" for="pr-cv_m2">
                 Link ka CV-ju
               </lable>
-              <input
+              {/* <input
                 type="file"
                 class="pr-text"
                 id="pr-cv_m2"
@@ -329,7 +350,12 @@ const Prijava = () => {
                   setCv2(e.target.files[0]);
                 }}
                 required
-              ></input>
+              ></input> */}
+              <FileUploadButton
+                onChange={(fileUrl) => {
+                  setCv2(fileUrl);
+                }}
+              />
               <lable class="pr-lable" for="pr-git_m2">
                 Link ka repozitorijumu na GitHub-u
               </lable>
@@ -409,7 +435,7 @@ const Prijava = () => {
               <lable class="pr-lable" for="pr-cv_m3">
                 Link ka CV-ju
               </lable>
-              <input
+              {/* <input
                 type="file"
                 class="pr-text"
                 id="pr-cv_m3"
@@ -418,7 +444,12 @@ const Prijava = () => {
                   setCv3(e.target.files[0]);
                 }}
                 required
-              ></input>
+              ></input> */}
+              <FileUploadButton
+                onChange={(fileUrl) => {
+                  setCv3(fileUrl);
+                }}
+              />
               <lable class="pr-lable" for="pr-git_m3">
                 Link ka repozitorijumu na GitHub-u
               </lable>
@@ -497,7 +528,7 @@ const Prijava = () => {
               <lable class="pr-lable" for="pr-cv_m4">
                 Link ka CV-ju
               </lable>
-              <input
+              {/* <input
                 type="file"
                 class="pr-text"
                 id="pr-cv_m4"
@@ -506,7 +537,12 @@ const Prijava = () => {
                   setCv4(e.target.files[0]);
                 }}
                 required
-              ></input>
+              ></input> */}
+              <FileUploadButton
+                onChange={(fileUrl) => {
+                  setCv4(fileUrl);
+                }}
+              />
               <lable class="pr-lable" for="pr-git_m4">
                 Link ka repozitorijumu na GitHub-u
               </lable>
