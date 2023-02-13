@@ -292,19 +292,14 @@ const Partneri = (props) => {
 
   return (
     <div className="ceo-partneri">
-      <div className="dveSekcijeP">
-        <div id="partneri"></div>
-        <div className="pokrovitelj">
-          <h1 className="pokrovitelj-naslov">POKROVITELJ TAKMIČENJA</h1>
-          <Partner
-            partnerSlika={Slika}
-            partnerIme="Partner"
-            width="16em"
-            // height="9em"
-            // pozadina="#C3B0FF"
-            link="https://www.telesign.com/"
-          ></Partner>
-        </div>
+      <div className="pokrovitelj">
+        <h1 className="pokrovitelj-naslov">POKROVITELJ TAKMIČENJA</h1>
+        <Partner
+          partnerSlika={Slika}
+          partnerIme="Partner"
+          id="pokrovitelj"
+          link="https://www.telesign.com/"
+        ></Partner>
       </div>
 
       <h1>GODIŠNJI PARTNERI</h1>
@@ -313,20 +308,13 @@ const Partneri = (props) => {
         <PartneriSlider
           partneri={godisnjiPartneri}
           settings={partneriSettings}
-          width="16em"
-          // height="9em"
         />
       </div>
 
       <h1>NATURALNI PARTNERI</h1>
 
       <div className="partneri-box">
-        <PartneriSlider
-          partneri={robniPartneri}
-          settings={partneriSettings}
-          width="16em"
-          // height="9em"
-        />
+        <PartneriSlider partneri={robniPartneri} settings={partneriSettings} />
       </div>
 
       <h1>MEDIJSKI PARTNERI</h1>
@@ -335,8 +323,6 @@ const Partneri = (props) => {
         <PartneriSlider
           partneri={medijskiPartneri}
           settings={partneriSettings}
-          width="16em"
-          // height="9em"
         />
       </div>
     </div>
