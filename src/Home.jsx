@@ -15,7 +15,7 @@ import image from "./images/st-faqWeb.png";
 function Home() {
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <div className="dveSekcijePO">
         <Pocetna />
         <Ohakatonu />

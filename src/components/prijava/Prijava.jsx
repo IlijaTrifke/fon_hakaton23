@@ -48,6 +48,14 @@ const Prijava = () => {
   const [pitanje3, setPitanje3] = useState("");
   const [pitanje4, setPitanje4] = useState("");
 
+  const [error, setError] = useState(false);
+
+  function validateEmail(email) {
+    const re =
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  }
+
   const [modalOpen, setModalOpen] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
 
@@ -65,7 +73,7 @@ const Prijava = () => {
     console.log(prijava);
 
     try {
-      const response = await fetch("https://hzs5.herokuapp.com/prijave/api", {
+      const response = await fetch("http://localhost:5000/prijave/api", {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -86,54 +94,70 @@ const Prijava = () => {
   };
 
   const posaljiPrijavu = async () => {
-    let prijava = {
-      ime1: ime1,
-      imejl1: imejl1,
-      brojTelefona1: brojTelefona1,
-      status1: status1,
-      imeSkoleFirme1: imeSkoleFirme1,
-      cv1: cv1,
-      git1: git1,
-      ime2: ime2,
-      imejl2: imejl2,
-      brojTelefona2: brojTelefona2,
-      status2: status2,
-      imeSkoleFirme2: imeSkoleFirme2,
-      cv2: cv2,
-      git2: git2,
-      ime3: ime3,
-      imejl3: imejl3,
-      brojTelefona3: brojTelefona3,
-      status3: status3,
-      imeSkoleFirme3: imeSkoleFirme3,
-      git3: git3,
-      cv3: cv3,
-      ime4: ime4,
-      imejl4: imejl4,
-      brojTelefona4: brojTelefona4,
-      status4: status4,
-      imeSkoleFirme4: imeSkoleFirme4,
-      cv4: cv4,
-      pitanje1: pitanje1,
-      pitanje2: pitanje2,
-      pitanje3: pitanje3,
-      pitanje4: pitanje4,
-      git4: git4,
+    if (!ime1 || !ime2 || !validateEmail(imejl1)) {
+      setError(true);
+      return;
+    }
+
+    const prijava = {
+      pitanje1,
+      pitanje2,
+      pitanje3,
+      pitanje4,
+      clanovi: [
+        {
+          imePrezime: ime1,
+          email: imejl1,
+          brojTelefona: brojTelefona1,
+          status: status1,
+          godinaStudija: imeSkoleFirme1,
+          linkCV: cv1,
+          linkGit: git1,
+        },
+        {
+          imePrezime: ime2,
+          email: imejl2,
+          brojTelefona: brojTelefona2,
+          status: status2,
+          godinaStudija: imeSkoleFirme2,
+          linkCV: cv2,
+          linkGit: git2,
+        },
+        {
+          imePrezime: ime3,
+          email: imejl3,
+          brojTelefona: brojTelefona3,
+          status: status3,
+          godinaStudija: imeSkoleFirme3,
+          linkCV: cv3,
+          linkGit: git3,
+        },
+        {
+          imePrezime: ime4,
+          email: imejl4,
+          brojTelefona: brojTelefona4,
+          status: status4,
+          godinaStudija: imeSkoleFirme4,
+          linkCV: cv4,
+          linkGit: git4,
+        },
+      ],
     };
+
     postPrijava(prijava);
   };
 
-  function ProverPitanja() {
-    if (pitanje1 === "") {
-      document
-        .getElementById("pr-teamname")
-        .style.setProperty("border", "double 8px red");
-    } else {
-      document
-        .getElementById("pr-motivation")
-        .style.setProperty("border", "double 4px transparent");
-    }
-  }
+  // function ProverPitanja() {
+  //   if (pitanje1 === "") {
+  //     document
+  //       .getElementById("pr-teamname")
+  //       .style.setProperty("border", "double 8px red");
+  //   } else {
+  //     document
+  //       .getElementById("pr-motivation")
+  //       .style.setProperty("border", "double 4px transparent");
+  //   }
+  // }
 
   return (
     <div class="pr-prijava">
@@ -154,7 +178,7 @@ const Prijava = () => {
               </lable>
               <input
                 type="text"
-                class="pr-text"
+                class={`pr-text ${error && ime1 === "" ? "errorClass" : ""}`}
                 id="pr-name_m1"
                 onChange={(e) => {
                   setIme1(e.target.value);
@@ -166,7 +190,9 @@ const Prijava = () => {
               </lable>
               <input
                 type="email"
-                class="pr-text"
+                class={`pr-text ${
+                  error && !validateEmail(imejl1) ? "errorClass" : ""
+                }`}
                 id="pr-email_m1"
                 onChange={(e) => {
                   setImejl1(e.target.value);
@@ -244,13 +270,14 @@ const Prijava = () => {
               </lable>
               <input
                 type="text"
-                class="pr-text"
+                class={`pr-text ${error && ime2 === "" ? "errorClass" : ""}`}
                 id="pr-name_m2"
                 onChange={(e) => {
                   setIme2(e.target.value);
                 }}
                 required
               ></input>
+              {error && ime2 === "" && <label>Ime je obavezno!</label>}
               <lable class="pr-lable" for="pr-email_m2">
                 Imejl
               </lable>
@@ -564,6 +591,7 @@ const Prijava = () => {
               class="pr-submit"
               value="Pošalji prijavu"
               onClick={(e) => {
+                e.preventDefault();
                 posaljiPrijavu();
                 //ProverPitanja();
               }}
