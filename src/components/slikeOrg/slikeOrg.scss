@@ -28,7 +28,7 @@
 .org-text {
   color: $bela;
   font-family: "Noto Sans", sans-serif;
-  width: 40vw;
+  width: 30rem;
   text-align: center;
   filter: drop-shadow(0 0 10px #011b30);
   display: grid;
@@ -86,8 +86,7 @@
 
 .org-photo-hold {
   position: relative;
-
-  width: 45vw;
+  width: 35rem;
   filter: drop-shadow(0 0 10px #011b30);
   object-fit: cover;
 }
@@ -110,16 +109,24 @@
   height: 100%;
 }
 
-@media (max-width: 620px) {
+@media (max-width: 1200px) {
   .org-content {
-    flex-wrap: wrap-reverse;
+    flex-direction: column-reverse;
     gap: 2rem;
   }
   .org-text,
   .org-photo-hold {
-    width: 85%;
+    width: 33rem;
   }
   .org-header {
     font-size: 2.5rem;
+    width: 95%;
+  }
+}
+@media (max-width: 620px) {
+  .org-text,
+  .org-photo-hold {
+    width: 85%;
+    margin: auto;
   }
 }

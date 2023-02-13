@@ -77,19 +77,6 @@
   margin-left: -10%;
 }
 
-// .agn-bead::before {
-//   content: "";
-//   position: absolute;
-//   inset: 0;
-//   border-radius: 50%;
-//   padding: 2.1px;
-//   background: linear-gradient(45deg, $svetloPlava, $ljubicasta);
-//   -webkit-mask: linear-gradient(rgb(255, 255, 255) 0 0) content-box,
-//     linear-gradient(#fff 0 0);
-//   -webkit-mask-composite: xor;
-//   mask-composite: exclude;
-// }
-
 .agn-head {
   background-color: $tamnoPlava;
   width: 60%;
