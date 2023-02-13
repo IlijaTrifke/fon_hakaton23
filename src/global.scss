@@ -54,3 +54,64 @@ $svetloPlava: #24bdde; //Za detalje
   gap: 5rem;
   align-items: center;
 }
+
+.dveSekcijePO {
+  background-image: url(./images/Constellation.png);
+  background-color: $tamnoPlava;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.balls-wrapper {
+  width: 100%;
+  min-height: 180vh;
+  position: absolute;
+  overflow: hidden;
+  top: 20%;
+  left: 0;
+}
+
+.blue-ball-blur {
+  position: absolute;
+  top: 30%;
+  left: -5%;
+  width: 20%;
+  height: 30%;
+  background-color: $svetloPlava;
+  filter: blur(7rem);
+  border-radius: 50%;
+  animation: blurMoving 10s linear infinite;
+}
+.purple-rectangle-blur {
+  position: absolute;
+  top: 20%;
+  left: 90%;
+  width: 20%;
+  height: 30%;
+  background-color: $ljubicasta;
+  filter: blur(5rem);
+  border-radius: 50%;
+  animation: blurMoving 10s linear infinite;
+}
+
+@keyframes blurMoving {
+  0% {
+    transform: rotate(0deg) translate(-100px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(-100px) rotate(-360deg);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .blue-ball-blur {
+    filter: blur(6rem);
+    width: 40%;
+    top: 20%;
+  }
+  .purple-rectangle-blur {
+    filter: blur(3rem);
+    width: 40%;
+    top: 10%;
+  }
+}
