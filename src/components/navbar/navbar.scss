@@ -22,13 +22,35 @@
   gap: 6%;
   align-items: center;
   font-size: 1.2rem;
-  background-color: transparent;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(2px);
+  background: linear-gradient(
+    135deg,
+    rgba(36, 189, 222, 0.1),
+    rgba(36, 189, 222, 0.1)
+  );
   font-family: Orbitron;
-  -webkit-backdrop-filter: blur(15px);
-  border-radius: 10rem;
-  border: 2px solid $ljubicasta;
+  border-radius: 5rem;
+}
+
+.navbar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 5rem;
+  padding: 0.1rem;
+  background: linear-gradient(
+    135deg,
+    #24bdde,
+    rgba(107, 184, 206, 0.88),
+    rgba(0, 36, 64, 0.5),
+    rgba(0, 36, 64, 0.5),
+    rgba(113, 80, 185, 0.83),
+    #7b2787
+  );
+  -webkit-mask: linear-gradient(rgb(255, 255, 255) 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
 }
 
 .navbar-logo {
@@ -72,8 +94,22 @@
   padding: 0.5rem 1rem;
   position: relative;
   white-space: nowrap;
-  border: 2px solid $ljubicasta;
-  border-radius: 12rem;
+  border-radius: 5rem;
+  box-shadow: 5px 5px 8px 0px #000000;
+  font-weight: 600;
+}
+.link-do-prijave::before,
+.prijavi-se::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 5rem;
+  padding: 0.1rem;
+  background: linear-gradient(155deg, transparent, #7b2787);
+  -webkit-mask: linear-gradient(rgb(255, 255, 255) 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
 }
 
 .desktop {
@@ -90,22 +126,20 @@
     width: 100%;
     margin: 0;
     border: 0;
-    opacity: 1;
     position: fixed;
     top: 0;
     height: 4rem;
-    // outline: 1.5px solid rgba(255, 255, 255, 0.093);
+    background: none;
+    backdrop-filter: none;
   }
-
-  .hamburger-react {
-    margin-top: -10px;
+  .navbar::before {
+    background: none;
   }
 
   a.nav-links.link-do-prijave {
     width: 70%;
     padding: 0.5rem 1rem;
     position: relative;
-    cursor: pointer;
   }
 
   .nav-menu {
@@ -115,12 +149,13 @@
     padding-bottom: 10%;
     width: 100vw;
     height: 100vh;
+    gap: 3%;
     position: absolute;
-    top: 3rem;
+    top: 0;
     left: -100%;
-    opacity: 1;
-    /* transition: all 0.5s ease; */
+    transition: all 0.5s ease;
     overflow: hidden;
+    white-space: nowrap;
   }
 
   .nav-menu.active {
@@ -129,18 +164,15 @@
     border-radius: 0;
     position: fixed;
     left: 0;
+    top: 0;
   }
 
   .nav-links {
     text-align: center;
-    padding-left: 20%;
-    padding-right: 20%;
-    margin-bottom: 6vw;
-    font-size: 8.5vw;
+    font-size: 2.5rem;
     width: 100vw;
     display: table;
     font-weight: 200;
-    color: #ffffff;
   }
 
   .nav-links:hover {
@@ -154,11 +186,20 @@
   .menu-icon {
     display: block;
     position: absolute;
-
     top: 1.5rem;
-    right: 2rem;
-    transform: translate(-10%, -7%);
-    color: #00ffa3;
-    cursor: pointer;
+    right: 1.5rem;
+    color: $svetloPlava;
+  }
+
+  .hamburger-react {
+    margin-top: -25%;
+    background: linear-gradient(
+      135deg,
+      rgba(232, 239, 245, 0.2),
+      rgba(232, 239, 245, 0.05)
+    );
+    border-radius: 0.5rem;
+    z-index: 500;
+    backdrop-filter: blur(2px);
   }
 }
