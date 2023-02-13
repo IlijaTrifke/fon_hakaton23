@@ -5,7 +5,7 @@ export const DataSlider = [
     name: "Lorem Ipsum",
 
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id fermentum diam. Fusce egestas pharetra orci, eu vestibulum elit eleifend ut. In vitae arcu nunc. Aliquam maximus magna quis facilisis mollis. Integer consequat blandit sagittis. Curabitur varius sed lectus vel finibus. Aenean tincidunt turpis id fermentum scelerisque. Etiam quis luctus magna, non vulputate augue. Aenean mattis congue vulputate.",
+      "...Fusce egestas pharetra orci, eu vestibulum elit eleifend ut. In vitae arcu nunc. Aliquam maximus magna quis facilisis mollis. Integer consequat blandit sagittis. Curabitur varius sed lectus vel finibus. Aenean tincidunt turpis id fermentum scelerisque. Etiam quis luctus magna, non vulputate augue. Aenean mattis congue vulputate.",
   },
   {
     id: 1,
@@ -13,7 +13,7 @@ export const DataSlider = [
     name: "Lorem Ipsum",
 
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id fermentum diam. Fusce egestas pharetra orci, eu vestibulum elit eleifend ut. In vitae arcu nunc. Aliquam maximus magna quis facilisis mollis. Integer consequat blandit sagittis. Curabitur varius sed lectus vel finibus. Aenean tincidunt turpis id fermentum scelerisque. Etiam quis luctus magna, non vulputate augue. Aenean mattis congue vulputate.",
+      "...Fusce egestas pharetra orci, eu vestibulum elit eleifend ut. In vitae arcu nunc. Aliquam maximus magna quis facilisis mollis. Integer consequat blandit sagittis. Curabitur varius sed lectus vel finibus. Aenean tincidunt turpis id fermentum scelerisque. Etiam quis luctus magna, non vulputate augue. Aenean mattis congue vulputate.",
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ export const DataSlider = [
     name: "Lorem Ipsum",
 
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id fermentum diam. Fusce egestas pharetra orci, eu vestibulum elit eleifend ut. In vitae arcu nunc. Aliquam maximus magna quis facilisis mollis. Integer consequat blandit sagittis. Curabitur varius sed lectus vel finibus. Aenean tincidunt turpis id fermentum scelerisque. Etiam quis luctus magna, non vulputate augue. Aenean mattis congue vulputate.",
+      "...Fusce egestas pharetra orci, eu vestibulum elit eleifend ut. In vitae arcu nunc. Aliquam maximus magna quis facilisis mollis. Integer consequat blandit sagittis. Curabitur varius sed lectus vel finibus. Aenean tincidunt turpis id fermentum scelerisque. Etiam quis luctus magna, non vulputate augue. Aenean mattis congue vulputate.",
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ export const DataSlider = [
     name: "Lorem Ipsum",
 
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id fermentum diam. Fusce egestas pharetra orci, eu vestibulum elit eleifend ut. In vitae arcu nunc. Aliquam maximus magna quis facilisis mollis. Integer consequat blandit sagittis. Curabitur varius sed lectus vel finibus. Aenean tincidunt turpis id fermentum scelerisque. Etiam quis luctus magna, non vulputate augue. Aenean mattis congue vulputate.",
+      "...Fusce egestas pharetra orci, eu vestibulum elit eleifend ut. In vitae arcu nunc. Aliquam maximus magna quis facilisis mollis. Integer consequat blandit sagittis. Curabitur varius sed lectus vel finibus. Aenean tincidunt turpis id fermentum scelerisque. Etiam quis luctus magna, non vulputate augue. Aenean mattis congue vulputate.",
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ export const DataSlider = [
     name: "Lorem Ipsum",
 
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id fermentum diam. Fusce egestas pharetra orci, eu vestibulum elit eleifend ut. In vitae arcu nunc. Aliquam maximus magna quis facilisis mollis. Integer consequat blandit sagittis. Curabitur varius sed lectus vel finibus. Aenean tincidunt turpis id fermentum scelerisque. Etiam quis luctus magna, non vulputate augue. Aenean mattis congue vulputate.",
+      "...Fusce egestas pharetra orci, eu vestibulum elit eleifend ut. In vitae arcu nunc. Aliquam maximus magna quis facilisis mollis. Integer consequat blandit sagittis. Curabitur varius sed lectus vel finibus. Aenean tincidunt turpis id fermentum scelerisque. Etiam quis luctus magna, non vulputate augue. Aenean mattis congue vulputate.",
   },
   {
     id: 5,
@@ -45,7 +45,7 @@ export const DataSlider = [
     name: "Lorem Ipsum",
 
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id fermentum diam. Fusce egestas pharetra orci, eu vestibulum elit eleifend ut. In vitae arcu nunc. Aliquam maximus magna quis facilisis mollis. Integer consequat blandit sagittis. Curabitur varius sed lectus vel finibus. Aenean tincidunt turpis id fermentum scelerisque. Etiam quis luctus magna, non vulputate augue. Aenean mattis congue vulputate.",
+      "...Fusce egestas pharetra orci, eu vestibulum elit eleifend ut. In vitae arcu nunc. Aliquam maximus magna quis facilisis mollis. Integer consequat blandit sagittis. Curabitur varius sed lectus vel finibus. Aenean tincidunt turpis id fermentum scelerisque. Etiam quis luctus magna, non vulputate augue. Aenean mattis congue vulputate.",
   },
   {
     id: 6,
@@ -53,6 +53,6 @@ export const DataSlider = [
     name: "Lorem Ipsum",
 
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id fermentum diam. Fusce egestas pharetra orci, eu vestibulum elit eleifend ut. In vitae arcu nunc. Aliquam maximus magna quis facilisis mollis. Integer consequat blandit sagittis. Curabitur varius sed lectus vel finibus. Aenean tincidunt turpis id fermentum scelerisque. Etiam quis luctus magna, non vulputate augue. Aenean mattis congue vulputate.",
+      "...Fusce egestas pharetra orci, eu vestibulum elit eleifend ut. In vitae arcu nunc. Aliquam maximus magna quis facilisis mollis. Integer consequat blandit sagittis. Curabitur varius sed lectus vel finibus. Aenean tincidunt turpis id fermentum scelerisque. Etiam quis luctus magna, non vulputate augue. Aenean mattis congue vulputate.",
   },
 ];

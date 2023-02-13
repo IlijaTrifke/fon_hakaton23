@@ -39,6 +39,11 @@
   border-color: white;
   border-radius: 15px;
   border-width: 1px;
+  background: linear-gradient(
+    180deg,
+    rgba(217, 217, 217, 1),
+    rgba(217, 217, 217, 0)
+  );
 }
 .ax-top-left hr {
   width: 13rem;
@@ -49,7 +54,7 @@
   font-family: "Noto Sans", sans-serif;
   color: $bela;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 15px;
   margin-top: 5rem;
 }
 
@@ -159,16 +164,19 @@
   border-color: #ffffff;
   border-radius: 15px;
   border-width: 1px;
+  background: repeating-linear-gradient(
+    180deg,
+    rgba(217, 217, 217, 0),
+    rgba(217, 217, 217, 0.2),
+    rgba(217, 217, 217, 0)
+  );
 }
 
 .ax-top-right .ax-top-description {
-  font-size: 0.9rem;
+  font-size: 16px;
   font-family: "Noto Sans", sans-serif;
   color: $bela;
-  padding-top: 5%;
-  font-size: 1;
-  width: 13rem;
-  height: 20rem;
+  width: 80%;
   text-align: center;
 }
 .ax-top-right .slide-active {
@@ -197,7 +205,7 @@
   }
 
   .ax-top-right .ax-top-description {
-    font-size: 0.65rem;
+    font-size: 12px;
     width: 18rem;
     height: 20rem;
     padding-top: 21%;
@@ -238,7 +246,7 @@
   }
 
   .ax-top-right .ax-top-description {
-    font-size: 0.59rem;
+    font-size: 10px;
     width: 13rem;
     height: 20rem;
     padding-top: 16%;
@@ -317,7 +325,6 @@
   .ax-top-container {
     display: flex;
     flex-direction: column;
-    position: relative;
     justify-content: center;
     align-items: center;
     gap: 2rem;
