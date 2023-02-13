@@ -1,7 +1,6 @@
 import React from "react";
-import CountUp from "react-countup";
 import "./prijava.scss";
-import Kevin from "./img/pr-kocka.png";
+import Kevin from "./img/cube.webm";
 import Iks from "./img/pr-exit.png";
 import Strelica from "./img/pr-strelica-dugme.png";
 import { useNavigate } from "react-router-dom";
@@ -31,10 +30,10 @@ const Prijava = () => {
   const [status2, setStatus2] = useState("Zaposlen");
   const [status3, setStatus3] = useState("Zaposlen");
   const [status4, setStatus4] = useState("Zaposlen");
-  const [imeSkoleFirme1, setimeSkoleFirme1] = useState("");
-  const [imeSkoleFirme2, setimeSkoleFirme2] = useState("");
-  const [imeSkoleFirme3, setimeSkoleFirme3] = useState("");
-  const [imeSkoleFirme4, setimeSkoleFirme4] = useState("");
+  const [imeSkole1, setimeSkole1] = useState("");
+  const [imeSkole2, setimeSkole2] = useState("");
+  const [imeSkole3, setimeSkole3] = useState("");
+  const [imeSkole4, setimeSkole4] = useState("");
   const [cv1, setCv1] = useState("");
   const [cv2, setCv2] = useState("");
   const [cv3, setCv3] = useState("");
@@ -69,20 +68,21 @@ const Prijava = () => {
   };
 
   const postPrijava = async (prijava) => {
-    // console.log("Post zahtev za prijava");
-    console.log(prijava);
-
     try {
-      const response = await fetch("http://localhost:5000/prijave/api", {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(prijava),
-      });
+      const response = await fetch(
+        "https://fh-server-main.onrender.com/prijave/api",
+        {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(prijava),
+        }
+      );
       const data = await response.json();
       if (data.success) {
+        setIme1("");
         openModal("Uspesno poslata prijava");
       } else {
         openModal(data.msg);
@@ -110,7 +110,7 @@ const Prijava = () => {
           email: imejl1,
           brojTelefona: brojTelefona1,
           status: status1,
-          godinaStudija: imeSkoleFirme1,
+          imeSkole: imeSkole1,
           linkCV: cv1,
           linkGit: git1,
         },
@@ -119,7 +119,7 @@ const Prijava = () => {
           email: imejl2,
           brojTelefona: brojTelefona2,
           status: status2,
-          godinaStudija: imeSkoleFirme2,
+          imeSkole: imeSkole2,
           linkCV: cv2,
           linkGit: git2,
         },
@@ -128,7 +128,7 @@ const Prijava = () => {
           email: imejl3,
           brojTelefona: brojTelefona3,
           status: status3,
-          godinaStudija: imeSkoleFirme3,
+          imeSkole: imeSkole3,
           linkCV: cv3,
           linkGit: git3,
         },
@@ -137,7 +137,7 @@ const Prijava = () => {
           email: imejl4,
           brojTelefona: brojTelefona4,
           status: status4,
-          godinaStudija: imeSkoleFirme4,
+          imeSkole: imeSkole4,
           linkCV: cv4,
           linkGit: git4,
         },
@@ -147,27 +147,16 @@ const Prijava = () => {
     postPrijava(prijava);
   };
 
-  // function ProverPitanja() {
-  //   if (pitanje1 === "") {
-  //     document
-  //       .getElementById("pr-teamname")
-  //       .style.setProperty("border", "double 8px red");
-  //   } else {
-  //     document
-  //       .getElementById("pr-motivation")
-  //       .style.setProperty("border", "double 4px transparent");
-  //   }
-  // }
-
   return (
     <div class="pr-prijava">
       <div class="pr-header">
         <h1 class="pr-h1">Forma za prijavu</h1>
         <div class="pr-exit-text">
           <p onClick={goBack}>Izađi</p>
-          <img class="pr-exit" src={Iks} onClick={goBack}></img>
+          <img class="pr-exit" src={Iks} onClick={goBack} alt="Exit"></img>
         </div>
       </div>
+      {/* {modalOpen && } */}
       <form class="pr-team-data">
         <div class="pr-content">
           <div class="pr-members">
@@ -204,7 +193,9 @@ const Prijava = () => {
               </lable>
               <input
                 type="text"
-                class="pr-text"
+                class={`pr-text ${
+                  error && brojTelefona1 === "" ? "errorClass" : ""
+                }`}
                 id="pr-phone_m1"
                 required
                 onChange={(e) => {
@@ -227,13 +218,13 @@ const Prijava = () => {
                 <option value="srednjoskolac">Srednjoškolac</option>
               </select>
               <lable class="pr-lable" for="pr-year_m1">
-                Godina i naziv studija/ srednje škole
+                Godina i naziv studija/srednje škole
               </lable>
               <input
                 type="text"
                 class="pr-text"
                 onChange={(e) => {
-                  setimeSkoleFirme1(e.target.value);
+                  setimeSkole1(e.target.value);
                 }}
               ></input>
               <lable class="pr-lable" for="pr-cv_m1">
@@ -316,13 +307,13 @@ const Prijava = () => {
                 <option value="srednjoskolac">Srednjoškolac</option>
               </select>
               <lable class="pr-lable" for="pr-year_m2">
-                Godina i naziv studija/ srednje škole
+                Godina i naziv studija/srednje škole
               </lable>
               <input
                 type="text"
                 class="pr-text"
                 onChange={(e) => {
-                  setimeSkoleFirme2(e.target.value);
+                  setimeSkole2(e.target.value);
                 }}
                 required
               ></input>
@@ -406,13 +397,13 @@ const Prijava = () => {
                 <option value="srednjoskolac">Srednjoškolac</option>
               </select>
               <lable class="pr-lable" for="pr-year_m3">
-                Godina i naziv studija/ srednje škole
+                Godina i naziv studija/srednje škole
               </lable>
               <input
                 type="text"
                 class="pr-text"
                 onChange={(e) => {
-                  setimeSkoleFirme3(e.target.value);
+                  setimeSkole3(e.target.value);
                 }}
               ></input>
               <lable class="pr-lable" for="pr-cv_m3">
@@ -494,13 +485,13 @@ const Prijava = () => {
                 <option value="srednjoskolac">Srednjoškolac</option>
               </select>
               <lable class="pr-lable" for="pr-year_m4">
-                Godina i naziv fakulteta/ srednje škole
+                Godina i naziv studija/srednje škole
               </lable>
               <input
                 type="text"
                 class="pr-text"
                 onChange={(e) => {
-                  setimeSkoleFirme4(e.target.value);
+                  setimeSkole4(e.target.value);
                 }}
               ></input>
               <lable class="pr-lable" for="pr-cv_m4">
@@ -531,9 +522,20 @@ const Prijava = () => {
             </div>
           </div>
           <div class="pr-team">
-            <div class="pr-kevin">
-              <img src={Kevin} class="pr-kevin-img" />
-            </div>
+            <video
+              className="pr-kevin"
+              autoPlay={true}
+              webkit-playsinline
+              playsinline="true"
+              muted
+              type="video/webm"
+              controlBar="false"
+              loadingSpinner="false"
+              bigPlayButton="false"
+              loop
+            >
+              <source src={Kevin} type="video/webm" />
+            </video>
 
             <div class="pr-team-info">
               <h1 class="pr-h1_m">Tim</h1>
@@ -593,7 +595,6 @@ const Prijava = () => {
               onClick={(e) => {
                 e.preventDefault();
                 posaljiPrijavu();
-                //ProverPitanja();
               }}
             ></input>
             <img src={Strelica} class="pr-strelica-img"></img>
