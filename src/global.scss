@@ -34,6 +34,11 @@ $svetloPlava: #24bdde; //Za detalje
   padding: 0;
   scroll-behavior: smooth;
 }
+
+.App {
+  background-color: $tamnoPlava;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap"); //u vasem scss-u kucate font-family: "Orbitron", sans-serif;
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"); //u vasem scss-u kucate font-family: "Noto Sans", sans-serif;
 

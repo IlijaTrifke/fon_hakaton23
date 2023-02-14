@@ -52,7 +52,7 @@ const Navbar = () => {
   return (
     <div
       className="ceo-nav"
-      style={{ ...navbarStyles, top: visible ? "0" : "-7rem" }}
+      // style={{ ...navbarStyles, top: visible ? "0" : "-7rem" }}
     >
       <nav className="navbar">
         <img className="navbar-logo" src={logo} alt="Fon hakaton logo" />

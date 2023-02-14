@@ -7,6 +7,7 @@
   text-align: center;
   font-size: 3rem;
   font-weight: 400;
+  width: 95%;
 }
 
 .faq-section {
@@ -17,24 +18,49 @@
   align-items: center;
   min-height: 70vh;
   gap: 2rem;
+  position: relative;
+}
+
+.vector4 {
+  position: absolute;
+  top: 10rem;
+  right: 0;
+  // width: 60rem;
 }
 
 .faq-box {
   border-radius: 15px;
-  background-color: $tamnoPlava;
-  width: 30rem;
+  width: 40rem;
+  // min-height: 20rem;
   max-width: 80%;
   align-self: center;
-  margin: 2rem;
-  padding: 1rem;
+  padding: 2rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  backdrop-filter: blur(0.5rem);
+  backdrop-filter: blur(1px);
+  background: linear-gradient(
+    135deg,
+    rgba(36, 189, 222, 0.1),
+    rgba(123, 39, 135, 0.1)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-box-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 33rem;
+  width: 100%;
 }
 
 .faq-text {
   color: $bela;
   font-family: "Noto Sans", sans-serif;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 .faq-horizontal {
@@ -129,12 +155,12 @@
   width: 100%;
   color: $bela;
   font-family: "Noto Sans", sans-serif;
-  font-size: 0.7rem;
+  font-size: 1rem;
 }
 
 .show {
   height: 60%;
-  max-height: 100px;
+  max-height: 150px;
   transition: all 0.3s cubic-bezier(1, 0, 1, 0);
   padding-bottom: 1rem;
 }
@@ -152,6 +178,11 @@
   background: none;
 }
 
+@media screen and (max-width: 1200px) {
+  .faq-plus {
+    cursor: none;
+  }
+}
 @media screen and (max-width: 620px) {
   .faq-naslov {
     font-size: 2.5rem;
