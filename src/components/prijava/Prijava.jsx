@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useRef } from "react";
 import { Upload } from "upload-js";
+import Popup from "reactjs-popup";
 
 const upload = Upload({ apiKey: "public_FW25b4V4ALwH6oZJdyGdwaxjzmZX" });
 
@@ -23,6 +24,13 @@ const FileUploadButton = (props) => {
   }
   return <input type="file" onChange={(e) => onFileSelected(e)} />;
 };
+
+const PopupExample = () => (
+  <Popup trigger={<button> Trigger</button>} position="right center">
+    <div>Popup content here !!</div>
+  </Popup>
+);
+
 const Prijava = () => {
   const navigate = useNavigate();
   const goBack = () => {
@@ -54,10 +62,10 @@ const Prijava = () => {
   const [cv2, setCv2] = useState("");
   const [cv3, setCv3] = useState("");
   const [cv4, setCv4] = useState("");
-  const [git1, setGit1] = useState("");
-  const [git2, setGit2] = useState("");
-  const [git3, setGit3] = useState("");
-  const [git4, setGit4] = useState("");
+  //const [git1, setGit1] = useState("");
+  // const [git2, setGit2] = useState("");
+  // const [git3, setGit3] = useState("");
+  // const [git4, setGit4] = useState("");
   const [pitanje1, setPitanje1] = useState("");
   const [pitanje2, setPitanje2] = useState("");
   const [pitanje3, setPitanje3] = useState("");
@@ -99,7 +107,8 @@ const Prijava = () => {
       );
       const data = await response.json();
       if (data.success) {
-        // setIme1(""); ovde praznimo polja
+        //document.getElementById("pr-name.m1").textContent = "";
+        //setIme1("");
         openModal("Uspesno poslata prijava");
       } else {
         openModal(data.msg);
@@ -111,10 +120,81 @@ const Prijava = () => {
   };
 
   const posaljiPrijavu = async () => {
-    if (!ime1 || !ime2 || !validateEmail(imejl1)) {
+    if (
+      !ime1 ||
+      !ime2 ||
+      !ime3 ||
+      !ime4 ||
+      !imejl1 ||
+      !imejl2 ||
+      !imejl3 ||
+      !imejl4 ||
+      !brojTelefona1 ||
+      !brojTelefona2 ||
+      !brojTelefona3 ||
+      !brojTelefona4 ||
+      !imeSkole1 ||
+      !imeSkole2 ||
+      !imeSkole3 ||
+      !imeSkole4 ||
+      !pitanje1 ||
+      !pitanje2 ||
+      !pitanje3 ||
+      !pitanje4 ||
+      !validateEmail(imejl1) ||
+      !validateEmail(imejl2) ||
+      !validateEmail(imejl3) ||
+      !validateEmail(imejl4) ||
+      cv1 === null ||
+      cv2 === null ||
+      cv3 === null ||
+      cv4 === null
+    ) {
       setError(true);
+      //radi testiranja praznjenja kopirati ovde
       return;
     }
+    //praznjenje polja
+    setIme1(" ");
+    document.getElementById("pr-name_m1").value = " ";
+    setIme2(" ");
+    document.getElementById("pr-name_m2").value = " ";
+    setIme3(" ");
+    document.getElementById("pr-name_m3").value = " ";
+    setIme4(" ");
+    document.getElementById("pr-name_m4").value = " ";
+    //setImejl1(" ");
+    document.getElementById("pr-email_m1").value = " ";
+    // setImejl2(" ");
+    document.getElementById("pr-email_m2").value = " ";
+    //setImejl3(" ");
+    document.getElementById("pr-email_m3").value = " ";
+    // setImejl4(" ");
+    document.getElementById("pr-email_m4").value = " ";
+    setbrojTelefon1(" ");
+    document.getElementById("pr-phone_m1").value = " ";
+    setbrojTelefon2(" ");
+    document.getElementById("pr-phone_m2").value = " ";
+    setbrojTelefon3(" ");
+    document.getElementById("pr-phone_m3").value = " ";
+    setbrojTelefon4(" ");
+    document.getElementById("pr-phone_m4").value = " ";
+    setimeSkole1(" ");
+    document.getElementById("pr-year_m1").value = " ";
+    setimeSkole2(" ");
+    document.getElementById("pr-year_m2").value = " ";
+    setimeSkole3(" ");
+    document.getElementById("pr-year_m3").value = " ";
+    setimeSkole4(" ");
+    document.getElementById("pr-year_m4").value = " ";
+    setPitanje1(" ");
+    document.getElementById("pr-teamname").value = " ";
+    setPitanje2(" ");
+    document.getElementById("pr-motivation").value = " ";
+    setPitanje3(" ");
+    document.getElementById("pr-iskustvo").value = " ";
+    setPitanje4(" ");
+    document.getElementById("pr-vrline").value = " ";
 
     const prijava = {
       pitanje1,
@@ -129,7 +209,7 @@ const Prijava = () => {
           status: status1,
           imeSkole: imeSkole1,
           linkCV: cv1,
-          linkGit: git1,
+          //linkGit: git1,
         },
         {
           imePrezime: ime2,
@@ -138,7 +218,7 @@ const Prijava = () => {
           status: status2,
           imeSkole: imeSkole2,
           linkCV: cv2,
-          linkGit: git2,
+          // linkGit: git2,
         },
         {
           imePrezime: ime3,
@@ -147,7 +227,7 @@ const Prijava = () => {
           status: status3,
           imeSkole: imeSkole3,
           linkCV: cv3,
-          linkGit: git3,
+          // linkGit: git3,
         },
         {
           imePrezime: ime4,
@@ -156,7 +236,7 @@ const Prijava = () => {
           status: status4,
           imeSkole: imeSkole4,
           linkCV: cv4,
-          linkGit: git4,
+          // linkGit: git4,
         },
       ],
     };
@@ -169,7 +249,7 @@ const Prijava = () => {
       <div class="pr-header">
         <h1 class="pr-h1">Forma za prijavu</h1>
         <div class="pr-exit-text">
-          <p onClick={goBack}>Izađi</p>
+          <p onClick={goBack}>Početna</p>
           <img class="pr-exit" src={Iks} onClick={goBack} alt="Exit"></img>
         </div>
       </div>
@@ -191,6 +271,9 @@ const Prijava = () => {
                 }}
                 required
               ></input>
+              {error && ime1 === "" && (
+                <label class="pr-lable-error">Ime je obavezno!</label>
+              )}
               <lable class="pr-lable" for="pr-email_m1">
                 Imejl
               </lable>
@@ -206,7 +289,7 @@ const Prijava = () => {
                 required
               ></input>
               <lable class="pr-lable" for="pr-phone_m1">
-                Broj Telefona
+                Broj telefona
               </lable>
               <input
                 type="text"
@@ -239,7 +322,10 @@ const Prijava = () => {
               </lable>
               <input
                 type="text"
-                class="pr-text"
+                id="pr-year_m1"
+                class={`pr-text ${
+                  error && imeSkole1 === "" ? "errorClass" : ""
+                }`}
                 onChange={(e) => {
                   setimeSkole1(e.target.value);
                 }}
@@ -262,18 +348,18 @@ const Prijava = () => {
                   setCv1(fileUrl);
                 }}
               />
-              <lable class="pr-lable" for="pr-git_m1">
+              {/* <lable class="pr-lable" for="pr-git_m1">
                 Link ka repozitorijumu na GitHub-u
               </lable>
               <input
                 type="url"
-                class="pr-text"
+                class={`pr-text ${error && git1 === "" ? "errorClass" : ""}`}
                 id="pr-git_m1"
                 onChange={(e) => {
                   setGit1(e.target.value);
                 }}
                 required
-              ></input>
+              ></input> */}
             </div>
 
             <div class="pr-member">
@@ -290,24 +376,30 @@ const Prijava = () => {
                 }}
                 required
               ></input>
-              {error && ime2 === "" && <label>Ime je obavezno!</label>}
+              {error && ime2 === "" && (
+                <label class="pr-lable-error">Ime je obavezno!</label>
+              )}
               <lable class="pr-lable" for="pr-email_m2">
                 Imejl
               </lable>
               <input
                 type="email"
-                class="pr-text"
+                class={`pr-text ${
+                  error && !validateEmail(imejl2) ? "errorClass" : ""
+                }`}
                 id="pr-email_m2"
                 onChange={(e) => {
                   setImejl2(e.target.value);
                 }}
               ></input>
               <lable class="pr-lable" for="pr-phone_m2">
-                Broj Telefona
+                Broj telefona
               </lable>
               <input
                 type="text"
-                class="pr-text"
+                class={`pr-text ${
+                  error && brojTelefona2 === "" ? "errorClass" : ""
+                }`}
                 id="pr-phone_m2"
                 onChange={(e) => {
                   setbrojTelefon2(e.target.value);
@@ -333,7 +425,10 @@ const Prijava = () => {
               </lable>
               <input
                 type="text"
-                class="pr-text"
+                id="pr-year_m2"
+                class={`pr-text ${
+                  error && imeSkole2 === "" ? "errorClass" : ""
+                }`}
                 onChange={(e) => {
                   setimeSkole2(e.target.value);
                 }}
@@ -357,18 +452,18 @@ const Prijava = () => {
                   setCv2(fileUrl);
                 }}
               />
-              <lable class="pr-lable" for="pr-git_m2">
+              {/* <lable class="pr-lable" for="pr-git_m2">
                 Link ka repozitorijumu na GitHub-u
               </lable>
               <input
                 type="url"
-                class="pr-text"
+                class={`pr-text ${error && git2 === "" ? "errorClass" : ""}`}
                 id="pr-git_m2"
                 onChange={(e) => {
                   setGit2(e.target.value);
                 }}
                 required
-              ></input>
+              ></input> */}
             </div>
 
             <div class="pr-member">
@@ -378,7 +473,7 @@ const Prijava = () => {
               </lable>
               <input
                 type="text"
-                class="pr-text"
+                class={`pr-text ${error && ime3 === "" ? "errorClass" : ""}`}
                 id="pr-name_m3"
                 onChange={(e) => {
                   setIme3(e.target.value);
@@ -390,7 +485,9 @@ const Prijava = () => {
               </lable>
               <input
                 type="email"
-                class="pr-text"
+                class={`pr-text ${
+                  error && !validateEmail(imejl3) ? "errorClass" : ""
+                }`}
                 id="pr-email_m3"
                 onChange={(e) => {
                   setImejl3(e.target.value);
@@ -398,11 +495,13 @@ const Prijava = () => {
                 required
               ></input>
               <lable class="pr-lable" for="pr-phone_m3">
-                Broj Telefona
+                Broj telefona
               </lable>
               <input
                 type="text"
-                class="pr-text"
+                class={`pr-text ${
+                  error && brojTelefona3 === "" ? "errorClass" : ""
+                }`}
                 id="pr-phone_m3"
                 onChange={(e) => {
                   setbrojTelefon3(e.target.value);
@@ -428,7 +527,10 @@ const Prijava = () => {
               </lable>
               <input
                 type="text"
-                class="pr-text"
+                id="pr-year_m3"
+                class={`pr-text ${
+                  error && imeSkole3 === "" ? "errorClass" : ""
+                }`}
                 onChange={(e) => {
                   setimeSkole3(e.target.value);
                 }}
@@ -451,18 +553,18 @@ const Prijava = () => {
                   setCv3(fileUrl);
                 }}
               />
-              <lable class="pr-lable" for="pr-git_m3">
+              {/* <lable class="pr-lable" for="pr-git_m3">
                 Link ka repozitorijumu na GitHub-u
               </lable>
               <input
                 type="url"
-                class="pr-text"
+                class={`pr-text ${error && git3 === "" ? "errorClass" : ""}`}
                 id="pr-git_m3"
                 onChange={(e) => {
                   setGit3(e.target.value);
                 }}
                 required
-              ></input>
+              ></input> */}
             </div>
 
             <div class="pr-member">
@@ -472,7 +574,7 @@ const Prijava = () => {
               </lable>
               <input
                 type="text"
-                class="pr-text"
+                class={`pr-text ${error && ime4 === "" ? "errorClass" : ""}`}
                 id="pr-name_m4"
                 onChange={(e) => {
                   setIme4(e.target.value);
@@ -484,18 +586,22 @@ const Prijava = () => {
               </lable>
               <input
                 type="email"
-                class="pr-text"
+                class={`pr-text ${
+                  error && !validateEmail(imejl4) ? "errorClass" : ""
+                }`}
                 id="pr-email_m4"
                 onChange={(e) => {
                   setImejl4(e.target.value);
                 }}
               ></input>
               <lable class="pr-lable" for="pr-phone_m4">
-                Broj Telefona
+                Broj telefona
               </lable>
               <input
                 type="text"
-                class="pr-text"
+                class={`pr-text ${
+                  error && brojTelefona4 === "" ? "errorClass" : ""
+                }`}
                 id="pr-phone_m4"
                 onChange={(e) => {
                   setbrojTelefon4(e.target.value);
@@ -521,7 +627,10 @@ const Prijava = () => {
               </lable>
               <input
                 type="text"
-                class="pr-text"
+                id="pr-year_m4"
+                class={`pr-text ${
+                  error && imeSkole4 === "" ? "errorClass" : ""
+                }`}
                 onChange={(e) => {
                   setimeSkole4(e.target.value);
                 }}
@@ -544,18 +653,18 @@ const Prijava = () => {
                   setCv4(fileUrl);
                 }}
               />
-              <lable class="pr-lable" for="pr-git_m4">
+              {/* <lable class="pr-lable" for="pr-git_m4">
                 Link ka repozitorijumu na GitHub-u
               </lable>
               <input
                 type="url"
-                class="pr-text"
+                class={`pr-text ${error && git4 === "" ? "errorClass" : ""}`}
                 id="pr-git_m4"
                 onChange={(e) => {
                   setGit4(e.target.value);
                 }}
                 required
-              ></input>
+              ></input> */}
             </div>
           </div>
           <div class="pr-team">
@@ -582,17 +691,21 @@ const Prijava = () => {
               <input
                 ref={ref}
                 type="text"
-                class="pr-text"
+                class={`pr-text ${
+                  error && pitanje1 === "" ? "errorClass" : ""
+                }`}
                 id="pr-teamname"
                 onChange={(e) => setPitanje1(e.target.value)}
                 required
               ></input>
-              <lable class="pr-lable" for="pr-motivation">
+              <lable class="pr-lable" for="pr-iskustvo">
                 Navedite i opišite prethodna iskustva u grupnom radu, a ako do
                 sada niste radili zajedno, opišite vaša pojedinačna iskustva.
               </lable>
               <textarea
-                class="pr-text-team_textarea"
+                class={`pr-text-team_textarea ${
+                  error && pitanje2 === "" ? "errorClass" : ""
+                }`}
                 id="pr-motivation"
                 onChange={(e) => setPitanje2(e.target.value)}
                 required
@@ -602,19 +715,23 @@ const Prijava = () => {
                 postignete i naučite učestvovanjem na ovom takmičenju?
               </lable>
               <textarea
-                class="pr-text-team_textarea"
+                class={`pr-text-team_textarea ${
+                  error && pitanje3 === "" ? "errorClass" : ""
+                }`}
                 id="pr-vrline"
                 onChange={(e) => {
                   setPitanje3(e.target.value);
                 }}
                 required
               ></textarea>
-              <lable class="pr-lable" for="pr-motivation">
+              <lable class="pr-lable" for="pr-vrline">
                 Šta biste istakli kao svoje vrline i mane koje bi uticale na
                 uspeh celog tima na takmičenju?
               </lable>
               <textarea
-                class="pr-text-team_textarea"
+                class={`pr-text-team_textarea ${
+                  error && pitanje4 === "" ? "errorClass" : ""
+                }`}
                 id="pr-motivation"
                 onChange={(e) => setPitanje4(e.target.value)}
                 required
@@ -630,6 +747,7 @@ const Prijava = () => {
               class="pr-submit"
               value="Pošalji prijavu"
               onClick={(e) => {
+                PopupExample();
                 e.preventDefault();
                 posaljiPrijavu();
               }}

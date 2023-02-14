@@ -92,6 +92,18 @@
   margin-bottom: 0.5rem;
 }
 
+.pr-lable-error {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.5rem;
+  color: red;
+  word-wrap: break-word;
+  text-align: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  margin-top: -2rem;
+}
+
 .pr-text {
   height: 2.5rem;
   width: 80%;
@@ -204,7 +216,13 @@
   transform: translate(-70%, 50%);
 }
 
-@media (max-width: 1920) {
+@media (max-width: 4000px) {
+  .pr-h1 {
+    margin-right: 30vw;
+  }
+}
+
+@media (max-width: 1920px) {
   .pr-h1 {
     margin-right: 20%;
   }
