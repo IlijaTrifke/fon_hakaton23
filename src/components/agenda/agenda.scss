@@ -9,6 +9,18 @@
   align-items: center;
   overflow: hidden;
   scroll-behavior: smooth;
+  position: relative;
+  // background-image: url(../../images/Vector6.png);
+  // background-repeat: no-repeat;
+  // background-size: 60rem;
+  // background-position-x: -1.5rem;
+}
+
+.vector6 {
+  position: absolute;
+  top: 0;
+  left: -1.5rem;
+  width: 60rem;
 }
 
 .agn-timeline {

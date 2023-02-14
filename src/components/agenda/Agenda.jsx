@@ -2,6 +2,7 @@ import React from "react";
 import "./agenda.scss";
 import { useRef, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+import Vector6 from "../../images/Vector6.png";
 
 const Agenda = () => {
   const scrollRef = useRef();
@@ -68,6 +69,7 @@ const Agenda = () => {
 
   return (
     <div className="agn-section" ref={timlineRef}>
+      <img className="vector6" src={Vector6} alt="Web" />
       <h1 className="agn-header" ref={scrollRef}>
         Agenda
       </h1>
