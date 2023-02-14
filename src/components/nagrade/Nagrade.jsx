@@ -45,7 +45,7 @@ const Nagrade = () => {
       <div class="ng-stands">
         <div class="ng-pole">
           <div class="ng-circle">
-            <p class="ng-circletext">40.000</p>
+            <p class="ng-circletext">40.000 rsd</p>
           </div>
           <div class="ng-stand-2">
             <img src={Postolje} alt="Postolje" class="ng-postolje-img"></img>
@@ -55,7 +55,7 @@ const Nagrade = () => {
 
         <div class="ng-pole">
           <div class="ng-circle">
-            <p class="ng-circletext">70.000</p>
+            <p class="ng-circletext">70.000 rsd</p>
           </div>
           <div class="ng-stand-1">
             <img src={Postolje} alt="Postolje" class="ng-postolje-img"></img>
@@ -65,7 +65,7 @@ const Nagrade = () => {
 
         <div class="ng-pole">
           <div class="ng-circle">
-            <p class="ng-circletext">20.000</p>
+            <p class="ng-circletext">20.000 rsd</p>
           </div>
           <div class="ng-stand-3">
             <img src={Postolje} alt="Postolje" class="ng-postolje-img"></img>

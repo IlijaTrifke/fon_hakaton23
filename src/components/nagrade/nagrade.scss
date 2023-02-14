@@ -60,8 +60,8 @@
   background: black;
   justify-content: center;
   border-radius: 100%;
-  height: 11rem;
-  width: 11rem;
+  height: 10rem;
+  width: 10rem;
   margin: 0;
   background: radial-gradient(circle at 4rem 4rem, #5cabff, #000);
   animation: float 6s ease-in-out infinite; //fadeIn 4s ease-in-out 1;
@@ -80,13 +80,13 @@
   font-family: "Noto sans", light;
   display: flex;
   text-align: center;
-  font-size: 3rem;
+  font-size: 2rem;
   color: $bela;
 }
 
 .ng-postolje-img {
   height: 100%;
-  width: 15rem;
+  width: 13rem;
   //animation: fadeInTop 2s ease-in-out 1;
 }
 
@@ -104,18 +104,18 @@
 
 .ng-stand-3 {
   position: relative;
-  width: 14rem;
+  width: 12rem;
   height: 15rem;
 }
 
 .ng-stand-1 {
   position: relative;
-  width: 14rem;
+  width: 12rem;
   height: 20rem;
 }
 .ng-stand-2 {
   position: relative;
-  width: 14rem;
+  width: 12rem;
   height: 17rem;
 }
 
@@ -143,12 +143,12 @@
 }
 @media screen and (max-width: 1200px) {
   .ng-circle {
-    width: 7rem;
-    height: 7rem;
+    width: 8rem;
+    height: 8rem;
   }
 
   .ng-circletext {
-    font-size: 2rem;
+    font-size: 1.3rem;
   }
   .ng-postolje-img {
     height: 20rem;
@@ -157,12 +157,12 @@
 
   .ng-stand-3 {
     width: 10rem;
-    height: 15rem;
+    height: 12rem;
   }
 
   .ng-stand-1 {
     width: 10rem;
-    height: 20rem;
+    height: 18rem;
   }
   .ng-stand-2 {
     width: 10rem;
@@ -270,7 +270,7 @@
   }
 
   .ng-circletext {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   .ng-postolje-img {
