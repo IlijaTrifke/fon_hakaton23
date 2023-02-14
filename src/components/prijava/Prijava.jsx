@@ -86,7 +86,8 @@ const Prijava = () => {
   const postPrijava = async (prijava) => {
     try {
       const response = await fetch(
-        "https://fh-server-main.onrender.com/prijave/api",
+        // "https://fh-server-main.onrender.com/prijave/api",
+        "http://localhost:5000/prijave/api",
         {
           method: "POST",
           headers: {
