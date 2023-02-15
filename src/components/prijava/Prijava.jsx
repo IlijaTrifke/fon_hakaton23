@@ -62,10 +62,6 @@ const Prijava = () => {
   const [cv2, setCv2] = useState("");
   const [cv3, setCv3] = useState("");
   const [cv4, setCv4] = useState("");
-  //const [git1, setGit1] = useState("");
-  // const [git2, setGit2] = useState("");
-  // const [git3, setGit3] = useState("");
-  // const [git4, setGit4] = useState("");
   const [pitanje1, setPitanje1] = useState("");
   const [pitanje2, setPitanje2] = useState("");
   const [pitanje3, setPitanje3] = useState("");
@@ -107,7 +103,6 @@ const Prijava = () => {
       );
       const data = await response.json();
       if (data.success) {
-        //document.getElementById("pr-name.m1").textContent = "";
         //setIme1("");
         openModal("Uspesno poslata prijava");
       } else {
@@ -154,6 +149,50 @@ const Prijava = () => {
       //radi testiranja praznjenja kopirati ovde
       return;
     }
+
+    const prijava = {
+      pitanje1,
+      pitanje2,
+      pitanje3,
+      pitanje4,
+      clanovi: [
+        {
+          imePrezime: ime1,
+          email: imejl1,
+          brojTelefona: brojTelefona1,
+          status: status1,
+          imeSkole: imeSkole1,
+          linkCV: cv1,
+        },
+        {
+          imePrezime: ime2,
+          email: imejl2,
+          brojTelefona: brojTelefona2,
+          status: status2,
+          imeSkole: imeSkole2,
+          linkCV: cv2,
+        },
+        {
+          imePrezime: ime3,
+          email: imejl3,
+          brojTelefona: brojTelefona3,
+          status: status3,
+          imeSkole: imeSkole3,
+          linkCV: cv3,
+        },
+        {
+          imePrezime: ime4,
+          email: imejl4,
+          brojTelefona: brojTelefona4,
+          status: status4,
+          imeSkole: imeSkole4,
+          linkCV: cv4,
+        },
+      ],
+    };
+
+    postPrijava(prijava);
+
     //praznjenje polja
     setIme1(" ");
     document.getElementById("pr-name_m1").value = " ";
@@ -195,53 +234,6 @@ const Prijava = () => {
     document.getElementById("pr-iskustvo").value = " ";
     setPitanje4(" ");
     document.getElementById("pr-vrline").value = " ";
-
-    const prijava = {
-      pitanje1,
-      pitanje2,
-      pitanje3,
-      pitanje4,
-      clanovi: [
-        {
-          imePrezime: ime1,
-          email: imejl1,
-          brojTelefona: brojTelefona1,
-          status: status1,
-          imeSkole: imeSkole1,
-          linkCV: cv1,
-          //linkGit: git1,
-        },
-        {
-          imePrezime: ime2,
-          email: imejl2,
-          brojTelefona: brojTelefona2,
-          status: status2,
-          imeSkole: imeSkole2,
-          linkCV: cv2,
-          // linkGit: git2,
-        },
-        {
-          imePrezime: ime3,
-          email: imejl3,
-          brojTelefona: brojTelefona3,
-          status: status3,
-          imeSkole: imeSkole3,
-          linkCV: cv3,
-          // linkGit: git3,
-        },
-        {
-          imePrezime: ime4,
-          email: imejl4,
-          brojTelefona: brojTelefona4,
-          status: status4,
-          imeSkole: imeSkole4,
-          linkCV: cv4,
-          // linkGit: git4,
-        },
-      ],
-    };
-
-    postPrijava(prijava);
   };
 
   return (
@@ -333,33 +325,12 @@ const Prijava = () => {
               <lable class="pr-lable" for="pr-cv_m1">
                 Link ka CV-ju
               </lable>
-              {/* <input
-                type="File"
-                class="pr-text"
-                id="pr-cv_m1"
-                placeholder=""
-                onClick={(e) => {
-                  setCv1(e.target.files[0]);
-                }}
-                required
-              ></input> */}
+
               <FileUploadButton
                 onChange={(fileUrl) => {
                   setCv1(fileUrl);
                 }}
               />
-              {/* <lable class="pr-lable" for="pr-git_m1">
-                Link ka repozitorijumu na GitHub-u
-              </lable>
-              <input
-                type="url"
-                class={`pr-text ${error && git1 === "" ? "errorClass" : ""}`}
-                id="pr-git_m1"
-                onChange={(e) => {
-                  setGit1(e.target.value);
-                }}
-                required
-              ></input> */}
             </div>
 
             <div class="pr-member">
@@ -437,33 +408,12 @@ const Prijava = () => {
               <lable class="pr-lable" for="pr-cv_m2">
                 Link ka CV-ju
               </lable>
-              {/* <input
-                type="file"
-                class="pr-text"
-                id="pr-cv_m2"
-                placeholder=""
-                onClick={(e) => {
-                  setCv2(e.target.files[0]);
-                }}
-                required
-              ></input> */}
+
               <FileUploadButton
                 onChange={(fileUrl) => {
                   setCv2(fileUrl);
                 }}
               />
-              {/* <lable class="pr-lable" for="pr-git_m2">
-                Link ka repozitorijumu na GitHub-u
-              </lable>
-              <input
-                type="url"
-                class={`pr-text ${error && git2 === "" ? "errorClass" : ""}`}
-                id="pr-git_m2"
-                onChange={(e) => {
-                  setGit2(e.target.value);
-                }}
-                required
-              ></input> */}
             </div>
 
             <div class="pr-member">
@@ -538,33 +488,12 @@ const Prijava = () => {
               <lable class="pr-lable" for="pr-cv_m3">
                 Link ka CV-ju
               </lable>
-              {/* <input
-                type="file"
-                class="pr-text"
-                id="pr-cv_m3"
-                placeholder=""
-                onClick={(e) => {
-                  setCv3(e.target.files[0]);
-                }}
-                required
-              ></input> */}
+
               <FileUploadButton
                 onChange={(fileUrl) => {
                   setCv3(fileUrl);
                 }}
               />
-              {/* <lable class="pr-lable" for="pr-git_m3">
-                Link ka repozitorijumu na GitHub-u
-              </lable>
-              <input
-                type="url"
-                class={`pr-text ${error && git3 === "" ? "errorClass" : ""}`}
-                id="pr-git_m3"
-                onChange={(e) => {
-                  setGit3(e.target.value);
-                }}
-                required
-              ></input> */}
             </div>
 
             <div class="pr-member">
@@ -638,33 +567,12 @@ const Prijava = () => {
               <lable class="pr-lable" for="pr-cv_m4">
                 Link ka CV-ju
               </lable>
-              {/* <input
-                type="file"
-                class="pr-text"
-                id="pr-cv_m4"
-                placeholder=""
-                onClick={(e) => {
-                  setCv4(e.target.files[0]);
-                }}
-                required
-              ></input> */}
+
               <FileUploadButton
                 onChange={(fileUrl) => {
                   setCv4(fileUrl);
                 }}
               />
-              {/* <lable class="pr-lable" for="pr-git_m4">
-                Link ka repozitorijumu na GitHub-u
-              </lable>
-              <input
-                type="url"
-                class={`pr-text ${error && git4 === "" ? "errorClass" : ""}`}
-                id="pr-git_m4"
-                onChange={(e) => {
-                  setGit4(e.target.value);
-                }}
-                required
-              ></input> */}
             </div>
           </div>
           <div class="pr-team">
