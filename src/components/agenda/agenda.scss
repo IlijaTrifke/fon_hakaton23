@@ -99,7 +99,7 @@
   background-color: $tamnoPlava;
   width: 60%;
   height: 18%;
-  font-size: 100%;
+  font-size: 1.5rem;
   font-weight: 600;
   border-radius: 12px 12px 0 0;
   padding: 0.5rem 1rem 0rem 1rem;
@@ -140,7 +140,7 @@
 }
 
 .agn-date {
-  font-size: 100%;
+  font-size: 1.2rem;
   font-weight: 500;
   text-align: left;
   height: 2rem;
@@ -175,6 +175,7 @@
 
 .agn-descr {
   position: relative;
+  font-size: 1.2rem;
   margin: 1rem 1rem 1rem 1rem;
   padding: 0.5rem;
   text-align: left;

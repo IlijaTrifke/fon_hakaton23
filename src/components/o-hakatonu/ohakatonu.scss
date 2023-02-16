@@ -1,13 +1,17 @@
 @import "../../global.scss";
 
 .ohakatonu {
-  min-height: 80vh;
+  //min-height: 80vh;
   position: relative;
 }
 
 #o_hakatonu {
   position: absolute;
   top: -15%;
+}
+
+.hakaton-section{
+  height: 30rem;
 }
 
 .hakaton-title {
