@@ -21,17 +21,19 @@ const menuItems = [
     url: "#faq",
     cName: "nav-links",
   },
-  {
-    title: "Tim",
-    url: "#tim",
-    cName: "nav-links",
-  },
 
   {
     title: "Partneri",
     url: "#partneri",
     cName: "nav-links",
   },
+
+  {
+    title: "Tim",
+    url: "#tim",
+    cName: "nav-links",
+  },
+
   {
     title: "Pravilnik",
     url: "#pravilnik",

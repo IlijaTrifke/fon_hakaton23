@@ -1,6 +1,14 @@
 @import "../../global.scss";
 
 .org-section {
+  position: relative;
+}
+
+#tim {
+  position: absolute;
+  top: -5%;
+}
+.org-section {
   background-color: $tamnoPlava;
   min-height: 90vh;
   display: flex;
