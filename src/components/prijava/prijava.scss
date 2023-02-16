@@ -121,16 +121,27 @@ input[type="file"] {
   width: 90%;
 }
 
+// .pr-text-wrapper {
+//   width: 100%;
+//   position: relative;
+//   margin: auto;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
 .pr-lable-error {
   font-family: "Noto Sans", sans-serif;
   font-size: 1.5rem;
   color: red;
   word-wrap: break-word;
   text-align: center;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  margin-bottom: 2rem;
-  margin-top: -2rem;
+  width: 95%;
+  // margin-left: 2rem;
+  // margin-right: 2rem;
+  // margin-bottom: 2rem;
+  // margin-top: -2rem;
+  // position: absolute;
 }
 
 .pr-text {
@@ -182,7 +193,7 @@ input[type="file"] {
   align-items: center;
   border-radius: 2rem;
   background-color: rgba(6, 58, 86, 0.6);
-  margin-bottom: 10rem;
+  // margin-bottom: 10rem;
   width: 70%;
 }
 
@@ -214,7 +225,7 @@ input[type="file"] {
     linear-gradient(to right, $svetloPlava, $ljubicasta);
   background-origin: border-box;
   background-clip: padding-box, border-box;
-  margin-bottom: 3.5rem;
+  margin-bottom: 1rem;
   resize: none;
 }
 
@@ -243,6 +254,10 @@ input[type="file"] {
 @media (max-width: 960px) {
   .pr-h1 {
     font-size: 2rem;
+  }
+
+  .pr-lable-error {
+    font-size: 1rem;
   }
 
   .pr-h1_m {
