@@ -13,13 +13,9 @@
 }
 
 .pr-header {
-  padding-top: 5vh;
-  display: flex;
   width: 100%;
-  justify-content: flex-end;
-  margin-bottom: 2rem;
-  align-items: center;
-  margin-bottom: 5rem;
+  height: 6rem;
+  position: relative;
 }
 
 .errorClass {
@@ -27,19 +23,26 @@
 }
 
 .pr-h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-family: "Orbitron", sans-serif;
   color: $bela;
   display: flex;
-  margin-right: 18%;
-  text-shadow: -2px 0 $ljubicasta, 0 2px $ljubicasta, 2px 0 $ljubicasta,
-    0 -2px $ljubicasta;
-  font-size: 3rem;
+  // text-shadow: -2px 0 $ljubicasta, 0 2px $ljubicasta, 2px 0 $ljubicasta,
+  //   0 -2px $ljubicasta;
+  font-size: 2.5rem;
+  white-space: nowrap;
 }
 
 .pr-exit-text {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
   font-family: "Noto Sans", sans-serif;
   font-size: 2rem;
-  margin-right: 10%;
   color: $bela;
   display: flex;
   align-items: center;
@@ -48,7 +51,6 @@
 
 .pr-exit {
   margin-left: 0.5rem;
-  max-height: 2rem;
 }
 
 .pr-team-data {
@@ -64,9 +66,9 @@
 .pr-members {
   display: flex;
   flex-direction: column;
-  width: 90%;
   border-radius: 30px;
   margin-left: 5%;
+  width: 100%;
 }
 
 .pr-member {
@@ -82,8 +84,8 @@
 .pr-h1_m {
   font-family: "Noto sans";
   color: $bela;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .pr-lable {
@@ -92,9 +94,8 @@
   color: $bela;
   word-wrap: break-word;
   text-align: center;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  margin-bottom: 0.5rem;
+  margin: 0.5rem auto;
+  width: 90%;
 }
 
 .pr-lable-error {
@@ -148,6 +149,7 @@
 
 .pr-kevin {
   width: 80%;
+  margin: 0 auto;
 }
 
 .pr-team-info {
@@ -178,7 +180,7 @@
 }
 
 .pr-text-team_textarea {
-  height: 25rem;
+  height: 20rem;
   width: 80%;
   font-size: 1.5rem;
   background-color: $tamnoPlava;
@@ -211,47 +213,21 @@
   border-radius: 1.5rem;
   padding: 1rem;
   position: relative;
-  margin-bottom: 10rem;
+  margin: 5rem 0;
   cursor: pointer;
 }
 
-.pr-strelica-img {
-  position: absolute;
-  max-width: 20%;
-  transform: translate(-70%, 50%);
-}
-
-@media (max-width: 4000px) {
-  .pr-h1 {
-    margin-right: 30vw;
-  }
-}
-
-@media (max-width: 1920px) {
-  .pr-h1 {
-    margin-right: 20%;
-  }
-}
-
-@media (max-width: 1200px) {
-  .pr-h1 {
-    margin-right: 10%;
-  }
-  .pr-exit-text {
-    //margin-left: 15%;
-  }
-  .pr-members {
-    width: 80%;
-  }
-}
-
-@media (max-width: 700px) {
+@media (max-width: 960px) {
   .pr-h1 {
     font-size: 2rem;
-    margin-right: 15%;
   }
-  .pr-exit-text {
-    // margin-left: 10%;
+
+  .pr-h1_m {
+    font-size: 1.5rem;
+  }
+
+  .pr-lable {
+    font-size: 1rem;
   }
 
   .pr-exit-text p {
@@ -266,13 +242,13 @@
     align-items: center;
   }
   .pr-members {
-    margin-left: 0;
-    width: 85%;
+    margin: auto;
+    width: 30rem;
+    max-width: 90%;
   }
   .pr-team-info {
-    justify-content: center;
-    margin-left: 7.5%;
-    width: 85%;
+    margin: auto;
+    max-width: 90%;
   }
   .pr-kevin {
     display: none;
@@ -281,17 +257,8 @@
     font-size: 2rem;
   }
 }
-
 @media (max-width: 480px) {
   .pr-h1 {
-    margin-right: 10%;
-    font-size: 1.5rem;
-  }
-}
-@media (max-width: 340px) {
-  .pr-h1 {
-    margin-right: 2%;
-    margin-left: 5%;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 }

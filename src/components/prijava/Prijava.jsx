@@ -2,7 +2,6 @@ import React from "react";
 import "./prijava.scss";
 import Kevin from "./img/cube.webm";
 import Iks from "./img/pr-exit.png";
-import Strelica from "./img/pr-strelica-dugme.png";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useRef } from "react";
@@ -660,7 +659,6 @@ const Prijava = () => {
                 posaljiPrijavu();
               }}
             ></input>
-            <img src={Strelica} class="pr-strelica-img"></img>
           </div>
         </div>
       </form>
