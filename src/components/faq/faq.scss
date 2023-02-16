@@ -1,5 +1,10 @@
 @import "../../global.scss";
 
+#faq {
+  position: absolute;
+  top: -15%;
+}
+
 .faq-naslov {
   color: $bela;
   font-family: "Orbitron", sans-serif;

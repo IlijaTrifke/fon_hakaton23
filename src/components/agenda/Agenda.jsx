@@ -69,6 +69,7 @@ const Agenda = () => {
 
   return (
     <div className="agn-section" ref={timlineRef}>
+      <div id="agenda"></div>
       <img className="vector6" src={Vector6} alt="Web" />
       <h1 className="agn-header" ref={scrollRef}>
         Agenda

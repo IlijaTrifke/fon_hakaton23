@@ -1,5 +1,10 @@
 @import "../../global.scss";
 
+#agenda {
+  position: absolute;
+  top: -5%;
+}
+
 .agn-section {
   background-color: $tamnoPlava;
   padding-bottom: 0rem;

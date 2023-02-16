@@ -5,6 +5,7 @@ import slika from "./god.png";
 const SlikeOrg = () => {
   return (
     <div className="org-section">
+      <div id="tim"></div>
       <h2 className="org-header">Organizacioni tim</h2>
       <div className="org-content">
         <div className="org-text">

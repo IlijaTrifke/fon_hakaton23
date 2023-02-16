@@ -1,6 +1,15 @@
 @import "../../global.scss";
 
 .ax-iskustva {
+  position: relative;
+}
+
+#iskustva {
+  position: absolute;
+  top: -10%;
+}
+
+.ax-iskustva {
   display: flex;
   flex-direction: column;
   gap: 2rem;

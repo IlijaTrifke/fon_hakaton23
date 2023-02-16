@@ -16,6 +16,7 @@ const Faq = () => {
 
   return (
     <div className="faq-section">
+      <div id="faq"></div>
       <img className="vector4" src={Vector4} alt="Web" />
       <h1 className="faq-naslov">Često postavljana pitanja</h1>
 
