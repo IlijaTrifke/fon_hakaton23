@@ -23,14 +23,17 @@ const FileUploadButton = (props) => {
     //document.getElementById("pr-test").innerHTML = file.name;
     props.onChange(fileUrl);
   }
+  // <input type="file" class="pr-text" onChange={(e) => onFileSelected(e)} />
+  // {/* <label for="file-upload" class="custom-file-upload" id="pr-test">
+  //   <i class="fa fa-cloud-upload"></i>Izaberi fajl
+  // </label> */}
   return (
-    // <input type="file" class="pr-text" onChange={(e) => onFileSelected(e)} />
-    <div class="pr-fileinput">
-      <label for="file-upload" class="custom-file-upload" id="pr-test">
-        <i class="fa fa-cloud-upload"></i>Vaš CV
-      </label>
-      <input id="file-upload" type="file" onChange={(e) => onFileSelected(e)} />
-    </div>
+    <input
+      className="pr-upload-input"
+      type="file"
+      onChange={(e) => onFileSelected(e)}
+      required
+    />
   );
 };
 
@@ -271,6 +274,7 @@ const Prijava = () => {
                   setIme1(e.target.value);
                 }}
                 required
+                autoComplete="off"
               ></input>
               {error && ime1 === "" && (
                 <label class="pr-lable-error">Ime je obavezno!</label>
@@ -336,12 +340,13 @@ const Prijava = () => {
                 onChange={(e) => {
                   setimeSkole1(e.target.value);
                 }}
+                required
               ></input>
               {error && imeSkole1 === "" && (
                 <label class="pr-lable-error">Naziv je obavezan!</label>
               )}
               <lable class="pr-lable" for="pr-cv_m1">
-                Link ka CV-ju
+                Vaš CV
               </lable>
 
               <FileUploadButton
@@ -433,7 +438,7 @@ const Prijava = () => {
                 <label class="pr-lable-error">Naziv je obavezan!</label>
               )}
               <lable class="pr-lable" for="pr-cv_m2">
-                Link ka CV-ju
+                Vaš CV
               </lable>
 
               <FileUploadButton
@@ -525,7 +530,7 @@ const Prijava = () => {
                 <label class="pr-lable-error">Naziv je obavezan!</label>
               )}
               <lable class="pr-lable" for="pr-cv_m3">
-                Link ka CV-ju
+                Vaš CV
               </lable>
 
               <FileUploadButton
@@ -616,7 +621,7 @@ const Prijava = () => {
                 <label class="pr-lable-error">Naziv je obavezan!</label>
               )}
               <lable class="pr-lable" for="pr-cv_m4">
-                Link ka CV-ju
+                Vaš CV
               </lable>
 
               <FileUploadButton

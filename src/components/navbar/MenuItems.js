@@ -36,12 +36,12 @@ const menuItems = [
 
   {
     title: "Pravilnik",
-    url: "#pravilnik",
+    url: "../../PravilnikHZS.pdf",
     cName: "nav-links",
   },
   {
     title: "PRIJAVI SE",
-    url: "/Prijava",
+    url: "/prijava",
     cName: "nav-links link-do-prijave",
   },
 ];
