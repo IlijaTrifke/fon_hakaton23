@@ -42,7 +42,7 @@ export default function Pocetna() {
   }
 
   return (
-    <div className="pocetna-section">
+    <div className="pocetna-section" id="pocetna">
       <img src={logo} alt="Fon hakaton logo" className="pocetna-logo" />
       <h1 className="pocetna-motto">Use your code to change the road</h1>
       <HashLink to="/Prijava" className="pocetna-text-box">

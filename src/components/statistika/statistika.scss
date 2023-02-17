@@ -8,6 +8,7 @@
   align-items: center;
   padding: 5rem;
   font-family: Noto Sans;
+  font-weight: 300;
 }
 
 .stk-section ul {
@@ -24,7 +25,8 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 20px;
   background: linear-gradient(to right, #003560, transparent);
-  backdrop-filter: blur(0.05rem);
+  backdrop-filter: blur(2px);
+  height: 8rem;
 }
 
 .stk-numbers {
@@ -35,7 +37,7 @@
 }
 
 .stk-text {
-  display: flexbox;
+  display: flex;
   align-self: center;
   flex-wrap: wrap;
   color: white;
@@ -43,10 +45,8 @@
 }
 
 .stk-vertical-line {
-  display: inline-block;
-  border-left: 0.8px solid $svetloPlava;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  border-left: 0.15rem solid $svetloPlava;
+  height: 60%;
 }
 
 @media screen and (max-width: 960px) {
@@ -56,7 +56,7 @@
   }
 
   .stk-section li {
-    width: 30rem;
+    width: 20rem;
     max-width: 90%;
     margin: auto;
   }
@@ -75,6 +75,5 @@
     align-self: center;
     flex-wrap: wrap;
     color: white;
-    padding: 0.5rem;
   }
 }

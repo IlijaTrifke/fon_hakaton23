@@ -1,9 +1,5 @@
 @import "../../global.scss";
 
-.pr-file-upload-button {
-  border-radius: 5rem;
-}
-
 .pr-prijava {
   background-color: $tamnoPlava;
   display: flex;
@@ -22,28 +18,52 @@
   border: 2px solid red !important;
 }
 
-input[type="file"] {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-.custom-file-upload {
-  border: 1px solid #ccc;
-  display: inline-block;
-  padding: 6px 12px;
-  cursor: pointer;
-  color: $bela;
-  background-color: $tamnoPlava;
+// input[type="file"] {
+//   position: absolute;
+//   width: 1px;
+//   height: 1px;
+//   padding: 0;
+//   margin: -1px;
+//   overflow: hidden;
+//   clip: rect(0, 0, 0, 0);
+//   border: 0;
+// }
+
+.pr-upload-input {
+  // height: 2.5rem;
+  width: 80%;
   text-align: center;
-  font-family: "Noto sans, sans-serif";
-  width: 50%;
   font-size: 1.5rem;
+  background-color: $tamnoPlava;
+  color: $bela;
+  border: double 0.15rem transparent;
+  border-radius: 6px;
+  background-image: linear-gradient($tamnoPlava, $tamnoPlava),
+    linear-gradient(
+      150deg,
+      #24bdde,
+      rgba(107, 184, 206, 0.88),
+      rgba(16, 78, 126, 0.5),
+      rgba(71, 51, 153, 0.5),
+      rgba(113, 80, 185, 0.83),
+      #7b2787
+    );
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  margin: auto;
 }
+// .custom-file-upload {
+//   border: 1px solid #ccc;
+//   display: inline-block;
+//   padding: 6px 12px;
+//   cursor: pointer;
+//   color: $bela;
+//   background-color: $tamnoPlava;
+//   text-align: center;
+//   font-family: "Noto sans, sans-serif";
+//   width: 50%;
+//   font-size: 1.5rem;
+// }
 
 .pr-h1 {
   position: absolute;
@@ -90,8 +110,7 @@ input[type="file"] {
   display: flex;
   flex-direction: column;
   border-radius: 30px;
-  margin-left: 5%;
-  width: 100%;
+  width: 30rem;
 }
 
 .pr-member {
@@ -99,14 +118,29 @@ input[type="file"] {
   flex-direction: column;
   align-items: center;
   border-radius: 2rem;
-  background-color: rgba(6, 58, 86, 0.6);
+  background: linear-gradient(
+    135deg,
+    rgba(36, 189, 222, 0.2),
+    rgba(232, 239, 245, 0.03)
+  );
   margin-bottom: 5rem;
+  padding: 1rem;
   height: 80%;
+}
+.pr-team-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2rem;
+  background-color: rgba(6, 58, 86, 0.6);
+  // margin-bottom: 10rem;
+  width: 40rem;
 }
 
 .pr-h1_m {
-  font-family: "Noto sans";
+  font-family: "Orbitron", sans-serif;
   color: $bela;
+  font-weight: 800;
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
 }
@@ -114,6 +148,7 @@ input[type="file"] {
 .pr-lable {
   font-family: "Noto Sans", sans-serif;
   font-size: 1.5rem;
+  font-weight: 300;
   color: $bela;
   word-wrap: break-word;
   text-align: center;
@@ -146,17 +181,27 @@ input[type="file"] {
 
 .pr-text {
   height: 2.5rem;
+  font-family: "Noto Sans", sans-serif;
   width: 80%;
   text-align: center;
   font-size: 1.5rem;
   background-color: $tamnoPlava;
   color: $bela;
-  border: double 4px transparent;
+  border: solid 0.15rem transparent;
   border-radius: 6px;
   background-image: linear-gradient($tamnoPlava, $tamnoPlava),
-    linear-gradient(to right, $svetloPlava, $ljubicasta);
+    linear-gradient(
+      150deg,
+      #24bdde,
+      rgba(107, 184, 206, 0.88),
+      rgba(16, 78, 126, 0.5),
+      rgba(71, 51, 153, 0.5),
+      rgba(113, 80, 185, 0.83),
+      #7b2787
+    );
   background-origin: border-box;
   background-clip: padding-box, border-box;
+  background-color: rgba(0, 36, 64, 0.5);
   margin-bottom: 0.5rem;
 }
 
@@ -167,10 +212,18 @@ input[type="file"] {
   font-size: 1.5rem;
   background-color: $tamnoPlava;
   color: $bela;
-  border: double 4px transparent;
+  border: double 0.15rem transparent;
   border-radius: 6px;
   background-image: linear-gradient($tamnoPlava, $tamnoPlava),
-    linear-gradient(to right, $svetloPlava, $ljubicasta);
+    linear-gradient(
+      150deg,
+      #24bdde,
+      rgba(107, 184, 206, 0.88),
+      rgba(16, 78, 126, 0.5),
+      rgba(71, 51, 153, 0.5),
+      rgba(113, 80, 185, 0.83),
+      #7b2787
+    );
   background-origin: border-box;
   background-clip: padding-box, border-box;
   margin-bottom: 0.5rem;
@@ -182,19 +235,8 @@ input[type="file"] {
 }
 
 .pr-kevin {
-  width: 80%;
+  width: 30rem;
   margin: 0 auto;
-}
-
-.pr-team-info {
-  margin-left: 20%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 2rem;
-  background-color: rgba(6, 58, 86, 0.6);
-  // margin-bottom: 10rem;
-  width: 70%;
 }
 
 .pr-text-team {
@@ -251,9 +293,13 @@ input[type="file"] {
   cursor: pointer;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1200px) {
   .pr-h1 {
     font-size: 2rem;
+  }
+
+  .pr-upload-input {
+    font-size: 1rem;
   }
 
   .pr-lable-error {
@@ -287,6 +333,7 @@ input[type="file"] {
   .pr-team-info {
     margin: auto;
     max-width: 90%;
+    width: 80%;
   }
   .pr-kevin {
     display: none;
