@@ -2,14 +2,13 @@ import React, { useState, useEffect } from "react";
 import "./pocetna.scss";
 import logo from "../../images/FH_Logo.png";
 import { HashLink } from "react-router-hash-link";
-import Ohakatonu from "./../o-hakatonu/Ohakatonu";
 
 export default function Pocetna() {
   const [timer, setTimer] = useState(0);
 
   useEffect(() => {
     setTimeout(() => {
-      setTimer(() => getTime(new Date("Feb 30, 2023 23:59:59").getTime()));
+      setTimer(() => getTime(new Date("Mar 6, 2023 23:59:59").getTime()));
     }, 1000);
   });
 
