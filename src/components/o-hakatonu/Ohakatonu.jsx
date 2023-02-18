@@ -91,8 +91,8 @@ function Ohakatonu() {
             </div>
             <p className="hakaton-descr">
               Pokrovitelj ovogodišnjeg FON Hakatona je svetski poznata
-              konsultantska firma Ernst & Young, koja će odrediti temu samog
-              takmičenja.
+              konsultantska firma <span className="ernst"> Ernst & Young</span>,
+              koja će odrediti temu samog takmičenja.
             </p>
           </div>
         </div>
