@@ -219,37 +219,6 @@
   text-align: center;
 }
 
-@media screen and (max-width: 960px) {
-  .ax-title h1 {
-    font-size: 2.5rem;
-    font-weight: 400;
-  }
-  .ax-top-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .ax-top-container .ax-top-right {
-    min-height: 20rem;
-  }
-
-  .ax-top-container .ax-top-left,
-  .ax-top-container .ax-top-right {
-    max-width: 60%;
-  }
-
-  .left-arrow {
-    top: 100%;
-    cursor: none;
-  }
-  .right-arrow {
-    top: -13%;
-    cursor: none;
-  }
-}
-
 .ax-okvir-iskustva {
   width: 16em;
   height: 9em;
@@ -313,4 +282,55 @@
 .activeS {
   background-color: #00ffa3;
   color: #000000 !important;
+}
+
+@media screen and (max-width: 960px) {
+  .ax-title h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+  }
+  .ax-top-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ax-top-container .ax-top-right {
+    min-height: 20rem;
+  }
+
+  .ax-top-container .ax-top-left,
+  .ax-top-container .ax-top-right {
+    max-width: 60%;
+    position: initial;
+  }
+
+  .left-arrow {
+    top: 45%;
+    left: 10%;
+    right: initial;
+    cursor: none;
+  }
+  .right-arrow {
+    top: 45%;
+    right: 10%;
+    left: initial;
+    cursor: none;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .left-arrow {
+    top: 45%;
+    left: 5%;
+    right: initial;
+    cursor: none;
+  }
+  .right-arrow {
+    top: 45%;
+    right: 5%;
+    left: initial;
+    cursor: none;
+  }
 }

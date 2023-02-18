@@ -2,27 +2,46 @@ import React from "react";
 import "./prijava.scss";
 import Kevin from "./img/cube.webm";
 import Iks from "./img/pr-exit.png";
-import Strelica from "./img/pr-strelica-dugme.png";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useRef } from "react";
 import { Upload } from "upload-js";
 import Popup from "reactjs-popup";
+import { HashLink } from "react-router-hash-link";
 
 const upload = Upload({ apiKey: "public_FW25b4V4ALwH6oZJdyGdwaxjzmZX" });
 
 const FileUploadButton = (props) => {
   async function onFileSelected(event) {
     const [file] = event.target.files;
+    console.log(event.target.files);
     const { fileUrl } = await upload.uploadFile(file, {
       onBegin: ({ cancel }) => console.log("File upload started!"),
       onProgress: ({ progress }) =>
         console.log(`File uploading... ${progress}%`),
     });
     console.log(`File uploaded! ${fileUrl}`);
+    console.log(file.name);
+    //document.getElementById("pr-test").innerHTML = file.name;
     props.onChange(fileUrl);
   }
-  return <input type="file" onChange={(e) => onFileSelected(e)} />;
+
+  return (
+    <>
+      <input
+        id={props.id}
+        className={`pr-text ${props.error && !props.prom ? "errorClass" : ""}`}
+        type="file"
+        onChange={(e) => onFileSelected(e)}
+        required
+      />
+      {props.error && !props.prom && (
+        <label class="pr-lable-error">
+          CV je obavezan i maksimalna količina fajla je 5MB!
+        </label>
+      )}
+    </>
+  );
 };
 
 const PopupExample = () => (
@@ -32,12 +51,8 @@ const PopupExample = () => (
 );
 
 const Prijava = () => {
-  const navigate = useNavigate();
-  const goBack = () => {
-    navigate(-1);
-  };
-
   const ref = useRef(null);
+  const navigate = useNavigate();
   const [ime1, setIme1] = useState("");
   const [ime2, setIme2] = useState("");
   const [ime3, setIme3] = useState("");
@@ -68,6 +83,7 @@ const Prijava = () => {
   const [pitanje4, setPitanje4] = useState("");
 
   const [error, setError] = useState(false);
+  const [error1, setError1] = useState(false);
 
   function validateEmail(email) {
     const re =
@@ -90,8 +106,8 @@ const Prijava = () => {
   const postPrijava = async (prijava) => {
     try {
       const response = await fetch(
-        // "https://fh-server-main.onrender.com/prijave/api",
-        "http://localhost:5000/prijave/api",
+        "https://fh-server-main.onrender.com/prijave/api",
+        // "http://localhost:5000/prijave/api",
         {
           method: "POST",
           headers: {
@@ -103,7 +119,6 @@ const Prijava = () => {
       );
       const data = await response.json();
       if (data.success) {
-        //setIme1("");
         openModal("Uspesno poslata prijava");
       } else {
         openModal(data.msg);
@@ -119,19 +134,15 @@ const Prijava = () => {
       !ime1 ||
       !ime2 ||
       !ime3 ||
-      !ime4 ||
       !imejl1 ||
       !imejl2 ||
       !imejl3 ||
-      !imejl4 ||
       !brojTelefona1 ||
       !brojTelefona2 ||
       !brojTelefona3 ||
-      !brojTelefona4 ||
       !imeSkole1 ||
       !imeSkole2 ||
       !imeSkole3 ||
-      !imeSkole4 ||
       !pitanje1 ||
       !pitanje2 ||
       !pitanje3 ||
@@ -139,15 +150,24 @@ const Prijava = () => {
       !validateEmail(imejl1) ||
       !validateEmail(imejl2) ||
       !validateEmail(imejl3) ||
-      !validateEmail(imejl4) ||
       cv1 === null ||
       cv2 === null ||
-      cv3 === null ||
-      cv4 === null
+      cv3 === null
     ) {
       setError(true);
+
       //radi testiranja praznjenja kopirati ovde
       return;
+    }
+
+    if (ime4 || imeSkole4 || brojTelefona4 || validateEmail(imejl4) || cv4) {
+      if (
+        !(ime4 && imeSkole4 && brojTelefona4 && validateEmail(imejl4) && cv4)
+      ) {
+        setError1(true);
+
+        return;
+      }
     }
 
     const prijava = {
@@ -180,73 +200,98 @@ const Prijava = () => {
           imeSkole: imeSkole3,
           linkCV: cv3,
         },
-        {
-          imePrezime: ime4,
-          email: imejl4,
-          brojTelefona: brojTelefona4,
-          status: status4,
-          imeSkole: imeSkole4,
-          linkCV: cv4,
-        },
+        // ...(someCondition && {b: 5})
+        ...(ime4 && imeSkole4 && brojTelefona4 && validateEmail(imejl4) && cv4
+          ? [
+              {
+                imePrezime: ime4,
+                email: imejl4,
+                brojTelefona: brojTelefona4,
+                status: status4,
+                imeSkole: imeSkole4,
+                linkCV: cv4,
+              },
+            ]
+          : [
+              {
+                imePrezime: "/",
+                email: "/",
+                brojTelefona: "/",
+                status: "/",
+                imeSkole: "/",
+                linkCV: "/",
+              },
+            ]),
       ],
     };
 
     postPrijava(prijava);
 
     //praznjenje polja
-    setIme1(" ");
-    document.getElementById("pr-name_m1").value = " ";
-    setIme2(" ");
-    document.getElementById("pr-name_m2").value = " ";
-    setIme3(" ");
-    document.getElementById("pr-name_m3").value = " ";
-    setIme4(" ");
-    document.getElementById("pr-name_m4").value = " ";
-    //setImejl1(" ");
-    document.getElementById("pr-email_m1").value = " ";
-    // setImejl2(" ");
-    document.getElementById("pr-email_m2").value = " ";
-    //setImejl3(" ");
-    document.getElementById("pr-email_m3").value = " ";
-    // setImejl4(" ");
-    document.getElementById("pr-email_m4").value = " ";
-    setbrojTelefon1(" ");
-    document.getElementById("pr-phone_m1").value = " ";
-    setbrojTelefon2(" ");
-    document.getElementById("pr-phone_m2").value = " ";
-    setbrojTelefon3(" ");
-    document.getElementById("pr-phone_m3").value = " ";
-    setbrojTelefon4(" ");
-    document.getElementById("pr-phone_m4").value = " ";
-    setimeSkole1(" ");
-    document.getElementById("pr-year_m1").value = " ";
-    setimeSkole2(" ");
-    document.getElementById("pr-year_m2").value = " ";
-    setimeSkole3(" ");
-    document.getElementById("pr-year_m3").value = " ";
-    setimeSkole4(" ");
-    document.getElementById("pr-year_m4").value = " ";
-    setPitanje1(" ");
-    document.getElementById("pr-teamname").value = " ";
-    setPitanje2(" ");
-    document.getElementById("pr-motivation").value = " ";
-    setPitanje3(" ");
-    document.getElementById("pr-iskustvo").value = " ";
-    setPitanje4(" ");
-    document.getElementById("pr-vrline").value = " ";
+    setIme1("");
+    setIme2("");
+    setIme3("");
+    setIme4("");
+    setImejl1("");
+    setImejl2("");
+    setImejl3("");
+    setImejl4("");
+    setbrojTelefon1("");
+    setbrojTelefon2("");
+    setbrojTelefon3("");
+    setbrojTelefon4("");
+    setimeSkole1("");
+    setimeSkole2("");
+    setimeSkole3("");
+    setimeSkole4("");
+    setPitanje1("");
+    setPitanje2("");
+    setPitanje3("");
+    setPitanje4("");
+    setCv1("");
+    setCv2("");
+    setCv3("");
+    setCv4("");
+    document.getElementById("pr-team-data").reset();
+    // document.getElementById("pr-name_m1").value = null;
+    // document.getElementById("pr-name_m2").value = null;
+    // document.getElementById("pr-name_m3").value = null;
+    // document.getElementById("pr-name_m4").value = null;
+    // document.getElementById("pr-email_m1").value = null;
+    // document.getElementById("pr-email_m2").value = null;
+    // document.getElementById("pr-email_m3").value = null;
+    // document.getElementById("pr-email_m4").value = null;
+    // document.getElementById("pr-phone_m1").value = null;
+    // document.getElementById("pr-phone_m2").value = null;
+    // document.getElementById("pr-phone_m3").value = null;
+    // document.getElementById("pr-phone_m4").value = null;
+    // document.getElementById("pr-year_m1").value = null;
+    // document.getElementById("pr-year_m2").value = null;
+    // document.getElementById("pr-year_m3").value = null;
+    // document.getElementById("pr-year_m4").value = null;
+    // document.getElementById("pr-teamname").value = null;
+    // document.getElementById("pr-motivation").value = null;
+    // document.getElementById("pr-pit3").value = null;
+    // document.getElementById("pr-pit4").value = null;
+    // document.getElementById("pr-cv_m1").value = null;
+    // document.getElementById("pr-cv_m2").value = null;
+    // document.getElementById("pr-cv_m3").value = null;
+    // document.getElementById("pr-cv_m4").value = null;
+    setError1(false);
+    setError(false);
   };
 
   return (
     <div class="pr-prijava">
       <div class="pr-header">
         <h1 class="pr-h1">Forma za prijavu</h1>
-        <div class="pr-exit-text">
-          <p onClick={goBack}>Početna</p>
-          <img class="pr-exit" src={Iks} onClick={goBack} alt="Exit"></img>
-        </div>
+        <HashLink to="/#pocetna" class="pr-exit-text">
+          <p className="pr-exit-p">Početna</p>
+          <img class="pr-exit" src={Iks} alt="Exit"></img>
+        </HashLink>
       </div>
       {/* {modalOpen && } */}
-      <form class="pr-team-data">
+      <form class="pr-team-data" id="pr-team-data">
         <div class="pr-content">
           <div class="pr-members">
             <div class="pr-member">
@@ -270,7 +315,7 @@ const Prijava = () => {
                 Imejl
               </lable>
               <input
-                type="email"
+                type="text"
                 class={`pr-text ${
                   error && !validateEmail(imejl1) ? "errorClass" : ""
                 }`}
@@ -280,6 +325,11 @@ const Prijava = () => {
                 }}
                 required
               ></input>
+              {error && !validateEmail(imejl1) && (
+                <label class="pr-lable-error">
+                  Imejl je obavezan i mora biti u formatu!
+                </label>
+              )}
               <lable class="pr-lable" for="pr-phone_m1">
                 Broj telefona
               </lable>
@@ -294,6 +344,9 @@ const Prijava = () => {
                   setbrojTelefon1(e.target.value);
                 }}
               ></input>
+              {error && brojTelefona1 === "" && (
+                <label class="pr-lable-error">Broj telefona je obavezan!</label>
+              )}
               <lable class="pr-lable" for="pr-select_m1">
                 Status: zaposlen, student, srednjoškolac
               </lable>
@@ -321,15 +374,22 @@ const Prijava = () => {
                 onChange={(e) => {
                   setimeSkole1(e.target.value);
                 }}
+                required
               ></input>
+              {error && imeSkole1 === "" && (
+                <label class="pr-lable-error">Naziv je obavezan!</label>
+              )}
               <lable class="pr-lable" for="pr-cv_m1">
-                Link ka CV-ju
+                Vaš CV
               </lable>
 
               <FileUploadButton
+                id="pr-cv_m1"
                 onChange={(fileUrl) => {
                   setCv1(fileUrl);
                 }}
+                error={error}
+                prom={cv1}
               />
             </div>
 
@@ -354,7 +414,7 @@ const Prijava = () => {
                 Imejl
               </lable>
               <input
-                type="email"
+                type="text"
                 class={`pr-text ${
                   error && !validateEmail(imejl2) ? "errorClass" : ""
                 }`}
@@ -363,6 +423,11 @@ const Prijava = () => {
                   setImejl2(e.target.value);
                 }}
               ></input>
+              {error && !validateEmail(imejl2) && (
+                <label class="pr-lable-error">
+                  Imejl je obavezan i mora biti u formatu!
+                </label>
+              )}
               <lable class="pr-lable" for="pr-phone_m2">
                 Broj telefona
               </lable>
@@ -377,6 +442,9 @@ const Prijava = () => {
                 }}
                 required
               ></input>
+              {error && brojTelefona2 === "" && (
+                <label class="pr-lable-error">Broj telefona je obavezan!</label>
+              )}
               <lable class="pr-lable" for="pr-select_m2">
                 Status: zaposlen, student, srednjoškolac
               </lable>
@@ -405,14 +473,20 @@ const Prijava = () => {
                 }}
                 required
               ></input>
+              {error && imeSkole2 === "" && (
+                <label class="pr-lable-error">Naziv je obavezan!</label>
+              )}
               <lable class="pr-lable" for="pr-cv_m2">
-                Link ka CV-ju
+                Vaš CV
               </lable>
 
               <FileUploadButton
+                id="pr-cv_m2"
                 onChange={(fileUrl) => {
                   setCv2(fileUrl);
                 }}
+                error={error}
+                prom={cv2}
               />
             </div>
 
@@ -430,11 +504,14 @@ const Prijava = () => {
                 }}
                 required
               ></input>
+              {error && ime3 === "" && (
+                <label class="pr-lable-error">Ime je obavezno!</label>
+              )}
               <lable class="pr-lable" for="pr-email_m3">
                 Imejl
               </lable>
               <input
-                type="email"
+                type="text"
                 class={`pr-text ${
                   error && !validateEmail(imejl3) ? "errorClass" : ""
                 }`}
@@ -444,6 +521,11 @@ const Prijava = () => {
                 }}
                 required
               ></input>
+              {error && !validateEmail(imejl3) && (
+                <label class="pr-lable-error">
+                  Imejl je obavezan i mora biti u formatu!
+                </label>
+              )}
               <lable class="pr-lable" for="pr-phone_m3">
                 Broj telefona
               </lable>
@@ -458,6 +540,9 @@ const Prijava = () => {
                 }}
                 required
               ></input>
+              {error && brojTelefona3 === "" && (
+                <label class="pr-lable-error">Broj telefona je obavezan!</label>
+              )}
               <lable
                 class="pr-lable"
                 for="pr-select_m3"
@@ -485,58 +570,73 @@ const Prijava = () => {
                   setimeSkole3(e.target.value);
                 }}
               ></input>
+              {error && imeSkole3 === "" && (
+                <label class="pr-lable-error">Naziv je obavezan!</label>
+              )}
               <lable class="pr-lable" for="pr-cv_m3">
-                Link ka CV-ju
+                Vaš CV
               </lable>
 
               <FileUploadButton
+                id="pr-cv_m3"
                 onChange={(fileUrl) => {
                   setCv3(fileUrl);
                 }}
+                error={error}
+                prom={cv3}
               />
             </div>
 
             <div class="pr-member">
-              <h1 class="pr-h1_m">Član 4</h1>
+              <h1 class="pr-h1_m">Član 4 (Opcionalno)</h1>
               <lable class="pr-lable" for="pr-name_m4">
                 Ime i prezime
               </lable>
               <input
                 type="text"
-                class={`pr-text ${error && ime4 === "" ? "errorClass" : ""}`}
+                class={`pr-text ${error1 && !ime4 ? "errorClass" : ""}`}
                 id="pr-name_m4"
                 onChange={(e) => {
                   setIme4(e.target.value);
                 }}
-                required
               ></input>
+              {error1 && !ime4 && (
+                <label class="pr-lable-error">Ime je obavezno!</label>
+              )}
               <lable class="pr-lable" for="pr-email_m4">
                 Imejl
               </lable>
               <input
-                type="email"
+                type="text"
                 class={`pr-text ${
-                  error && !validateEmail(imejl4) ? "errorClass" : ""
+                  error1 && !validateEmail(imejl4) ? "errorClass" : ""
                 }`}
                 id="pr-email_m4"
                 onChange={(e) => {
                   setImejl4(e.target.value);
                 }}
               ></input>
+              {error1 && !validateEmail(imejl4) && (
+                <label class="pr-lable-error">
+                  Imejl je obavezan i mora biti u formatu!
+                </label>
+              )}
               <lable class="pr-lable" for="pr-phone_m4">
                 Broj telefona
               </lable>
               <input
                 type="text"
                 class={`pr-text ${
-                  error && brojTelefona4 === "" ? "errorClass" : ""
+                  error1 && brojTelefona4 === "" ? "errorClass" : ""
                 }`}
                 id="pr-phone_m4"
                 onChange={(e) => {
                   setbrojTelefon4(e.target.value);
                 }}
-                required
               ></input>
+              {error1 && !brojTelefona4 && (
+                <label class="pr-lable-error">Broj telefona je obavezan!</label>
+              )}
               <lable
                 class="pr-lable"
                 for="pr-select_m4"
@@ -558,20 +658,26 @@ const Prijava = () => {
                 type="text"
                 id="pr-year_m4"
                 class={`pr-text ${
-                  error && imeSkole4 === "" ? "errorClass" : ""
+                  error1 && imeSkole4 === "" ? "errorClass" : ""
                 }`}
                 onChange={(e) => {
                   setimeSkole4(e.target.value);
                 }}
               ></input>
+              {error1 && !imeSkole4 && (
+                <label class="pr-lable-error">Naziv je obavezan!</label>
+              )}
               <lable class="pr-lable" for="pr-cv_m4">
-                Link ka CV-ju
+                Vaš CV
               </lable>
 
               <FileUploadButton
+                id="pr-cv_m4"
                 onChange={(fileUrl) => {
                   setCv4(fileUrl);
                 }}
+                error={error1}
+                prom={cv4}
               />
             </div>
           </div>
@@ -606,6 +712,9 @@ const Prijava = () => {
                 onChange={(e) => setPitanje1(e.target.value)}
                 required
               ></input>
+              {error && pitanje1 === "" && (
+                <label class="pr-lable-error">Ime tima je obavezno!</label>
+              )}
               <lable class="pr-lable" for="pr-iskustvo">
                 Navedite i opišite prethodna iskustva u grupnom radu, a ako do
                 sada niste radili zajedno, opišite vaša pojedinačna iskustva.
@@ -618,6 +727,9 @@ const Prijava = () => {
                 onChange={(e) => setPitanje2(e.target.value)}
                 required
               ></textarea>
+              {error && pitanje2 === "" && (
+                <label class="pr-lable-error">Ovo polje je obavezno!</label>
+              )}
               <lable class="pr-lable" for="pr-vrline">
                 Šta vas je navelo da se prijavite na hakaton i šta želite da
                 postignete i naučite učestvovanjem na ovom takmičenju?
@@ -626,12 +738,15 @@ const Prijava = () => {
                 class={`pr-text-team_textarea ${
                   error && pitanje3 === "" ? "errorClass" : ""
                 }`}
-                id="pr-vrline"
+                id="pr-pit3"
                 onChange={(e) => {
                   setPitanje3(e.target.value);
                 }}
                 required
               ></textarea>
+              {error && pitanje3 === "" && (
+                <label class="pr-lable-error">Ovo polje je obavezno!</label>
+              )}
               <lable class="pr-lable" for="pr-vrline">
                 Šta biste istakli kao svoje vrline i mane koje bi uticale na
                 uspeh celog tima na takmičenju?
@@ -640,10 +755,13 @@ const Prijava = () => {
                 class={`pr-text-team_textarea ${
                   error && pitanje4 === "" ? "errorClass" : ""
                 }`}
-                id="pr-motivation"
+                id="pr-pit4"
                 onChange={(e) => setPitanje4(e.target.value)}
                 required
               ></textarea>
+              {error && pitanje4 === "" && (
+                <label class="pr-lable-error">Ovo polje je obavezno!</label>
+              )}
             </div>
           </div>
         </div>
@@ -660,7 +778,6 @@ const Prijava = () => {
                 posaljiPrijavu();
               }}
             ></input>
-            <img src={Strelica} class="pr-strelica-img"></img>
           </div>
         </div>
       </form>

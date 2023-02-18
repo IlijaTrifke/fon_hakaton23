@@ -55,7 +55,9 @@ const Navbar = () => {
       // style={{ ...navbarStyles, top: visible ? "0" : "-7rem" }}
     >
       <nav className="navbar">
-        <img className="navbar-logo" src={logo} alt="Fon hakaton logo" />
+        <a href="#pocetna" style={{ zIndex: 200 }}>
+          <img className="navbar-logo" src={logo} alt="Fon hakaton logo" />
+        </a>
         <div className="menu-icon" onClick={handleClick}>
           <Hamburger
             className="hamburger"
@@ -75,6 +77,8 @@ const Navbar = () => {
                 id={index}
                 className={item.cName}
                 onClick={handleClick}
+                target={index === 6 ? "_blank" : ""}
+                rel={index === 6 ? "noopener noreferrer" : ""}
               >
                 {item.title}
               </HashLink>
@@ -82,7 +86,7 @@ const Navbar = () => {
           })}
         </div>
         <HashLink
-          to="/Prijava"
+          to="/prijava"
           className="prijavi-se desktop"
           onClick={handleClick}
         >

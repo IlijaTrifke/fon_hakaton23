@@ -1,7 +1,15 @@
 @import "../../global.scss";
 
-.pr-file-upload-button {
-  border-radius: 5rem;
+input,
+textarea input:before,
+textarea:before,
+textarea:after,
+input:after {
+  -webkit-user-select: initial;
+  -khtml-user-select: initial;
+  -moz-user-select: initial;
+  -ms-user-select: initial;
+  user-select: initial;
 }
 
 .pr-prijava {
@@ -13,42 +21,106 @@
 }
 
 .pr-header {
-  padding-top: 5vh;
-  display: flex;
   width: 100%;
-  justify-content: flex-end;
-  margin-bottom: 2rem;
-  align-items: center;
-  margin-bottom: 5rem;
+  height: 6rem;
+  position: relative;
 }
 
 .errorClass {
   border: 2px solid red !important;
 }
 
+// input[type="file"] {
+//   position: absolute;
+//   width: 1px;
+//   height: 1px;
+//   padding: 0;
+//   margin: -1px;
+//   overflow: hidden;
+//   clip: rect(0, 0, 0, 0);
+//   border: 0;
+// }
+
+.pr-upload-input {
+  // height: 2.5rem;
+  width: 80%;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 300;
+  font-family: "Noto Sans", sans-serif;
+  background-color: $tamnoPlava;
+  color: $bela;
+  border: double 0.15rem transparent;
+  border-radius: 6px;
+  background-image: linear-gradient($tamnoPlava, $tamnoPlava),
+    linear-gradient(
+      150deg,
+      #24bdde,
+      rgba(107, 184, 206, 0.88),
+      rgba(16, 78, 126, 0.5),
+      rgba(71, 51, 153, 0.5),
+      rgba(113, 80, 185, 0.83),
+      #7b2787
+    );
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  margin: auto;
+}
+// .custom-file-upload {
+//   border: 1px solid #ccc;
+//   display: inline-block;
+//   padding: 6px 12px;
+//   cursor: pointer;
+//   color: $bela;
+//   background-color: $tamnoPlava;
+//   text-align: center;
+//   font-family: "Noto sans, sans-serif";
+//   width: 50%;
+//   font-size: 1.5rem;
+// }
+
 .pr-h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-family: "Orbitron", sans-serif;
   color: $bela;
   display: flex;
-  margin-right: 18%;
-  text-shadow: -2px 0 $ljubicasta, 0 2px $ljubicasta, 2px 0 $ljubicasta,
-    0 -2px $ljubicasta;
-  font-size: 3rem;
+  // text-shadow: -2px 0 $ljubicasta, 0 2px $ljubicasta, 2px 0 $ljubicasta,
+  //   0 -2px $ljubicasta;
+  font-size: 2.5rem;
+  white-space: nowrap;
 }
 
 .pr-exit-text {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
   font-family: "Noto Sans", sans-serif;
   font-size: 2rem;
-  margin-right: 10%;
   color: $bela;
   display: flex;
   align-items: center;
+  justify-content: center;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .pr-exit {
-  margin-left: 0.5rem;
-  max-height: 2rem;
+  margin-left: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+.pr-exit-p {
+  transition: all 0.2s ease-in-out;
+}
+
+.pr-exit-text:hover > .pr-exit {
+  transform: scale(1.2) rotate(180deg);
+}
+.pr-exit-text:hover > .pr-exit-p {
+  transform: scale(1.2);
 }
 
 .pr-team-data {
@@ -64,9 +136,8 @@
 .pr-members {
   display: flex;
   flex-direction: column;
-  width: 90%;
   border-radius: 30px;
-  margin-left: 5%;
+  width: 30rem;
 }
 
 .pr-member {
@@ -74,28 +145,52 @@
   flex-direction: column;
   align-items: center;
   border-radius: 2rem;
-  background-color: rgba(6, 58, 86, 0.6);
+  background: linear-gradient(
+    135deg,
+    rgba(36, 189, 222, 0.2),
+    rgba(232, 239, 245, 0.03)
+  );
   margin-bottom: 5rem;
+  padding: 1rem;
   height: 80%;
+}
+.pr-team-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2rem;
+  background-color: rgba(6, 58, 86, 0.6);
+  // margin-bottom: 10rem;
+  width: 40rem;
 }
 
 .pr-h1_m {
-  font-family: "Noto sans";
+  font-family: "Orbitron", sans-serif;
   color: $bela;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .pr-lable {
   font-family: "Noto Sans", sans-serif;
   font-size: 1.5rem;
+  font-weight: 300;
   color: $bela;
   word-wrap: break-word;
   text-align: center;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  margin-bottom: 0.5rem;
+  margin: 0.5rem auto;
+  width: 90%;
 }
+
+// .pr-text-wrapper {
+//   width: 100%;
+//   position: relative;
+//   margin: auto;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
 
 .pr-lable-error {
   font-family: "Noto Sans", sans-serif;
@@ -103,25 +198,37 @@
   color: red;
   word-wrap: break-word;
   text-align: center;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  margin-bottom: 2rem;
-  margin-top: -2rem;
+  width: 95%;
+  // margin-left: 2rem;
+  // margin-right: 2rem;
+  // margin-bottom: 2rem;
+  // margin-top: -2rem;
+  // position: absolute;
 }
 
 .pr-text {
   height: 2.5rem;
+  font-family: "Noto Sans", sans-serif;
   width: 80%;
   text-align: center;
   font-size: 1.5rem;
   background-color: $tamnoPlava;
   color: $bela;
-  border: double 4px transparent;
+  border: solid 0.15rem transparent;
   border-radius: 6px;
   background-image: linear-gradient($tamnoPlava, $tamnoPlava),
-    linear-gradient(to right, $svetloPlava, $ljubicasta);
+    linear-gradient(
+      150deg,
+      #24bdde,
+      rgba(107, 184, 206, 0.88),
+      rgba(16, 78, 126, 0.5),
+      rgba(71, 51, 153, 0.5),
+      rgba(113, 80, 185, 0.83),
+      #7b2787
+    );
   background-origin: border-box;
   background-clip: padding-box, border-box;
+  background-color: rgba(0, 36, 64, 0.5);
   margin-bottom: 0.5rem;
 }
 
@@ -129,13 +236,23 @@
   height: 2.5rem;
   width: 80%;
   text-align: center;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 300;
   font-size: 1.5rem;
   background-color: $tamnoPlava;
   color: $bela;
-  border: double 4px transparent;
+  border: double 0.15rem transparent;
   border-radius: 6px;
   background-image: linear-gradient($tamnoPlava, $tamnoPlava),
-    linear-gradient(to right, $svetloPlava, $ljubicasta);
+    linear-gradient(
+      150deg,
+      #24bdde,
+      rgba(107, 184, 206, 0.88),
+      rgba(16, 78, 126, 0.5),
+      rgba(71, 51, 153, 0.5),
+      rgba(113, 80, 185, 0.83),
+      #7b2787
+    );
   background-origin: border-box;
   background-clip: padding-box, border-box;
   margin-bottom: 0.5rem;
@@ -147,18 +264,8 @@
 }
 
 .pr-kevin {
-  width: 80%;
-}
-
-.pr-team-info {
-  margin-left: 20%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 2rem;
-  background-color: rgba(6, 58, 86, 0.6);
-  margin-bottom: 10rem;
-  width: 70%;
+  width: 30rem;
+  margin: 0 auto;
 }
 
 .pr-text-team {
@@ -178,7 +285,7 @@
 }
 
 .pr-text-team_textarea {
-  height: 25rem;
+  height: 20rem;
   width: 80%;
   font-size: 1.5rem;
   background-color: $tamnoPlava;
@@ -189,7 +296,7 @@
     linear-gradient(to right, $svetloPlava, $ljubicasta);
   background-origin: border-box;
   background-clip: padding-box, border-box;
-  margin-bottom: 3.5rem;
+  margin-bottom: 1rem;
   resize: none;
 }
 
@@ -211,47 +318,29 @@
   border-radius: 1.5rem;
   padding: 1rem;
   position: relative;
-  margin-bottom: 10rem;
+  margin: 5rem 0;
   cursor: pointer;
-}
-
-.pr-strelica-img {
-  position: absolute;
-  max-width: 20%;
-  transform: translate(-70%, 50%);
-}
-
-@media (max-width: 4000px) {
-  .pr-h1 {
-    margin-right: 30vw;
-  }
-}
-
-@media (max-width: 1920px) {
-  .pr-h1 {
-    margin-right: 20%;
-  }
 }
 
 @media (max-width: 1200px) {
   .pr-h1 {
-    margin-right: 10%;
-  }
-  .pr-exit-text {
-    //margin-left: 15%;
-  }
-  .pr-members {
-    width: 80%;
-  }
-}
-
-@media (max-width: 700px) {
-  .pr-h1 {
     font-size: 2rem;
-    margin-right: 15%;
   }
-  .pr-exit-text {
-    // margin-left: 10%;
+
+  .pr-upload-input {
+    font-size: 1rem;
+  }
+
+  .pr-lable-error {
+    font-size: 1rem;
+  }
+
+  .pr-h1_m {
+    font-size: 1.5rem;
+  }
+
+  .pr-lable {
+    font-size: 1rem;
   }
 
   .pr-exit-text p {
@@ -266,13 +355,14 @@
     align-items: center;
   }
   .pr-members {
-    margin-left: 0;
-    width: 85%;
+    margin: auto;
+    width: 30rem;
+    max-width: 90%;
   }
   .pr-team-info {
-    justify-content: center;
-    margin-left: 7.5%;
-    width: 85%;
+    margin: auto;
+    max-width: 90%;
+    width: 80%;
   }
   .pr-kevin {
     display: none;
@@ -281,17 +371,8 @@
     font-size: 2rem;
   }
 }
-
 @media (max-width: 480px) {
   .pr-h1 {
-    margin-right: 10%;
-    font-size: 1.5rem;
-  }
-}
-@media (max-width: 340px) {
-  .pr-h1 {
-    margin-right: 2%;
-    margin-left: 5%;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 }

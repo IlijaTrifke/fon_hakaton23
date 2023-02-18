@@ -64,6 +64,7 @@
 .faq-text {
   color: $bela;
   font-family: "Noto Sans", sans-serif;
+  font-weight: 300;
   font-size: 1.5rem;
 }
 
@@ -160,6 +161,7 @@
   color: $bela;
   font-family: "Noto Sans", sans-serif;
   font-size: 1rem;
+  font-weight: 300;
 }
 
 .show {
@@ -190,7 +192,6 @@
 @media screen and (max-width: 620px) {
   .faq-naslov {
     font-size: 2.5rem;
-    width: 95%;
   }
 }
 
@@ -201,5 +202,8 @@
     padding-bottom: 0.5rem;
     color: #978bcc;
     cursor: none;
+  }
+  .faq-box-wrapper {
+    height: 40rem;
   }
 }

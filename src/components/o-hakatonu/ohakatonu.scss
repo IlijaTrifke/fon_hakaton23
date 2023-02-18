@@ -10,7 +10,7 @@
   top: -15%;
 }
 
-.hakaton-section{
+.hakaton-section {
   height: 30rem;
 }
 
@@ -31,6 +31,9 @@
   color: $bela;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   border-radius: 1rem;
   position: absolute;
   gap: 0.5rem;
@@ -90,15 +93,20 @@
   backdrop-filter: blur(1px);
 }
 
+.ernst {
+  font-weight: bold;
+}
+
 .hakaton-content {
   display: flex;
   flex-direction: column;
   position: relative;
+  padding: 1.5rem;
 }
 
 .crd3 {
   flex-direction: row;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .crd3 .hakaton-arrows {
@@ -173,13 +181,14 @@
 .hakaton-header {
   display: flex;
   gap: 0.5rem;
-  justify-content: flex-end;
   padding-right: 0.5rem;
   padding-top: 0.5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .hakaton-descr {
-  padding: 0.5rem;
   text-align: left;
   font-size: 1.2rem;
 }
@@ -190,6 +199,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: fit-content;
     gap: 2rem;
   }
 
