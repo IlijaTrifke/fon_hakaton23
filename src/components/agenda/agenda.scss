@@ -144,7 +144,7 @@
   font-weight: 500;
   text-align: left;
   height: 2rem;
-  padding-left: 3%;
+  padding-left: 1rem;
   display: flex;
   align-items: center;
   width: 90%;
@@ -176,8 +176,11 @@
 .agn-descr {
   position: relative;
   font-size: 1.2rem;
-  margin: 1rem 1rem 1rem 1rem;
-  padding: 0.5rem;
+  width: 90%;
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
   text-align: left;
 }
 .agn-descr::before {
@@ -228,7 +231,7 @@
     margin-left: 0;
   }
   .agn-line {
-    left: 4.2%;
+    left: 1rem;
   }
 
   .agn-content {
@@ -238,6 +241,7 @@
   }
   .agn-card {
     transform: translateX(100%);
+    justify-content: flex-start;
   }
 }
 

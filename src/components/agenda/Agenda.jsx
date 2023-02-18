@@ -46,7 +46,7 @@ const Agenda = () => {
 
         if (dist > timeline.offsetHeight - 140 && !full) {
           full = true;
-          line.style.bottom = `8%`;
+          line.style.bottom = `11%`;
         }
 
         sections.forEach((item) => {
@@ -83,12 +83,9 @@ const Agenda = () => {
             <h1 className="agn-head">Otvaranje prijava</h1>
             <div className="agn-pseudo"></div>
             <div className="agn-text">
-              <h2 className="agn-date">3. mart 2023.</h2>
+              <h2 className="agn-date">20. februar 2023.</h2>
               <p className="agn-descr">
-                Samo nekoliko koraka deli vas od učešća na takmičenju koje će
-                vam svojom uprčatljivom atmosferom pokazati moć programiranja i
-                timskog rada. Popunjavanjem prijave na sajtu vaš tim će ući u
-                prvi krug selekcije.
+              Voliš programiranje i spreman si za nove izazove i druženje? Okupi ekipu, popuni formu na sajtu i prijavi se za FON Hakaton!
               </p>
             </div>
           </div>
@@ -97,15 +94,12 @@ const Agenda = () => {
         <div className="agn-card">
           <div className="agn-bead"></div>
           <div className="agn-content">
-            <h1 className="agn-head">Otvaranje prijava</h1>
+            <h1 className="agn-head">Zatvaranje prijava</h1>
             <div className="agn-pseudo"></div>
             <div className="agn-text">
-              <h2 className="agn-date">3. mart 2023.</h2>
+              <h2 className="agn-date">6. mart 2023.</h2>
               <p className="agn-descr">
-                Samo nekoliko koraka deli vas od učešća na takmičenju koje će
-                vam svojom uprčatljivom atmosferom pokazati moć programiranja i
-                timskog rada. Popunjavanjem prijave na sajtu vaš tim će ući u
-                prvi krug selekcije.
+              Nakon zatvaranja prijava, kontaktiraćemo sve kandidate i objavićemo detaljnije informacije vezane za online test. Ne zaboravi da proveravaš svoj mejl!
               </p>
             </div>
           </div>
@@ -114,15 +108,12 @@ const Agenda = () => {
         <div className="agn-card">
           <div className="agn-bead"></div>
           <div className="agn-content">
-            <h1 className="agn-head">Otvaranje prijava</h1>
+            <h1 className="agn-head">Test IT znanja</h1>
             <div className="agn-pseudo"></div>
             <div className="agn-text">
-              <h2 className="agn-date">3. mart 2023.</h2>
+              <h2 className="agn-date">8. mart 2023.</h2>
               <p className="agn-descr">
-                Samo nekoliko koraka deli vas od učešća na takmičenju koje će
-                vam svojom uprčatljivom atmosferom pokazati moć programiranja i
-                timskog rada. Popunjavanjem prijave na sajtu vaš tim će ući u
-                prvi krug selekcije.
+              Sledeći korak jeste test IT znanja. Test će se raditi timski preko Moodle platforme, a rezultate selekcije ćemo objaviti u što kraćem roku.
               </p>
             </div>
           </div>
@@ -131,15 +122,12 @@ const Agenda = () => {
         <div className="agn-card">
           <div className="agn-bead"></div>
           <div className="agn-content">
-            <h1 className="agn-head">Otvaranje prijava</h1>
+            <h1 className="agn-head">Tehnički intervju</h1>
             <div className="agn-pseudo"></div>
             <div className="agn-text">
-              <h2 className="agn-date">3. mart 2023.</h2>
+              <h2 className="agn-date">9. - 11. mart 2023.</h2>
               <p className="agn-descr">
-                Samo nekoliko koraka deli vas od učešća na takmičenju koje će
-                vam svojom uprčatljivom atmosferom pokazati moć programiranja i
-                timskog rada. Popunjavanjem prijave na sajtu vaš tim će ući u
-                prvi krug selekcije.
+              Ono što timove deli od učešća na takmičenju je još samo tehnički intervju. Intervjui će se održati na Fakultetu organizacionih nauka u vidu speed dating-a sa osobljem fakulteta, nakon čega najbolje rangirane ekipe prolaze u finale.
               </p>
             </div>
           </div>
@@ -148,36 +136,18 @@ const Agenda = () => {
         <div className="agn-card">
           <div className="agn-bead"></div>
           <div className="agn-content">
-            <h1 className="agn-head">Otvaranje prijava</h1>
+            <h1 className="agn-head">FON Hakaton</h1>
             <div className="agn-pseudo"></div>
             <div className="agn-text">
-              <h2 className="agn-date">3. mart 2023.</h2>
+              <h2 className="agn-date">18. i 19. mart 2023.</h2>
               <p className="agn-descr">
-                Samo nekoliko koraka deli vas od učešća na takmičenju koje će
-                vam svojom uprčatljivom atmosferom pokazati moć programiranja i
-                timskog rada. Popunjavanjem prijave na sajtu vaš tim će ući u
-                prvi krug selekcije.
+              Za timove koji su prošli selekciju počinje izazov. Timovima je na raspolaganju 24 časa da osmisle i razviju svoje softversko rešenje, koje će nakon toga predstaviti stručnom žiriju. Najbolji tim osvojiće titulu pobednika desetog FON Hakatona!
               </p>
             </div>
           </div>
         </div>
 
-        <div className="agn-card">
-          <div className="agn-bead"></div>
-          <div className="agn-content">
-            <h1 className="agn-head">Otvaranje prijava</h1>
-            <div className="agn-pseudo"></div>
-            <div className="agn-text">
-              <h2 className="agn-date">3. mart 2023.</h2>
-              <p className="agn-descr">
-                Samo nekoliko koraka deli vas od učešća na takmičenju koje će
-                vam svojom uprčatljivom atmosferom pokazati moć programiranja i
-                timskog rada. Popunjavanjem prijave na sajtu vaš tim će ući u
-                prvi krug selekcije.
-              </p>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </div>
   );
