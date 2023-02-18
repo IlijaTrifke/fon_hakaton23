@@ -26,13 +26,14 @@
   border-radius: 20px;
   background: linear-gradient(to right, #003560, transparent);
   height: 8rem;
+  width: 30%;
 }
 
 .stk-numbers {
   font-size: 1.5rem;
   padding: 1.5rem;
   color: white;
-  width: 6rem;
+  width: 30%;
 }
 
 .stk-text {
@@ -41,6 +42,7 @@
   flex-wrap: wrap;
   color: white;
   padding: 1.5rem;
+  width: 80%;
 }
 
 .stk-vertical-line {

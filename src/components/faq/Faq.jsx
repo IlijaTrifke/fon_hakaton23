@@ -57,33 +57,39 @@ const Faq = () => {
 
 const dataFaq = [
   {
-    question: "Ko se može prijaviti",
+    question: "Ko se sve može prijaviti za učešće?",
     answer:
-      " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed enim dedee nihil aut tenetur ipsam, commodi aliquam suscipit corporis, quibusdam",
+      "Pravo učešća na jubilarnom, desetom, FON Hakatonu imaju svi stariji od 16, a mlađi od 26 godina, bez obzira na državljanstvo i stepen formalnog obrazovanja.",
   },
 
   {
-    question: "Ko se može prijaviti",
+    question: "Da li mi je potrebno određeno predznanje?",
     answer:
-      " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed enim dedee nihil aut tenetur ipsam, commodi aliquam suscipit corporis, quibusdam",
+      "Predznanje o određenim tehnologijama je neophodno, pre svega zbog samog procesa selekcije, gde će tvoje znanje biti testirano, ali i kasnije na samom takmičenju. Sa svojim timom ćeš prvo razvijati softversko rešenje na zadati problem, a potom ćete zajedno prezentovati isto pred stručnim žirijem.",
   },
 
   {
-    question: "Ko se može prijaviti",
+    question: "Kako izgleda selekcija?",
     answer:
-      " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed enim dedee nihil aut tenetur ipsam, commodi aliquam suscipit corporis, quibusdam",
+      "Sama selekcija se sastoji iz dva kruga. Prvi krug predstavlja ocenjivanje timske prijave, poslatih 	CV-jeva i testa IT znanja. Najbolje rangirane timove čeka drugi krug selekcije - tehnički intervjui koji će se održati u formi speed dating-a na Fakultetu organizacionih nauka. Nakon drugog kruga selekcije, deset timova koji budu imali najveću ukupnu ocenu, dobiće priliku da svoje veštine prikažu u finalu Hakatona.",
   },
 
   {
-    question: "Ko se može prijaviti",
+    question: "Da li mi je potreban računar ili druga vrsta prateće opreme?",
     answer:
-      " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed enim dedee nihil aut tenetur ipsam, commodi aliquam suscipit corporis, quibusdam",
+      " Bilo bi poželjno da poneseš svoj računar.  Iako će biti obezbeđena fakultetska oprema, na njoj se ne može instalirati nikakav dodatni softver, već se može koristiti samo ono što već postoji na samim računarima. ",
   },
 
   {
-    question: "Ko se može prijaviti",
+    question: "Da li se mogu prijaviti individualno?",
     answer:
-      " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed enim dedee nihil aut tenetur ipsam, commodi aliquam suscipit corporis, quibusdam",
+      "Hakaton je timsko takmičenje, pa samim tim potrebno je da pronađeš svoj tim i da se svi zajedno prijavite.",
+  },
+
+  {
+    question: "Ko su mentori na takmičenju i kako ti mogu pomoći?",
+    answer:
+      "Mentori su podrška timu tokom takmičenja. Oni će biti tu za sva postavljena pitanja u određenim vremenskim terminima. Mentorsku podršku čine stručnjaci, konkretno nastavnici i saradnici sa Fakulteta organizacionih nauka, kao i stručnjaci ispred partnerske kompanije i alumni članovi FONIS-a.",
   },
 ];
 
