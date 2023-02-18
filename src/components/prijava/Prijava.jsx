@@ -52,6 +52,7 @@ const PopupExample = () => (
 
 const Prijava = () => {
   const ref = useRef(null);
+  const navigate = useNavigate();
   const [ime1, setIme1] = useState("");
   const [ime2, setIme2] = useState("");
   const [ime3, setIme3] = useState("");
