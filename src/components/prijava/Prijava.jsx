@@ -14,6 +14,7 @@ const upload = Upload({ apiKey: "public_FW25b4V4ALwH6oZJdyGdwaxjzmZX" });
 const FileUploadButton = (props) => {
   async function onFileSelected(event) {
     const [file] = event.target.files;
+    console.log(event.target.files);
     const { fileUrl } = await upload.uploadFile(file, {
       onBegin: ({ cancel }) => console.log("File upload started!"),
       onProgress: ({ progress }) =>
@@ -24,18 +25,24 @@ const FileUploadButton = (props) => {
     //document.getElementById("pr-test").innerHTML = file.name;
     props.onChange(fileUrl);
   }
+
   // <input type="file" class="pr-text" onChange={(e) => onFileSelected(e)} />
   // {/* <label for="file-upload" class="custom-file-upload" id="pr-test">
   //   <i class="fa fa-cloud-upload"></i>Izaberi fajl
   // </label> */}
   return (
-    <input
-      id={props.id}
-      className={`pr-text ${props.error && !props.prom ? "errorClass" : ""}`}
-      type="file"
-      onChange={(e) => onFileSelected(e)}
-      required
-    />
+    <>
+      <input
+        id={props.id}
+        className={`pr-text ${props.error && !props.prom ? "errorClass" : ""}`}
+        type="file"
+        onChange={(e) => onFileSelected(e)}
+        required
+      />
+      {props.error && !props.prom && (
+        <label class="pr-lable-error">CV je obavezan!</label>
+      )}
+    </>
   );
 };
 
@@ -192,17 +199,23 @@ const Prijava = () => {
           imeSkole: imeSkole3,
           linkCV: cv3,
         },
-        {
-          imePrezime: ime4,
-          email: imejl4,
-          brojTelefona: brojTelefona4,
-          status: status4,
-          imeSkole: imeSkole4,
-          linkCV: cv4,
-        },
+        // ...(someCondition && {b: 5})
+        ...(ime4 && imeSkole4 && brojTelefona4 && validateEmail(imejl4) && cv4
+          ? [
+              {
+                imePrezime: ime4,
+                email: imejl4,
+                brojTelefona: brojTelefona4,
+                status: status4,
+                imeSkole: imeSkole4,
+                linkCV: cv4,
+              },
+            ]
+          : []),
       ],
     };
 
+    console.log(prijava);
     postPrijava(prijava);
 
     //praznjenje polja
@@ -284,7 +297,6 @@ const Prijava = () => {
                   setIme1(e.target.value);
                 }}
                 required
-                autoComplete="off"
               ></input>
               {error && ime1 === "" && (
                 <label class="pr-lable-error">Ime je obavezno!</label>
@@ -369,9 +381,6 @@ const Prijava = () => {
                 error={error}
                 prom={cv1}
               />
-              {error && cv1 === "" && (
-                <label class="pr-lable-error">CV je obavezan!</label>
-              )}
             </div>
 
             <div class="pr-member">
@@ -469,9 +478,6 @@ const Prijava = () => {
                 error={error}
                 prom={cv2}
               />
-              {error && cv2 === "" && (
-                <label class="pr-lable-error">CV je obavezan!</label>
-              )}
             </div>
 
             <div class="pr-member">
@@ -569,9 +575,6 @@ const Prijava = () => {
                 error={error}
                 prom={cv3}
               />
-              {error && cv3 === "" && (
-                <label class="pr-lable-error">CV je obavezan!</label>
-              )}
             </div>
 
             <div class="pr-member">
@@ -666,9 +669,6 @@ const Prijava = () => {
                 error={error1}
                 prom={cv4}
               />
-              {error1 && !cv4 && (
-                <label class="pr-lable-error">CV je obavezan!</label>
-              )}
             </div>
           </div>
           <div class="pr-team">
