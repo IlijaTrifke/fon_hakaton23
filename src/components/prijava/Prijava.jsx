@@ -26,10 +26,6 @@ const FileUploadButton = (props) => {
     props.onChange(fileUrl);
   }
 
-  // <input type="file" class="pr-text" onChange={(e) => onFileSelected(e)} />
-  // {/* <label for="file-upload" class="custom-file-upload" id="pr-test">
-  //   <i class="fa fa-cloud-upload"></i>Izaberi fajl
-  // </label> */}
   return (
     <>
       <input
@@ -40,7 +36,9 @@ const FileUploadButton = (props) => {
         required
       />
       {props.error && !props.prom && (
-        <label class="pr-lable-error">CV je obavezan!</label>
+        <label class="pr-lable-error">
+          CV je obavezan i maksimalna količina fajla je 5MB!
+        </label>
       )}
     </>
   );
@@ -254,6 +252,30 @@ const Prijava = () => {
     setCv3("");
     setCv4("");
     document.getElementById("pr-team-data").reset();
+    // document.getElementById("pr-name_m1").value = null;
+    // document.getElementById("pr-name_m2").value = null;
+    // document.getElementById("pr-name_m3").value = null;
+    // document.getElementById("pr-name_m4").value = null;
+    // document.getElementById("pr-email_m1").value = null;
+    // document.getElementById("pr-email_m2").value = null;
+    // document.getElementById("pr-email_m3").value = null;
+    // document.getElementById("pr-email_m4").value = null;
+    // document.getElementById("pr-phone_m1").value = null;
+    // document.getElementById("pr-phone_m2").value = null;
+    // document.getElementById("pr-phone_m3").value = null;
+    // document.getElementById("pr-phone_m4").value = null;
+    // document.getElementById("pr-year_m1").value = null;
+    // document.getElementById("pr-year_m2").value = null;
+    // document.getElementById("pr-year_m3").value = null;
+    // document.getElementById("pr-year_m4").value = null;
+    // document.getElementById("pr-teamname").value = null;
+    // document.getElementById("pr-motivation").value = null;
+    // document.getElementById("pr-pit3").value = null;
+    // document.getElementById("pr-pit4").value = null;
+    // document.getElementById("pr-cv_m1").value = null;
+    // document.getElementById("pr-cv_m2").value = null;
+    // document.getElementById("pr-cv_m3").value = null;
+    // document.getElementById("pr-cv_m4").value = null;
     setError1(false);
     setError(false);
   };
@@ -292,7 +314,7 @@ const Prijava = () => {
                 Imejl
               </lable>
               <input
-                type="email"
+                type="text"
                 class={`pr-text ${
                   error && !validateEmail(imejl1) ? "errorClass" : ""
                 }`}
@@ -391,7 +413,7 @@ const Prijava = () => {
                 Imejl
               </lable>
               <input
-                type="email"
+                type="text"
                 class={`pr-text ${
                   error && !validateEmail(imejl2) ? "errorClass" : ""
                 }`}
@@ -488,7 +510,7 @@ const Prijava = () => {
                 Imejl
               </lable>
               <input
-                type="email"
+                type="text"
                 class={`pr-text ${
                   error && !validateEmail(imejl3) ? "errorClass" : ""
                 }`}
@@ -584,7 +606,7 @@ const Prijava = () => {
                 Imejl
               </lable>
               <input
-                type="email"
+                type="text"
                 class={`pr-text ${
                   error1 && !validateEmail(imejl4) ? "errorClass" : ""
                 }`}
