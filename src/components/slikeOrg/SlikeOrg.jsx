@@ -17,7 +17,7 @@ Svi članovi imaju posebnu ulogu da u jednom od 6 različitih timova, uz neophod
 
           </p>
         </div>
-        <div className="org-photo-hold">
+        <div className="org-photo-hold"> 
           <img className="org-photo" src={slika} alt="" srcset="" />
         </div>
       </div>
