@@ -125,7 +125,7 @@ const Agenda = () => {
             <h1 className="agn-head">Tehnički intervju</h1>
             <div className="agn-pseudo"></div>
             <div className="agn-text">
-              <h2 className="agn-date">9. - 11. mart 2023.</h2>
+              <h2 className="agn-date">9-11. mart 2023.</h2>
               <p className="agn-descr">
               Ono što timove deli od učešća na takmičenju je još samo tehnički intervju. Intervjui će se održati na Fakultetu organizacionih nauka u vidu speed dating-a sa osobljem fakulteta, nakon čega najbolje rangirane ekipe prolaze u finale.
               </p>

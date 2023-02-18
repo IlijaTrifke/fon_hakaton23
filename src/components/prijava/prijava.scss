@@ -303,6 +303,7 @@ input:after {
 .pr-footer {
   display: flex;
   justify-content: center;
+  background-color: transparent;
 }
 
 .pr-footer-dugme {
@@ -327,6 +328,7 @@ input:after {
   cursor: pointer;
   z-index: 100;
   text-decoration: none;
+  border: 0;
 }
 
 @media (max-width: 1200px) {
@@ -375,7 +377,7 @@ input:after {
     display: none;
   }
   .pr-submit {
-    font-size: 2rem;
+    margin-top: 2rem;
   }
 }
 @media (max-width: 480px) {
