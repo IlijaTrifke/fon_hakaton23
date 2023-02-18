@@ -156,6 +156,7 @@ const Prijava = () => {
       cv3 === null
     ) {
       setError(true);
+
       //radi testiranja praznjenja kopirati ovde
       return;
     }
@@ -165,6 +166,7 @@ const Prijava = () => {
         !(ime4 && imeSkole4 && brojTelefona4 && validateEmail(imejl4) && cv4)
       ) {
         setError1(true);
+
         return;
       }
     }
@@ -211,62 +213,47 @@ const Prijava = () => {
                 linkCV: cv4,
               },
             ]
-          : []),
+          : [
+              {
+                imePrezime: "/",
+                email: "/",
+                brojTelefona: "/",
+                status: "/",
+                imeSkole: "/",
+                linkCV: "/",
+              },
+            ]),
       ],
     };
 
-    console.log(prijava);
     postPrijava(prijava);
 
     //praznjenje polja
-    setIme1(null);
-    document.getElementById("pr-name_m1").value = null;
-    setIme2(null);
-    document.getElementById("pr-name_m2").value = null;
-    setIme3(null);
-    document.getElementById("pr-name_m3").value = null;
-    setIme4(null);
-    document.getElementById("pr-name_m4").value = null;
-    setImejl1(null);
-    document.getElementById("pr-email_m1").value = null;
-    setImejl2(null);
-    document.getElementById("pr-email_m2").value = null;
-    setImejl3(null);
-    document.getElementById("pr-email_m3").value = null;
-    setImejl4(null);
-    document.getElementById("pr-email_m4").value = null;
-    setbrojTelefon1(null);
-    document.getElementById("pr-phone_m1").value = null;
-    setbrojTelefon2(null);
-    document.getElementById("pr-phone_m2").value = null;
-    setbrojTelefon3(null);
-    document.getElementById("pr-phone_m3").value = null;
-    setbrojTelefon4(null);
-    document.getElementById("pr-phone_m4").value = null;
-    setimeSkole1(null);
-    document.getElementById("pr-year_m1").value = null;
-    setimeSkole2(null);
-    document.getElementById("pr-year_m2").value = null;
-    setimeSkole3(null);
-    document.getElementById("pr-year_m3").value = null;
-    setimeSkole4(null);
-    document.getElementById("pr-year_m4").value = null;
-    setPitanje1(null);
-    document.getElementById("pr-teamname").value = null;
-    setPitanje2(null);
-    document.getElementById("pr-motivation").value = null;
-    setPitanje3(null);
-    document.getElementById("pr-pit3").value = null;
-    setPitanje4(null);
-    document.getElementById("pr-pit4").value = null;
-    setCv1(null);
-    document.getElementById("pr-cv_m1").value = null;
-    document.getElementById("pr-cv_m2").value = null;
-    document.getElementById("pr-cv_m3").value = null;
-    document.getElementById("pr-cv_m4").value = null;
-    setCv2(null);
-    setCv3(null);
-    setCv4(null);
+    setIme1("");
+    setIme2("");
+    setIme3("");
+    setIme4("");
+    setImejl1("");
+    setImejl2("");
+    setImejl3("");
+    setImejl4("");
+    setbrojTelefon1("");
+    setbrojTelefon2("");
+    setbrojTelefon3("");
+    setbrojTelefon4("");
+    setimeSkole1("");
+    setimeSkole2("");
+    setimeSkole3("");
+    setimeSkole4("");
+    setPitanje1("");
+    setPitanje2("");
+    setPitanje3("");
+    setPitanje4("");
+    setCv1("");
+    setCv2("");
+    setCv3("");
+    setCv4("");
+    document.getElementById("pr-team-data").reset();
     setError1(false);
     setError(false);
   };
@@ -281,7 +268,7 @@ const Prijava = () => {
         </HashLink>
       </div>
       {/* {modalOpen && } */}
-      <form class="pr-team-data">
+      <form class="pr-team-data" id="pr-team-data">
         <div class="pr-content">
           <div class="pr-members">
             <div class="pr-member">
