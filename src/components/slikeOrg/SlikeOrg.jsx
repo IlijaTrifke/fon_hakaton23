@@ -11,13 +11,13 @@ const SlikeOrg = () => {
         <div className="org-text">
           <h2 className="org-h2">LOREM IPSUM</h2>
           <p className="org-p">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor non
-            iure, quidem ea, reiciendis voluptate tempore libero alias
-            repudiandae atque voluptatibus reprehenderit omnis distinctio
-            repellat pariatur similique? Voluptate, dolor quia!
+          Motivisani mladi ljudi koji su zaslužni za organizovanje ovogodišnjeg FON Hakatona, udružili su snage da svojim trudom doprinesu zajedničkom cilju, a to je uspešno realizovanje takmičenja. 
+Predanost i posvećenost svakog člana organizacionog tima je rezultat inspirativne atmosfere koja vlada u organizaciji i koja motiviše članove da vredno rade na tome da takmičenje učesnicima bude nezaboravno iskustvo.
+Svi članovi imaju posebnu ulogu da u jednom od 6 različitih timova, uz neophodna znanja i podršku od strane svojih koordinatora, omoguće da ovogodišnji FON Hakaton bude najbolji do sad.
+
           </p>
         </div>
-        <div className="org-photo-hold">
+        <div className="org-photo-hold"> 
           <img className="org-photo" src={slika} alt="" srcset="" />
         </div>
       </div>

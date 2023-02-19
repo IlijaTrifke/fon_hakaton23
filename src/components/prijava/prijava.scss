@@ -312,23 +312,32 @@ input:after {
 .pr-footer {
   display: flex;
   justify-content: center;
+  background-color: transparent;
 }
 
 .pr-footer-dugme {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
 }
 
 .pr-submit {
-  display: flex;
-  font-family: "Noto Sans", sans-serif;
-  color: $bela;
+  font-family: Orbitron;
+  @include flex-center();
+  width: 15rem;
+  height: 4rem;
   background-image: linear-gradient(to right, $svetloPlava, $ljubicasta);
-  font-size: 3rem;
-  border-radius: 1.5rem;
-  padding: 1rem;
-  position: relative;
-  margin: 5rem 0;
+  border-radius: 5rem;
+  font-size: 1.4rem;
+  color: $bela;
+  font-weight: 400;
+  top: 100%;
+  left: 50%;
   cursor: pointer;
+  z-index: 100;
+  text-decoration: none;
+  border: 0;
 }
 
 @media (max-width: 1200px) {
@@ -377,7 +386,7 @@ input:after {
     display: none;
   }
   .pr-submit {
-    font-size: 2rem;
+    margin-top: 2rem;
   }
 }
 @media (max-width: 480px) {

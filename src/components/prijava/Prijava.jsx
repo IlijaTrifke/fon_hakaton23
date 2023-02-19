@@ -6,6 +6,15 @@ import { useState } from "react";
 import { useRef } from "react";
 import { Upload } from "upload-js";
 import { HashLink } from "react-router-hash-link";
+import Footer from "../footer/Footer";
+import {
+  FaInstagram,
+  FaFacebookF,
+  FaLinkedinIn,
+  FaGlobe,
+} from "react-icons/fa";
+import logo from "../footer/logo.png";
+import location from "../footer/location.png";
 
 const upload = Upload({ apiKey: "public_FW25b4V4ALwH6oZJdyGdwaxjzmZX" });
 const leki = () => document.getElementById("selectFile").click();
@@ -799,6 +808,62 @@ const Prijava = () => {
           </div>
         </div>
       </form>
+      <hr className="footer-hr" />
+      <div className="footer-box">
+        <div className="footer-icons">
+          <a
+            className="footer-gl"
+            href="https://fonis.rs/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaGlobe />
+            fonis.rs
+          </a>
+
+          <div className="footer-socials">
+            <a
+              className="footer-ig"
+              href="https://www.instagram.com/fonis_fon/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              className="footer-fb"
+              href="https://www.facebook.com/fonis.rs"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaFacebookF />
+            </a>
+            <a
+              className="footer-in"
+              href="https://www.linkedin.com/company/fonis"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaLinkedinIn />
+            </a>
+          </div>
+        </div>
+        <div className="footer-img">
+          <img src={logo} alt="" className="footer-logo" />
+        </div>
+        <a
+          href="https://goo.gl/maps/cqN9GxpaLVnMjsiK6"
+          target="_blank"
+          rel="noreferrer"
+          className="footer-adress"
+        >
+          <div className="footer-adress-left">
+            <p>Fakultet organizacionih nauka</p>
+            <p>Jove Ilića 154, Beograd</p>
+          </div>
+          <img src={location} alt="Location" />
+        </a>
+      </div>
     </div>
   );
 };
