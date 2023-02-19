@@ -25,8 +25,10 @@
 }
 
 .footer-h {
-  font-family: Orbitron;
-  font-weight: 200;
+  font-family: "Orbitron", sans-serif;
+  color: $bela;
+  text-shadow: 0 0 0.4rem $bela;
+  text-shadow: 0 0 0.8rem $bela;
 }
 
 .footer-text::before {
