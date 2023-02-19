@@ -1,5 +1,6 @@
 @import "../../global.scss";
 
+$providnaPlava: #0024407a;
 #agenda {
   position: absolute;
   top: -5%;
@@ -21,12 +22,50 @@
   // background-size: 60rem;
   // background-position-x: -1.5rem;
 }
+.agn-balls-wrapper {
+  width: 100%;
+  min-height: 200vh;
+  position: absolute;
+  overflow: hidden;
+  top: 0%;
+  left: 0;
+}
 
+.agn-ball-blur {
+  position: absolute;
+  top: 20%;
+  left: -2%;
+  width: 20%;
+  height: 30%;
+  background-color: $svetloPlava;
+  filter: blur(7rem);
+  border-radius: 50%;
+  //animation: blurMoving 10s linear infinite;
+}
+.agn-rectangle-blur {
+  position: absolute;
+  top: 55%;
+  left: 75%;
+  width: 40%;
+  height: 30%;
+  background-color: $svetloPlava;
+  filter: blur(5rem);
+  border-radius: 50%;
+  //animation: blurMoving 10s linear infinite;
+}
 .vector6 {
   position: absolute;
   top: 0;
   left: -1.5rem;
   width: 60rem;
+}
+
+.vector7 {
+  position: absolute;
+  top: 39rem;
+  right: -9rem;
+  width: 60rem;
+  rotate: 45deg;
 }
 
 .agn-timeline {
@@ -69,7 +108,7 @@
   //   height: 13rem;
   position: relative;
   z-index: 1;
-  filter: drop-shadow(0 0 10px #011b30);
+  filter: drop-shadow(0 0 15px #000f1b);
   visibility: hidden;
 }
 .agn-bead {
@@ -96,7 +135,7 @@
 }
 
 .agn-head {
-  background-color: $tamnoPlava;
+  background-color: $providnaPlava;
   width: 60%;
   height: 18%;
   font-size: 1.5rem;
@@ -116,22 +155,12 @@
   background-color: transparent;
   height: 100%;
   border-radius: 12px;
-  box-shadow: -8px 6px 0 -3px $tamnoPlava;
+  box-shadow: -8px 6px 0 -3px $providnaPlava;
 }
-.agn-pseudo {
-  position: absolute;
-  background-color: red;
-  width: 10%;
-  height: inherit;
-  border-radius: 12px;
 
-  top: 0;
-  left: 81%;
-  box-shadow: -8px 6px 0 -3px $tamnoPlava;
-}
 
 .agn-text {
-  background-color: $tamnoPlava;
+  background-color: $providnaPlava;
   width: 100%;
   height: 82%;
   padding-top: 1rem;
@@ -217,8 +246,27 @@
   .agn-head {
     width: 80%;
   }
+  .vector7{
+    top:44rem;
+    right: -5rem;
+  }
+
 }
 @media (max-width: 960px) {
+  #agenda {
+    top: 0;
+  }
+  .vector7{
+    top:50rem;
+    right: -5rem;
+  }
+  .agn-balls-wrapper{
+    min-height: 250vh;
+  }
+  .agn-rectangle-blur {
+    top: 50%;
+    
+  }
   .agn-header {
     font-size: 2.5rem;
   }
@@ -255,6 +303,10 @@
 }
 
 @media (max-width: 480px) {
+  .vector7{
+    top: 89rem;
+  }
+  
   .agn-content {
     width: calc(100% - 5rem);
   }
