@@ -5,6 +5,7 @@ import menuItems from "./MenuItems";
 import { HashLink } from "react-router-hash-link";
 import { Divide as Hamburger } from "hamburger-react";
 import logo from "../../images/FH_Logo.png";
+import Pravilnik from "../../FH_pravilnik.pdf";
 
 const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -70,6 +71,19 @@ const Navbar = () => {
             if (index === 7 && widthVisible) {
               return null;
             }
+            if (index === 6) {
+              return (
+                <a
+                  id={index}
+                  href={Pravilnik}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={item.cName}
+                >
+                  {item.title}
+                </a>
+              );
+            }
             return (
               <HashLink
                 key={index}
@@ -77,8 +91,6 @@ const Navbar = () => {
                 id={index}
                 className={item.cName}
                 onClick={handleClick}
-                target={index === 6 ? "_blank" : ""}
-                rel={index === 6 ? "noopener noreferrer" : ""}
               >
                 {item.title}
               </HashLink>

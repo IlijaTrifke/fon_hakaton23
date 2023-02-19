@@ -12,6 +12,15 @@ input:after {
   user-select: initial;
 }
 
+.modal {
+  position: fixed;
+  width: 50rem;
+  height: 30rem;
+  background-color: $tamnoPlava;
+  border-radius: 12px;
+  color: $bela;
+}
+
 .pr-prijava {
   background-color: $tamnoPlava;
   display: flex;
