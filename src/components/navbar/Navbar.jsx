@@ -97,14 +97,6 @@ const Navbar = () => {
             );
           })}
         </div>
-        {/* <a
-          href={Pravilnik}
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ zIndex: 200 }}
-        >
-          pravilnik
-        </a> */}
         <HashLink
           to="/prijava"
           className="prijavi-se desktop"
