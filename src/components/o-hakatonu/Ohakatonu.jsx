@@ -8,6 +8,7 @@ import { faClose } from "@fortawesome/free-solid-svg-icons";
 function Ohakatonu() {
   return (
     <div className="ohakatonu">
+      <div id="o_hakatonu"></div>
       <div id="stars"></div>
       <div id="stars2"></div>
       <div id="stars3"></div>
@@ -23,15 +24,16 @@ function Ohakatonu() {
           </div>
           <div className="hakaton-content">
             <p className="hakaton-descr">
-              FON Hakaton je programersko takmičenje kreirano sa ciljem da
-              učesnici za 24h osmisle i izrade softversko rešenje na zadatu
-              temu. Tročlani ili četvoročlani timovi, koji će biti odabrani za
-              veliko finale, imaće priliku da iskoriste svoja znanja i veštine i
-              da u realnom okruženju steknu nezaboravna iskustva koja će im
-              sigurno značiti u daljem napredovanju i usavršavanju programerske
-              karijere. Timovi će imati pomoć IT stručnjaka sa dugogodišnjim
-              iskustvom u ovoj oblasti, koji će im kroz konsultacije, pokazati
-              put do realizacije što boljeg softverskog rešenja.
+              FON Hakaton je programersko takmičenje koje se ove godine održava
+              18. i 19. marta na Fakultetu organizacionih nauka. Cilj samog
+              takmičenja je pružanje prilike mladim programerima da primene
+              svoja znanja i veštine u rešavanju konkretnih problema iz poslovne
+              prakse i osvoje vredne nagrade. Članovi tročlanih i četvoročlanih
+              timova imaće 24h da razviju softversko rešenje na zadati problem,
+              nakon čega će ga prezentovati žiriju i ući u borbu za jednu od tri
+              glavne nagrade. Za vreme takmičenja biće prisutni i stručni
+              mentori iz IT industrije koji će ovo nezaboravno iskustvo
+              učesnicima dodatno ulepšati i olakšati.
             </p>
           </div>
         </div>
@@ -51,6 +53,11 @@ function Ohakatonu() {
                 <div className="hakaton-arrow" />
               </div>
               <h1> lokacija:</h1>
+              <div className="hakaton-arrows right">
+                <div className="hakaton-arrow" />
+                <div className="hakaton-arrow" />
+                <div className="hakaton-arrow" />
+              </div>
             </div>
             <p className="hakaton-descr">Fakultet organizacionih nauka</p>
             <div className="hakaton-card-title">
@@ -60,8 +67,13 @@ function Ohakatonu() {
                 <div className="hakaton-arrow" />
               </div>
               <h1> vreme:</h1>
+              <div className="hakaton-arrows right">
+                <div className="hakaton-arrow" />
+                <div className="hakaton-arrow" />
+                <div className="hakaton-arrow" />
+              </div>
             </div>
-            <p className="hakaton-descr">12. i 13. mart</p>
+            <p className="hakaton-descr">18. i 19. mart</p>
           </div>
         </div>
 
@@ -72,11 +84,16 @@ function Ohakatonu() {
             <FontAwesomeIcon icon={faMaximize} />
             <FontAwesomeIcon icon={faClose} />
           </div>
-          <div className="hakaton-content">
+          <div className="hakaton-content crd3">
+            <div className="hakaton-arrows">
+              <div className="hakaton-arrow" />
+              <div className="hakaton-arrow" />
+              <div className="hakaton-arrow" />
+            </div>
             <p className="hakaton-descr">
-              Generalni pokrovitelj takmičenja je kompanija Levi9 koja će zadati
-              izazovnu temu Hakatona pružajući timovima priliku da pokažu
-              inovativnost i stvore rešenje široke primene.
+              Pokrovitelj ovogodišnjeg FON Hakatona je svetski poznata
+              konsultantska firma <span className="ernst"> Ernst & Young</span>,
+              koja će odrediti temu samog takmičenja.
             </p>
           </div>
         </div>

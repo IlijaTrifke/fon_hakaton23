@@ -1,56 +1,117 @@
 @import "../../global.scss";
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 .ohakatonu {
-  background-color: $tamnoPlava;
-  justify-items: center;
-  align-items: center;
-  min-height: 100vh;
+  //min-height: 80vh;
   position: relative;
+}
+
+#o_hakatonu {
+  position: absolute;
+  top: -15%;
+}
+
+.hakaton-section {
+  height: 30rem;
 }
 
 .hakaton-title {
   font-family: "Orbitron", sans-serif;
   color: $bela;
   text-shadow: 0 0 7px $bela;
-  text-shadow: 0 0 10px $bela;
   text-align: center;
+  margin: 2rem 0;
+  font-weight: 400;
+  font-size: 3rem;
+  position: relative;
+  z-index: 4;
 }
 
 .hakaton-card {
   font-family: "Noto Sans", sans-serif;
   color: $bela;
-  border-radius: 10px 10px 10px 10px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 1rem;
   position: absolute;
   gap: 0.5rem;
   text-align: center;
-  height: fit-content;
+  background: linear-gradient(
+    to right,
+    rgba(36, 188, 222, 0.1),
+    rgba(123, 39, 135, 0.1)
+  );
+  box-shadow: 10px 10px 14px 0px #011b30;
+  z-index: 4;
+}
+
+.hakaton-card:before {
+  content: "";
+  position: absolute;
+  border-radius: 1rem;
+  inset: 0;
+  padding: 0.1rem;
+  background: linear-gradient(
+    130deg,
+    #24bdde,
+    rgba(107, 184, 206, 0.88),
+    rgba(16, 78, 126, 0.5),
+    rgba(71, 51, 153, 0.5),
+    rgba(113, 80, 185, 0.83),
+    #7b2787
+  );
+  -webkit-mask: linear-gradient(rgb(255, 255, 255) 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
 }
 
 .card1 {
-  top: 15%;
-  left: 13%;
-  width: 40%;
+  top: 22%;
+  left: 15%;
+  width: 48rem;
+  max-width: 33%;
+  min-height: 20rem;
   padding: 0.7%;
 }
 
 .card2 {
-  top: 28%;
-  left: 58%;
-  width: 23%;
+  top: 12rem;
+  left: 55%;
+  width: 23rem;
+  height: 15rem;
   padding: 0.7%;
+}
+
+.card3 {
+  top: 25rem;
+  left: 47%;
+  width: 25rem;
+  padding: 0.7%;
+  backdrop-filter: blur(1px);
+}
+
+.ernst {
+  font-weight: bold;
 }
 
 .hakaton-content {
   display: flex;
   flex-direction: column;
   position: relative;
+  padding: 1.5rem;
+}
+
+.crd3 {
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.crd3 .hakaton-arrows {
+  margin-top: 2%;
+  margin-right: 2%;
 }
 
 .hakaton-card-title {
@@ -59,12 +120,14 @@
   justify-content: flex-start;
   gap: 1.3rem;
   position: relative;
+  align-items: center;
 }
 .hakaton-card-title h1 {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   text-align: center;
   text-decoration: underline;
-  color: white;
+  font-weight: 500;
+  color: $bela;
   font-family: Orbitron;
 }
 
@@ -74,99 +137,110 @@
   position: relative;
   z-index: 100;
   filter: brightness(1.2);
+  margin: 0 0.5rem;
 }
 
 .hakaton-arrow {
   border: solid $svetloPlava;
   border-width: 0 3px 3px 0;
   display: inline-block;
-  padding: 4px;
-  // transform: rotate(45deg) scale(1);
-  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
   position: relative;
+  width: 1rem;
+  height: 1rem;
+  margin-right: -0.4rem;
+  animation: arrowLoad1 1s infinite ease-out;
 }
 
-.card3 {
-  top: 60%;
-  left: 45%;
-  width: 30%;
-  padding: 0.7%;
-  backdrop-filter: blur(3px);
-  background: rgba(0, 36, 64, 0.5);
+.right {
+  display: none;
+}
+
+@keyframes arrowLoad1 {
+  0% {
+    opacity: 0;
+    transform: rotate(-45deg);
+  }
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(-45deg);
+  }
+}
+
+.hakaton-arrow:nth-child(1) {
+  position: relative;
+  animation-delay: -0.4s;
+}
+.hakaton-arrow:nth-child(2) {
+  animation-delay: -0.2s;
 }
 
 .hakaton-header {
   display: flex;
   gap: 0.5rem;
-  justify-content: flex-end;
   padding-right: 0.5rem;
   padding-top: 0.5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .hakaton-descr {
-  padding: 0.5rem;
   text-align: left;
+  font-size: 1.2rem;
 }
 
-.hakaton-card:before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 1rem;
-  padding: 2.1px;
-  background: linear-gradient(-30deg, $ljubicasta, transparent, $svetloPlava);
-  -webkit-mask: linear-gradient(rgb(255, 255, 255) 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-}
-
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 960px) {
   .hakaton-section {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
     justify-content: center;
     align-items: center;
+    height: fit-content;
+    gap: 2rem;
   }
 
+  #o_hakatonu {
+    position: absolute;
+    top: 0;
+  }
+
+  .hakaton-title {
+    font-size: 2.5rem;
+  }
+  .ohakatonu {
+    min-height: 0;
+  }
   .hakaton-card {
     transform: translateX(0%);
     position: initial;
-    width: 60%;
+    width: 30rem;
+    max-width: 90%;
   }
-
-  .hakaton-section {
-    height: 60%;
-    gap: 2rem;
-    margin-top: 1rem;
+  .hakaton-descr {
+    text-align: center;
   }
-}
-@media screen and (max-width: 960px) {
-  .hakaton-section {
-    height: 40%;
-  }
-
   .card3 {
     backdrop-filter: none;
   }
-}
-@media screen and (max-width: 620px) {
-  .hakaton-section {
-    height: 60%;
+  .right {
+    display: block;
+    transform: rotate(-180deg);
   }
-}
-@media screen and (max-width: 480px) {
-  .hakaton-section {
-    height: 70%;
+  .crd3 .hakaton-arrows {
+    display: none;
   }
-}
-@media screen and (min-width: 1450px) {
+  .hakaton-card-title {
+    justify-content: center;
+  }
+  .card3 {
+    order: 2;
+  }
   .card2 {
-    top: 20%;
-  }
-  .card3 {
-    top: 48%;
-    backdrop-filter: none;
+    order: 3;
   }
 }
 

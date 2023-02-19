@@ -7,6 +7,8 @@ import {
   FaGlobe,
 } from "react-icons/fa";
 import logo from "./logo.png";
+import location from "./location.png";
+import { HashLink } from "react-router-hash-link";
 
 export default function Footer() {
   return (
@@ -20,30 +22,46 @@ export default function Footer() {
           primenljive veštine. Takmičenje ovakvog tipa motivisaće te da nastaviš da istražuješ nove tehnologije, ali i da se 
           usavršavaš na profesionalnom nivou. Takođe, FON Hakaton je godinama unazad poznat po pozitivnoj atmosferi koja vlada među takmičarima. Iskoristi priliku da je osetiš i ti!
           </p>
-          <h1 className="footer-button">
+          <HashLink to="/Prijava" className="footer-button">
             <span>PRIJAVI SE!</span>
-          </h1>
+          </HashLink>
         </div>
       </div>
       <hr className="footer-hr" />
       <div className="footer-box">
         <div className="footer-icons">
-          <div className="footer-globe">
-            <a className="footer-gl" href="https://fonis.rs/">
-              <FaGlobe />
-              fonis.rs
-            </a>
-          </div>
+          <a
+            className="footer-gl"
+            href="https://fonis.rs/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaGlobe />
+            fonis.rs
+          </a>
+
           <div className="footer-socials">
-            <a className="footer-ig" href="https://www.instagram.com/fonis_fon/">
+            <a
+              className="footer-ig"
+              href="https://www.instagram.com/fonis_fon/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FaInstagram />
             </a>
-            <a className="footer-fb" href="https://www.facebook.com/fonis.rs">
+            <a
+              className="footer-fb"
+              href="https://www.facebook.com/fonis.rs"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FaFacebookF />
             </a>
             <a
               className="footer-in"
               href="https://www.linkedin.com/company/fonis"
+              target="_blank"
+              rel="noreferrer"
             >
               <FaLinkedinIn />
             </a>
@@ -52,10 +70,18 @@ export default function Footer() {
         <div className="footer-img">
           <img src={logo} alt="" className="footer-logo" />
         </div>
-        <div className="footer-adress">
-          <p>Fakultet organizacionih nauka</p>
-          <p>Jove Ilića 154, Beograd</p>
-        </div>
+        <a
+          href="https://goo.gl/maps/cqN9GxpaLVnMjsiK6"
+          target="_blank"
+          rel="noreferrer"
+          className="footer-adress"
+        >
+          <div className="footer-adress-left">
+            <p>Fakultet organizacionih nauka</p>
+            <p>Jove Ilića 154, Beograd</p>
+          </div>
+          <img src={location} alt="Location" />
+        </a>
       </div>
     </div>
   );

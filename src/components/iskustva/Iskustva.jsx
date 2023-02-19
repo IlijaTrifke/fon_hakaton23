@@ -12,8 +12,8 @@ import iskustvaFoto from "./assets/fonis.jpg";
 
 import React, { useState, useEffect } from "react";
 
-import StrelaLevo from "../../images/LeftArrow.png";
-import StrelaDesno from "../../images/RightArrow.png";
+import StrelaLevo from "../../images/left-arrow.png";
+import StrelaDesno from "../../images/right-arrow.png";
 
 import { DataSlider } from "./DataSlider";
 
@@ -236,46 +236,13 @@ const Iskustva = (props) => {
 
   return (
     <div className="ax-iskustva">
+      <div id="iskustva"></div>
       <div className="ax-title">
         <h1>Iskustva</h1>
       </div>
 
       <div className="ax-top-container">
-        <img
-          className={toggleActiveStylesLeftArrow()}
-          src={StrelaLevo}
-          alt="Slika strele"
-          onClick={() => {
-            prevSlide();
-            toggleStateL();
-            setState(true);
-          }}
-        />
-        <img
-          className={toggleActiveStylesRightArrow()}
-          src={StrelaDesno}
-          alt="Slika strele"
-          onClick={() => {
-            nextSlide();
-            toggleStateR();
-            setState(true);
-          }}
-        />
         <div className="ax-top-left">
-          <div className="ax-top-slider">
-            {DataSlider.map((data, index) => {
-              return (
-                <div
-                  className={index === current ? "slide-active" : "slide"}
-                  key={index}
-                >
-                  {index === current && (
-                    <img src={data.image} alt="group" className="image" />
-                  )}
-                </div>
-              );
-            })}
-          </div>
           {DataSlider.map((data, index) => {
             return (
               <div
@@ -283,15 +250,29 @@ const Iskustva = (props) => {
                 key={index}
               >
                 {index === current && (
-                  <div className="opis-slike">
-                    <h1 className="ax-top-name">{data.name}</h1>
-                    <hr className="ax-top-hr" />
+                  <div className="ax-top-slider">
+                    <img src={data.image} alt="group" className="image" />
+                    <div className="opis-slike">
+                      <h1 className="ax-top-name">{data.name}</h1>
+                      <hr />
+                    </div>
                   </div>
                 )}
               </div>
             );
           })}
+          <img
+            className={toggleActiveStylesLeftArrow()}
+            src={StrelaLevo}
+            alt="Slika strele"
+            onClick={() => {
+              prevSlide();
+              toggleStateL();
+              setState(true);
+            }}
+          />
         </div>
+
         <div className="ax-top-right">
           {DataSlider.map((data, index) => {
             return (
@@ -305,6 +286,16 @@ const Iskustva = (props) => {
               </div>
             );
           })}
+          <img
+            className={toggleActiveStylesRightArrow()}
+            src={StrelaDesno}
+            alt="Slika strele"
+            onClick={() => {
+              nextSlide();
+              toggleStateR();
+              setState(true);
+            }}
+          />
         </div>
       </div>
 

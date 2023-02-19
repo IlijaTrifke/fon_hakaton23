@@ -21,6 +21,13 @@ const menuItems = [
     url: "#faq",
     cName: "nav-links",
   },
+
+  {
+    title: "Partneri",
+    url: "#partneri",
+    cName: "nav-links",
+  },
+
   {
     title: "Tim",
     url: "#tim",
@@ -28,18 +35,13 @@ const menuItems = [
   },
 
   {
-    title: "Partneri",
-    url: "#partneri",
-    cName: "nav-links",
-  },
-  {
     title: "Pravilnik",
-    url: "#pravilnik",
+    url: "../../PravilnikHZS.pdf",
     cName: "nav-links",
   },
   {
     title: "PRIJAVI SE",
-    url: "/Prijava",
+    url: "/prijava",
     cName: "nav-links link-do-prijave",
   },
 ];

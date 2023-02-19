@@ -2,6 +2,7 @@ import React from "react";
 import "./agenda.scss";
 import { useRef, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+import Vector6 from "../../images/Vector6.png";
 
 const Agenda = () => {
   const scrollRef = useRef();
@@ -10,17 +11,17 @@ const Agenda = () => {
     if (isInView) seeRef();
   }, [isInView]);
   var timlineRef = useRef();
-  console.log(timlineRef.current);
+  ////console.log(timlineRef.current);
 
   const seeRef = () => {
-    console.log(timlineRef.current); // <h1 ></h1>
+    //console.log(timlineRef.current); // <h1 ></h1>
     if (timlineRef.current !== undefined) {
       var sections = timlineRef.current.querySelectorAll(".agn-card");
       var timeline = timlineRef.current.querySelector(".agn-timeline");
       var line = timlineRef.current.querySelector(".agn-line");
-      console.log(sections);
-      console.log(timeline);
-      console.log(line);
+      //console.log(sections);
+      //console.log(timeline);
+      //console.log(line);
       line.style.bottom = `calc(100% - 20px)`;
       let prevScrollY = window.scrollY;
       let up, down;
@@ -36,26 +37,26 @@ const Agenda = () => {
         //const lineRect = line.getBoundingClientRect(); // const lineHeight = lineRect.bottom - lineRect.top;
 
         const dist = targetY - timelineRect.top + 50;
-        console.log(dist);
+        //console.log(dist);
 
         if (down && !full) {
           set = Math.max(set, dist);
           line.style.bottom = `calc(100% - ${set}px)`;
         }
 
-        if (dist > timeline.offsetHeight - 70 && !full) {
+        if (dist > timeline.offsetHeight - 140 && !full) {
           full = true;
-          line.style.bottom = `70px`;
+          line.style.bottom = `8%`;
         }
 
         sections.forEach((item) => {
-          // console.log(item);
-          const rect = item.getBoundingClientRect(); //     console.log(rect);
+          // //console.log(item);
+          const rect = item.getBoundingClientRect(); //     //console.log(rect);
 
           if (rect.top + item.offsetHeight / 5 < targetY) {
             item.classList.add("show-me");
           }
-        }); // console.log(up, down);
+        }); // //console.log(up, down);
 
         prevScrollY = window.scrollY;
       }
@@ -68,6 +69,8 @@ const Agenda = () => {
 
   return (
     <div className="agn-section" ref={timlineRef}>
+      <div id="agenda"></div>
+      <img className="vector6" src={Vector6} alt="Web" />
       <h1 className="agn-header" ref={scrollRef}>
         Agenda
       </h1>

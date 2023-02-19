@@ -1,24 +1,16 @@
 @import "../../global.scss";
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 .ng-nagrade {
   background-color: $tamnoPlava;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  gap: 0;
 }
 
 .ng-text h1 {
-  font-family: "Noto sans", light;
-  font-size: 3rem;
-  font-weight: lighter;
-  text-transform: uppercase;
+  font-family: "Noto sans";
+  font-size: 2.5rem;
+  font-weight: 300;
   color: $bela;
 }
 @keyframes float {
@@ -54,25 +46,25 @@
 }
 
 .ng-stands {
-  padding-top: 5rem;
-  padding-left: 2rem;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   max-width: 50%;
   overflow: hidden;
+  height: 35rem;
 }
 
 .ng-circle {
   display: flex;
   align-items: center;
   background: black;
+  justify-content: center;
   border-radius: 100%;
-  height: 11rem;
-  width: 11rem;
+  height: 10rem;
+  width: 10rem;
   margin: 0;
   background: radial-gradient(circle at 4rem 4rem, #5cabff, #000);
-  animation: float 6s ease-in-out infinite, fadeIn 4s ease-in-out 1;
+  animation: float 6s ease-in-out infinite; //fadeIn 4s ease-in-out 1;
 }
 
 @keyframes fadeIn {
@@ -88,15 +80,14 @@
   font-family: "Noto sans", light;
   display: flex;
   text-align: center;
-  padding: 1rem;
-  font-size: 3rem;
+  font-size: 2rem;
   color: $bela;
 }
 
 .ng-postolje-img {
   height: 100%;
-  width: 15rem;
-  animation: fadeInTop 4s ease-in-out 1;
+  width: 13rem;
+  //animation: fadeInTop 2s ease-in-out 1;
 }
 
 .ng-pole {
@@ -104,22 +95,27 @@
   flex-direction: column;
   align-items: center;
   max-width: 35%;
+  visibility: hidden;
+}
+.show-pole {
+  visibility: visible;
+  animation: fadeInTop 1.5s ease-in-out 1;
 }
 
 .ng-stand-3 {
   position: relative;
-  width: 14rem;
+  width: 12rem;
   height: 15rem;
 }
 
 .ng-stand-1 {
   position: relative;
-  width: 14rem;
+  width: 12rem;
   height: 20rem;
 }
 .ng-stand-2 {
   position: relative;
-  width: 14rem;
+  width: 12rem;
   height: 17rem;
 }
 
@@ -131,7 +127,7 @@
   transform: translate(-50%, -50%);
   font-size: 8rem;
   color: $bela;
-  animation: fadeInNumbers 5s ease-in-out 1;
+  //animation: fadeInNumbers 4s ease-in-out 1;
 }
 
 @keyframes fadeInNumbers {
@@ -145,18 +141,14 @@
     opacity: 1;
   }
 }
-@media (max-width: 1200px) {
-  .ng-text h1 {
-    font-size: 2rem;
-  }
-
+@media screen and (max-width: 1200px) {
   .ng-circle {
-    width: 7rem;
-    height: 7rem;
+    width: 8rem;
+    height: 8rem;
   }
 
   .ng-circletext {
-    font-size: 2rem;
+    font-size: 1.3rem;
   }
   .ng-postolje-img {
     height: 20rem;
@@ -165,12 +157,12 @@
 
   .ng-stand-3 {
     width: 10rem;
-    height: 15rem;
+    height: 12rem;
   }
 
   .ng-stand-1 {
     width: 10rem;
-    height: 20rem;
+    height: 18rem;
   }
   .ng-stand-2 {
     width: 10rem;
@@ -179,6 +171,10 @@
 }
 
 @media (max-width: 960px) {
+  .ng-text h1 {
+    width: 16rem;
+  }
+
   .ng-stands {
     max-width: 100%;
     padding-left: 1rem;
@@ -205,18 +201,27 @@
   }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 620px) {
   .ng-nagrade {
     flex-direction: column;
+    min-height: 70vh;
+  }
 
-    .ng-text h1 {
-      font-size: 1.5rem;
-    }
+  .ng-text {
+    padding-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .ng-text h1 {
+    width: 100%;
+    font-size: 2rem;
   }
   .ng-stands {
     max-width: 100%;
     padding-left: 1rem;
     padding-right: 1rem;
+    height: 30rem;
   }
 
   .ng-postolje-img {
@@ -247,10 +252,11 @@
     max-width: 100%;
     padding-left: 1rem;
     padding-right: 1rem;
+    height: 17rem;
   }
 
   .ng-text {
-    max-width: 75%;
+    width: 75%;
     padding-top: 1rem;
   }
 
@@ -264,7 +270,7 @@
   }
 
   .ng-circletext {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   .ng-postolje-img {

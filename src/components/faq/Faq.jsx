@@ -1,10 +1,9 @@
-import { startOptimizedAppearAnimation } from "framer-motion";
 import React from "react";
 import { useState } from "react";
 import "./faq.scss";
+import Vector4 from "../../images/Vector4.png";
 
 const Faq = () => {
-  const [plus, setPlus] = useState(false);
   const [selected, setSelected] = useState(null);
 
   const toggle = (i) => {
@@ -17,38 +16,40 @@ const Faq = () => {
 
   return (
     <div className="faq-section">
+      <div id="faq"></div>
+      <img className="vector4" src={Vector4} alt="Web" />
       <h1 className="faq-naslov">Često postavljana pitanja</h1>
 
-      <div className="faq-box">
-        {dataFaq.map((item, i) => (
-          <div className="faq-content" key={i}>
-            <div className="faq-horizontal">
-              <p className="faq-text">{item.question}</p>
+      <div className="faq-box-wrapper">
+        <div className="faq-box">
+          {dataFaq.map((item, i) => (
+            <div className="faq-content" key={i}>
+              <div className="faq-horizontal">
+                <p className="faq-text">{item.question}</p>
+                <p
+                  className={
+                    selected === i
+                      ? "faq-plus faq-plus-animation1"
+                      : "faq-plus faq-plus-animation2"
+                  }
+                  onClick={() => {
+                    toggle(i);
+                  }}
+                >
+                  +
+                </p>
+              </div>
+
               <p
                 className={
-                  selected === i
-                    ? "faq-plus faq-plus-animation1"
-                    : "faq-plus faq-plus-animation2"
+                  selected === i ? "faq-text-moving show" : "faq-text-moving"
                 }
-                onClick={() => {
-                  toggle(i);
-                  //toggleState();
-                }}
               >
-                +
+                {item.answer}
               </p>
             </div>
-
-            <p
-              className={
-                selected === i ? "faq-text-moving show" : "faq-text-moving"
-              }
-            >
-              {item.answer}
-            </p>
-            {/* <span class="faq-horizontal-line" /> */}
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

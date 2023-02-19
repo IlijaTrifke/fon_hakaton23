@@ -3,13 +3,15 @@ import { debounce } from "../../utilities/helpers";
 import "./navbar.scss";
 import menuItems from "./MenuItems";
 import { HashLink } from "react-router-hash-link";
-import { Twirl as Hamburger } from "hamburger-react";
+import { Divide as Hamburger } from "hamburger-react";
 import logo from "../../images/FH_Logo.png";
 
 const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
   const [active, setActive] = useState(false);
+
+  const [widthVisible, setwidthVisible] = useState(true);
   const handleScroll = debounce(() => {
     const currentScrollPos = window.pageYOffset;
 
@@ -28,6 +30,15 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [prevScrollPos, visible, handleScroll]);
 
+  useEffect(() => {
+    //treba videti kako da radi da nema trottle
+    if (window.innerWidth <= 1200) {
+      setwidthVisible(false);
+    } else {
+      setwidthVisible(true);
+    }
+  }, [widthVisible]);
+
   const navbarStyles = {
     position: "fixed",
     textAlign: "center",
@@ -41,10 +52,12 @@ const Navbar = () => {
   return (
     <div
       className="ceo-nav"
-      style={{ ...navbarStyles, top: visible ? "0" : "-7rem" }}
+      // style={{ ...navbarStyles, top: visible ? "0" : "-7rem" }}
     >
       <nav className="navbar">
-        <img className="navbar-logo" src={logo} alt="Fon hakaton logo" />
+        <a href="#pocetna" style={{ zIndex: 200 }}>
+          <img className="navbar-logo" src={logo} alt="Fon hakaton logo" />
+        </a>
         <div className="menu-icon" onClick={handleClick}>
           <Hamburger
             className="hamburger"
@@ -52,23 +65,28 @@ const Navbar = () => {
             toggle={setActive}
           />
         </div>
-        <ul className={active ? "nav-menu active" : "nav-menu"}>
+        <div className={active ? "nav-menu active" : "nav-menu"}>
           {menuItems.map((item, index) => {
+            if (index === 7 && widthVisible) {
+              return null;
+            }
             return (
-              <li key={index}>
-                <HashLink
-                  to={item.url}
-                  className={item.cName}
-                  onClick={handleClick}
-                >
-                  {item.title}
-                </HashLink>
-              </li>
+              <HashLink
+                key={index}
+                to={item.url}
+                id={index}
+                className={item.cName}
+                onClick={handleClick}
+                target={index === 6 ? "_blank" : ""}
+                rel={index === 6 ? "noopener noreferrer" : ""}
+              >
+                {item.title}
+              </HashLink>
             );
           })}
-        </ul>
+        </div>
         <HashLink
-          to="/Prijava"
+          to="/prijava"
           className="prijavi-se desktop"
           onClick={handleClick}
         >

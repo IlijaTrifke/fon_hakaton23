@@ -3,17 +3,12 @@ import "./partneri.scss";
 
 const Partner = (props) => {
   return (
-    <div
-      className="partner"
-      style={{
-        width: props.width,
-        height: props.height,
-        backgroundColor: props.pozadina,
-      }}
-    >
-      <a href={props.link} target="_blank" rel="noreferrer">
-        <img src={props.partnerSlika} alt={props.partnerIme} />
-      </a>
+    <div className="partner">
+      <div id={props.id} className="ax-okvir-partneri">
+        <a href={props.link} target="_blank" rel="noreferrer">
+          <img src={props.partnerSlika} alt={props.partnerIme} />
+        </a>
+      </div>
     </div>
   );
 };

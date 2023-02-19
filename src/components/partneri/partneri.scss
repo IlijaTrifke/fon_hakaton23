@@ -1,64 +1,97 @@
 @import "../../global.scss";
 
-// .ceo-partneri {
-//   height: 100%;
-//   background-color: $tamnoPlava;
-// }
-
-.dveSekcijeP {
-  background-size: 100% 100%;
-  height: 100%;
-
+.ceo-partneri {
   position: relative;
+}
+
+#partneri {
+  position: absolute;
+  top: -8%;
+}
+
+.ax-okvir-partneri {
+  width: 16em;
+  height: 11em;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    rgba(36, 189, 222, 0.1),
+    rgba(123, 39, 135, 0.1)
+  );
+}
+.ax-okvir-partneri::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 0.2rem;
+  background: linear-gradient(
+    135deg,
+    rgba(36, 189, 222, 0.13),
+    rgba(36, 188, 222, 0.6),
+    rgba(0, 36, 64, 0.15),
+    rgba(0, 36, 64, 0.15),
+    rgba(113, 80, 185, 0.25),
+    rgba(123, 39, 135, 0.3)
+  );
+  -webkit-mask: linear-gradient(rgb(255, 255, 255) 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+.pokrovitelj {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   z-index: 1;
 }
 
 .ceo-partneri {
-  height: 100%;
   background-color: $tamnoPlava;
-  position: relative;
+  display: flex;
+  flex-direction: column;
   z-index: 1;
+  gap: 2rem;
 }
 
 .ceo-partneri h1 {
-  // // margin-top: 1.2%;
-  font-family: "Orbitron";
+  font-family: "Orbitron", sans-serif;
+  color: $bela;
+  text-shadow: 0 0 7px $bela;
   font-style: normal;
-  font-weight: 200;
-  font-size: 3vw;
-  color: #ffffff;
   text-align: center;
-}
-
-.pokrovitelj-naslov {
-  margin-bottom: 2%;
-}
-
-.pokrovitelj {
-  // margin-top: 12%;
-  // margin-bottom: 3%;
-}
-
-.partner img {
-  z-index: -100;
+  max-width: 90%;
+  margin: auto;
 }
 
 .partner {
   z-index: -10;
   display: flex;
   justify-content: center;
-  background: #c3b0ff;
-  box-shadow: 25px 50px 70px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
-  margin: 0 auto;
-  position: relative;
-  width: 100%;
+  margin: auto;
 }
 
 .partner img {
-  width: 16em;
-  height: 9em;
-  border-radius: 30px;
+  width: 13em;
+  height: 8em;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+#pokrovitelj {
+  width: 20em;
+  height: 14em;
+}
+
+#pokrovitelj img {
+  width: 17em;
+  height: 11em;
 }
 
 .pokrovitelj-logo {
@@ -67,37 +100,19 @@
   width: 100%;
 }
 
-.linija img {
-  width: 100%;
-}
-
-// @media screen and (max-width: 1920px) {
-//   .ceo-partneri h1 {
-//     margin-top: 1.2%;
-//     font-family: "Orbitron";
-//     font-style: normal;
-//     font-weight: 200;
-//     font-size: 2.5vw;
-//     color: #ffffff;
-//   }
-// }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1920px) {
   .ceo-partneri h1 {
-    font-size: 2.5vw;
-  }
-}
-@media screen and (max-width: 960px) {
-  .ceo-partneri h1 {
-    font-size: 3vw;
+    font-weight: 400;
+    font-size: 2.5rem;
   }
 }
 @media screen and (max-width: 620px) {
   .ceo-partneri h1 {
-    font-size: 7vw;
+    font-size: 2rem;
   }
 }
 @media screen and (max-width: 480px) {
   .ceo-partneri h1 {
-    font-size: 7vw;
+    font-size: 2rem;
   }
 }

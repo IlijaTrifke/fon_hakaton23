@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./pocetna.scss";
 import logo from "../../images/FH_Logo.png";
+import { HashLink } from "react-router-hash-link";
 
 export default function Pocetna() {
   const [timer, setTimer] = useState(0);
 
   useEffect(() => {
     setTimeout(() => {
-      setTimer(() => getTime(new Date("Feb 30, 2023 23:59:59").getTime()));
+      setTimer(() => getTime(new Date("Mar 6, 2023 23:59:59").getTime()));
     }, 1000);
   });
 
@@ -40,19 +41,19 @@ export default function Pocetna() {
   }
 
   return (
-    <div className="pocetna-section">
+    <div className="pocetna-section" id="pocetna">
       <img src={logo} alt="Fon hakaton logo" className="pocetna-logo" />
       <h1 className="pocetna-motto">Use your code to change the road</h1>
-      <h1 className="pocetna-text-box">
+      <HashLink to="/Prijava" className="pocetna-text-box">
         <span>PRIJAVI SE!</span>
-      </h1>
+      </HashLink>
       <div className="pocetna-bottom">
-        <div className="pocetna-arrows">
+        <HashLink smooth to="#o_hakatonu" className="pocetna-arrows">
           <h1>Saznaj Više</h1>
           <div className="pocetna-arrow" />
           <div className="pocetna-arrow" />
           <div className="pocetna-arrow" />
-        </div>
+        </HashLink>
         <div className="pocetna-bottom-middle">
           <h1 className="pocetna-middle-text">Ostalo je još:</h1>
           <div className="pocetna-timer">
@@ -63,15 +64,13 @@ export default function Pocetna() {
           </div>
           <div className="pocetna-date-box"></div>
         </div>
-        <div className="pocetna-arrows">
+        <HashLink smooth to="#o_hakatonu" className="pocetna-arrows">
           <h1>Saznaj Više</h1>
           <div className="pocetna-arrow" />
           <div className="pocetna-arrow" />
           <div className="pocetna-arrow" />
-        </div>
+        </HashLink>
       </div>
-      <div className="blue-ball-blur" />
-      <div className="purple-rectangle-blur" />
     </div>
   );
 }

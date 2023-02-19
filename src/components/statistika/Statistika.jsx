@@ -15,6 +15,7 @@ const Statistika = () => {
               delay={0}
               suffix="+"
               useEasing="yes"
+              enableScrollSpy
             />
           </p>
           <span class="stk-vertical-line"></span>
@@ -29,6 +30,7 @@ const Statistika = () => {
               delay={0}
               suffix="+"
               useEasing="yes"
+              enableScrollSpy
             />
           </p>
           <span class="stk-vertical-line"></span>
@@ -43,6 +45,7 @@ const Statistika = () => {
               delay={0}
               suffix="+"
               useEasing="yes"
+              enableScrollSpy
             />
           </p>
           <span class="stk-vertical-line"></span>
