@@ -156,7 +156,7 @@ const Iskustva = (props) => {
     let slider = setInterval(
       () => {
         setState(false);
-        if (current == 6) {
+        if (current == 3) {
           toggleActiveStyles(0);
           toggleActive(0);
           setCurrent(0);

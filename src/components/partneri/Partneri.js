@@ -294,7 +294,7 @@ const Partneri = (props) => {
     <div className="ceo-partneri">
       <div id="partneri"></div>
       <div className="pokrovitelj">
-        <h1 className="pokrovitelj-naslov">POKROVITELJ TAKMIČENJA</h1>
+        <h1 className="pokrovitelj-naslov">Pokrovitelj takmičenja</h1>
         <Partner
           partnerSlika={Slika}
           partnerIme="Partner"
@@ -303,7 +303,7 @@ const Partneri = (props) => {
         ></Partner>
       </div>
 
-      <h1>GODIŠNJI PARTNERI</h1>
+      <h1>Godišnji partneri</h1>
 
       <div className="partneri-box">
         <PartneriSlider
@@ -312,13 +312,13 @@ const Partneri = (props) => {
         />
       </div>
 
-      <h1>NATURALNI PARTNERI</h1>
+      <h1>Naturalni partneri</h1>
 
       <div className="partneri-box">
         <PartneriSlider partneri={robniPartneri} settings={partneriSettings} />
       </div>
 
-      <h1>MEDIJSKI PARTNERI</h1>
+      <h1>Medijski partneri</h1>
 
       <div className="partneri-box">
         <PartneriSlider

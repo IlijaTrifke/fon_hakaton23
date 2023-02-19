@@ -8,7 +8,7 @@ import { Upload } from "upload-js";
 import { HashLink } from "react-router-hash-link";
 
 const upload = Upload({ apiKey: "public_FW25b4V4ALwH6oZJdyGdwaxjzmZX" });
-
+const leki = () => document.getElementById("selectFile").click();
 const FileUploadButton = (props) => {
   const [errorMax, setErrorMax] = useState(false);
   const [percent, setPercent] = useState("");
@@ -299,7 +299,7 @@ const Prijava = () => {
   return (
     <div class="pr-prijava">
       <div class="pr-header">
-        <h1 class="pr-h1">Forma za prijavu</h1>
+        <h1 class="pr-h1">Prijava</h1>
         <HashLink to="/#pocetna" class="pr-exit-text">
           <p className="pr-exit-p">Početna</p>
           <img class="pr-exit" src={Iks} alt="Exit"></img>
@@ -719,7 +719,7 @@ const Prijava = () => {
             <div class="pr-team-info">
               <h1 class="pr-h1_m">Tim</h1>
               <lable class="pr-lable" for="pr-teamname">
-                Ime Tima
+                Ime tima
               </lable>
               <input
                 ref={ref}
