@@ -6,7 +6,6 @@ import { useState } from "react";
 import { useRef } from "react";
 import { Upload } from "upload-js";
 import { HashLink } from "react-router-hash-link";
-import Footer from "../footer/Footer";
 import {
   FaInstagram,
   FaFacebookF,
