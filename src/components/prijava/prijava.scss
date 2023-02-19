@@ -354,7 +354,7 @@ input:after {
   word-wrap: break-word;
   text-align: center;
   margin: 0.5rem auto;
-  width: 90%;
+  width: 95%;
 }
 
 .pr-submit {
@@ -380,20 +380,15 @@ input:after {
     font-size: 2rem;
   }
 
-  .pr-upload-input {
-    font-size: 1rem;
-  }
-
-  .pr-lable-error {
+  .pr-upload-input,
+  .pr-lable-error,
+  .pr-lable,
+  .pr-lable_check {
     font-size: 1rem;
   }
 
   .pr-h1_m {
     font-size: 1.5rem;
-  }
-
-  .pr-lable {
-    font-size: 1rem;
   }
 
   .pr-exit-text p {
