@@ -2,11 +2,9 @@ import React from "react";
 import "./prijava.scss";
 import Kevin from "./img/cube.webm";
 import Iks from "./img/pr-exit.png";
-import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useRef } from "react";
 import { Upload } from "upload-js";
-import Popup from "reactjs-popup";
 import { HashLink } from "react-router-hash-link";
 import Footer from "../footer/Footer";
 import {
@@ -21,20 +19,30 @@ import location from "../footer/location.png";
 const upload = Upload({ apiKey: "public_FW25b4V4ALwH6oZJdyGdwaxjzmZX" });
 
 const FileUploadButton = (props) => {
+  const [errorMax, setErrorMax] = useState(false);
+  const [percent, setPercent] = useState("");
+  const [fileValue, setFileValue] = useState("");
   async function onFileSelected(event) {
-    const [file] = event.target.files;
-    console.log(event.target.files);
-    const { fileUrl } = await upload.uploadFile(file, {
-      onBegin: ({ cancel }) => console.log("File upload started!"),
-      onProgress: ({ progress }) =>
-        console.log(`File uploading... ${progress}%`),
-    });
-    console.log(`File uploaded! ${fileUrl}`);
-    console.log(file.name);
-    //document.getElementById("pr-test").innerHTML = file.name;
-    props.onChange(fileUrl);
+    setFileValue(event.target.value);
+    setErrorMax(false);
+    try {
+      const [file] = event.target.files;
+      console.log(event.target.files);
+      const { fileUrl } = await upload.uploadFile(file, {
+        onBegin: ({ cancel }) => console.log("File upload started!"),
+        onProgress: ({ progress }) => setPercent(progress.toString()),
+      });
+      setPercent("");
+      console.log(`File uploaded! ${fileUrl}`);
+      console.log(file.name);
+      //document.getElementById("pr-test").innerHTML = file.name;
+      props.onChange(fileUrl);
+    } catch (e) {
+      setErrorMax(true);
+      setFileValue("");
+      setPercent("");
+    }
   }
-
   return (
     <>
       <input
@@ -43,25 +51,26 @@ const FileUploadButton = (props) => {
         type="file"
         onChange={(e) => onFileSelected(e)}
         required
+        value={fileValue}
       />
-      {props.error && !props.prom && (
+      {percent}
+      {((props.error && !props.prom) || errorMax) && (
         <label class="pr-lable-error">
-          CV je obavezan i maksimalna količina fajla je 5MB!
+          CV je obavezan i maksimalna veličina fajla je 5MB!
         </label>
       )}
     </>
   );
 };
 
-const PopupExample = () => (
-  <Popup trigger={<button> Trigger</button>} position="right center">
-    <div>Popup content here !!</div>
-  </Popup>
-);
+// const PopupExample = () => (
+//   <Popup trigger={<button> Trigger</button>} position="right center">
+//     <div>Popup content here !!</div>
+//   </Popup>
+// );
 
 const Prijava = () => {
   const ref = useRef(null);
-  const navigate = useNavigate();
   const [ime1, setIme1] = useState("");
   const [ime2, setIme2] = useState("");
   const [ime3, setIme3] = useState("");
@@ -115,7 +124,7 @@ const Prijava = () => {
   const postPrijava = async (prijava) => {
     try {
       const response = await fetch(
-        "https://fh-server-main.onrender.com/prijave/api",
+        "https://fh-server-main.vercel.app/prijave/api",
         // "http://localhost:5000/prijave/api",
         {
           method: "POST",
@@ -139,6 +148,11 @@ const Prijava = () => {
   };
 
   const posaljiPrijavu = async () => {
+    document.documentElement.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant",
+    });
     if (
       !ime1 ||
       !ime2 ||
@@ -288,6 +302,7 @@ const Prijava = () => {
     // document.getElementById("pr-cv_m4").value = null;
     setError1(false);
     setError(false);
+    openModal("Uspešno ste se prijavili!");
   };
 
   return (
@@ -299,8 +314,8 @@ const Prijava = () => {
           <img class="pr-exit" src={Iks} alt="Exit"></img>
         </HashLink>
       </div>
-      {/* {modalOpen && } */}
-      <form class="pr-team-data" id="pr-team-data">
+      {/* {modalOpen && <div className="modal">{modalMessage}</div>} */}
+      <form class="pr-team-data" id="pr-team-data" autoComplete="off">
         <div class="pr-content">
           <div class="pr-members">
             <div class="pr-member">
@@ -336,7 +351,8 @@ const Prijava = () => {
               ></input>
               {error && !validateEmail(imejl1) && (
                 <label class="pr-lable-error">
-                  Imejl je obavezan i mora biti u formatu!
+                  Imejl je obavezan i mora biti u formatu
+                  "myemail@gmail.domain"!
                 </label>
               )}
               <lable class="pr-lable" for="pr-phone_m1">
@@ -434,7 +450,8 @@ const Prijava = () => {
               ></input>
               {error && !validateEmail(imejl2) && (
                 <label class="pr-lable-error">
-                  Imejl je obavezan i mora biti u formatu!
+                  Imejl je obavezan i mora biti u formatu
+                  "myemail@gmail.domain"!
                 </label>
               )}
               <lable class="pr-lable" for="pr-phone_m2">
@@ -532,7 +549,8 @@ const Prijava = () => {
               ></input>
               {error && !validateEmail(imejl3) && (
                 <label class="pr-lable-error">
-                  Imejl je obavezan i mora biti u formatu!
+                  Imejl je obavezan i mora biti u formatu
+                  "myemail@gmail.domain"!
                 </label>
               )}
               <lable class="pr-lable" for="pr-phone_m3">
@@ -627,7 +645,8 @@ const Prijava = () => {
               ></input>
               {error1 && !validateEmail(imejl4) && (
                 <label class="pr-lable-error">
-                  Imejl je obavezan i mora biti u formatu!
+                  Imejl je obavezan i mora biti u formatu
+                  "myemail@gmail.domain"!
                 </label>
               )}
               <lable class="pr-lable" for="pr-phone_m4">
@@ -782,7 +801,6 @@ const Prijava = () => {
               class="pr-submit"
               value="Pošalji prijavu"
               onClick={(e) => {
-                PopupExample();
                 e.preventDefault();
                 posaljiPrijavu();
               }}

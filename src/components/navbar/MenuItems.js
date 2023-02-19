@@ -36,7 +36,6 @@ const menuItems = [
 
   {
     title: "Pravilnik",
-    url: "../../PravilnikHZS.pdf",
     cName: "nav-links",
   },
   {
