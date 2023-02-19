@@ -16,7 +16,6 @@ import logo from "../footer/logo.png";
 import location from "../footer/location.png";
 
 const upload = Upload({ apiKey: "public_FW25b4V4ALwH6oZJdyGdwaxjzmZX" });
-const leki = () => document.getElementById("selectFile").click();
 const FileUploadButton = (props) => {
   const [errorMax, setErrorMax] = useState(false);
   const [percent, setPercent] = useState("");
