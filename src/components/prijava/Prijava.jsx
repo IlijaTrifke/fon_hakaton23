@@ -3,6 +3,7 @@ import "./prijava.scss";
 import Kevin from "./img/cube.webm";
 import Iks from "./img/pr-exit.png";
 import Strelica from "./img/pr-strelica-dugme.png";
+import Choose from "./img/choose.png";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useRef } from "react";
@@ -10,7 +11,7 @@ import { Upload } from "upload-js";
 import Popup from "reactjs-popup";
 
 const upload = Upload({ apiKey: "public_FW25b4V4ALwH6oZJdyGdwaxjzmZX" });
-
+const leki = () => document.getElementById("selectFile").click();
 const FileUploadButton = (props) => {
   async function onFileSelected(event) {
     const [file] = event.target.files;
@@ -22,7 +23,15 @@ const FileUploadButton = (props) => {
     console.log(`File uploaded! ${fileUrl}`);
     props.onChange(fileUrl);
   }
-  return <input type="file" onChange={(e) => onFileSelected(e)} />;
+  return (
+    <input
+      id="selectFile"
+      type="file"
+      className="file"
+      onChange={(e) => onFileSelected(e)}
+    />
+  );
+  //tu sam mijenjao
 };
 
 const PopupExample = () => (
@@ -594,7 +603,7 @@ const Prijava = () => {
             <div class="pr-team-info">
               <h1 class="pr-h1_m">Tim</h1>
               <lable class="pr-lable" for="pr-teamname">
-                Ime Tima
+                Ime tima
               </lable>
               <input
                 ref={ref}
