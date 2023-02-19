@@ -248,7 +248,7 @@ const Prijava = () => {
   return (
     <div class="pr-prijava">
       <div class="pr-header">
-        <h1 class="pr-h1">Forma za prijavu</h1>
+        <h1 class="pr-h1">Prijava</h1>
         <div class="pr-exit-text">
           <p onClick={goBack}>Početna</p>
           <img class="pr-exit" src={Iks} onClick={goBack} alt="Exit"></img>
