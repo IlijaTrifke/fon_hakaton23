@@ -388,7 +388,7 @@ const Prijava = () => {
                 <option value="srednjoskolac">Srednjoškolac</option>
               </select>
               <lable class="pr-lable" for="pr-year_m1">
-                Godina i naziv studija/srednje škole
+                Godina i naziv fakulteta/razred i naziv srednje škole
               </lable>
               <input
                 type="text"
@@ -402,7 +402,10 @@ const Prijava = () => {
                 required
               ></input>
               {error && imeSkole1 === "" && (
-                <label class="pr-lable-error">Naziv je obavezan!</label>
+                <label class="pr-lable-error">
+                  Godina i naziv fakulteta/razred i naziv srednje škole su
+                  obavezni!
+                </label>
               )}
               <lable class="pr-lable" for="pr-cv_m1">
                 Vaš CV
@@ -486,7 +489,7 @@ const Prijava = () => {
                 <option value="srednjoskolac">Srednjoškolac</option>
               </select>
               <lable class="pr-lable" for="pr-year_m2">
-                Godina i naziv studija/srednje škole
+                Godina i naziv fakulteta/razred i naziv srednje škole
               </lable>
               <input
                 type="text"
@@ -500,7 +503,10 @@ const Prijava = () => {
                 required
               ></input>
               {error && imeSkole2 === "" && (
-                <label class="pr-lable-error">Naziv je obavezan!</label>
+                <label class="pr-lable-error">
+                  Godina i naziv fakulteta/razred i naziv srednje škole su
+                  obavezni!
+                </label>
               )}
               <lable class="pr-lable" for="pr-cv_m2">
                 Vaš CV
@@ -585,7 +591,7 @@ const Prijava = () => {
                 <option value="srednjoskolac">Srednjoškolac</option>
               </select>
               <lable class="pr-lable" for="pr-year_m3">
-                Godina i naziv studija/srednje škole
+                Godina i naziv fakulteta/razred i naziv srednje škole
               </lable>
               <input
                 type="text"
@@ -598,7 +604,10 @@ const Prijava = () => {
                 }}
               ></input>
               {error && imeSkole3 === "" && (
-                <label class="pr-lable-error">Naziv je obavezan!</label>
+                <label class="pr-lable-error">
+                  Godina i naziv fakulteta/razred i naziv srednje škole su
+                  obavezni!
+                </label>
               )}
               <lable class="pr-lable" for="pr-cv_m3">
                 Vaš CV
@@ -680,7 +689,7 @@ const Prijava = () => {
                 <option value="srednjoskolac">Srednjoškolac</option>
               </select>
               <lable class="pr-lable" for="pr-year_m4">
-                Godina i naziv studija/srednje škole
+                Godina i naziv fakulteta/razred i naziv srednje škole
               </lable>
               <input
                 type="text"
@@ -693,7 +702,10 @@ const Prijava = () => {
                 }}
               ></input>
               {error1 && !imeSkole4 && (
-                <label class="pr-lable-error">Naziv je obavezan!</label>
+                <label class="pr-lable-error">
+                  Godina i naziv fakulteta/razred i naziv srednje škole su
+                  obavezni!
+                </label>
               )}
               <lable class="pr-lable" for="pr-cv_m4">
                 Vaš CV
