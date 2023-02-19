@@ -10,13 +10,18 @@ import SlikeOrg from "./components/slikeOrg/SlikeOrg";
 import Ohakatonu from "./components/o-hakatonu/Ohakatonu";
 import Iskustva from "./components/iskustva/Iskustva";
 import Footer from "./components/footer/Footer";
-
 function Home() {
   return (
     <>
-      {/* <Navbar /> */}
-      <Pocetna />
-      <Ohakatonu />
+      <Navbar />
+      <div className="dveSekcijePO">
+        <Pocetna />
+        <Ohakatonu />
+        <div className="balls-wrapper">
+          <div className="blue-ball-blur" />
+          <div className="purple-rectangle-blur" />
+        </div>
+      </div>
       <Nagrade />
       <Agenda />
       <Iskustva />
@@ -28,5 +33,4 @@ function Home() {
     </>
   );
 }
-
 export default Home;
