@@ -14,15 +14,9 @@ import Footer from "./components/footer/Footer";
 function Home() {
   return (
     <>
-      <Navbar />
-      <div className="dveSekcijePO">
-        <Pocetna />
-        <Ohakatonu />
-        <div className="balls-wrapper">
-          <div className="blue-ball-blur" />
-          <div className="purple-rectangle-blur" />
-        </div>
-      </div>
+      {/* <Navbar /> */}
+      <Pocetna />
+      <Ohakatonu />
       <Nagrade />
       <Agenda />
       <Iskustva />

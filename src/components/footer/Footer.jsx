@@ -15,12 +15,12 @@ export default function Footer() {
     <div className="footer-section">
       <div className="footer-content">
         <div className="footer-text">
-          <h1 className="footer-h">Nesto</h1>
+          <h1 className="footer-h">ŠTA TI PRUŽA FON HAKATON?</h1>
           <p className="footer-p">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quisquam
-            impedit quidem dolore cupiditate aut dolorum architecto magnam
-            provident enim quos labore accusamus debitis modi commodi
-            distinctio, corporis repellat voluptas.
+          FON Hakaton je odlična prilika za usavršavanje postojećih i sticanje novih veština i znanja. 
+          Tokom timskog rada i konsultacija sa mentorima, imaćeš priliku da na praktičan način stekneš mnoge interesantne i 
+          primenljive veštine. Takmičenje ovakvog tipa motivisaće te da nastaviš da istražuješ nove tehnologije, ali i da se 
+          usavršavaš na profesionalnom nivou. Takođe, FON Hakaton je godinama unazad poznat po pozitivnoj atmosferi koja vlada među takmičarima. Iskoristi priliku da je osetiš i ti!
           </p>
           <HashLink to="/Prijava" className="footer-button">
             <span>PRIJAVI SE!</span>
