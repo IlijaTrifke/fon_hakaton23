@@ -97,6 +97,8 @@ const Prijava = () => {
   const [pitanje2, setPitanje2] = useState("");
   const [pitanje3, setPitanje3] = useState("");
   const [pitanje4, setPitanje4] = useState("");
+  const [vesti, setVesti] = useState("");
+  const [pravila, setPravila] = useState("");
 
   const [error, setError] = useState(false);
   const [error1, setError1] = useState(false);
@@ -613,7 +615,7 @@ const Prijava = () => {
             </div>
 
             <div class="pr-member">
-              <h1 class="pr-h1_m">Član 4 (Opcionalno)</h1>
+              <h1 class="pr-h1_m">Član 4 (Opciono)</h1>
               <lable class="pr-lable" for="pr-name_m4">
                 Ime i prezime
               </lable>
@@ -788,6 +790,41 @@ const Prijava = () => {
               {error && pitanje4 === "" && (
                 <label class="pr-lable-error">Ovo polje je obavezno!</label>
               )}
+              <div class="pr-checkboxStyle">
+                {/* <div class="pr-temp"> */}
+                <input
+                  type="checkbox"
+                  id="pr-check1"
+                  class="pr-check"
+                  value="obavestenja"
+                  onChange={(e) => {
+                    setVesti(e.target.checked);
+                  }}
+                ></input>
+                <label class="pr-lable_check">
+                  Želimo da dobijamo obaveštenja o FONIS aktivnostima
+                </label>
+              </div>
+              <div class="pr-checkboxStyle">
+                <input
+                  type="checkbox"
+                  id="pr-check1"
+                  class={`pr-check2 ${
+                    error && pravila === "" ? "errorClass" : ""
+                  }`}
+                  value="pravila"
+                  required
+                  onChange={(e) => {
+                    setPravila(e.target.checked);
+                  }}
+                ></input>
+                <label class="pr-lable_check">
+                  Saglasni smo sa pravilima takmičenja
+                </label>
+              </div>
+              {error && (pravila === "" || pravila == false) && (
+                <label class="pr-lable-error">Ovo polje je obavezno!</label>
+              )}
             </div>
           </div>
         </div>
@@ -799,6 +836,7 @@ const Prijava = () => {
               class="pr-submit"
               value="Pošalji prijavu"
               onClick={(e) => {
+                console.log(pravila);
                 e.preventDefault();
                 posaljiPrijavu();
               }}
