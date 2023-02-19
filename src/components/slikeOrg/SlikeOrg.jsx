@@ -1,6 +1,6 @@
 import React from "react";
 import "./slikeOrg.scss";
-import slika from "./god.png";
+import slika from "./slikaOrgFull.JPG";
 
 const SlikeOrg = () => {
   return (
@@ -9,7 +9,6 @@ const SlikeOrg = () => {
       <h2 className="org-header">Organizacioni tim</h2>
       <div className="org-content">
         <div className="org-text">
-          <h2 className="org-h2">LOREM IPSUM</h2>
           <p className="org-p">
           Motivisani mladi ljudi koji su zaslužni za organizovanje ovogodišnjeg FON Hakatona, udružili su snage da svojim trudom doprinesu zajedničkom cilju, a to je uspešno realizovanje takmičenja. 
 Predanost i posvećenost svakog člana organizacionog tima je rezultat inspirativne atmosfere koja vlada u organizaciji i koja motiviše članove da vredno rade na tome da takmičenje učesnicima bude nezaboravno iskustvo.
@@ -18,7 +17,7 @@ Svi članovi imaju posebnu ulogu da u jednom od 6 različitih timova, uz neophod
           </p>
         </div>
         <div className="org-photo-hold"> 
-          <img className="org-photo" src={slika} alt="" srcset="" />
+          <img className="org-photo" src={slika} alt="Slika organizacionog tima" srcset="" />
         </div>
       </div>
     </div>
