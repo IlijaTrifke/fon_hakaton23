@@ -73,6 +73,11 @@ $svetloPlava: #24bdde; //Za detalje
   position: relative;
 }
 
+.dveSekcijeAI {
+  position: relative;
+  overflow: hidden;
+}
+
 .balls-wrapper {
   width: 100%;
   min-height: 180vh;

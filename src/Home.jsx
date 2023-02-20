@@ -10,6 +10,9 @@ import SlikeOrg from "./components/slikeOrg/SlikeOrg";
 import Ohakatonu from "./components/o-hakatonu/Ohakatonu";
 import Iskustva from "./components/iskustva/Iskustva";
 import Footer from "./components/footer/Footer";
+import Vector4 from "./images/Vector4.png";
+import Vector6 from "./images/Vector6.png";
+
 function Home() {
   return (
     <>
@@ -23,13 +26,29 @@ function Home() {
         </div>
       </div>
       <Nagrade />
-      <Agenda />
-      <Iskustva />
-      <Statistika />
-      <Faq />
-      <Partneri />
-      <SlikeOrg />
-      <Footer />
+      <div className="dveSekcijeAI">
+        <div className="agn-rectangle-blur" />
+        <img className="vector6" src={Vector6} alt="Web" />
+        <img className="vector7" src={Vector6} alt="Web" />
+        <Agenda />
+        <Iskustva />
+      </div>
+
+      <div className="dveSekcijeAI">
+        <img className="vector6" src={Vector6} alt="Web" />
+
+        <Statistika />
+        <Faq />
+        <Partneri />
+
+        <div className="partneri-blue-rectangle-blur" />
+        <div className="partneri-ball-blur" />
+      </div>
+
+      <div className="dveSekcijeAI">
+        <SlikeOrg />
+        <Footer />
+      </div>
     </>
   );
 }
