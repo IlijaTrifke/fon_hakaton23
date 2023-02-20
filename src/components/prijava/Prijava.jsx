@@ -81,10 +81,10 @@ const Prijava = () => {
   const [brojTelefona2, setbrojTelefon2] = useState("");
   const [brojTelefona3, setbrojTelefon3] = useState("");
   const [brojTelefona4, setbrojTelefon4] = useState("");
-  const [status1, setStatus1] = useState("Zaposlen");
-  const [status2, setStatus2] = useState("Zaposlen");
-  const [status3, setStatus3] = useState("Zaposlen");
-  const [status4, setStatus4] = useState("Zaposlen");
+  const [status1, setStatus1] = useState("Zaposlen/a");
+  const [status2, setStatus2] = useState("Zaposlen/a");
+  const [status3, setStatus3] = useState("Zaposlen/a");
+  const [status4, setStatus4] = useState("Zaposlen/a");
   const [imeSkole1, setimeSkole1] = useState("");
   const [imeSkole2, setimeSkole2] = useState("");
   const [imeSkole3, setimeSkole3] = useState("");
@@ -373,7 +373,7 @@ const Prijava = () => {
                 <label class="pr-lable-error">Broj telefona je obavezan!</label>
               )}
               <lable class="pr-lable" for="pr-select_m1">
-                Status: zaposlen, student, srednjoškolac
+                Status: Zaposlen/a, Student/kinja, Srednjoškolac/ka
               </lable>
               <select
                 class="pr-select"
@@ -383,12 +383,12 @@ const Prijava = () => {
                 }}
                 required
               >
-                <option value="zaposlen">Zaposlen</option>
-                <option value="student">Student</option>
-                <option value="srednjoskolac">Srednjoškolac</option>
+                <option value="Zaposlen/a">Zaposlen/a</option>
+                <option value="Student/kinja">Student/kinja</option>
+                <option value="srednjoskolac">Srednjoškolac/ka</option>
               </select>
               <lable class="pr-lable" for="pr-year_m1">
-                Godina i naziv fakulteta/razred i naziv srednje škole
+                Naziv fakulteta/srednje škole i godina studija/razred
               </lable>
               <input
                 type="text"
@@ -403,7 +403,7 @@ const Prijava = () => {
               ></input>
               {error && imeSkole1 === "" && (
                 <label class="pr-lable-error">
-                  Godina i naziv fakulteta/razred i naziv srednje škole su
+                  Naziv fakulteta/srednje škole i godina studija/razred su
                   obavezni!
                 </label>
               )}
@@ -475,7 +475,7 @@ const Prijava = () => {
                 <label class="pr-lable-error">Broj telefona je obavezan!</label>
               )}
               <lable class="pr-lable" for="pr-select_m2">
-                Status: zaposlen, student, srednjoškolac
+                Status: Zaposlen/a, Student/kinja, Srednjoškolac/ka
               </lable>
               <select
                 class="pr-select"
@@ -484,12 +484,12 @@ const Prijava = () => {
                   setStatus2(e.target.value);
                 }}
               >
-                <option value="zaposlen">Zaposlen</option>
-                <option value="student">Student</option>
-                <option value="srednjoskolac">Srednjoškolac</option>
+                <option value="Zaposlen/a">Zaposlen/a</option>
+                <option value="Student/kinja">Student/kinja</option>
+                <option value="srednjoskolac">Srednjoškolac/ka</option>
               </select>
               <lable class="pr-lable" for="pr-year_m2">
-                Godina i naziv fakulteta/razred i naziv srednje škole
+                Naziv fakulteta/srednje škole i godina studija/razred
               </lable>
               <input
                 type="text"
@@ -504,7 +504,7 @@ const Prijava = () => {
               ></input>
               {error && imeSkole2 === "" && (
                 <label class="pr-lable-error">
-                  Godina i naziv fakulteta/razred i naziv srednje škole su
+                  Naziv fakulteta/srednje škole i godina studija/razred su
                   obavezni!
                 </label>
               )}
@@ -583,15 +583,15 @@ const Prijava = () => {
                   setStatus3(e.target.value);
                 }}
               >
-                Status: zaposlen, student, srednjoškolac
+                Status: Zaposlen/a, Student/kinja, Srednjoškolac/ka
               </lable>
               <select class="pr-select" id="pr-select_m3">
-                <option value="zaposlen">Zaposlen</option>
-                <option value="student">Student</option>
-                <option value="srednjoskolac">Srednjoškolac</option>
+                <option value="Zaposlen/a">Zaposlen/a</option>
+                <option value="Student/kinja">Student/kinja</option>
+                <option value="srednjoskolac">Srednjoškolac/ka</option>
               </select>
               <lable class="pr-lable" for="pr-year_m3">
-                Godina i naziv fakulteta/razred i naziv srednje škole
+                Naziv fakulteta/srednje škole i godina studija/razred
               </lable>
               <input
                 type="text"
@@ -605,7 +605,7 @@ const Prijava = () => {
               ></input>
               {error && imeSkole3 === "" && (
                 <label class="pr-lable-error">
-                  Godina i naziv fakulteta/razred i naziv srednje škole su
+                  Naziv fakulteta/srednje škole i godina studija/razred su
                   obavezni!
                 </label>
               )}
@@ -681,15 +681,15 @@ const Prijava = () => {
                   setStatus4(e.target.value);
                 }}
               >
-                Status: zaposlen, student, srednjoškolac
+                Status: Zaposlen/a, Student/kinja, Srednjoškolac/ka
               </lable>
               <select class="pr-select" id="pr-select_m4">
-                <option value="zaposlen">Zaposlen</option>
-                <option value="student">Student</option>
-                <option value="srednjoskolac">Srednjoškolac</option>
+                <option value="Zaposlen/a">Zaposlen/a</option>
+                <option value="Student/kinja">Student/kinja</option>
+                <option value="srednjoskolac">Srednjoškolac/ka</option>
               </select>
               <lable class="pr-lable" for="pr-year_m4">
-                Godina i naziv fakulteta/razred i naziv srednje škole
+                Naziv fakulteta/srednje škole i godina studija/razred
               </lable>
               <input
                 type="text"
@@ -703,7 +703,7 @@ const Prijava = () => {
               ></input>
               {error1 && !imeSkole4 && (
                 <label class="pr-lable-error">
-                  Godina i naziv fakulteta/razred i naziv srednje škole su
+                  Naziv fakulteta/srednje škole i godina studija/razred su
                   obavezni!
                 </label>
               )}
