@@ -38,7 +38,8 @@
 .modalContainer {
   scrollbar-width: thin;
   min-height: 250px;
-  min-width: 350px;
+  width: 25rem;
+  max-width: 85%;
   max-height: 400px;
   overflow-y: auto;
   padding: 16px 16px;
@@ -118,19 +119,7 @@
   background: #0268dd;
 }
 
-@media (max-width: 768px) {
-  .modalContainer {
-    min-height: 200px;
-    min-width: 300px;
-  }
-}
-
 @media (max-width: 460px) {
-  .modalContainer {
-    min-height: 150px;
-    min-width: 250px;
-  }
-
   .modalContainer .inputRow {
     flex-direction: column !important;
     margin-bottom: 0;
@@ -139,12 +128,5 @@
 
   input {
     margin-bottom: 16px;
-  }
-}
-
-@media (max-width: 350px) {
-  .modalContainer {
-    min-height: 100px;
-    min-width: 200px;
   }
 }

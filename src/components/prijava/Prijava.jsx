@@ -16,11 +16,16 @@ import logo from "../footer/logo.png";
 import location from "../footer/location.png";
 import Modal from "./modal/Modal";
 import { Loader } from "./../loader/Loader";
+import { ProgressBar } from "react-bootstrap";
+
+// const AnimatedBar = (props) => {
+//   return <ProgressBar now={props.percent} />;
+// };
 
 const upload = Upload({ apiKey: "public_FW25b4V4ALwH6oZJdyGdwaxjzmZX" });
 const FileUploadButton = (props) => {
   const [errorMax, setErrorMax] = useState(false);
-  const [percent, setPercent] = useState("");
+  const [percent, setPercent] = useState(""); //ovde ""
   async function onFileSelected(event) {
     props.setFileValue(event.target.value);
     setErrorMax(false);
@@ -29,15 +34,15 @@ const FileUploadButton = (props) => {
       console.log(event.target.files);
       const { fileUrl } = await upload.uploadFile(file, {
         onBegin: ({ cancel }) => console.log("File upload started!"),
-        onProgress: ({ progress }) => setPercent(progress.toString()),
+        onProgress: ({ progress }) => setPercent(progress.toString()), //ovde je bio progress.toString()
       });
-      setPercent("");
+      setPercent(""); //ovde ""
       console.log(`File uploaded! ${fileUrl}`);
       console.log(file.name);
       props.onChange(fileUrl);
     } catch (e) {
       setErrorMax(true);
-      setPercent();
+      setPercent(""); //ovde ""
       props.setFileValue("");
     }
   }
@@ -50,6 +55,7 @@ const FileUploadButton = (props) => {
         onChange={(e) => onFileSelected(e)}
         required
       />
+      {/* <AnimatedBar percent={percent} /> */}
       <div style={{ color: "white", fontFamily: "Noto Sans" }}>{percent}</div>
       {((props.error && !props.prom) || errorMax) && (
         <label class="pr-lable-error">
@@ -166,7 +172,9 @@ const Prijava = () => {
       );
       const data = await response.json();
       if (data.success) {
-        openModal("Uspešno poslata prijava!");
+        openModal(
+          "Uspešno poslata prijava!\nPotvrda prijave je poslata na mejl svakome od članova."
+        );
         clearForm();
       } else {
         openModal(data.msg);
