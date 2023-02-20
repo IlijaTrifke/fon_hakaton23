@@ -243,3 +243,42 @@
     width: 12rem;
   }
 }
+
+.footer-dveSekcijePO {
+  //background-image: url(./images/Constellation.png);
+  background-color: $tamnoPlava;
+  //background-repeat: no-repeat;
+  position: relative;
+}
+
+.footer-balls-wrapper {
+  width: 100%;
+  min-height: 80vh;
+  position: absolute;
+  overflow: hidden;
+  top: 10%;
+  left: 0;
+}
+
+.footer-blue-ball-blur {
+  position: absolute;
+  top: 45%;
+  left: -5%;
+  width: 30%;
+  height: 10%;
+  background-color: $svetloPlava;
+  filter: blur(6rem);
+  border-radius: 50%;
+  //animation: blurMoving 10s linear infinite;
+}
+.footer-purple-rectangle-blur {
+  position: absolute;
+  top: 30%;
+  left: 90%;
+  width: 50%;
+  height: 10%;
+  background-color: $svetloPlava;
+  filter: blur(5rem);
+  border-radius: 50%;
+  //animation: blurMoving 10s linear infinite;
+}
