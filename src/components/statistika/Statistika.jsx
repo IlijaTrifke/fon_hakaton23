@@ -43,7 +43,6 @@ const Statistika = () => {
               end={10}
               duration={2}
               delay={0}
-              suffix="+"
               useEasing="yes"
               enableScrollSpy
             />
