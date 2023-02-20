@@ -16,11 +16,16 @@ import logo from "../footer/logo.png";
 import location from "../footer/location.png";
 import Modal from "./modal/Modal";
 import { Loader } from "./../loader/Loader";
+import { ProgressBar } from "react-bootstrap";
+
+const AnimatedBar = (props) => {
+  return <ProgressBar animated now={props.percent} />;
+};
 
 const upload = Upload({ apiKey: "public_FW25b4V4ALwH6oZJdyGdwaxjzmZX" });
 const FileUploadButton = (props) => {
   const [errorMax, setErrorMax] = useState(false);
-  const [percent, setPercent] = useState("");
+  const [percent, setPercent] = useState(0);
   async function onFileSelected(event) {
     props.setFileValue(event.target.value);
     setErrorMax(false);
@@ -29,15 +34,15 @@ const FileUploadButton = (props) => {
       console.log(event.target.files);
       const { fileUrl } = await upload.uploadFile(file, {
         onBegin: ({ cancel }) => console.log("File upload started!"),
-        onProgress: ({ progress }) => setPercent(progress.toString()),
+        onProgress: ({ progress }) => setPercent(progress),
       });
-      setPercent("");
+      setPercent(0);
       console.log(`File uploaded! ${fileUrl}`);
       console.log(file.name);
       props.onChange(fileUrl);
     } catch (e) {
       setErrorMax(true);
-      setPercent("");
+      setPercent(0);
       props.setFileValue("");
     }
   }
@@ -50,7 +55,7 @@ const FileUploadButton = (props) => {
         onChange={(e) => onFileSelected(e)}
         required
       />
-      {percent}
+      <AnimatedBar percent={percent} />
       {((props.error && !props.prom) || errorMax) && (
         <label class="pr-lable-error">
           CV je obavezan i maksimalna veličina fajla je 5MB!
@@ -167,7 +172,7 @@ const Prijava = () => {
       const data = await response.json();
       if (data.success) {
         setLoading(false);
-        openModal("Uspesno poslata prijava");
+        openModal("Uspešno poslata prijava!");
         clearForm();
       } else {
         openModal(data.msg);
@@ -212,7 +217,7 @@ const Prijava = () => {
       !pravila
     ) {
       setError(true);
-      openModal("Neuspešna prijava!");
+      openModal("Neuspešna prijava!\nProverite crvena polja!");
       //radi testiranja praznjenja kopirati ovde
       return;
     }
@@ -293,7 +298,9 @@ const Prijava = () => {
       <div class="pr-prijava">
         <div className="pr-ball-blur" />
         <div className="pr-blue-rectangle-blur" />
-
+        <div className="pr-purple-rectangle-blur" />
+        <div className="pr-blue-ball-blur2" />
+        <div className="pr-purple-rectangle-blur2" />
         <div class="pr-header">
           <h1 class="pr-h1">Prijava</h1>
           <HashLink to="/#pocetna" class="pr-exit-text">
@@ -302,8 +309,8 @@ const Prijava = () => {
           </HashLink>
         </div>
         {modalOpen && (
-          <Modal header={modalMessage} closeModal={closeModal}>
-            <p>Ćao</p>
+          <Modal header="Status prijave:" closeModal={closeModal}>
+            <p>{modalMessage}</p>
           </Modal>
         )}
         <form
