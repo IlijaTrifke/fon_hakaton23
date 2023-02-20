@@ -196,12 +196,12 @@ const Partneri = (props) => {
       pozadina: "#304b38",
       link: "https://www.instagram.com/mymoonmirror/",
     },
-    {
-      partnerSlika: Slika,
-      partnerIme: "KST",
-      pozadina: "#f5f5f5",
-      link: "https://www.instagram.com/klubstudenatatehnike/",
-    },
+    // {
+    //   partnerSlika: Slika,
+    //   partnerIme: "KST",
+    //   pozadina: "#f5f5f5",
+    //   link: "https://www.instagram.com/klubstudenatatehnike/",
+    // },
     {
       partnerSlika: naturalni10,
       partnerIme: "campster",
@@ -214,12 +214,12 @@ const Partneri = (props) => {
       pozadina: "#fff",
       link: "https://www.instagram.com/naucidizajn/?hl=sr",
     },
-    {
-      partnerSlika: Slika,
-      partnerIme: "Cubes School",
-      pozadina: "#f5f5f5",
-      link: "https://www.instagram.com/cubesschool/?hl=sr",
-    },
+    // {
+    //   partnerSlika: Slika,
+    //   partnerIme: "Cubes School",
+    //   pozadina: "#f5f5f5",
+    //   link: "https://www.instagram.com/cubesschool/?hl=sr",
+    // },
     {
       partnerSlika: naturalni1,
       partnerIme: "Adventure Hub",
@@ -238,12 +238,12 @@ const Partneri = (props) => {
       pozadina: "#ffd503",
       link: "https://www.instagram.com/sektor44beograd/?hl=en",
     },
-    {
-      partnerSlika: Slika,
-      partnerIme: "Akademska misao",
-      pozadina: "#f5f5f5",
-      link: "https://akademska-misao.rs/",
-    },
+    // {
+    //   partnerSlika: Slika,
+    //   partnerIme: "Akademska misao",
+    //   pozadina: "#f5f5f5",
+    //   link: "https://akademska-misao.rs/",
+    // },
     {
       partnerSlika: naturalni2,
       partnerIme: "Beer pong bar",
@@ -268,36 +268,36 @@ const Partneri = (props) => {
       pozadina: "#000",
       link: "https://www.instagram.com/dilescaperooms/",
     },
-    {
-      partnerSlika: Slika,
-      partnerIme: "Stark",
-      pozadina: "#f5f5f5",
-      link: "http://www.stark.rs/",
-    },
-    {
-      partnerSlika: Slika,
-      partnerIme: "Grand",
-      pozadina: "#f5f5f5",
-      link: "http://grandkafa.rs/",
-    },
+    // {
+    //   partnerSlika: Slika,
+    //   partnerIme: "Stark",
+    //   pozadina: "#f5f5f5",
+    //   link: "http://www.stark.rs/",
+    // },
+    // {
+    //   partnerSlika: Slika,
+    //   partnerIme: "Grand",
+    //   pozadina: "#f5f5f5",
+    //   link: "http://grandkafa.rs/",
+    // },
     {
       partnerSlika: naturalni4,
       partnerIme: "Dr Brado",
       pozadina: "#fff",
       link: "https://brados.rs/",
     },
-    {
-      partnerSlika: Slika,
-      partnerIme: "Milford",
-      pozadina: "#f5f5f5",
-      link: "https://www.instagram.com/milford_srbija/",
-    },
-    {
-      partnerSlika: Slika,
-      partnerIme: "Maf Maf",
-      pozadina: "#f5f5f5",
-      link: "https://instagram.com/maf_maf_mafinerija?igshid=YWJhMjlhZTc=",
-    },
+    // {
+    //   partnerSlika: Slika,
+    //   partnerIme: "Milford",
+    //   pozadina: "#f5f5f5",
+    //   link: "https://www.instagram.com/milford_srbija/",
+    // },
+    // {
+    //   partnerSlika: Slika,
+    //   partnerIme: "Maf Maf",
+    //   pozadina: "#f5f5f5",
+    //   link: "https://instagram.com/maf_maf_mafinerija?igshid=YWJhMjlhZTc=",
+    // },
     {
       partnerSlika: naturalni14,
       partnerIme: "StejsnKlub",
