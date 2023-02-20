@@ -384,6 +384,30 @@ input:after {
   left: 0;
 }
 
+.pr-blue-rectangle-blur {
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  width: 50%;
+  height: 10%;
+  background-color: $svetloPlava;
+  filter: blur(5rem);
+  border-radius: 50%;
+  //animation: blurMoving 10s linear infinite;
+}
+
+.pr-ball-blur {
+  position: absolute;
+  top: 20%;
+  left: -2%;
+  width: 20%;
+  height: 30%;
+  background-color: $svetloPlava;
+  filter: blur(7rem);
+  border-radius: 50%;
+  //animation: blurMoving 10s linear infinite;
+}
+
 .pr-blue-ball-blur {
   position: absolute;
   top: 20%;
