@@ -11,7 +11,7 @@ const Modal = ({ header, children, closeModal }) => {
         <div className="modalContent">{children}</div>
         <div className="modalFooter">
           <button className="ugasi" onClick={closeModal}>
-            Ugasi
+            Zatvori
           </button>
         </div>
       </div>

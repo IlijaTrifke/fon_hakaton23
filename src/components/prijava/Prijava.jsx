@@ -16,16 +16,11 @@ import logo from "../footer/logo.png";
 import location from "../footer/location.png";
 import Modal from "./modal/Modal";
 import { Loader } from "./../loader/Loader";
-import { ProgressBar } from "react-bootstrap";
-
-const AnimatedBar = (props) => {
-  return <ProgressBar animated now={props.percent} />;
-};
 
 const upload = Upload({ apiKey: "public_FW25b4V4ALwH6oZJdyGdwaxjzmZX" });
 const FileUploadButton = (props) => {
   const [errorMax, setErrorMax] = useState(false);
-  const [percent, setPercent] = useState(0);
+  const [percent, setPercent] = useState("");
   async function onFileSelected(event) {
     props.setFileValue(event.target.value);
     setErrorMax(false);
@@ -34,15 +29,15 @@ const FileUploadButton = (props) => {
       console.log(event.target.files);
       const { fileUrl } = await upload.uploadFile(file, {
         onBegin: ({ cancel }) => console.log("File upload started!"),
-        onProgress: ({ progress }) => setPercent(progress),
+        onProgress: ({ progress }) => setPercent(progress.toString()),
       });
-      setPercent(0);
+      setPercent("");
       console.log(`File uploaded! ${fileUrl}`);
       console.log(file.name);
       props.onChange(fileUrl);
     } catch (e) {
       setErrorMax(true);
-      setPercent(0);
+      setPercent();
       props.setFileValue("");
     }
   }
@@ -55,7 +50,7 @@ const FileUploadButton = (props) => {
         onChange={(e) => onFileSelected(e)}
         required
       />
-      <AnimatedBar percent={percent} />
+      <div style={{ color: "white", fontFamily: "Noto Sans" }}>{percent}</div>
       {((props.error && !props.prom) || errorMax) && (
         <label class="pr-lable-error">
           CV je obavezan i maksimalna veličina fajla je 5MB!
@@ -171,7 +166,6 @@ const Prijava = () => {
       );
       const data = await response.json();
       if (data.success) {
-        setLoading(false);
         openModal("Uspešno poslata prijava!");
         clearForm();
       } else {
@@ -179,6 +173,8 @@ const Prijava = () => {
       }
     } catch (e) {
       openModal(e.message);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -226,7 +222,6 @@ const Prijava = () => {
       if (
         !(ime4 && imeSkole4 && brojTelefona4 && validateEmail(imejl4) && cv4)
       ) {
-        console.log("nesto");
         setError1(true);
         return;
       }

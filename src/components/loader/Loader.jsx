@@ -1,7 +1,5 @@
 import React from "react";
-
-import { useState, useEffect } from "react";
-import FadeLoader from "react-spinners/FadeLoader";
+import ScaleLoader from "react-spinners/ScaleLoader";
 
 export const Loader = () => {
   return (
@@ -14,12 +12,13 @@ export const Loader = () => {
         justifyContent: "center",
         alignItems: "center",
         position: "fixed",
+        zIndex: "2000",
       }}
     >
       <div className="backdrop"></div>
-      <FadeLoader
-        color={"#00ffa3"}
-        size={"80vw"}
+      <ScaleLoader
+        color={"#24bdde"}
+        size={"10rem"}
         aria-label="Loading Spinner"
         data-testid="loader"
       />
