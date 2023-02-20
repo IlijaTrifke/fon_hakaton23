@@ -22,6 +22,7 @@
   align-items: center;
   min-height: 70vh;
   position: relative;
+  margin: 2rem 0;
 }
 
 .vector4 {
@@ -56,7 +57,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 33rem;
+  height: 37rem;
   width: 100%;
 }
 
@@ -165,7 +166,7 @@
 
 .show {
   height: 60%;
-  max-height: 150px;
+  max-height: 270px;
   transition: all 0.3s cubic-bezier(1, 0, 1, 0);
   padding-bottom: 1rem;
 }
@@ -188,9 +189,17 @@
     cursor: none;
   }
 }
+@media screen and (max-width: 960px) {
+  .faq-box-wrapper {
+    height: 40rem;
+  }
+}
 @media screen and (max-width: 620px) {
   .faq-naslov {
     font-size: 2.5rem;
+  }
+  .faq-box-wrapper {
+    height: 45rem;
   }
 }
 
@@ -203,6 +212,6 @@
     cursor: none;
   }
   .faq-box-wrapper {
-    height: 40rem;
+    height: 55rem;
   }
 }
