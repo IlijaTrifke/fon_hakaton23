@@ -10,7 +10,7 @@ const Statistika = () => {
           <p className="stk-numbers">
             <CountUp
               start={0}
-              end={100}
+              end={80}
               duration={2}
               delay={0}
               suffix="+"
@@ -19,7 +19,7 @@ const Statistika = () => {
             />
           </p>
           <span class="stk-vertical-line"></span>
-          <p className="stk-text">timova</p>
+          <p className="stk-text">različitih timova u finalu</p>
         </li>
         <li>
           <p className="stk-numbers">
@@ -34,7 +34,7 @@ const Statistika = () => {
             />
           </p>
           <span class="stk-vertical-line"></span>
-          <p className="stk-text">kompanija podržalo Hakaton</p>
+          <p className="stk-text">kompanija podržalo FON Hakaton</p>
         </li>
         <li>
           <p className="stk-numbers">
