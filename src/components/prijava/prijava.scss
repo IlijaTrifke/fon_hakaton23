@@ -148,6 +148,7 @@ input:after {
   flex-direction: column;
   border-radius: 30px;
   width: 30rem;
+  position: relative;
 }
 
 .pr-member {
@@ -155,11 +156,7 @@ input:after {
   flex-direction: column;
   align-items: center;
   border-radius: 2rem;
-  background: linear-gradient(
-    135deg,
-    rgba(36, 189, 222, 0.2),
-    rgba(232, 239, 245, 0.03)
-  );
+  background-color: rgba(6, 58, 86, 0.6);
   margin-bottom: 5rem;
   padding: 1rem;
   height: 80%;
@@ -172,6 +169,7 @@ input:after {
   background-color: rgba(6, 58, 86, 0.6);
   // margin-bottom: 10rem;
   width: 40rem;
+  position: relative;
 }
 
 .pr-h1_m {
@@ -376,15 +374,6 @@ input:after {
   border: 0;
 }
 
-.pr-balls-wrapper {
-  width: 100%;
-  min-height: 180vh;
-  position: absolute;
-  overflow: hidden;
-  top: 20%;
-  left: 0;
-}
-
 .pr-blue-rectangle-blur {
   position: absolute;
   top: 50%;
@@ -392,7 +381,7 @@ input:after {
   width: 50%;
   height: 10%;
   background-color: $svetloPlava;
-  filter: blur(5rem);
+  filter: blur(10rem);
   border-radius: 50%;
   //animation: blurMoving 10s linear infinite;
 }
@@ -404,7 +393,7 @@ input:after {
   width: 20%;
   height: 30%;
   background-color: $svetloPlava;
-  filter: blur(7rem);
+  filter: blur(9rem);
   border-radius: 50%;
   //animation: blurMoving 10s linear infinite;
 }
@@ -421,8 +410,8 @@ input:after {
 }
 .pr-purple-rectangle-blur {
   position: absolute;
-  top: 20%;
-  left: 80%;
+  top: 0%;
+  right: -15%;
   width: 15%;
   height: 30%;
   background-color: $ljubicasta;
@@ -443,11 +432,11 @@ input:after {
 .pr-purple-rectangle-blur2 {
   position: absolute;
   top: 70%;
-  left: 80%;
+  right: -4%;
   width: 10%;
-  height: 30%;
+  height: 20%;
   background-color: $ljubicasta;
-  filter: blur(5rem);
+  filter: blur(6rem);
   border-radius: 50%;
 }
 
@@ -493,16 +482,6 @@ input:after {
   }
   .pr-submit {
     margin-top: 2rem;
-  }
-  .pr-blue-ball-blur {
-    filter: blur(4rem);
-    width: 25%;
-    top: 20%;
-  }
-  .pr-purple-rectangle-blur {
-    filter: blur(1rem);
-    width: 10%;
-    top: 10%;
   }
 }
 @media (max-width: 480px) {
