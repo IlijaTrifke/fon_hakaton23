@@ -71,9 +71,8 @@ const Agenda = () => {
     <div className="agn-section" ref={timlineRef}>
       <div id="agenda"></div>
       <div className="agn-balls-wrapper">
-          <div className="agn-ball-blur" />
-          <div className="agn-rectangle-blur" />
-        </div>
+        <div className="agn-ball-blur" />
+      </div>
       <img className="vector6" src={Vector6} alt="Web" />
       <img className="vector7" src={Vector6} alt="Web" />
       <h1 className="agn-header" ref={scrollRef}>
@@ -90,7 +89,8 @@ const Agenda = () => {
             <div className="agn-text">
               <h2 className="agn-date">20. februar 2023.</h2>
               <p className="agn-descr">
-              Voliš programiranje i spreman si za nove izazove i druženje? Okupi ekipu, popuni formu na sajtu i prijavi se za FON Hakaton!
+                Voliš programiranje i spreman si za nove izazove i druženje?
+                Okupi ekipu, popuni formu na sajtu i prijavi se za FON Hakaton!
               </p>
             </div>
           </div>
@@ -104,7 +104,9 @@ const Agenda = () => {
             <div className="agn-text">
               <h2 className="agn-date">6. mart 2023.</h2>
               <p className="agn-descr">
-              Nakon zatvaranja prijava, kontaktiraćemo sve kandidate i objavićemo detaljnije informacije vezane za online test. Ne zaboravi da proveravaš svoj mejl!
+                Nakon zatvaranja prijava, kontaktiraćemo sve kandidate i
+                objavićemo detaljnije informacije vezane za online test. Ne
+                zaboravi da proveravaš svoj mejl!
               </p>
             </div>
           </div>
@@ -118,7 +120,9 @@ const Agenda = () => {
             <div className="agn-text">
               <h2 className="agn-date">8. mart 2023.</h2>
               <p className="agn-descr">
-              Sledeći korak jeste test IT znanja. Test će se raditi timski preko Moodle platforme, a rezultate selekcije ćemo objaviti u što kraćem roku.
+                Sledeći korak jeste test IT znanja. Test će se raditi timski
+                preko Moodle platforme, a rezultate selekcije ćemo objaviti u
+                što kraćem roku.
               </p>
             </div>
           </div>
@@ -132,7 +136,10 @@ const Agenda = () => {
             <div className="agn-text">
               <h2 className="agn-date">9-11. mart 2023.</h2>
               <p className="agn-descr">
-              Ono što timove deli od učešća na takmičenju je još samo tehnički intervju. Intervjui će se održati na Fakultetu organizacionih nauka u vidu speed dating-a sa osobljem fakulteta, nakon čega najbolje rangirane ekipe prolaze u finale.
+                Ono što timove deli od učešća na takmičenju je još samo tehnički
+                intervju. Intervjui će se održati na Fakultetu organizacionih
+                nauka u vidu speed dating-a sa osobljem fakulteta, nakon čega
+                najbolje rangirane ekipe prolaze u finale.
               </p>
             </div>
           </div>
@@ -146,13 +153,14 @@ const Agenda = () => {
             <div className="agn-text">
               <h2 className="agn-date">18. i 19. mart 2023.</h2>
               <p className="agn-descr">
-              Za timove koji su prošli selekciju počinje izazov. Timovima je na raspolaganju 24 časa da osmisle i razviju svoje softversko rešenje, koje će nakon toga predstaviti stručnom žiriju. Najbolji tim osvojiće titulu pobednika desetog FON Hakatona!
+                Za timove koji su prošli selekciju počinje izazov. Timovima je
+                na raspolaganju 24 časa da osmisle i razviju svoje softversko
+                rešenje, koje će nakon toga predstaviti stručnom žiriju.
+                Najbolji tim osvojiće titulu pobednika desetog FON Hakatona!
               </p>
             </div>
           </div>
         </div>
-
-        
       </div>
     </div>
   );

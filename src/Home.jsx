@@ -10,6 +10,7 @@ import SlikeOrg from "./components/slikeOrg/SlikeOrg";
 import Ohakatonu from "./components/o-hakatonu/Ohakatonu";
 import Iskustva from "./components/iskustva/Iskustva";
 import Footer from "./components/footer/Footer";
+
 function Home() {
   return (
     <>
@@ -23,8 +24,13 @@ function Home() {
         </div>
       </div>
       <Nagrade />
-      <Agenda />
-      <Iskustva />
+      <div className="dveSekcijeAI">
+        <div className="agn-rectangle-blur" />
+
+        <Agenda />
+        <Iskustva />
+      </div>
+
       <Statistika />
       <Faq />
       <Partneri />
