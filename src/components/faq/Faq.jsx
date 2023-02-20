@@ -77,7 +77,7 @@ const dataFaq = [
   {
     question: "Kako izgleda selekcija?",
     answer:
-      "Sama selekcija se sastoji iz dva kruga. Prvi krug predstavlja ocenjivanje timske prijave, poslatih 	CV-jeva i testa IT znanja. Najbolje rangirane timove čeka drugi krug selekcije - tehnički intervjui koji će se održati u formi speed dating-a na Fakultetu organizacionih nauka. Nakon drugog kruga selekcije, deset timova koji budu imali najveću ukupnu ocenu, dobiće priliku da svoje veštine prikažu u finalu Hakatona.",
+      "Sama selekcija se sastoji iz dva kruga. Prvi krug predstavlja ocenjivanje timske prijave, poslatih 	CV-jeva i testa IT znanja. Najbolje rangirane timove čeka drugi krug selekcije - tehnički intervjui koji će se održati u formi speed dating-a preko platforme Teams. Nakon drugog kruga selekcije, deset timova koji budu imali najveću ukupnu ocenu, dobiće priliku da svoje veštine prikažu u finalu Hakatona.",
   },
 
   {
@@ -89,13 +89,13 @@ const dataFaq = [
   {
     question: "Da li se mogu prijaviti individualno?",
     answer:
-      "Hakaton je timsko takmičenje, pa samim tim potrebno je da pronađeš svoj tim i da se svi zajedno prijavite.",
+      "FON Hakaton je timsko takmičenje, pa samim tim potrebno je da pronađeš svoj tim i da se svi zajedno prijavite.",
   },
 
   {
     question: "Ko su mentori na takmičenju i kako ti mogu pomoći?",
     answer:
-      "Mentori su podrška timu tokom takmičenja. Oni će biti tu za sva postavljena pitanja u određenim vremenskim terminima. Mentorsku podršku čine stručnjaci, konkretno nastavnici i saradnici sa Fakulteta organizacionih nauka, kao i stručnjaci ispred partnerske kompanije i alumni članovi FONIS-a.",
+      "Mentori su podrška timu tokom takmičenja. Oni će biti tu za sva postavljena pitanja u određenim vremenskim terminima. Mentorsku podršku čine stručnjaci, konkretno zaposleni sa Fakulteta organizacionih nauka, kao i stručnjaci ispred partnerske kompanije i alumni članovi FONIS-a.",
   },
 ];
 

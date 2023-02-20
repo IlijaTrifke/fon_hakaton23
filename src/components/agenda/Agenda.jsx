@@ -90,7 +90,7 @@ const Agenda = () => {
             <h1 className="agn-head">Otvaranje prijava</h1>
             <div className="agn-pseudo"></div>
             <div className="agn-text">
-              <h2 className="agn-date">20. februar 2023.</h2>
+              <h2 className="agn-date">21. februar 2023.</h2>
               <p className="agn-descr">
                 Voliš programiranje i spreman si za nove izazove i druženje?
                 Okupi ekipu, popuni formu na sajtu i prijavi se za FON Hakaton!
