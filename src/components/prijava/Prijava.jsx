@@ -75,10 +75,10 @@ const Prijava = () => {
   const [brojTelefona2, setbrojTelefon2] = useState("");
   const [brojTelefona3, setbrojTelefon3] = useState("");
   const [brojTelefona4, setbrojTelefon4] = useState("");
-  const [status1, setStatus1] = useState("Zaposlen");
-  const [status2, setStatus2] = useState("Zaposlen");
-  const [status3, setStatus3] = useState("Zaposlen");
-  const [status4, setStatus4] = useState("Zaposlen");
+  const [status1, setStatus1] = useState("Zaposlen/a");
+  const [status2, setStatus2] = useState("Zaposlen/a");
+  const [status3, setStatus3] = useState("Zaposlen/a");
+  const [status4, setStatus4] = useState("Zaposlen/a");
   const [imeSkole1, setimeSkole1] = useState("");
   const [imeSkole2, setimeSkole2] = useState("");
   const [imeSkole3, setimeSkole3] = useState("");

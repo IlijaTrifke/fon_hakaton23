@@ -32,7 +32,6 @@
 
 .ax-top-container {
   display: flex;
-  // position: relative;
   justify-content: center;
   gap: 2rem;
 }
@@ -52,6 +51,7 @@
     rgba(217, 217, 217, 1),
     rgba(217, 217, 217, 0)
   );
+  height: 30rem;
 }
 .ax-top-left hr {
   width: 80%;
@@ -209,6 +209,7 @@
     rgba(217, 217, 217, 0.2),
     rgba(217, 217, 217, 0)
   );
+  height: 30rem;
 }
 
 .ax-top-right .ax-top-description {

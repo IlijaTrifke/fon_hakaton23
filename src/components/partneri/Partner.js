@@ -6,7 +6,9 @@ const Partner = (props) => {
     <div className="partner">
       <div id={props.id} className="ax-okvir-partneri">
         <a href={props.link} target="_blank" rel="noreferrer">
-          <img src={props.partnerSlika} alt={props.partnerIme} />
+          <div className="partneri-slika">
+            <img src={props.partnerSlika} alt={props.partnerIme} />
+          </div>
         </a>
       </div>
     </div>
