@@ -300,6 +300,12 @@ const Prijava = () => {
 
   return (
     <div class="pr-prijava">
+      <div className="balls-wrapper">
+        <div className="pr-blue-ball-blur" />
+        <div className="pr-purple-rectangle-blur" />
+        <div className="pr-blue-ball-blur2" />
+        <div className="pr-purple-rectangle-blur2" />
+      </div>
       <div class="pr-header">
         <h1 class="pr-h1">Forma za prijavu</h1>
         <HashLink to="/#pocetna" class="pr-exit-text">
