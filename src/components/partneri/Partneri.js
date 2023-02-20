@@ -36,6 +36,9 @@ import godisnji9 from "./assets/godisnji/9.png";
 
 import Pokrovitelj from "./assets/pokrovitelj.png";
 
+import Vector6 from "../../images/Vector6.png";
+import Vector4 from "../../images/Vector4.png";
+
 const Partneri = (props) => {
   const partneriSettings = {
     dots: false,
@@ -364,8 +367,8 @@ const Partneri = (props) => {
     <div className="ceo-partneri">
       <div id="partneri"></div>
 
-      <div className="partneri-blue-rectangle-blur" />
-      <div className="partneri-ball-blur" />
+      <img className="vector6" src={Vector6} alt="Web" />
+      <img className="vector4" src={Vector4} alt="Web" />
 
       <div className="pokrovitelj">
         <h1 className="pokrovitelj-naslov">Pokrovitelj takmičenja</h1>

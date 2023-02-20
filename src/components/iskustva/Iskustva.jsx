@@ -21,6 +21,8 @@ import iskustva11 from "./assets/11.jpg";
 import iskustva12 from "./assets/12.JPG";
 import iskustva13 from "./assets/13.jpg";
 
+import Vector6 from "../../images/Vector6.png";
+
 import React, { useState, useEffect } from "react";
 
 import StrelaLevo from "../../images/left-arrow.png";
@@ -240,6 +242,7 @@ const Iskustva = (props) => {
   return (
     <div className="ax-iskustva">
       <div id="iskustva"></div>
+
       <div className="ax-title">
         <h1>Iskustva</h1>
       </div>

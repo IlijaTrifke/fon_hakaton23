@@ -23,10 +23,6 @@ const Faq = () => {
       <div className="faq-section">
         <div id="faq"></div>
 
-        <div className="stk-blue-rectangle-blur" />
-        <div className="stk-ball-blur" />
-
-        <img className="vector4" src={Vector4} alt="Web" />
         <h1 className="faq-naslov">Često postavljana pitanja</h1>
 
         <div className="faq-box-wrapper">
