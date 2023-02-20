@@ -7,7 +7,7 @@ $providnaPlava: #0024407a;
 }
 
 .agn-section {
-  background-color: $tamnoPlava;
+  // background-color: $tamnoPlava;
   padding-bottom: 0rem;
   width: 100%;
   display: flex;
@@ -158,7 +158,6 @@ $providnaPlava: #0024407a;
   box-shadow: -8px 6px 0 -3px $providnaPlava;
 }
 
-
 .agn-text {
   background-color: $providnaPlava;
   width: 100%;
@@ -246,27 +245,25 @@ $providnaPlava: #0024407a;
   .agn-head {
     width: 80%;
   }
-  .vector7{
-    top:44rem;
+  .vector7 {
+    top: 44rem;
     right: -5rem;
   }
-
 }
 @media (max-width: 960px) {
   #agenda {
     top: 0;
   }
-  .vector7{
-    top:50rem;
+  .vector7 {
+    top: 50rem;
     right: -5rem;
   }
-  .agn-balls-wrapper{
+  .agn-balls-wrapper {
     min-height: 250vh;
   }
   .agn-rectangle-blur {
     top: 50%;
     visibility: hidden;
-    
   }
   .agn-header {
     font-size: 2.5rem;
@@ -304,10 +301,10 @@ $providnaPlava: #0024407a;
 }
 
 @media (max-width: 480px) {
-  .vector7{
+  .vector7 {
     top: 89rem;
   }
-  
+
   .agn-content {
     width: calc(100% - 5rem);
   }
