@@ -75,6 +75,8 @@
   align-items: center;
   flex-direction: column;
   gap: 1rem;
+  position: relative;
+  z-index: 2;
 }
 
 .faq-box-wrapper {
