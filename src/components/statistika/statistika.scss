@@ -31,17 +31,18 @@
 
 .stk-numbers {
   font-size: 1.5rem;
-  padding: 1.5rem;
+  padding: 1rem;
   color: white;
-  width: 35%;
+  width: 6rem;
+  text-align: center;
 }
-
 .stk-text {
   display: flex;
   align-self: center;
   flex-wrap: wrap;
   color: white;
-  padding: 1.5rem;
+  padding: 1rem;
+  font-size: 1.2rem;
   width: 80%;
 }
 
@@ -69,12 +70,5 @@
     justify-items: center;
     align-items: center;
     padding: 2rem;
-  }
-
-  .stk-text {
-    display: flex;
-    align-self: center;
-    flex-wrap: wrap;
-    color: white;
   }
 }

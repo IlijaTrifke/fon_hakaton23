@@ -13,20 +13,20 @@ import { HashLink } from "react-router-hash-link";
 export default function Footer() {
   return (
     <div className="footer-section">
-      <div className="footer-dveSekcijePO">
-      <div className="footer-balls-wrapper">
-          <div className="footer-blue-ball-blur" />
-          <div className="footer-purple-rectangle-blur" />
-      </div>
-      </div>
+      <div className="footer-purple-ball-blur" />
+      <div className="footer-blue-rectangle-blur" />
       <div className="footer-content">
         <div className="footer-text">
           <h1 className="footer-h">ŠTA TI PRUŽA FON HAKATON?</h1>
           <p className="footer-p">
-          FON Hakaton je odlična prilika za usavršavanje postojećih i sticanje novih veština i znanja. 
-          Tokom timskog rada i konsultacija sa mentorima, imaćeš priliku da na praktičan način stekneš mnoge interesantne i 
-          primenljive veštine. Takmičenje ovakvog tipa motivisaće te da nastaviš da istražuješ nove tehnologije, ali i da se 
-          usavršavaš na profesionalnom nivou. Takođe, FON Hakaton je godinama unazad poznat po pozitivnoj atmosferi koja vlada među takmičarima. Iskoristi priliku da je osetiš i ti!
+            FON Hakaton je odlična prilika za usavršavanje postojećih i sticanje
+            novih veština i znanja. Tokom timskog rada i konsultacija sa
+            mentorima, imaćeš priliku da na praktičan način stekneš mnoge
+            interesantne i primenljive veštine. Takmičenje ovakvog tipa
+            motivisaće te da nastaviš da istražuješ nove tehnologije, ali i da
+            se usavršavaš na profesionalnom nivou. Takođe, FON Hakaton je
+            godinama unazad poznat po pozitivnoj atmosferi koja vlada među
+            takmičarima. Iskoristi priliku da je osetiš i ti!
           </p>
           <HashLink to="/Prijava" className="footer-button">
             <span>PRIJAVI SE!</span>

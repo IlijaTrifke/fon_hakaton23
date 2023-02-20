@@ -3,8 +3,8 @@
 .footer-section {
   display: flex;
   flex-direction: column;
-  background-color: $tamnoPlava;
   padding-top: 2rem;
+  position: relative;
 }
 
 .footer-content {
@@ -14,6 +14,8 @@
   margin-bottom: 5rem;
   margin-left: 2rem;
   margin-right: 2rem;
+  position: relative;
+  z-index: 100;
 }
 
 .footer-h {
@@ -253,25 +255,25 @@
 
 .footer-balls-wrapper {
   width: 100%;
-  min-height: 80vh;
+  height: 100%;
   position: absolute;
   overflow: hidden;
   top: 10%;
   left: 0;
 }
 
-.footer-blue-ball-blur {
+.footer-purple-ball-blur {
   position: absolute;
   top: 45%;
-  left: -5%;
-  width: 30%;
+  left: -10%;
+  width: 40%;
   height: 10%;
-  background-color: $svetloPlava;
+  background-color: $ljubicasta;
   filter: blur(6rem);
   border-radius: 50%;
   //animation: blurMoving 10s linear infinite;
 }
-.footer-purple-rectangle-blur {
+.footer-blue-rectangle-blur {
   position: absolute;
   top: 30%;
   left: 90%;
