@@ -5,6 +5,8 @@ import "./statistika.scss";
 const Statistika = () => {
   return (
     <div className="stk-section">
+      <div className="footer-purple-ball-blur" />
+      <div className="stk-blue-rectangle-blur" />
       <ul>
         <li>
           <p className="stk-numbers">

@@ -363,6 +363,10 @@ const Partneri = (props) => {
   return (
     <div className="ceo-partneri">
       <div id="partneri"></div>
+
+      <div className="partneri-blue-rectangle-blur" />
+      <div className="partneri-ball-blur" />
+
       <div className="pokrovitelj">
         <h1 className="pokrovitelj-naslov">Pokrovitelj takmičenja</h1>
         <Partner
