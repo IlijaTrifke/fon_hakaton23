@@ -130,6 +130,11 @@
     font-size: 2.5rem;
   }
 }
+@media screen and (max-width: 1500px) {
+  .vector4 {
+    display: none;
+  }
+}
 @media screen and (max-width: 620px) {
   .ceo-partneri h1 {
     font-size: 2rem;

@@ -25,7 +25,7 @@ function Home() {
           <div className="purple-rectangle-blur" />
         </div>
       </div>
-      <Nagrade />
+      {/* <Nagrade /> */}
       <div className="dveSekcijeAI">
         <div className="agn-rectangle-blur" />
         <img className="vector6" src={Vector6} alt="Web" />
