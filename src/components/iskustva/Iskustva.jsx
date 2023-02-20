@@ -7,8 +7,19 @@ import "slick-carousel/slick/slick-theme.css";
 
 import IskustvoSlider from "./IskustvaSlider.js";
 
-import photo from "./assets/photo.jpg";
-import iskustvaFoto from "./assets/fonis.jpg";
+import iskustva1 from "./assets/1.JPG";
+import iskustva2 from "./assets/2.jpg";
+import iskustva3 from "./assets/3.JPG";
+import iskustva4 from "./assets/4.JPG";
+import iskustva5 from "./assets/5.jpg";
+import iskustva6 from "./assets/6.jpg";
+import iskustva7 from "./assets/7.JPG";
+import iskustva8 from "./assets/8.JPG";
+import iskustva9 from "./assets/9.JPG";
+import iskustva10 from "./assets/10.JPG";
+import iskustva11 from "./assets/11.jpg";
+import iskustva12 from "./assets/12.JPG";
+import iskustva13 from "./assets/13.jpg";
 
 import React, { useState, useEffect } from "react";
 
@@ -62,64 +73,56 @@ const Iskustva = (props) => {
   };
   const downSlike = [
     {
-      downSlika: iskustvaFoto,
+      downSlika: iskustva1,
       iskustvoIme: "iskustvo1",
     },
     {
-      downSlika: iskustvaFoto,
+      downSlika: iskustva2,
       iskustvoIme: "iskustvo2",
     },
     {
-      downSlika: iskustvaFoto,
+      downSlika: iskustva3,
       iskustvoIme: "iskustvo3",
     },
     {
-      downSlika: iskustvaFoto,
+      downSlika: iskustva4,
       iskustvoIme: "iskustvo4",
     },
     {
-      downSlika: iskustvaFoto,
+      downSlika: iskustva5,
       iskustvoIme: "iskustvo5",
     },
     {
-      downSlika: iskustvaFoto,
+      downSlika: iskustva6,
       iskustvoIme: "iskustvo6",
     },
     {
-      downSlika: iskustvaFoto,
+      downSlika: iskustva7,
       iskustvoIme: "iskustvo7",
     },
     {
-      downSlika: iskustvaFoto,
+      downSlika: iskustva8,
       iskustvoIme: "iskustvo8",
     },
     {
-      downSlika: iskustvaFoto,
+      downSlika: iskustva9,
       iskustvoIme: "iskustvo9",
     },
     {
-      downSlika: iskustvaFoto,
+      downSlika: iskustva10,
       iskustvoIme: "iskustvo10",
     },
     {
-      downSlika: iskustvaFoto,
+      downSlika: iskustva11,
       iskustvoIme: "iskustvo11",
     },
     {
-      downSlika: iskustvaFoto,
+      downSlika: iskustva12,
       iskustvoIme: "iskustvo12",
     },
     {
-      downSlika: iskustvaFoto,
+      downSlika: iskustva13,
       iskustvoIme: "iskustvo13",
-    },
-    {
-      downSlika: iskustvaFoto,
-      iskustvoIme: "iskustvo14",
-    },
-    {
-      downSlika: iskustvaFoto,
-      iskustvoIme: "iskustvo15",
     },
   ];
 
