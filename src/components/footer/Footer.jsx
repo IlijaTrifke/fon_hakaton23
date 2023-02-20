@@ -13,6 +13,12 @@ import { HashLink } from "react-router-hash-link";
 export default function Footer() {
   return (
     <div className="footer-section">
+      <div className="footer-dveSekcijePO">
+      <div className="footer-balls-wrapper">
+          <div className="footer-blue-ball-blur" />
+          <div className="footer-purple-rectangle-blur" />
+      </div>
+      </div>
       <div className="footer-content">
         <div className="footer-text">
           <h1 className="footer-h">ŠTA TI PRUŽA FON HAKATON?</h1>
