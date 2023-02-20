@@ -10,8 +10,7 @@
 }
 
 .ax-okvir-partneri {
-  width: 16em;
-  height: 11em;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   border-radius: 12px;
@@ -92,18 +91,7 @@
   width: 13em;
   height: 8em;
   border-radius: 12px;
-  background-color: #fff;
-  object-fit: cover;
-}
-
-#pokrovitelj {
-  width: 20em;
-  height: 14em;
-}
-
-#pokrovitelj img {
-  width: 17em;
-  height: 11em;
+  object-fit: contain;
 }
 
 .pokrovitelj-logo {
