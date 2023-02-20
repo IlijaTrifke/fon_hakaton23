@@ -35,8 +35,6 @@ function Home() {
       </div>
 
       <div className="dveSekcijeAI">
-        <img className="vector4" src={Vector4} alt="Web" />
-
         <img className="vector6" src={Vector6} alt="Web" />
 
         <Statistika />
@@ -47,8 +45,10 @@ function Home() {
         <div className="partneri-ball-blur" />
       </div>
 
-      <SlikeOrg />
-      <Footer />
+      <div className="dveSekcijeAI">
+        <SlikeOrg />
+        <Footer />
+      </div>
     </>
   );
 }
