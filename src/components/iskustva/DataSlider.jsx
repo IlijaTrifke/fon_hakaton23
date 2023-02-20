@@ -31,7 +31,7 @@ export const DataSlider = [
   {
     id: 4,
     image: require("./img/delegacija.JPG"),
-    name: "tim Delegacija, pobednički tim FH 2022",
+    name: "Tim Delegacija, pobednički tim FH 2022",
 
     description:
       "„Učestvovati na devetom FON Hakatonu za nas je bio veliki izazov. Najzad smo imali priliku da pokažemo sve što smo godinama učili i testiramo naše sposobnosti rada u timu pod pritiskom. Za 24 sata susreli smo se sa problemima koje smo kao tim, uz pomoć stručnih mentora, brzo i efikasno rešili. Od trenutka kad smo poslali prijavu pa sve do proglašenja pobednika, imali smo sjajnu komunikaciju sa svima i zaista je FON Hakaton prevazišao naša očekivanja.“",
