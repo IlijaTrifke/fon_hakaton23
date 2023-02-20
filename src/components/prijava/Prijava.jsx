@@ -81,10 +81,10 @@ const Prijava = () => {
   const [brojTelefona2, setbrojTelefon2] = useState("");
   const [brojTelefona3, setbrojTelefon3] = useState("");
   const [brojTelefona4, setbrojTelefon4] = useState("");
-  const [status1, setStatus1] = useState("Zaposlen/a");
-  const [status2, setStatus2] = useState("Zaposlen/a");
-  const [status3, setStatus3] = useState("Zaposlen/a");
-  const [status4, setStatus4] = useState("Zaposlen/a");
+  const [status1, setStatus1] = useState("zaposlen");
+  const [status2, setStatus2] = useState("zaposlen");
+  const [status3, setStatus3] = useState("zaposlen");
+  const [status4, setStatus4] = useState("zaposlen");
   const [imeSkole1, setimeSkole1] = useState("");
   const [imeSkole2, setimeSkole2] = useState("");
   const [imeSkole3, setimeSkole3] = useState("");
@@ -127,6 +127,10 @@ const Prijava = () => {
     setPitanje2("");
     setPitanje3("");
     setPitanje4("");
+    setStatus1("zaposlen");
+    setStatus2("zaposlen");
+    setStatus3("zaposlen");
+    setStatus4("zaposlen");
     setCv1("");
     setCv2("");
     setCv3("");
@@ -202,9 +206,9 @@ const Prijava = () => {
       !brojTelefona1 ||
       !brojTelefona2 ||
       !brojTelefona3 ||
-      !imeSkole1 ||
-      !imeSkole2 ||
-      !imeSkole3 ||
+      // !imeSkole1 ||
+      // !imeSkole2 ||
+      // !imeSkole3 ||
       !pitanje1 ||
       !pitanje2 ||
       !pitanje3 ||
@@ -222,15 +226,26 @@ const Prijava = () => {
     ) {
       setError(true);
       openModal("Neuspešna prijava!\nProverite crvena polja!");
-      //radi testiranja praznjenja kopirati ovde
+
+      return;
+    } else if (
+      (status1 !== "zaposlen" && imeSkole1 === "") ||
+      (status2 !== "zaposlen" && imeSkole2 === "") ||
+      (status3 !== "zaposlen" && imeSkole3 === "")
+    ) {
+      setError(true);
+      openModal("Neuspešna prijava!\nProverite crvena polja!");
       return;
     }
 
     if (ime4 || imeSkole4 || brojTelefona4 || validateEmail(imejl4) || cv4) {
-      if (
-        !(ime4 && imeSkole4 && brojTelefona4 && validateEmail(imejl4) && cv4)
-      ) {
+      if (!(ime4 && brojTelefona4 && validateEmail(imejl4) && cv4)) {
         setError1(true);
+        openModal("Neuspešna prijava!\nProverite crvena polja!");
+        return;
+      } else if (status4 !== "zaposlen" && imeSkole4 === "") {
+        setError1(true);
+        openModal("Neuspešna prijava!\nProverite crvena polja!");
         return;
       }
     }
@@ -391,9 +406,9 @@ const Prijava = () => {
                   }}
                   required
                 >
-                  <option value="zaposlen">Zaposlen</option>
-                  <option value="student">Student</option>
-                  <option value="srednjoskolac">Srednjoškolac</option>
+                  <option value="zaposlen">Zaposlen/a</option>
+                  <option value="student">Student/kinja</option>
+                  <option value="srednjoskolac">Srednjoškolac/ka</option>
                 </select>
                 <lable class="pr-lable" for="pr-year_m1">
                   Godina i naziv fakulteta/razred i naziv srednje škole
@@ -402,14 +417,16 @@ const Prijava = () => {
                   type="text"
                   id="pr-year_m1"
                   class={`pr-text ${
-                    error && imeSkole1 === "" ? "errorClass" : ""
+                    error && imeSkole1 === "" && status1 !== "zaposlen"
+                      ? "errorClass"
+                      : ""
                   }`}
                   onChange={(e) => {
                     setimeSkole1(e.target.value);
                   }}
                   required
                 ></input>
-                {error && imeSkole1 === "" && (
+                {error && imeSkole1 === "" && status1 !== "zaposlen" && (
                   <label class="pr-lable-error">
                     Godina i naziv fakulteta/razred i naziv srednje škole su
                     obavezni!
@@ -496,9 +513,9 @@ const Prijava = () => {
                     setStatus2(e.target.value);
                   }}
                 >
-                  <option value="zaposlen">Zaposlen</option>
-                  <option value="student">Student</option>
-                  <option value="srednjoskolac">Srednjoškolac</option>
+                  <option value="zaposlen">Zaposlen/a</option>
+                  <option value="student">Student/kinja</option>
+                  <option value="srednjoskolac">Srednjoškolac/ka</option>
                 </select>
                 <lable class="pr-lable" for="pr-year_m2">
                   Godina i naziv fakulteta/razred i naziv srednje škole
@@ -507,14 +524,16 @@ const Prijava = () => {
                   type="text"
                   id="pr-year_m2"
                   class={`pr-text ${
-                    error && imeSkole2 === "" ? "errorClass" : ""
+                    error && imeSkole2 === "" && status2 !== "zaposlen"
+                      ? "errorClass"
+                      : ""
                   }`}
                   onChange={(e) => {
                     setimeSkole2(e.target.value);
                   }}
                   required
                 ></input>
-                {error && imeSkole2 === "" && (
+                {error && imeSkole2 === "" && status2 !== "zaposlen" && (
                   <label class="pr-lable-error">
                     Godina i naziv fakulteta/razred i naziv srednje škole su
                     obavezni!
@@ -592,19 +611,19 @@ const Prijava = () => {
                     Broj telefona je obavezan!
                   </label>
                 )}
-                <lable
-                  class="pr-lable"
-                  for="pr-select_m3"
+                <lable class="pr-lable" for="pr-select_m3">
+                  Status: zaposlen, student, srednjoškolac
+                </lable>
+                <select
+                  class="pr-select"
+                  id="pr-select_m3"
                   onChange={(e) => {
                     setStatus3(e.target.value);
                   }}
                 >
-                  Status: zaposlen, student, srednjoškolac
-                </lable>
-                <select class="pr-select" id="pr-select_m3">
-                  <option value="zaposlen">Zaposlen</option>
-                  <option value="student">Student</option>
-                  <option value="srednjoskolac">Srednjoškolac</option>
+                  <option value="zaposlen">Zaposlen/a</option>
+                  <option value="student">Student/kinja</option>
+                  <option value="srednjoskolac">Srednjoškolac/ka</option>
                 </select>
                 <lable class="pr-lable" for="pr-year_m3">
                   Godina i naziv fakulteta/razred i naziv srednje škole
@@ -613,13 +632,15 @@ const Prijava = () => {
                   type="text"
                   id="pr-year_m3"
                   class={`pr-text ${
-                    error && imeSkole3 === "" ? "errorClass" : ""
+                    error && imeSkole3 === "" && status3 !== "zaposlen"
+                      ? "errorClass"
+                      : ""
                   }`}
                   onChange={(e) => {
                     setimeSkole3(e.target.value);
                   }}
                 ></input>
-                {error && imeSkole3 === "" && (
+                {error && imeSkole3 === "" && status3 !== "zaposlen" && (
                   <label class="pr-lable-error">
                     Godina i naziv fakulteta/razred i naziv srednje škole su
                     obavezni!
@@ -636,8 +657,8 @@ const Prijava = () => {
                   }}
                   error={error}
                   prom={cv3}
-                  fileValue={cv1}
-                  setFileValue={setCv1}
+                  fileValue={cv3}
+                  setFileValue={setCv3}
                 />
               </div>
 
@@ -694,19 +715,19 @@ const Prijava = () => {
                     Broj telefona je obavezan!
                   </label>
                 )}
-                <lable
-                  class="pr-lable"
-                  for="pr-select_m4"
+                <lable class="pr-lable" for="pr-select_m4">
+                  Status: zaposlen, student, srednjoškolac
+                </lable>
+                <select
+                  class="pr-select"
+                  id="pr-select_m4"
                   onClick={(e) => {
                     setStatus4(e.target.value);
                   }}
                 >
-                  Status: zaposlen, student, srednjoškolac
-                </lable>
-                <select class="pr-select" id="pr-select_m4">
-                  <option value="zaposlen">Zaposlen</option>
-                  <option value="student">Student</option>
-                  <option value="srednjoskolac">Srednjoškolac</option>
+                  <option value="zaposlen">Zaposlen/a</option>
+                  <option value="student">Student/kinja</option>
+                  <option value="srednjoskolac">Srednjoškolac/ka</option>
                 </select>
                 <lable class="pr-lable" for="pr-year_m4">
                   Godina i naziv fakulteta/razred i naziv srednje škole
@@ -715,13 +736,15 @@ const Prijava = () => {
                   type="text"
                   id="pr-year_m4"
                   class={`pr-text ${
-                    error1 && imeSkole4 === "" ? "errorClass" : ""
+                    error1 && imeSkole4 === "" && status4 !== "zaposlen"
+                      ? "errorClass"
+                      : ""
                   }`}
                   onChange={(e) => {
                     setimeSkole4(e.target.value);
                   }}
                 ></input>
-                {error1 && !imeSkole4 && (
+                {error1 && !imeSkole4 && status4 !== "zaposlen" && (
                   <label class="pr-lable-error">
                     Godina i naziv fakulteta/razred i naziv srednje škole su
                     obavezni!
