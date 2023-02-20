@@ -166,7 +166,9 @@ const Prijava = () => {
       );
       const data = await response.json();
       if (data.success) {
-        openModal("Uspešno poslata prijava!");
+        openModal(
+          "Uspešno poslata prijava!\nPotvrda prijave je poslata svakom članu na mejl."
+        );
         clearForm();
       } else {
         openModal(data.msg);
