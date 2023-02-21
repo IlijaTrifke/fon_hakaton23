@@ -27,6 +27,7 @@ import naturalni15 from "./assets/robni/15.png";
 import naturalni16 from "./assets/robni/16.png";
 import naturalni17 from "./assets/robni/17.png";
 import naturalni18 from "./assets/robni/18.png";
+import naturalni19 from "./assets/robni/19.png";
 
 import godisnji1 from "./assets/godisnji/1.png";
 import godisnji2 from "./assets/godisnji/2.png";
@@ -377,6 +378,14 @@ const Partneri = (props) => {
       partnerIme: "Wolt",
       pozadina: "#fff",
       link: "https://wolt.com/sr/srb/belgrade",
+      width: "13em",
+      height: "8em",
+    },
+    {
+      partnerSlika: naturalni19,
+      partnerIme: "Finesa",
+      pozadina: "#fff",
+      link: "https://www.finesa.edu.rs/",
       width: "13em",
       height: "8em",
     },
