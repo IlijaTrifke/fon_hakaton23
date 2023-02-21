@@ -8,7 +8,7 @@ export const DataSlider = [
   },
   {
     id: 1,
-    image: require("./img/milos.jpg"),
+    image: require("./img/milos.jpeg"),
     name: "Miloš Ninković",
     description:
       "„Bilo je veoma izazovno raditi preko 24 sata i rješavati probleme, ali zahvaljujući odličnoj atmosferi na takmičenju vrijeme je proletjelo. Osvojeno prvo mjesto na FON Hakatonu je pokazalo mom timu i meni da imamo dobru ideju i inspirisalo nas je da nastavimo sa razvojem naše aplikacije.“",
@@ -30,7 +30,7 @@ export const DataSlider = [
   },
   {
     id: 4,
-    image: require("./img/delegacija.JPG"),
+    image: require("./img/delegacija.jpeg"),
     name: "Tim Delegacija, pobednički tim FH 2022",
 
     description:
