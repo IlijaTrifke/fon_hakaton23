@@ -140,8 +140,8 @@ const Agenda = () => {
               <p className="agn-descr">
                 Ono što timove deli od učešća na takmičenju je još samo tehnički
                 intervju. Intervjui će se održati preko platforme Teams u vidu
-                speed dating-a sa osobljem fakulteta, nakon čega najbolje
-                rangirane ekipe prolaze u finale.
+                speed dating-a sa predstavnicima FON-a i alumnistima FONIS-a,
+                nakon čega najbolje rangirani timovi prolaze u finale.
               </p>
             </div>
           </div>
