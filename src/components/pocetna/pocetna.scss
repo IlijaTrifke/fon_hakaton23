@@ -5,7 +5,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 12rem 0;
   color: $bela;
   user-select: none;
   position: relative;
@@ -17,6 +16,7 @@
   width: 19rem;
   position: relative;
   z-index: 100;
+  margin-top: 5%;
 }
 
 .pocetna-motto {
@@ -24,7 +24,7 @@
   word-spacing: 1vw;
   text-align: center;
   text-shadow: 0 0 7px $bela;
-  margin: 2% 0;
+  margin: 2vh 0;
   position: relative;
   z-index: 100;
   font-size: 2rem;
