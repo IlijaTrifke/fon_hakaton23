@@ -10,7 +10,28 @@
   top: -8%;
 }
 
-.ax-okvir-partneri {
+.partneri-slika {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16em;
+  height: 9em;
+  border-radius: 12px;
+}
+
+.partner img {
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+.partner {
+  display: flex;
+  justify-content: center;
+  border-radius: 30px;
+  margin: auto;
+}
+
+.ax-okvir-partner {
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -25,12 +46,12 @@
   );
 }
 
-.ax-okvir-partneri::before {
+.ax-okvir-partner::before {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: 12px;
-  padding: 0.7rem;
+  padding: 0.2rem;
   background: linear-gradient(
     135deg,
     rgba(36, 189, 222, 0.13),
@@ -49,6 +70,11 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+#pokrovitelj {
+  width: 15em;
+  height: 15em;
 }
 
 .ceo-partneri {
@@ -92,30 +118,10 @@
   margin: auto;
 }
 
-.partner {
-  display: flex;
-  justify-content: center;
-  border-radius: 30px;
-  margin: auto;
-}
-.partneri-slike {
-  position: absolute;
-}
-.partneri-slike img {
-  height: 100%;
-  width: 100%;
-}
 .partner a {
   position: relative;
   z-index: 100;
   cursor: pointer;
-}
-
-.partner img {
-  width: 13em;
-  height: 8em;
-  border-radius: 12px;
-  object-fit: contain;
 }
 
 .pokrovitelj-logo {

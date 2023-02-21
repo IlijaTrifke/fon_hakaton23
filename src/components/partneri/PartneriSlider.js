@@ -10,8 +10,8 @@ const PartneriSlider = (props) => {
         key={partner.partnerIme}
         partnerSlika={partner.partnerSlika}
         partnerIme={partner.partnerIme}
-        width={props.width}
-        height={props.height}
+        width={partner.width}
+        height={partner.height}
         link={partner.link}
         pozadina={partner.pozadina}
       />

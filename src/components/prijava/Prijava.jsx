@@ -11,15 +11,19 @@ import {
   FaFacebookF,
   FaLinkedinIn,
   FaGlobe,
+  FaCheck,
 } from "react-icons/fa";
 import logo from "../footer/logo.png";
 import location from "../footer/location.png";
 import Modal from "./modal/Modal";
 import { Loader } from "./../loader/Loader";
-import { ProgressBar } from "react-bootstrap";
 
-const AnimatedBar = (props) => {
-  return <ProgressBar now={props.percent} />;
+const AnimatedBar = ({ percent = 0 }) => {
+  return (
+    <div className="animatedbar-wrapper">
+      <div className="animatedbar" style={{ width: percent }}></div>
+    </div>
+  );
 };
 
 const upload = Upload({ apiKey: "public_FW25b4V4ALwH6oZJdyGdwaxjzmZX" });
@@ -36,7 +40,7 @@ const FileUploadButton = (props) => {
         onBegin: ({ cancel }) => console.log("File upload started!"),
         onProgress: ({ progress }) => setPercent(progress), //ovde je bio progress.toString()
       });
-      setPercent(0); //ovde ""
+
       console.log(`File uploaded! ${fileUrl}`);
       console.log(file.name);
       props.onChange(fileUrl);
@@ -55,7 +59,11 @@ const FileUploadButton = (props) => {
         onChange={(e) => onFileSelected(e)}
         required
       />
-      <AnimatedBar percent={percent} />
+      {percent === 100 ? (
+        <FaCheck style={{ color: "green" }}></FaCheck>
+      ) : (
+        percent !== 0 && <AnimatedBar percent={percent} />
+      )}
       {/* <div style={{ color: "white", fontFamily: "Noto Sans" }}>{percent}</div> */}
       {((props.error && !props.prom) || errorMax) && (
         <label class="pr-lable-error">
@@ -433,7 +441,7 @@ const Prijava = () => {
                   </label>
                 )}
                 <lable class="pr-lable" for="pr-cv_m1">
-                  Vaš CV
+                  Vaš CV<span>(u pdf-u)</span>
                 </lable>
 
                 <FileUploadButton
@@ -540,7 +548,7 @@ const Prijava = () => {
                   </label>
                 )}
                 <lable class="pr-lable" for="pr-cv_m2">
-                  Vaš CV
+                  Vaš CV<span>(u pdf-u)</span>
                 </lable>
 
                 <FileUploadButton
@@ -647,7 +655,7 @@ const Prijava = () => {
                   </label>
                 )}
                 <lable class="pr-lable" for="pr-cv_m3">
-                  Vaš CV
+                  Vaš CV<span>(u pdf-u)</span>
                 </lable>
 
                 <FileUploadButton
@@ -751,7 +759,7 @@ const Prijava = () => {
                   </label>
                 )}
                 <lable class="pr-lable" for="pr-cv_m4">
-                  Vaš CV
+                  Vaš CV<span>(u pdf-u)</span>
                 </lable>
 
                 <FileUploadButton
