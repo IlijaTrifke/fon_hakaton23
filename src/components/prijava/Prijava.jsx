@@ -26,7 +26,7 @@ const AnimatedBar = ({ percent = 0 }) => {
   );
 };
 
-const upload = Upload({ apiKey: "public_FW25b4V4ALwH6oZJdyGdwaxjzmZX" });
+const upload = Upload({ apiKey: "public_12a1xysBFVZNNUDtmSoeYq4cYW4w" });
 const FileUploadButton = (props) => {
   const [errorMax, setErrorMax] = useState(false);
   const [percent, setPercent] = useState(0); //ovde ""
