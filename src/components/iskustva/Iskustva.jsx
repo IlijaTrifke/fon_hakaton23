@@ -171,7 +171,6 @@ const Iskustva = (props) => {
           setCurrent(current + 1);
         }
 
-        console.log(current);
         setCurrent(current + 1);
       },
       state === true ? 10000 : 3000
@@ -201,7 +200,6 @@ const Iskustva = (props) => {
   };
 
   const toggleActiveStyles = (index) => {
-    console.log(appState.objects[index], appState.activeObject);
     if (appState.objects[index] === appState.activeObject) {
       return "box activeS";
     } else {

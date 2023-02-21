@@ -23,7 +23,7 @@
   font-family: Orbitron;
   word-spacing: 1vw;
   text-align: center;
-  text-shadow: 0 0 10px $bela;
+  text-shadow: 0 0 7px $bela;
   margin: 2% 0;
   position: relative;
   z-index: 100;
@@ -169,6 +169,11 @@
   backdrop-filter: blur(1px);
 }
 
+@media screen and (max-width: 1200px) {
+  .pocetna-section {
+    padding: 3rem 0;
+  }
+}
 @media screen and (max-width: 960px) {
   .pocetna-bottom {
     gap: 5rem;

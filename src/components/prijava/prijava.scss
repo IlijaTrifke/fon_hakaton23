@@ -191,6 +191,11 @@ input:after {
   width: 90%;
 }
 
+.pr-lable span {
+  font-size: 1rem;
+  font-style: italic;
+}
+
 // .pr-text-wrapper {
 //   width: 100%;
 //   position: relative;
@@ -440,6 +445,17 @@ input:after {
   border-radius: 50%;
 }
 
+.animatedbar-wrapper {
+  height: 10px;
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.animatedbar {
+  background-color: #24bdde;
+  height: 100%;
+}
+
 @media (max-width: 1200px) {
   .pr-h1 {
     font-size: 2rem;
@@ -450,6 +466,10 @@ input:after {
   .pr-lable,
   .pr-lable_check {
     font-size: 1rem;
+  }
+
+  .pr-lable span {
+    font-size: 0.8rem;
   }
 
   .pr-h1_m {

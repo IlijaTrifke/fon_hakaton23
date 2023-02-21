@@ -2,7 +2,6 @@ import React from "react";
 import "./agenda.scss";
 import { useRef, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import Vector6 from "../../images/Vector6.png";
 
 const Agenda = () => {
   const scrollRef = useRef();
@@ -27,7 +26,7 @@ const Agenda = () => {
       let up, down;
       let full = false;
       let set = 50;
-      let brojac = 0;
+
       const targetY = window.innerHeight * 0.8;
 
       function scrollHandler(e) {
@@ -49,7 +48,7 @@ const Agenda = () => {
           full = true;
           line.style.bottom = `11.9%`;
         }
-        console.log(sections)
+
         sections.forEach((item) => {
           // //console.log(item);
           const rect = item.getBoundingClientRect(); //     //console.log(rect);
@@ -58,7 +57,7 @@ const Agenda = () => {
             item.classList.add("show-me");
           }
         }); // //console.log(up, down);
-        if(sections[4].classList.contains("show-me") && !full){
+        if (sections[4].classList.contains("show-me") && !full) {
           full = true;
           line.style.bottom = `11.9%`;
         }
@@ -140,8 +139,9 @@ const Agenda = () => {
               <h2 className="agn-date">9-11. mart 2023.</h2>
               <p className="agn-descr">
                 Ono što timove deli od učešća na takmičenju je još samo tehnički
-                intervju. Intervjui će se održati preko platforme Teams u vidu speed dating-a sa osobljem fakulteta, nakon čega
-                najbolje rangirane ekipe prolaze u finale.
+                intervju. Intervjui će se održati preko platforme Teams u vidu
+                speed dating-a sa osobljem fakulteta, nakon čega najbolje
+                rangirane ekipe prolaze u finale.
               </p>
             </div>
           </div>
