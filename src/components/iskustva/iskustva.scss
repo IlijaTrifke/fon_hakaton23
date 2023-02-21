@@ -5,7 +5,7 @@
 }
 
 .ax-iskustva-wrapper {
-  min-height: 120vh;
+  min-height: 45rem;
 }
 
 #iskustva {
@@ -300,6 +300,9 @@
 }
 
 @media screen and (max-width: 960px) {
+  .ax-iskustva-wrapper {
+    min-height: 66rem;
+  }
   .ax-title h1 {
     font-size: 2.5rem;
     font-weight: 400;
