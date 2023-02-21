@@ -4,6 +4,10 @@
   position: relative;
 }
 
+.ax-iskustva-wrapper {
+  min-height: 120vh;
+}
+
 #iskustva {
   position: absolute;
   top: -10%;
@@ -33,6 +37,7 @@
   display: flex;
   justify-content: center;
   gap: 2rem;
+  min-height: 20rem;
 }
 
 .ax-top-container .ax-top-left {
@@ -50,7 +55,6 @@
     rgba(217, 217, 217, 1),
     rgba(217, 217, 217, 0)
   );
-  // height: 25rem;
 }
 .ax-top-left hr {
   width: 80%;
@@ -64,8 +68,9 @@
   color: $bela;
   font-weight: 400;
   font-size: 15px;
-  margin: 1rem 0;
+  margin: 1rem auto;
   height: 2rem;
+  width: 80%;
 }
 
 .ax-top-slider {
@@ -187,7 +192,16 @@
 .slide-active {
   opacity: 1;
   transition-duration: 0.5s;
-  height: 100%;
+  min-height: 10rem;
+  width: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slide-active1 {
+  opacity: 1;
+  transition-duration: 0.5s;
+  min-height: 20rem;
   width: 20rem;
   display: flex;
   align-items: center;
@@ -209,7 +223,6 @@
     rgba(217, 217, 217, 0.2),
     rgba(217, 217, 217, 0)
   );
-  height: 25rem;
 }
 
 .ax-top-right .ax-top-description {
@@ -218,6 +231,7 @@
   font-family: "Noto Sans", sans-serif;
   color: $bela;
   text-align: center;
+  // height: 20rem;
 }
 
 .ax-okvir-iskustva {
@@ -311,13 +325,13 @@
   }
 
   .left-arrow {
-    top: 45%;
+    top: 30rem;
     left: 10%;
     right: initial;
     cursor: none;
   }
   .right-arrow {
-    top: 45%;
+    top: 30rem;
     right: 10%;
     left: initial;
     cursor: none;
@@ -326,13 +340,13 @@
 
 @media screen and (max-width: 620px) {
   .left-arrow {
-    top: 45%;
+    // top: 45%;
     left: 5%;
     right: initial;
     cursor: none;
   }
   .right-arrow {
-    top: 45%;
+    // top: 45%;
     right: 5%;
     left: initial;
     cursor: none;
@@ -340,11 +354,11 @@
 }
 @media screen and (max-width: 480px) {
   .left-arrow {
-    top: 35%;
+    top: 25rem;
     left: 2%;
   }
   .right-arrow {
-    top: 35%;
+    top: 25rem;
     right: 2%;
   }
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Agenda from "./components/agenda/Agenda";
 import Statistika from "./components/statistika/Statistika";
 import Pocetna from "./components/pocetna/Pocetna";
@@ -10,12 +10,21 @@ import SlikeOrg from "./components/slikeOrg/SlikeOrg";
 import Ohakatonu from "./components/o-hakatonu/Ohakatonu";
 import Iskustva from "./components/iskustva/Iskustva";
 import Footer from "./components/footer/Footer";
-import Vector4 from "./images/Vector4.png";
 import Vector6 from "./images/Vector6.png";
+import { Loader1 } from "./components/loader/Loader1";
 
 function Home() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
+
   return (
     <>
+      {loading && <Loader1 />}
       <Navbar />
       <div className="dveSekcijePO">
         <Pocetna />
