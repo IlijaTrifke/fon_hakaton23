@@ -18,7 +18,6 @@ const Faq = () => {
     <div>
       <div id="stars"></div>
       <div id="stars2"></div>
-      <div id="stars3"></div>
 
       <div className="faq-section">
         <div id="faq"></div>

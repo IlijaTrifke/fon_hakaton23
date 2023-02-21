@@ -11,7 +11,7 @@ function Ohakatonu() {
       <div id="o_hakatonu"></div>
       <div id="stars"></div>
       <div id="stars2"></div>
-      <div id="stars3"></div>
+
       <h1 className="hakaton-title">O Hakatonu</h1>
 
       <div className="hakaton-section">
