@@ -1,27 +1,24 @@
 // import React from "react";
 import "./iskustva.scss";
-import Iskustvo from "./Iskustvo.js";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import IskustvoSlider from "./IskustvaSlider.js";
 
-import iskustva1 from "./assets/1.JPG";
-import iskustva2 from "./assets/2.jpg";
-import iskustva3 from "./assets/3.JPG";
-import iskustva4 from "./assets/4.JPG";
-import iskustva5 from "./assets/5.jpg";
-import iskustva6 from "./assets/6.jpg";
-import iskustva7 from "./assets/7.JPG";
-import iskustva8 from "./assets/8.JPG";
-import iskustva9 from "./assets/9.JPG";
-import iskustva10 from "./assets/10.JPG";
-import iskustva11 from "./assets/11.jpg";
-import iskustva12 from "./assets/12.JPG";
-import iskustva13 from "./assets/13.jpg";
-
-import Vector6 from "../../images/Vector6.png";
+import iskustva1 from "./assets/1.jpeg";
+import iskustva2 from "./assets/2.jpeg";
+import iskustva3 from "./assets/3.jpeg";
+import iskustva4 from "./assets/4.jpeg";
+import iskustva5 from "./assets/5.jpeg";
+import iskustva6 from "./assets/6.jpeg";
+import iskustva7 from "./assets/7.jpeg";
+import iskustva8 from "./assets/8.jpeg";
+import iskustva9 from "./assets/9.jpeg";
+import iskustva10 from "./assets/10.jpeg";
+import iskustva11 from "./assets/11.jpeg";
+import iskustva12 from "./assets/12.jpeg";
+import iskustva13 from "./assets/13.jpeg";
 
 import React, { useState, useEffect } from "react";
 

@@ -451,8 +451,8 @@ const Partneri = (props) => {
         <Partner
           partnerSlika={Pokrovitelj}
           partnerIme="Partner"
-          height="13em"
-          width="13em"
+          height="10em"
+          width="10em"
           id="pokrovitelj"
           link="https://www.ey.com/en_us"
           pozadina="#fff"
