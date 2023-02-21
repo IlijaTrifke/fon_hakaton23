@@ -1,11 +1,11 @@
 import React from "react";
 import ScaleLoader from "react-spinners/ScaleLoader";
-import "./loader.scss";
+import "./loader1.scss";
 
-export const Loader = () => {
+export const Loader1 = () => {
   return (
     <div
-      className="loader"
+      className="loader1"
       style={{
         height: "100vh",
         width: "100%",
@@ -16,7 +16,7 @@ export const Loader = () => {
         zIndex: "2000",
       }}
     >
-      <div className="backdrop"></div>
+      <div className="backdrop1"></div>
       <ScaleLoader
         color={"#24bdde"}
         size={"10rem"}
@@ -27,4 +27,4 @@ export const Loader = () => {
   );
 };
 
-export default Loader;
+export default Loader1;

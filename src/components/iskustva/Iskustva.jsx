@@ -27,7 +27,7 @@ import StrelaDesno from "../../images/right-arrow.png";
 
 import { DataSlider } from "./DataSlider";
 
-const Iskustva = (props) => {
+const Iskustva = () => {
   const iskustvaSettings = {
     dots: false,
     infinite: true,
@@ -139,8 +139,6 @@ const Iskustva = (props) => {
       { id: 2, title: "Dizajn" },
       { id: 3, title: "PR" },
       { id: 4, title: "CR&AR" },
-      { id: 5, title: "Logistika" },
-      { id: 6, title: "HR" },
     ],
   });
 
@@ -158,7 +156,7 @@ const Iskustva = (props) => {
     let slider = setInterval(
       () => {
         setState(false);
-        if (current == 5) {
+        if (current === 5) {
           toggleActiveStyles(0);
           toggleActive(0);
           setCurrent(0);
@@ -170,7 +168,7 @@ const Iskustva = (props) => {
 
         setCurrent(current + 1);
       },
-      state === true ? 10000 : 3000
+      state === true ? 20000 : 3000
     );
 
     return () => {
@@ -235,79 +233,81 @@ const Iskustva = (props) => {
   };
 
   return (
-    <div className="ax-iskustva">
-      <div id="iskustva"></div>
+    <div className="ax-iskustva-wrapper">
+      <div className="ax-iskustva">
+        <div id="iskustva"></div>
 
-      <div className="ax-title">
-        <h1>Iskustva</h1>
-      </div>
+        <div className="ax-title">
+          <h1>Iskustva</h1>
+        </div>
 
-      <div className="ax-top-container">
-        <div className="ax-top-left">
-          {DataSlider.map((data, index) => {
-            return (
-              <div
-                className={index === current ? "slide-active" : "slide"}
-                key={index}
-              >
-                {index === current && (
-                  <div className="ax-top-slider">
-                    <img src={data.image} alt="group" className="image" />
-                    <div className="opis-slike">
-                      <h1 className="ax-top-name">{data.name}</h1>
-                      <hr />
+        <div className="ax-top-container">
+          <div className="ax-top-left">
+            {DataSlider.map((data, index) => {
+              return (
+                <div
+                  className={index === current ? "slide-active" : "slide"}
+                  key={index}
+                >
+                  {index === current && (
+                    <div className="ax-top-slider">
+                      <img src={data.image} alt="group" className="image" />
+                      <div className="opis-slike">
+                        <h1 className="ax-top-name">{data.name}</h1>
+                        <hr />
+                      </div>
                     </div>
-                  </div>
-                )}
-              </div>
-            );
-          })}
-          <img
-            className={toggleActiveStylesLeftArrow()}
-            src={StrelaLevo}
-            alt="Slika strele"
-            onClick={() => {
-              prevSlide();
-              toggleStateL();
-              setState(true);
-            }}
-          />
+                  )}
+                </div>
+              );
+            })}
+            <img
+              className={toggleActiveStylesLeftArrow()}
+              src={StrelaLevo}
+              alt="Slika strele"
+              onClick={() => {
+                prevSlide();
+                toggleStateL();
+                setState(true);
+              }}
+            />
+          </div>
+
+          <div className="ax-top-right">
+            {DataSlider.map((data, index) => {
+              return (
+                <div
+                  className={index === current ? "slide-active1" : "slide"}
+                  key={index}
+                >
+                  {index === current && (
+                    <p className="ax-top-description">{data.description}</p>
+                  )}
+                </div>
+              );
+            })}
+            <img
+              className={toggleActiveStylesRightArrow()}
+              src={StrelaDesno}
+              alt="Slika strele"
+              onClick={() => {
+                nextSlide();
+                toggleStateR();
+                setState(true);
+              }}
+            />
+          </div>
         </div>
 
-        <div className="ax-top-right">
-          {DataSlider.map((data, index) => {
-            return (
-              <div
-                className={index === current ? "slide-active" : "slide"}
-                key={index}
-              >
-                {index === current && (
-                  <p className="ax-top-description">{data.description}</p>
-                )}
-              </div>
-            );
-          })}
-          <img
-            className={toggleActiveStylesRightArrow()}
-            src={StrelaDesno}
-            alt="Slika strele"
-            onClick={() => {
-              nextSlide();
-              toggleStateR();
-              setState(true);
-            }}
-          />
-        </div>
-      </div>
-
-      <div className="ax-down">
-        <div className="ax-iskustva-box">
-          <IskustvoSlider
-            iskustva={downSlike}
-            settings={iskustvaSettings}
-            width="16em"
-            height="9em"
-          />
+        <div className="ax-down">
+          <div className="ax-iskustva-box">
+            <IskustvoSlider
+              iskustva={downSlike}
+              settings={iskustvaSettings}
+              width="16em"
+              height="9em"
+            />
+          </div>
         </div>
       </div>
     </div>

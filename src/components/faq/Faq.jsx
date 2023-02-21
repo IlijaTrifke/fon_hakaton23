@@ -24,36 +24,34 @@ const Faq = () => {
 
         <h1 className="faq-naslov">Često postavljana pitanja</h1>
 
-        <div className="faq-box-wrapper">
-          <div className="faq-box">
-            {dataFaq.map((item, i) => (
-              <div className="faq-content" key={i}>
-                <div className="faq-horizontal">
-                  <p className="faq-text">{item.question}</p>
-                  <p
-                    className={
-                      selected === i
-                        ? "faq-plus faq-plus-animation1"
-                        : "faq-plus faq-plus-animation2"
-                    }
-                    onClick={() => {
-                      toggle(i);
-                    }}
-                  >
-                    +
-                  </p>
-                </div>
-
+        <div className="faq-box">
+          {dataFaq.map((item, i) => (
+            <div className="faq-content" key={i}>
+              <div className="faq-horizontal">
+                <p className="faq-text">{item.question}</p>
                 <p
                   className={
-                    selected === i ? "faq-text-moving show" : "faq-text-moving"
+                    selected === i
+                      ? "faq-plus faq-plus-animation1"
+                      : "faq-plus faq-plus-animation2"
                   }
+                  onClick={() => {
+                    toggle(i);
+                  }}
                 >
-                  {item.answer}
+                  +
                 </p>
               </div>
-            ))}
-          </div>
+
+              <p
+                className={
+                  selected === i ? "faq-text-moving show" : "faq-text-moving"
+                }
+              >
+                {item.answer}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </div>
