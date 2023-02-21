@@ -23,6 +23,10 @@ import naturalni11 from "./assets/robni/11.png";
 import naturalni12 from "./assets/robni/12.png";
 import naturalni13 from "./assets/robni/13.png";
 import naturalni14 from "./assets/robni/14.png";
+import naturalni15 from "./assets/robni/15.png";
+import naturalni16 from "./assets/robni/16.png";
+import naturalni17 from "./assets/robni/17.png";
+import naturalni18 from "./assets/robni/18.png";
 
 import godisnji1 from "./assets/godisnji/1.png";
 import godisnji2 from "./assets/godisnji/2.png";
@@ -229,8 +233,8 @@ const Partneri = (props) => {
       partnerIme: "My moon M",
       pozadina: "#304b38",
       link: "https://www.instagram.com/mymoonmirror/",
-      width: "13em",
-      height: "8em",
+      width: "20em",
+      height: "9em",
     },
     // {
     //   partnerSlika: Slika,
@@ -254,19 +258,21 @@ const Partneri = (props) => {
       width: "13em",
       height: "8em",
     },
-    // {
-    //   partnerSlika: Slika,
-    //   partnerIme: "Cubes School",
-    //   pozadina: "#f5f5f5",
-    //   link: "https://www.instagram.com/cubesschool/?hl=sr",
-    // },
+    {
+      partnerSlika: naturalni18,
+      partnerIme: "Cubes School",
+      pozadina: "#fff",
+      link: "https://www.instagram.com/cubesschool/?hl=sr",
+      width: "13em",
+      height: "8em",
+    },
     {
       partnerSlika: naturalni1,
       partnerIme: "Adventure Hub",
       pozadina: "#98c123",
       link: "https://www.instagram.com/adventure_hub_serbia/?hl=sr",
-      width: "13em",
-      height: "8em",
+      width: "15em",
+      height: "9em",
     },
     {
       partnerSlika: naturalni6,
@@ -322,12 +328,14 @@ const Partneri = (props) => {
       width: "13em",
       height: "8em",
     },
-    // {
-    //   partnerSlika: Slika,
-    //   partnerIme: "Stark",
-    //   pozadina: "#f5f5f5",
-    //   link: "http://www.stark.rs/",
-    // },
+    {
+      partnerSlika: naturalni17,
+      partnerIme: "Stark",
+      pozadina: "#fff",
+      link: "http://www.stark.rs/",
+      width: "13em",
+      height: "9em",
+    },
     // {
     //   partnerSlika: Slika,
     //   partnerIme: "Grand",
@@ -342,12 +350,14 @@ const Partneri = (props) => {
       width: "13em",
       height: "8em",
     },
-    // {
-    //   partnerSlika: Slika,
-    //   partnerIme: "Milford",
-    //   pozadina: "#f5f5f5",
-    //   link: "https://www.instagram.com/milford_srbija/",
-    // },
+    {
+      partnerSlika: naturalni15,
+      partnerIme: "Milford",
+      pozadina: "#fff",
+      link: "https://www.instagram.com/milford_srbija/",
+      width: "16em",
+      height: "12em",
+    },
     // {
     //   partnerSlika: Slika,
     //   partnerIme: "Maf Maf",
@@ -359,6 +369,14 @@ const Partneri = (props) => {
       partnerIme: "StejsnKlub",
       pozadina: "#fff",
       link: "https://www.instagram.com/stejsnklub/",
+      width: "13em",
+      height: "8em",
+    },
+    {
+      partnerSlika: naturalni16,
+      partnerIme: "Wolt",
+      pozadina: "#fff",
+      link: "https://wolt.com/sr/srb/belgrade",
       width: "13em",
       height: "8em",
     },
@@ -402,8 +420,8 @@ const Partneri = (props) => {
       partnerIme: "hr fabrika",
       pozadina: "#fff",
       link: "https://hrfabrika.com/",
-      width: "13em",
-      height: "8em",
+      width: "19em",
+      height: "10em",
     },
     {
       partnerSlika: godisnji6,
