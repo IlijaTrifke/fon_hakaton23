@@ -291,7 +291,7 @@ const Prijava = () => {
           linkCV: cv3,
         },
         // ...(someCondition && {b: 5})
-        ...(ime4 && imeSkole4 && brojTelefona4 && validateEmail(imejl4) && cv4
+        ...(ime4 && brojTelefona4 && validateEmail(imejl4) && cv4
           ? [
               {
                 imePrezime: ime4,
