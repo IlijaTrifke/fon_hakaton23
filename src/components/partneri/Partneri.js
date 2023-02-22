@@ -297,8 +297,8 @@ const Partneri = (props) => {
       partnerIme: "Akademska misao",
       pozadina: "#ffffff",
       link: "https://akademska-misao.rs/",
-      width: "13em",
-      height: "8em",
+      width: "16em",
+      height: "9em",
     },
     {
       partnerSlika: naturalni2,
