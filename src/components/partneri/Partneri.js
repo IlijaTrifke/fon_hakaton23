@@ -29,6 +29,8 @@ import naturalni17 from "./assets/robni/17.png";
 import naturalni18 from "./assets/robni/18.png";
 import naturalni19 from "./assets/robni/19.png";
 import naturalni20 from "./assets/robni/20.png";
+import naturalni21 from "./assets/robni/21.png";
+import naturalni22 from "./assets/robni/22.png";
 
 import godisnji1 from "./assets/godisnji/1.png";
 import godisnji2 from "./assets/godisnji/2.png";
@@ -389,6 +391,22 @@ const Partneri = (props) => {
       partnerIme: "Finesa",
       pozadina: "#fff",
       link: "https://www.finesa.edu.rs/",
+      width: "13em",
+      height: "8em",
+    },
+    {
+      partnerSlika: naturalni21,
+      partnerIme: "Bitef",
+      pozadina: "#fff",
+      link: "https://teatar.bitef.rs/rs",
+      width: "13em",
+      height: "9em",
+    },
+    {
+      partnerSlika: naturalni22,
+      partnerIme: "NaturaLab",
+      pozadina: "#fff",
+      link: "https://naturalab.rs/",
       width: "13em",
       height: "8em",
     },
