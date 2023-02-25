@@ -31,6 +31,7 @@ import naturalni19 from "./assets/robni/19.png";
 import naturalni20 from "./assets/robni/20.png";
 import naturalni21 from "./assets/robni/21.png";
 import naturalni22 from "./assets/robni/22.png";
+import naturalni23 from "./assets/robni/23.png";
 
 import godisnji1 from "./assets/godisnji/1.png";
 import godisnji2 from "./assets/godisnji/2.png";
@@ -240,12 +241,14 @@ const Partneri = (props) => {
       width: "20em",
       height: "9em",
     },
-    // {
-    //   partnerSlika: Slika,
-    //   partnerIme: "KST",
-    //   pozadina: "#f5f5f5",
-    //   link: "https://www.instagram.com/klubstudenatatehnike/",
-    // },
+    {
+      partnerSlika: naturalni23,
+      partnerIme: "KST",
+      pozadina: "#fff",
+      link: "https://www.instagram.com/klubstudenatatehnike/",
+      width: "20em",
+      height: "9em",
+    },
     {
       partnerSlika: naturalni10,
       partnerIme: "campster",
