@@ -32,6 +32,7 @@ import naturalni20 from "./assets/robni/20.png";
 import naturalni21 from "./assets/robni/21.png";
 import naturalni22 from "./assets/robni/22.png";
 import naturalni23 from "./assets/robni/23.png";
+import naturalni24 from "./assets/robni/24.png";
 
 import godisnji1 from "./assets/godisnji/1.png";
 import godisnji2 from "./assets/godisnji/2.png";
@@ -345,12 +346,14 @@ const Partneri = (props) => {
       width: "13em",
       height: "9em",
     },
-    // {
-    //   partnerSlika: Slika,
-    //   partnerIme: "Grand",
-    //   pozadina: "#f5f5f5",
-    //   link: "http://grandkafa.rs/",
-    // },
+    {
+      partnerSlika: naturalni24,
+      partnerIme: "Grand",
+      pozadina: "#f5f5f5",
+      link: "http://grandkafa.rs/",
+      width: "13em",
+      height: "8em",
+    },
     {
       partnerSlika: naturalni4,
       partnerIme: "Dr Brado",
