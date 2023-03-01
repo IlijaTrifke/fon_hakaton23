@@ -34,6 +34,7 @@ import naturalni22 from "./assets/robni/22.png";
 import naturalni23 from "./assets/robni/23.png";
 import naturalni24 from "./assets/robni/24.png";
 import naturalni25 from "./assets/robni/25.png";
+import naturalni26 from "./assets/robni/26.png";
 
 import godisnji1 from "./assets/godisnji/1.png";
 import godisnji2 from "./assets/godisnji/2.png";
@@ -371,12 +372,14 @@ const Partneri = (props) => {
       width: "16em",
       height: "12em",
     },
-    // {
-    //   partnerSlika: Slika,
-    //   partnerIme: "Maf Maf",
-    //   pozadina: "#f5f5f5",
-    //   link: "https://instagram.com/maf_maf_mafinerija?igshid=YWJhMjlhZTc=",
-    // },
+    {
+      partnerSlika: naturalni26,
+      partnerIme: "MafMaf",
+      pozadina: "#fff",
+      link: "https://instagram.com/maf_maf_mafinerija?igshid=YWJhMjlhZTc=",
+      width: "14em",
+      height: "9em",
+    },
     {
       partnerSlika: naturalni14,
       partnerIme: "StejsnKlub",
