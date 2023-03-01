@@ -5,6 +5,7 @@ import { HashLink } from "react-router-hash-link";
 
 export default function Pocetna() {
   const [timer, setTimer] = useState(0);
+  const [off, setOff] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
@@ -37,6 +38,10 @@ export default function Pocetna() {
       seconds = "0" + seconds;
     }
 
+    if (distance < 0) {
+      setOff(true);
+    }
+
     return `${days}:${hours}:${minutes}:${seconds}`;
   }
 
@@ -56,12 +61,11 @@ export default function Pocetna() {
         </HashLink>
         <div className="pocetna-bottom-middle">
           <h1 className="pocetna-middle-text">Ostalo je još:</h1>
-          <div className="pocetna-timer">
-            {/* <div className="timer-text">
-              <div className="timer-span">PRIJAVE SU ZATVORENE!</div>
-            </div> */}
-            {timer}
-          </div>
+          {off ? (
+            <div className="pocetna-timer off">PRIJAVE SU ZATVORENE!</div>
+          ) : (
+            <div className="pocetna-timer">{timer}</div>
+          )}
           <div className="pocetna-date-box"></div>
         </div>
         <HashLink smooth to="#o_hakatonu" className="pocetna-arrows">
