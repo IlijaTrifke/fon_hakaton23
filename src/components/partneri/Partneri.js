@@ -33,6 +33,7 @@ import naturalni21 from "./assets/robni/21.png";
 import naturalni22 from "./assets/robni/22.png";
 import naturalni23 from "./assets/robni/23.png";
 import naturalni24 from "./assets/robni/24.png";
+import naturalni25 from "./assets/robni/25.png";
 
 import godisnji1 from "./assets/godisnji/1.png";
 import godisnji2 from "./assets/godisnji/2.png";
@@ -413,6 +414,14 @@ const Partneri = (props) => {
       partnerIme: "NaturaLab",
       pozadina: "#fff",
       link: "https://naturalab.rs/",
+      width: "13em",
+      height: "8em",
+    },
+    {
+      partnerSlika: naturalni25,
+      partnerIme: "Bazzinga",
+      pozadina: "#fff",
+      link: "www.bazzinga.shop",
       width: "13em",
       height: "8em",
     },
