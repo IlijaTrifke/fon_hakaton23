@@ -336,7 +336,7 @@ const Partneri = (props) => {
       partnerSlika: naturalni8,
       partnerIme: "DIL Escape Room",
       pozadina: "#000",
-      link: "https://www.instagram.com/dilescaperooms/",
+      link: "https://dilescaperooms.rs/",
       width: "13em",
       height: "8em",
     },
