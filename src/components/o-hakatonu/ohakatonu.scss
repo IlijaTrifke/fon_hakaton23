@@ -212,9 +212,7 @@
   .hakaton-title {
     font-size: 2.5rem;
   }
-  .ohakatonu {
-    height: 90rem;
-  }
+
   .hakaton-card {
     transform: translateX(0%);
     position: initial;
@@ -825,5 +823,8 @@
   }
   #stars3:after {
     display: none;
+  }
+  .ohakatonu {
+    height: 90rem;
   }
 }
