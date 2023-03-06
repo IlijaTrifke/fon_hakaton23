@@ -7,8 +7,6 @@ import "slick-carousel/slick/slick-theme.css";
 
 import PartneriSlider from "./PartneriSlider.js";
 
-import Slika from "./assets/slika.png";
-
 import naturalni1 from "./assets/robni/1.png";
 import naturalni2 from "./assets/robni/2.png";
 import naturalni3 from "./assets/robni/3.png";
@@ -16,7 +14,7 @@ import naturalni4 from "./assets/robni/4.png";
 import naturalni5 from "./assets/robni/5.png";
 import naturalni6 from "./assets/robni/6.png";
 import naturalni7 from "./assets/robni/7.png";
-import naturalni8 from "./assets/robni/8.png";
+// import naturalni8 from "./assets/robni/8.png";
 import naturalni9 from "./assets/robni/9.png";
 import naturalni10 from "./assets/robni/10.png";
 import naturalni11 from "./assets/robni/11.png";
@@ -35,6 +33,35 @@ import naturalni23 from "./assets/robni/23.png";
 import naturalni24 from "./assets/robni/24.png";
 import naturalni25 from "./assets/robni/25.png";
 import naturalni26 from "./assets/robni/26.png";
+
+import medijski1 from "./assets/medijski/1.png";
+import medijski2 from "./assets/medijski/2.jpg";
+import medijski3 from "./assets/medijski/3.png";
+import medijski4 from "./assets/medijski/4.png";
+import medijski5 from "./assets/medijski/5.jpg";
+import medijski6 from "./assets/medijski/6.jpeg";
+import medijski7 from "./assets/medijski/7.jpg";
+import medijski8 from "./assets/medijski/8.png";
+import medijski9 from "./assets/medijski/9.png";
+import medijski10 from "./assets/medijski/10.png";
+import medijski11 from "./assets/medijski/11.png";
+import medijski12 from "./assets/medijski/12.png";
+import medijski13 from "./assets/medijski/13.png";
+import medijski14 from "./assets/medijski/14.jpg";
+import medijski15 from "./assets/medijski/15.png";
+import medijski16 from "./assets/medijski/16.png";
+import medijski17 from "./assets/medijski/17.png";
+import medijski18 from "./assets/medijski/18.jpg";
+import medijski19 from "./assets/medijski/19.png";
+import medijski20 from "./assets/medijski/20.png";
+import medijski21 from "./assets/medijski/21.png";
+import medijski22 from "./assets/medijski/22.png";
+import medijski23 from "./assets/medijski/23.png";
+import medijski24 from "./assets/medijski/24.png";
+import medijski25 from "./assets/medijski/25.png";
+import medijski26 from "./assets/medijski/26.png";
+import medijski27 from "./assets/medijski/27.png";
+import medijski28 from "./assets/medijski/28.png";
 
 import godisnji1 from "./assets/godisnji/1.png";
 import godisnji2 from "./assets/godisnji/2.png";
@@ -97,121 +124,225 @@ const Partneri = (props) => {
 
   const medijskiPartneri = [
     {
-      partnerSlika: Slika,
-      partnerIme: "connecting",
-      pozadina: "#f5f5f5",
+      partnerSlika: medijski1,
+      partnerIme: "CaseStudyClub",
+      pozadina: "#fff",
       width: "13em",
-      height: "8em",
-      // link: "https://www.instagram.com/connecting.org.rs/",
-    },
-    {
-      partnerSlika: Slika,
-      partnerIme: "case study club",
-      pozadina: "#f5f5f5",
-      width: "13em",
-      height: "8em",
+      height: "9em",
       // link: "https://casestudyclub.org/en/",
     },
     {
-      partnerSlika: Slika,
-      partnerIme: "ehls",
-      pozadina: "#f5f5f5",
+      partnerSlika: medijski2,
+      partnerIme: "CentarZaPromocijuNauke",
+      pozadina: "#fff",
+      width: "13em",
+      height: "9em",
+      // link: "https://www.instagram.com/connecting.org.rs/",
+    },
+    {
+      partnerSlika: medijski3,
+      partnerIme: "StudentskaOrganizacijaViser",
+      pozadina: "#fff",
       width: "13em",
       height: "8em",
       // link: "https://ehls.rs/",
     },
     {
-      partnerSlika: Slika,
-      partnerIme: "ja alumni serbia",
-      pozadina: "#f5f5f5",
+      partnerSlika: medijski4,
+      partnerIme: "Elektron",
+      pozadina: "#fff",
       width: "13em",
       height: "8em",
       // link: "https://www.ja-serbia.org/alumni-klub/",
     },
     {
-      partnerSlika: Slika,
-      partnerIme: "it network",
-      pozadina: "#f5f5f5",
+      partnerSlika: medijski5,
+      partnerIme: "GoogleDevelopment",
+      pozadina: "#000",
       width: "13em",
-      height: "8em",
+      height: "9em",
       // link: "https://www.itnetwork.rs/",
     },
     {
-      partnerSlika: Slika,
+      partnerSlika: medijski6,
       partnerIme: "nova s",
-      pozadina: "#f5f5f5",
+      pozadina: "#fff",
       width: "13em",
-      height: "8em",
+      height: "9em",
       // link: "https://nova.rs/",
     },
     {
-      partnerSlika: Slika,
+      partnerSlika: medijski7,
       partnerIme: "Slika",
-      pozadina: "#f5f5f5",
+      pozadina: "#fff",
       width: "13em",
-      height: "8em",
+      height: "9em",
       // link: "https://www.instagram.com/codewithmary/?igshid=YmMyMTA2M2Y%3D",
     },
     {
-      partnerSlika: Slika,
+      partnerSlika: medijski8,
       partnerIme: "n1",
-      pozadina: "#f5f5f5",
+      pozadina: "#fff",
       width: "13em",
-      height: "8em",
+      height: "9em",
       // link: "https://rs.n1info.com/",
     },
     {
-      partnerSlika: Slika,
+      partnerSlika: medijski9,
       partnerIme: "pr objave",
-      pozadina: "#f5f5f5",
-      width: "13em",
-      height: "8em",
+      pozadina: "#fff",
+      width: "15em",
+      height: "10em",
       // link: "https://www.probjave.com/",
     },
     {
-      partnerSlika: Slika,
+      partnerSlika: medijski10,
       partnerIme: "softuni",
-      pozadina: "#f5f5f5",
+      pozadina: "#fff",
       width: "13em",
-      height: "8em",
+      height: "9em",
       // link: "https://www.softuni.rs/",
     },
     {
-      partnerSlika: Slika,
+      partnerSlika: medijski11,
       partnerIme: "youth.rs",
-      pozadina: "#f5f5f5",
+      pozadina: "#fff",
       width: "13em",
-      height: "8em",
+      height: "9em",
       // link: "https://youth.rs/",
     },
     {
-      partnerSlika: Slika,
+      partnerSlika: medijski12,
       partnerIme: "znanje.rs",
-      pozadina: "#f5f5f5",
+      pozadina: "#fff",
       width: "13em",
-      height: "8em",
+      height: "9em",
       // link: "http://www.znanje.rs/",
     },
     {
-      partnerSlika: Slika,
+      partnerSlika: medijski13,
       partnerIme: "kzm bajina basta",
-      pozadina: "#f5f5f5",
+      pozadina: "#fff",
       width: "13em",
-      height: "8em",
+      height: "9em",
       // link: "https://www.instagram.com/kzm_bb/",
     },
     {
-      partnerSlika: Slika,
+      partnerSlika: medijski14,
       partnerIme: "startuj infostud",
-      pozadina: "#f5f5f5",
+      pozadina: "#fff",
       width: "13em",
-      height: "8em",
+      height: "9em",
       // link: "https://startuj.com/",
     },
     {
-      partnerSlika: Slika,
+      partnerSlika: medijski15,
       partnerIme: "tv brainz",
-      pozadina: "#f5f5f5",
+      pozadina: "#e52e40",
+      width: "13em",
+      height: "9em",
+      // link: "https://brainz.center/",
+    },
+    {
+      partnerSlika: medijski16,
+      partnerIme: "tv brainz",
+      pozadina: "#fff",
+      width: "13em",
+      height: "9em",
+      // link: "https://brainz.center/",
+    },
+    {
+      partnerSlika: medijski17,
+      partnerIme: "tv brainz",
+      pozadina: "#fff",
+      width: "13em",
+      height: "9em",
+      // link: "https://brainz.center/",
+    },
+    {
+      partnerSlika: medijski18,
+      partnerIme: "tv brainz",
+      pozadina: "#fff",
+      width: "13em",
+      height: "8em",
+      // link: "https://brainz.center/",
+    },
+    {
+      partnerSlika: medijski19,
+      partnerIme: "tv brainz",
+      pozadina: "#014a7c",
+      width: "13em",
+      height: "9em",
+      // link: "https://brainz.center/",
+    },
+    {
+      partnerSlika: medijski20,
+      partnerIme: "tv brainz",
+      pozadina: "#fff",
+      width: "13em",
+      height: "9em",
+      // link: "https://brainz.center/",
+    },
+    {
+      partnerSlika: medijski21,
+      partnerIme: "tv brainz",
+      pozadina: "#fff",
+      width: "13em",
+      height: "9em",
+      // link: "https://brainz.center/",
+    },
+    {
+      partnerSlika: medijski22,
+      partnerIme: "tv brainz",
+      pozadina: "#fff",
+      width: "13em",
+      height: "9em",
+      // link: "https://brainz.center/",
+    },
+    {
+      partnerSlika: medijski23,
+      partnerIme: "tv brainz",
+      pozadina: "#fff",
+      width: "13em",
+      height: "9em",
+      // link: "https://brainz.center/",
+    },
+    {
+      partnerSlika: medijski24,
+      partnerIme: "tv brainz",
+      pozadina: "#fff",
+      width: "13em",
+      height: "9em",
+      // link: "https://brainz.center/",
+    },
+    {
+      partnerSlika: medijski25,
+      partnerIme: "tv brainz",
+      pozadina: "#fff",
+      width: "16em",
+      height: "12em",
+      // link: "https://brainz.center/",
+    },
+    {
+      partnerSlika: medijski26,
+      partnerIme: "tv brainz",
+      pozadina: "#fff",
+      width: "14em",
+      height: "11em",
+      // link: "https://brainz.center/",
+    },
+    {
+      partnerSlika: medijski27,
+      partnerIme: "tv brainz",
+      pozadina: "#fff",
+      width: "13em",
+      height: "9em",
+      // link: "https://brainz.center/",
+    },
+    {
+      partnerSlika: medijski28,
+      partnerIme: "Viser",
+      pozadina: "#fff",
       width: "13em",
       height: "8em",
       // link: "https://brainz.center/",
@@ -332,14 +463,14 @@ const Partneri = (props) => {
       width: "13em",
       height: "8em",
     },
-    {
-      partnerSlika: naturalni8,
-      partnerIme: "DIL Escape Room",
-      pozadina: "#000",
-      link: "https://dilescaperooms.rs/",
-      width: "13em",
-      height: "8em",
-    },
+    // {
+    //   partnerSlika: naturalni8,
+    //   partnerIme: "DIL Escape Room",
+    //   pozadina: "#000",
+    //   link: "https://dilescaperooms.rs/",
+    //   width: "13em",
+    //   height: "8em",
+    // },
     {
       partnerSlika: naturalni17,
       partnerIme: "Stark",
