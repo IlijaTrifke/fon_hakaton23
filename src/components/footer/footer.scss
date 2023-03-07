@@ -76,7 +76,8 @@
   top: 100%;
   left: 50%;
   transform: translate(-50%, -50%);
-  cursor: pointer;
+  cursor: not-allowed;
+  user-select: none;
   z-index: 100;
   text-decoration: none;
 }
@@ -94,14 +95,14 @@
   border-radius: 5rem;
   z-index: 100;
 }
-.footer-button:hover::after {
-  opacity: 1;
-}
+// .footer-button:hover::after {
+//   opacity: 1;
+// }
 
-.footer-button:hover > span {
-  color: $ljubicasta;
-  transition: all 0.3s ease-in-out;
-}
+// .footer-button:hover > span {
+//   color: $ljubicasta;
+//   transition: all 0.3s ease-in-out;
+// }
 
 .footer-button span {
   position: relative;

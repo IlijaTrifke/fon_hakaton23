@@ -43,7 +43,9 @@
   font-weight: 400;
   margin: 2% 0;
   position: relative;
-  cursor: pointer;
+  cursor: not-allowed;
+  user-select: none;
+  opacity: 0.3;
   z-index: 100;
   transition: all 0.3s ease-in-out;
   text-decoration: none;
@@ -62,14 +64,14 @@
   border-radius: 5rem;
   z-index: 100;
 }
-.pocetna-text-box:hover::after {
-  opacity: 1;
-}
+// .pocetna-text-box:hover::after {
+//   opacity: 1;
+// }
 
-.pocetna-text-box:hover > span {
-  color: $ljubicasta;
-  transition: all 0.3s ease-in-out;
-}
+// .pocetna-text-box:hover > span {
+//   color: $ljubicasta;
+//   transition: all 0.3s ease-in-out;
+// }
 
 .pocetna-text-box span {
   position: relative;

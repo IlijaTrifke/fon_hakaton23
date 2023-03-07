@@ -97,13 +97,13 @@ const Navbar = () => {
             );
           })}
         </div>
-        <HashLink
-          to="/prijava"
+        <p
+          // to="/prijava"
           className="prijavi-se desktop"
           onClick={handleClick}
         >
           PRIJAVI SE
-        </HashLink>
+        </p>
       </nav>
     </div>
   );

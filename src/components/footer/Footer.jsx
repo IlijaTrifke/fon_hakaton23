@@ -28,9 +28,9 @@ export default function Footer() {
             godinama unazad poznat po pozitivnoj atmosferi koja vlada među
             takmičarima. Iskoristi priliku da je osetiš i ti!
           </p>
-          <HashLink to="/Prijava" className="footer-button">
+          <p className="footer-button">
             <span>PRIJAVI SE!</span>
-          </HashLink>
+          </p>
         </div>
       </div>
       <hr className="footer-hr" />
