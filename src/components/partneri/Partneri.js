@@ -63,6 +63,8 @@ import medijski25 from "./assets/medijski/25.png";
 import medijski26 from "./assets/medijski/26.png";
 import medijski27 from "./assets/medijski/27.png";
 import medijski28 from "./assets/medijski/28.png";
+import medijski29 from "./assets/medijski/29.png";
+import medijski30 from "./assets/medijski/30.png";
 
 import godisnji1 from "./assets/godisnji/1.png";
 import godisnji2 from "./assets/godisnji/2.png";
@@ -298,7 +300,7 @@ const Partneri = (props) => {
       pozadina: "#fff",
       width: "13em",
       height: "9em",
-      link: " sbu-poslovi.rs",
+      link: "https://sbu-poslovi.rs/",
     },
     {
       partnerSlika: medijski23,
@@ -347,6 +349,22 @@ const Partneri = (props) => {
       width: "13em",
       height: "8em",
       link: "https://www.viser.edu.rs/",
+    },
+    {
+      partnerSlika: medijski29,
+      partnerIme: "LCNoviSad",
+      pozadina: "#fff",
+      width: "13em",
+      height: "8em",
+      link: "https://www.eestecns.org/",
+    },
+    {
+      partnerSlika: medijski30,
+      partnerIme: "Unija",
+      pozadina: "#b72025",
+      width: "13em",
+      height: "8em",
+      link: "https://unijastudenatafona.org/",
     },
   ];
 
