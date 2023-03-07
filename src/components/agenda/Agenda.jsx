@@ -139,9 +139,9 @@ const Agenda = () => {
               <h2 className="agn-date">10. mart 2023.</h2>
               <p className="agn-descr">
                 Ono što timove deli od učešća na takmičenju je još samo tehnički
-                intervju. Intervjui će se održati preko platforme Teams u vidu
-                speed dating-a sa predstavnicima FON-a i alumnistima FONIS-a,
-                nakon čega najbolje rangirani timovi prolaze u finale.
+                intervju. Intervjui će se održati preko platforme Google Meet u
+                vidu speed dating-a sa predstavnicima FON-a i alumnistima
+                FONIS-a, nakon čega najbolje rangirani timovi prolaze u finale.
               </p>
             </div>
           </div>
