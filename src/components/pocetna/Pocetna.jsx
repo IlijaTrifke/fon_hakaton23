@@ -49,9 +49,9 @@ export default function Pocetna() {
     <div className="pocetna-section" id="pocetna">
       <img src={logo} alt="Fon hakaton logo" className="pocetna-logo" />
       <h1 className="pocetna-motto">Use your code to change the road</h1>
-      <HashLink to="/Prijava" className="pocetna-text-box">
+      <p className="pocetna-text-box">
         <span>PRIJAVI SE!</span>
-      </HashLink>
+      </p>
       <div className="pocetna-bottom">
         <HashLink smooth to="#o_hakatonu" className="pocetna-arrows">
           <h1>Saznaj Više</h1>

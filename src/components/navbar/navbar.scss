@@ -69,6 +69,12 @@
   z-index: 1;
 }
 
+.prijavi-se {
+  cursor: not-allowed;
+  user-select: none;
+  opacity: 0.3;
+}
+
 .nav-links,
 .prijavi-se {
   color: $bela;
@@ -76,8 +82,7 @@
   transition: all 0.2s ease-in-out;
 }
 
-.nav-links:hover,
-.prijavi-se:hover {
+.nav-links:hover {
   color: $ljubicasta;
 }
 
@@ -87,6 +92,9 @@
 
 .link-do-prijave {
   display: none;
+  cursor: not-allowed;
+  user-select: none;
+  opacity: 0.3;
 }
 
 .link-do-prijave,
