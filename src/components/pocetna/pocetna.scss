@@ -84,6 +84,7 @@
   align-items: center;
   gap: 10rem;
   width: 70%;
+  margin-top: 6rem;
 }
 .pocetna-arrows {
   display: flex;
@@ -171,7 +172,7 @@
 }
 
 .off {
-  font-size: 1.5rem !important;
+  font-size: 2rem !important;
   text-align: center;
 }
 
@@ -216,6 +217,7 @@
   }
   .pocetna-bottom h1 {
     display: none;
+    //margin-top: 3rem;
   }
   .pocetna-text-box,
   .pocetna-arrows {

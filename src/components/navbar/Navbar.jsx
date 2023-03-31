@@ -97,13 +97,13 @@ const Navbar = () => {
             );
           })}
         </div>
-        <p
+        {/* <p
           // to="/prijava"
           className="prijavi-se desktop"
           onClick={handleClick}
         >
           PRIJAVI SE
-        </p>
+        </p> */}
       </nav>
     </div>
   );
