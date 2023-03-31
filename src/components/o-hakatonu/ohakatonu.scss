@@ -3,7 +3,8 @@
 .ohakatonu {
   //min-height: 80vh;
   position: relative;
-  height: 70rem;
+  //height: 70rem;
+  margin-bottom: 10rem;
 }
 
 #o_hakatonu {
@@ -825,6 +826,6 @@
     display: none;
   }
   .ohakatonu {
-    height: 90rem;
+    margin-bottom: 3rem;
   }
 }

@@ -65,6 +65,8 @@ import medijski27 from "./assets/medijski/27.png";
 import medijski28 from "./assets/medijski/28.png";
 import medijski29 from "./assets/medijski/29.png";
 import medijski30 from "./assets/medijski/30.png";
+import medijski31 from "./assets/medijski/it-academy.png";
+import medijski32 from "./assets/medijski/best-belgrade.png";
 
 import godisnji1 from "./assets/godisnji/1.png";
 import godisnji2 from "./assets/godisnji/2.png";
@@ -75,6 +77,7 @@ import godisnji6 from "./assets/godisnji/6.png";
 import godisnji7 from "./assets/godisnji/7.png";
 import godisnji8 from "./assets/godisnji/8.png";
 import godisnji9 from "./assets/godisnji/9.png";
+import godisnji10 from "./assets/godisnji/askg.png";
 
 import Pokrovitelj from "./assets/pokrovitelj.png";
 
@@ -366,6 +369,22 @@ const Partneri = (props) => {
       height: "8em",
       link: "https://unijastudenatafona.org/",
     },
+    {
+      partnerSlika: medijski31,
+      partnerIme: "it-Academy",
+      pozadina: "#fff",
+      width: "13em",
+      height: "8em",
+      link: "https://www.it-akademija.com/",
+    },
+    {
+      partnerSlika: medijski32,
+      partnerIme: "best-belgrade",
+      pozadina: "#fff",
+      width: "13em",
+      height: "8em",
+      link: "https://best.rs/",
+    },
   ];
 
   const robniPartneri = [
@@ -590,10 +609,10 @@ const Partneri = (props) => {
 
   const godisnjiPartneri = [
     {
-      partnerSlika: godisnji1,
-      partnerIme: "catenamedia",
+      partnerSlika: godisnji10,
+      partnerIme: "askgamblers",
       pozadina: "#fff",
-      link: "https://www.catenamedia.com/",
+      link: "https://www.askgamblers.com/",
       width: "13em",
       height: "8em",
     },
@@ -637,14 +656,14 @@ const Partneri = (props) => {
       width: "13em",
       height: "8em",
     },
-    {
-      partnerSlika: godisnji7,
-      partnerIme: "mainstream",
-      pozadina: "#fff",
-      link: "https://www.mainstream.rs/",
-      width: "13em",
-      height: "8em",
-    },
+    // {
+    //   partnerSlika: godisnji7,
+    //   partnerIme: "mainstream",
+    //   pozadina: "#fff",
+    //   link: "https://www.mainstream.rs/",
+    //   width: "13em",
+    //   height: "8em",
+    // },
     {
       partnerSlika: godisnji8,
       partnerIme: "prime softver",

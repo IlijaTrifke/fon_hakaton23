@@ -74,7 +74,7 @@ const dataFaq = [
   {
     question: "Kako izgleda selekcija?",
     answer:
-      "Sama selekcija se sastoji iz dva kruga. Prvi krug predstavlja ocenjivanje timske prijave, poslatih 	CV-jeva i testa IT znanja. Najbolje rangirane timove čeka drugi krug selekcije - tehnički intervjui koji će se održati u formi speed dating-a preko platforme Teams. Nakon drugog kruga selekcije, deset timova koji budu imali najveću ukupnu ocenu, dobiće priliku da svoje veštine prikažu u finalu Hakatona.",
+      "Sama selekcija se sastoji iz dva kruga. Prvi krug predstavlja ocenjivanje timske prijave, poslatih 	CV-jeva i testa IT znanja. Najbolje rangirane timove čeka drugi krug selekcije - tehnički intervjui koji će se održati u formi speed dating-a preko platforme Google Meet. Nakon drugog kruga selekcije, deset timova koji budu imali najveću ukupnu ocenu, dobiće priliku da svoje veštine prikažu u finalu Hakatona.",
   },
 
   {
