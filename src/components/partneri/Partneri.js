@@ -67,6 +67,9 @@ import medijski29 from "./assets/medijski/29.png";
 import medijski30 from "./assets/medijski/30.png";
 import medijski31 from "./assets/medijski/it-academy.png";
 import medijski32 from "./assets/medijski/best-belgrade.png";
+import medijski33 from "./assets/medijski/Brainz_Logo_1.png";
+import medijski34 from "./assets/medijski/svet kompjutera logo 185mm 300 dpi rgb.jpg";
+import medijski35 from "./assets/medijski/Logotip FON - cirilica.png";
 
 import godisnji1 from "./assets/godisnji/1.png";
 import godisnji2 from "./assets/godisnji/2.png";
@@ -384,6 +387,30 @@ const Partneri = (props) => {
       width: "13em",
       height: "8em",
       link: "https://best.rs/",
+    },
+    {
+      partnerSlika: medijski33,
+      partnerIme: "brainz",
+      pozadina: "#fff",
+      width: "13em",
+      height: "8em",
+      link: "https://brainz.center/",
+    },
+    {
+      partnerSlika: medijski34,
+      partnerIme: "svetkompjutera",
+      pozadina: "#fff",
+      width: "13em",
+      height: "8em",
+      link: "https://www.sk.rs/pocetna",
+    },
+    {
+      partnerSlika: medijski35,
+      partnerIme: "fon",
+      pozadina: "#014a7c",
+      width: "14em",
+      height: "9em",
+      link: "http://www.fon.bg.ac.rs/",
     },
   ];
 
